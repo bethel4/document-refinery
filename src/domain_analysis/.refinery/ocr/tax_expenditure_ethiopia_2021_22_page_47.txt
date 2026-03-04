@@ -1,0 +1,39 @@
+47 Import tax expenditure report: FY 2018/19 — 2020/21
+
+import tax on shipments recorded in eCMS alone amounted to 95% of actual collection, the total
+across both IT systems added up to 107% of actual collection. One plausible explanation of this
+discrepancy is that a substantial fraction of shipments were recorded in both datasets during the
+
+transition period.
+
+Figure D.1. Total import tax on shipments reported through the two IT systems compared
+with actual collection, FY 2018/19 to FY 2020/21
+
+120
+
+100
+
+ETB billion
+a
+S
+
+ 
+
+2018/19 2019/20 2020/21
+
+mae Total: eCMS ma Total: ASYCUDA =@=— Actual collection
+
+Source: Authors’ calculations using data from the Ethiopian Customs Commission and the Ministry of
+Revenues.
+
+Figure D.2 splits our headline tax expenditure estimates into tax expenditures on shipments
+recorded in eCMS and on shipments recorded in ASYCUDA++. Tax expenditures on shipments
+recorded in eCMS alone were ETB 68.7 billion or 2.6% of GDP in FY 2018/19 and ETB 76.4
+billion or 2.3% of GDP in FY 2019/20 (no shipments were recorded in ASYCUDA++ in FY
+2020/21). These numbers provide a useful lower bound for the estimates we would have
+obtained in the absence of double-counting. Notably, these numbers imply that while total tax
+expenditures may in fact have risen in nominal terms between FY 2018/19 and FY 2019/20, they
+definitely fell as a proportion of GDP.
+
+© Ministry of Finance, Ethiopia
+

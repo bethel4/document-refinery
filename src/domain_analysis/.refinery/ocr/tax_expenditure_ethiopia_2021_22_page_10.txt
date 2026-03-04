@@ -1,0 +1,50 @@
+10 Import tax expenditure report: FY 2018/19 — 2020/21
+
+Furthermore, import tax expenditures likely lead to higher collection of domestic taxes. Import
+VAT exemptions likely lead to higher domestic VAT collection on final goods, as less input
+VAT can be reclaimed. All tax expenditures likely lead to higher income tax collection, as the
+lower cost of imported inputs leads to higher profits and earnings. Thus, the cost of tax
+
+expenditures calculated in this report likely overstates their true overall fiscal cost.
+
+In the Ethiopian import tax system, customs duty, excise tax, VAT and surtax are charged
+sequentially, so that revenue from taxes early in the sequence enters the tax base of taxes later in
+the sequence. This means that tax expenditures relating to a given tax will indirectly affect the
+collection of other taxes later in the sequence. For the main estimates in this report, such
+indirect effects of tax expenditures are counted as expenditures on the origin tax even
+though they affect the collection of other taxes. (Results when indirect effects are counted as
+
+part of expenditures on the tax whose collection is affected are reported in Appendix C.)
+
+Customs duty
+
+Customs law is governed by Proclamation No. 859/2014. Customs duty is applied as the
+percentage of the duty-paying value. Duty-paying value is defined as the sum of the shipment
+value (cost of goods), transport charges paid to transport the goods from the port of the exporting
+country to their entry into Ethiopia, transport insurance paid and other charges such as loading
+and unloading charges, port charges, etc. The customs duty rate varies between 0% and 35%
+depending on the type and the level of processing of the imported goods. Final consumer goods
+are usually charged at higher rates, while raw materials and intermediate goods (including semi-
+
+knocked-down products) are charged at lower rates.
+The benchmark tax system for customs duty is defined as follows:
+
+= The unit of taxation for excise on imports is the importer, the business or the individual.
+
+= The customs duty tax base is the cost, insurance and freight (CIF) value of imports.
+
+= The benchmark customs duty rate is, in general, the standard customs duty rate for the item
+in question as specified in the 2017 tariff book (0%, 5%, 10%, 20%, 30% or 35%).
+
+= For items imported from countries with which Ethiopia has a multilateral, regional or
+bilateral trade deal, the benchmark rates are those specified under the relevant trade
+agreement.
+
+o Ethiopia is a member of the Common Market for Eastern and Southern Africa
+(COMESA) Preferential Trade Agreement where it grants 10% rate reductions for goods
+originating in a COMESA country and complying with the COMESA’s rule of origin.
+The benchmark customs duty rates for goods fulfilling COMESA rules of origin are 0%,
+4.5%, 9%, 18%, 27% and 31.5%.
+
+© Ministry of Finance, Ethiopia
+

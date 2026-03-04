@@ -1,0 +1,43 @@
+45 Import tax expenditure report: FY 2018/19 — 2020/21
+
+The indirect effect of excise tax expenditures is
+
+IEZ = (che — 8?) ch? + c2°)CI Fig «+ (th? — 18°) PS (1 + 18D CIF ig
+
+indirect effect of excise exp. through VAT _ indirect effect ‘of excise exp. through surtax
+
++ (ci? Tin — THe Nie’ Tie + TH) CIF it
+
+indirect effect of excise exp. through VAT and surtax
+The indirect effect of VAT expenditures is
+
+IE}, = (ti? — ch’) tf (1 + 18°) (1 + TACT Fit
+
+indirect effect of excise exp. through surtax
+
+This way of calculating indirect effects ensures that the sum of tax expenditures on each tax adds
+up to the difference between import tax paid under the benchmark system and actual import tax
+
+paid on a shipment.
+
+C. Alternative measures of tax expenditures
+
+In the main text, we present tax expenditure estimates as the sum of the direct and indirect
+effects, where the indirect effects of import taxes through the reduction in tax base on the
+subsequent taxes are counted as tax expenditure for the original tax. For example, the indirect
+effect of customs duty expenditure through excise, VAT and/or surtax are considered customs
+duty expenditures. In this appendix, we present an alternative measure of expenditures on each
+import tax, which is simply the difference between tax collected under the benchmark tax system
+
+and actual tax collected.
+
+As shown in Figure C.1, customs duty expenditures are lower under this alternative measure, as
+knock-on effects of customs duty exemptions and reduced rates on subsequent border taxes are
+not counted as part of customs duty tax expenditure. In contrast, VAT expenditures and surtax
+expenditures are higher under this alternative measure, as they include the knock-on effects from
+tax expenditures earlier in the import tax sequence. By definition, overall import tax
+
+expenditures are the same under both measures.
+
+© Ministry of Finance, Ethiopia
+

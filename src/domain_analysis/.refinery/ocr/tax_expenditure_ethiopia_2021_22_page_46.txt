@@ -1,0 +1,58 @@
+46 Import tax expenditure report: FY 2018/19 — 2020/21
+
+Figure C.1. Comparing the two tax expenditure measures by tax type, FY 2018/19 to FY
+2020/21
+
+50
+
+40
+
+3
+
+2
+
+| Tt I
+| |
+
+2018/19 2019/20 2020/21 2018/19 2019/20 2020/21 2018/19 2019/20 2020/21 2018/19 2019/20 2020/21
+
+ETB billion
+S
+
+So
+
+o
+
+Customs duty expenditure Excise tax expenditure VAT expenditure Surtax expenditure
+
+@ Alternative estimates @ Main estimates
+
+Note: ‘Main estimates’ are the expenditure estimates used in the main text. Assumes no duplicate reporting
+of transactions across customs IT systems (see Appendix D).
+
+Source: Authors’ calculations using data from the Ministry of Revenues.
+
+D. Duplicate records in customs microdata
+
+Between FY 2017/18 and FY 2019/20, the Ethiopian Customs Commission changed its IT
+system; it transitioned from the Automated System for Customs Data (AS YCUDA++) to the
+electronic Customs Management System (eCMS). For the main estimates in this report, we treat
+customs records in ASYCUDA++ and eCMS as referring to separate shipments. However, both
+anecdotal evidence and a comparison with tax revenue data from the Ministry of Revenues
+suggest that some shipments may have been recorded in both IT systems during the transition
+
+period, leading to double-counting in our tax expenditure estimates.
+
+In Figure D.1, we show the implied total import tax collection recorded in the two customs IT
+systems, as well as actual total import tax collection from the Ministry of Revenues. In FY
+2019/20 and FY 2020/21, when the transition to eCMS was (mostly) complete, total import tax
+recorded in the customs microdata was, respectively, 96% and 97% of actual import tax
+collected by the Ministry of Revenues.° This small shortfall is expected, as customs records for
+
+some shipments were incomplete and could therefore not be used. In 2018/19, however, while
+
+5 This pattern of a small shortfall relative to aggregate Ministry of Revenues data is consistent across the different
+import taxes.
+
+© Ministry of Finance, Ethiopia
+

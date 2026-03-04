@@ -1,0 +1,44 @@
+9 Import tax expenditure report: FY 2018/19 — 2020/21
+
+3. Definitions and data
+
+3.1 Defining the benchmark tax system
+
+Tax expenditures are defined as deviations from a benchmark system. The first step in
+estimating tax expenditures is therefore the definition of a benchmark tax system. Defining the
+appropriate benchmark involves a number of judgement calls which affect the resulting
+estimates. Below, we discuss in detail the definition used in the report and — where appropriate —
+
+examine the robustness of estimates with respect to the exact definition used.
+
+In this report, we focus on positive import tax expenditures — cases in which an importer is
+charged at a lower (possibly zero) customs duty/tax rate than the rate in the benchmark
+tax system. The benchmark tax system generally reflects the standard tax rates laid down in the
+relevant proclamations and regulations. When bilateral or multilateral agreements regulate tax
+rates for specific countries of origin, these tax rates enter the benchmark system and do not count
+as expenditures (International Monetary Fund, 2019). In addition, exemptions given to diplomats
+and international organisations in line with international law and the Vienna Conventions are
+considered part of the benchmark. In order to avoid negative tax expenditures, actual applied tax
+rates that are higher than the standard rates in the relevant proclamation or regulation are
+considered part of the benchmark tax system (the negative tax expenditures that arise when this
+
+adjustment is not made are discussed in Appendix A).
+
+Other deviations from standard rates are taken to give rise to tax expenditures. Lower rates
+and exemptions are examined in separate analyses for customs duty, where both are common.
+Second schedule customs duty and surtax rates are considered tax expenditures in our main
+analysis. Second schedule rates are preferential customs and surtax rates granted to local
+manufacturers importing raw materials. To be eligible for the scheme, manufacturers need to
+
+meet value-added requirements which vary by sector (Ministry of Finance, 2016).
+
+To estimate tax expenditures, the revenue forgone method is used; it assumes that the
+removal of tax expenditures would result in no changes in behaviour or compliance. This is
+a standard approach to tax expenditure analysis, but has important limitations (International
+Monetary Fund, 2019). In particular, this approach typically overestimates tax expenditures as it
+assumes individuals would continue to consume (or import in the case of import taxes) the same
+
+amount of goods and services (Kassim and Mansour, 2018) if full tax rates were charged.
+
+© Ministry of Finance, Ethiopia
+

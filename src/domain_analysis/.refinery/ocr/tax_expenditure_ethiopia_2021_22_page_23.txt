@@ -1,0 +1,58 @@
+ 
+
+23 Import tax expenditure report: FY 2018/19 — 2020/21
+
+duty expenditures were around ETB 23 billion. FY 2018/19 customs duty expenditures were up
+to ETB 30 billion.
+
+Figure 4.3. Customs duty tax expenditures, FY 2018/19 to FY 2020/21
+
+40
+a
+35
+30 a
+= Higher order indirect effects
+5 25 Indirect effect through surtax
+5 20 Indirect effect through VAT
+= @ Indirect effect through excise
+15
+@ Direct effect of rate reductions
+10 ® Direct effect of exemptions
+5
+0
+
+ 
+
+2018/19 2019/20 2020/21
+
+Note: Customs duty expenditures due to exemptions refer to cases when the standard rate for a particular
+good is positive but the applied rate is zero. Customs duty expenditures due to rate reductions refer to
+cases when the applied customs duty rate is greater than zero but less than the standard rate. Assumes no
+duplicate reporting of transactions across customs IT systems (see Appendix D).
+
+Source: Authors’ calculations using data from the Ethiopian Customs Commission.
+
+In FY 2020/21, 71% of customs duty tax expenditures arose from the direct effect of
+exemptions (ETB 27.5 billion), 2% arose from the direct effect of rate reductions
+
+(ETB 0.9 billion) and 27% arose from the indirect effects of customs duty tax expenditures
+on the collection of other import taxes (ETB 10.5 billion). Exemptions are cases where the
+standard rate would have been positive but the applied rate was zero. Rate reductions are cases
+where a positive rate was applied below the standard rate. Indirect effects of customs
+expenditure on the collection of other import taxes arises because customs duty payable is part
+
+of the tax base for all other import taxes.
+
+The importance of exemptions in customs tax expenditures has increased relative to
+previous fiscal years. They accounted for around 64% of customs tax expenditures in FY
+2018/19, 67% in FY 2019/20 and 71% in FY 2020/21. The indirect effect of customs
+expenditure through other taxes decreased from around 25% of customs duty expenditure in FY
+2018/19 to 23% in FY 2019/20, before increasing to 27% in FY 2020/21.
+
+Customs duty tax expenditures represented 0.9% of GDP, 6.9% of imports and 32.2% of
+
+all import tax expenditures in FY 2020/21. Relative to GDP, customs duty tax expenditures
+were lower in FY 2019/20 (0.7%) but potentially higher in FY 2018/19 (up to 1.1%). They
+
+© Ministry of Finance, Ethiopia
+

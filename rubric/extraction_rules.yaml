@@ -1,0 +1,145 @@
+# Extraction Rules Configuration
+# Defines thresholds and parameters for extraction strategies
+
+# Document Classification Rules
+document_classes:
+  simple_text:
+    description: "Simple digital documents with clear text"
+    avg_chars_per_page_min: 500
+    avg_chars_per_page_max: 5000
+    image_area_ratio_max: 0.2
+    table_count_max: 3
+    
+  moderate_complexity:
+    description: "Documents with moderate structure and tables"
+    avg_chars_per_page_min: 200
+    avg_chars_per_page_max: 3000
+    image_area_ratio_max: 0.5
+    table_count_min: 2
+    table_count_max: 10
+    
+  high_complexity:
+    description: "Complex documents with images, tables, or scanned content"
+    avg_chars_per_page_max: 500
+    image_area_ratio_min: 0.3
+    table_count_min: 5
+
+# Strategy Assignment Rules
+strategy_assignment:
+  fast_text:
+    conditions:
+      - avg_chars_per_page >= 500
+      - image_area_ratio <= 0.2
+      - is_searchable == true
+      - origin_type == "native_digital"
+    confidence_threshold: 0.8
+    escalation_threshold: 0.7
+    
+  layout:
+    conditions:
+      - avg_chars_per_page >= 200
+      - image_area_ratio <= 0.5
+      - table_count >= 2
+      - origin_type in ["native_digital", "mixed"]
+    confidence_threshold: 0.7
+    escalation_threshold: 0.6
+    
+  vision:
+    conditions:
+      - avg_chars_per_page < 200
+      - image_area_ratio > 0.3
+      - origin_type == "scanned_image"
+      - is_searchable == false
+    confidence_threshold: 0.6
+    escalation_threshold: 0.5
+    
+  hybrid:
+    conditions:
+      - origin_type == "mixed"
+      - scanned_page_ratio > 0.3
+      - digital_page_ratio > 0.3
+    confidence_threshold: 0.65
+    escalation_threshold: 0.55
+
+# Extraction Thresholds
+extraction_thresholds:
+  # FastTextExtractor thresholds
+  fast_text:
+    char_threshold: 100
+    image_ratio_threshold: 0.5
+    min_confidence: 0.7
+    
+  # LayoutExtractor thresholds  
+  layout:
+    min_table_confidence: 0.6
+    min_text_confidence: 0.5
+    structure_confidence_weight: 0.3
+    
+  # VisionExtractor thresholds
+  vision:
+    ocr_confidence_threshold: 0.5
+    table_detection_confidence: 0.4
+    budget_cap_usd: 5.0
+    dpi: 300
+    language: "eng"
+
+# Quality Control
+quality_control:
+  # Minimum acceptable confidence for each strategy
+  min_confidence:
+    fast_text: 0.7
+    layout: 0.6
+    vision: 0.5
+    
+  # Escalation rules
+  escalation:
+    # Escalate if confidence below threshold
+    enabled: true
+    confidence_threshold: 0.7
+    
+    # Maximum escalation attempts
+    max_attempts: 2
+    
+    # Cost controls
+    budget_limits:
+      vision_max_cost_per_doc: 5.0
+      daily_budget_limit: 50.0
+
+# Performance Tuning
+performance:
+  # Parallel processing limits
+  max_workers: 4
+  batch_size: 10
+  
+  # Processing timeouts (seconds)
+  timeouts:
+    fast_text: 30
+    layout: 120
+    vision: 300
+    
+  # Memory limits (MB)
+  memory_limits:
+    fast_text: 100
+    layout: 500
+    vision: 1000
+
+# Output Configuration
+output:
+  # Save intermediate results
+  save_images: true
+  save_ocr_text: true
+  save_profiles: true
+  
+  # Output formats
+  formats:
+    - json
+    - jsonl
+    
+  # Compression
+  compress_outputs: false
+  
+  # Retention policy (days)
+  retention:
+    profiles: 30
+    extractions: 7
+    logs: 90

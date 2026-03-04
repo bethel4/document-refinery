@@ -1,0 +1,50 @@
+22 Import tax expenditure report: FY 2018/19 — 2020/21
+
+Note: ‘This report’ refers to our headline figures assuming no double-counting of shipments across customs IT systems.
+‘This report, eCMS only’ refers to estimates obtained using only the eCMS customs system as detailed in Appendix D.
+‘ECC standard rates as benchmark’ reports the headline numbers we would have obtained had we used ECC standard
+rates as our benchmark (see text). Ministry of Finance (2022) and Ministry of Finance (2020) refer to other sources of tax
+expenditure estimates for Ethiopia (see text).
+
+ECC standard rates are the same as our benchmark rates for 86% of shipments for customs duty, 98%
+for excise, 84% for VAT and 83% for surtax. In nearly all remaining cases, our benchmark rates are
+higher. This results in much lower tax expenditure estimates using ECC standard rates. Using ECC
+standard rates, we obtain overall tax expenditures of ETB 40.0 billion (1.5% of GDP) in 2018/19, ETB
+45.3 billion (1.3% of GDP) in 2019/20 and ETB 81.4 billion (1.9% of GDP) in 2020/21. In our view,
+these estimates likely understate the true extent of tax expenditures, as ECC standard rates do not seem
+
+to reflect statutory standard rates in all cases.
+
+ECC standard rates were used in a recent Ministry of Finance report that evaluated the centralization of
+the tax exemptions process that took place in 2021 (Ministry of Finance, 2022). This report included
+figures for estimated tax expenditures of ETB 68.5 billion in 2020/21 and ETB 87.9 billion in 2021/22.
+The primary reason that the Figure for 2020/21 is lower than the estimate reported in the previous
+paragraph appears to be that the report only considered tax exemptions for a select set of customs
+
+codes.
+
+A second alternative benchmark is the definition adopted in the previous Ministry of Finance report on
+tax expenditures (Ministry of Finance, 2020), which covers the 2016/17, 2017/18 and 2018/19 tax
+years. That report found overall tax expenditures of ETB 73.9 billion in 2018/19. This is substantially
+lower than our main estimate of ETB 99.3 billion, but above our estimate adjusting for potential
+
+double counting of ETB 68.7 billion.
+
+A few methodological changes may account for the differences in these estimates. Most importantly,
+our estimates for 2018/19 use the 2017 tariff book to derive benchmark tariffs (except for goods whose
+tariff rates were unspecified in the 2017 tariff book), whereas the previous report used the 2012 tariff
+book. In reality, Ethiopian Customs appear to have gradually transitioned from the 2012 to the 2017
+tariff book over the course of the 2018/19 tax year. An additional source of discrepancies is likely to be
+
+the use of different vintages of ECC data, as these data are subject to retrospective revisions.
+
+ 
+
+4.2 Customs duty
+
+Tax expenditures in the form of forgone customs duties were ETB 38.9 billion in FY
+
+2020/21. This represents a 67% increase in nominal terms relative to FY 2019/20 when customs
+
+© Ministry of Finance, Ethiopia
+

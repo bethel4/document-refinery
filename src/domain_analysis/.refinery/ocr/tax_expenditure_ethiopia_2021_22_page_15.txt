@@ -1,0 +1,39 @@
+15 Import tax expenditure report: FY 2018/19 — 2020/21
+
+3.3 Data
+
+This report uses shipment-level microdata from the Ethiopian Customs Commission at the
+eight-digit HS level from FY 2018/19 to FY 2020/21. During this period, the Ethiopian
+Customs Commission transitioned from the Automated System for Customs Data
+(ASYCUDA++) to the electronic Customs Management System (eCMS). The data were
+
+accessed from these two systems and merged together.
+The data contain shipment-level information on:
+
+= importer details;
+
+= Harmonised System (HS) code with description;
+= Customs Procedure (CP) code with description;
+= CIF value of imports (in ETB);
+
+= customs duty rate;
+
+= customs duty paid;
+
+= excise duties paid;
+
+= WAT paid;
+
+= surtax paid.
+
+Due to the transition between the two customs IT systems, some shipments may be recorded
+twice in our merged data set (once in the data from each system). As a result, the tax
+expenditures estimated in this report could be overestimated by up to ETB 30.6 billion in FY
+2018/19 and up to ETB 1.9 billion in FY 2019/20 (FY 2020/21 estimates are unaffected). This is
+important for the interpretation of our FY 2018/19 results, as well as for the interpretations of
+trends in the main estimates, especially changes between FY 2018/19 and FY 2019/20. This
+
+issue is discussed in detail in Appendix D.
+
+© Ministry of Finance, Ethiopia
+

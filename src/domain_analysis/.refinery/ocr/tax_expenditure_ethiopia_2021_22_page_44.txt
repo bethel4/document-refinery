@@ -1,0 +1,46 @@
+44 \|mport tax expenditure report: FY 2018/19 — 2020/21
+Figure A.1. Negative tax expenditures when the actual rate is not imposed as a lower bound,
+FY 2018/19 to FY 2020/21
+
+Customs Excise VAT Surtax
+0.0 | i ll aa
+
+ETB billion
+th
+
+-3.0
+
+m@ 2018/19 m 2019/20 m@ 2020/21
+
+Note: Each bar represents the sum of all ‘negative tax expenditures’ in that tax year, where the actual tax
+rate charged exceeds the tax rate under the benchmark system if the actual rate is not imposed as a lower
+bound for the benchmark rate. Includes indirect effects of tax expenditures as in the main text. Assumes no
+duplicate reporting of transactions across customs IT systems (see Appendix D).
+
+Source: Authors’ calculations using data from the Ministry of Revenues.
+
+B. Details on the calculation of indirect
+effects of tax expenditures
+
+The indirect effect of customs duty expenditures is given by
+[Ef = (Pe — TH ©) rbe C1Fit + (2° — TH °\rpY Cl Fit
+indirect effect of customs exp. throughexcise indirect effect of customs exp. through VAT
+
++ (ci Tit Tit Vr? SCIF it + (x?! Tit — Tit °\cRe Th CIF it
+
+indirect effect of customs exp. through surtax indirect effect of customs exp. through excise and VAT
+
++ (2° ~ Tit °\rpY th SCIF it + (2° ~ Tit °\pe th SCIFit
+indirect eff. of customs exp. through VAT and surtax indirect eff. of customs exp. through excise and surtax
+
+bc
++ (rio — TH °\rp! The th SCIFit
+
+indirect effect of customs exp. through excise, VAT and surtax
+
+All variables are defined as in Section 3.2 in the main text. We group the last four terms in this
+
+sum together as ‘higher-order effects’, as they are generally quite small.
+
+© Ministry of Finance, Ethiopia
+

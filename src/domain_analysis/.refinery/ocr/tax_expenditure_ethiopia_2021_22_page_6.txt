@@ -1,0 +1,44 @@
+6 Import tax expenditure report: FY 2018/19 — 2020/21
+
+1. Introduction
+
+This report provides estimates of federal import tax expenditures during fiscal years
+2018/19, 2019/20 and 2020/21. The report is based on shipment-level microdata on customs
+duty, excise duty, VAT and surtax collections on imports from the Ethiopian Customs
+Commission.' It starts by defining a benchmark tax system and then compares actual collections
+with estimated collections under the benchmark tax system for each of the tax types and each
+shipment. Shipment-level differences between estimated benchmark collections and actual
+collections are aggregated to provide annual estimates overall and by various categories of
+
+goods, services and expenditures.
+
+The report focuses on import taxes and does not report expenditures for other types of
+taxes. Exemptions and various other concessions that constitute tax expenditures exist for
+domestic direct taxes and domestic indirect taxes as well. However, the transaction-level
+microdata necessary for reliably estimating tax expenditures is currently readily available only
+
+for import taxes. Future iterations of this report should aim to incorporate all tax expenditures.
+
+The current report on tax expenditures builds on previous estimates of tax expenditures in
+Ethiopia. The most recent tax expenditure report on import taxes was produced in April 2020
+and covered fiscal years 2016/17, 2017/18 and 2018/19 (Ministry of Finance, 2020). It found
+that the estimated revenue forgone on imports as a share of GDP was 2.74% in FY 2018/19. (At
+3.7%, our main estimate for FY 2018/19 tax expenditures is somewhat larger; however, it is
+likely that this estimate is inflated by up to 1.1 percentage points as a result of double-counting
+
+of shipments arising from the transition between two customs IT systems in that fiscal year.)
+
+The rest of this report proceeds as follows. Section 2 provides an overview of the policy
+rationales for and the drawbacks of tax expenditures. Section 3 describes how tax expenditures
+are defined and estimated. Section 4 provides estimates of tax expenditures by tax type. Section
+
+5 concludes and offers recommendations.
+
+In addition to customs duty, excise, VAT and surtax, a 3% flat rate (on the CIF value of imports) of withholding
+tax is collected on imported items. This is not a final tax by itself but is creditable against the income tax liability
+of importers later. So, for the purposes of this report, we ignore withholding tax on imports entirely.
+
+For details, see Appendix D.
+
+© Ministry of Finance, Ethiopia
+

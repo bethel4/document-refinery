@@ -1,0 +1,46 @@
+4 Import tax expenditure report: FY 2018/19 — 2020/21
+
+Executive summary
+
+Understanding, estimating and reporting on tax expenditures is an important exercise in
+public financial management. Tax expenditures — cases in which the tax liability of an
+individual, a firm or other entity is reduced below the liability under a benchmark tax system —
+use limited public financial resources. Ethiopia, like other countries, incurs significant tax
+expenditures each year. To understand whether these tax expenditures serve the government’s
+
+development agenda, tax expenditures must first be measured.
+
+This report uses shipment-level microdata from the Ethiopian Customs Commission to
+estimate import tax expenditures for fiscal years 2018/19, 2019/20 and 2020/21. It covers the
+four taxes levied on imports: customs duty, excise duty, VAT and surtax. (It does not cover
+
+withholding tax, which is not designed as a final tax.)
+
+Where appropriate, exemptions and rate reductions are considered separately, and
+
+estimates are presented for different categories of commodities. In addition to estimating
+overall tax expenditures and tax expenditures for each tax type, it is useful to understand the
+source of tax expenditures. Estimates by categories of commodities can help the government
+
+assess whether expenditures are in line with development objectives.
+
+The report uses the revenue forgone method and does not attempt to incorporate the
+behavioural or compliance effects of tax expenditures. This implicitly assumes that if all tax
+expenditures were eliminated, the government would collect the full difference between what is
+currently collected and what would be collected under the benchmark system. This, however,
+need not be the case, as imports are potentially responsive to tax rates both on the real and the
+compliance margin. Furthermore, import tax expenditures likely lead to higher collection of
+domestic taxes, and especially domestic VAT. Thus, the cost of tax expenditures calculated in
+
+this report likely overstates their true fiscal cost.
+
+Import tax expenditures were ETB 120.7 billion in FY 2020/21, which represented around
+2.8% of GDP, between ETB 76.4 billion and ETB 78.3 billion (or 2.3% of GDP) in FY
+2019/20, and between ETB 68.7 billion and ETB 99.3 billion (2.6% to 3.7% of GDP) in FY
+2018/19. Of total import tax expenditures in FY 2020/21, VAT expenditures constituted the
+largest share at 37% of the total (ETB 44.6 billion), followed by customs duty expenditures at
+32% (ETB 38.9 billion), excise tax expenditures at around 16% (ETB 18.8 billion) and surtax
+expenditures at 15% (ETB 18.4 billion). On average, tax expenditures were worth 21.3% of the
+
+© Ministry of Finance, Ethiopia
+

@@ -1,0 +1,49 @@
+13 Import tax expenditure report: FY 2018/19 — 2020/21
+
+The benchmark tax system for surtax on imports is defined as follows:
+
+= The unit of taxation for surtax on imports is the importer, the business or the individual.
+
+= The surtax base is the sum of the CIF value of imports, customs duty payable, excise tax
+payable and VAT payable.
+
+= The benchmark surtax rate for imports as stipulated in Council of Ministers Regulation
+No. 133/2007 is 10%.
+
+" The regulation exempts certain imports such as fertilisers, petroleum and lubricants,
+motor vehicles for freight and passengers and special-purpose motor vehicles, aircraft
+and spacecraft, and all capital and investment goods from the payment of surtax. Goods
+exempted as per Regulation No. 133/2007 and in subsequent reforms are not considered
+tax expenditures, except for the exemption for capital and investment goods.
+
+=  Surtax-free privileges for international organisations and their foreign personnel, under
+the Vienna Conventions, are part of the benchmark system. Imports by diplomats,
+consular officers, and their immediate family members are exempt from all surtax.
+
+=  Surtax-free privileges for international aid organisations outside of the UN system (e.g.
+USAID, SIDA) are considered tax expenditures.
+
+3.2 Estimating tax expenditures
+
+The overall tax expenditure for a shipment is the difference between the tax that should have
+been paid had the benchmark tax system been applied and the actual tax collected. One
+complication in the Ethiopian import tax system is that customs duty, excise tax, VAT and
+surtax are charged sequentially, so tax expenditures earlier in the sequence affect the tax base for
+taxes later in the sequence. This means that simply comparing actual tax collected under the
+benchmark tax system with actual collection for each tax can be misleading; even if tax rates are
+the same as under the benchmark system for a given tax, the actual amount collected can be
+smaller than under the benchmark system because reduced rates or exemptions earlier in the
+
+sequence of taxes have led to a lower tax base.
+
+For the main estimates in this report, such indirect effects of tax expenditures are counted as
+expenditures on the origin tax even though they affect the collection of other taxes. (Results
+when indirect effects are counted as part of expenditures on the tax whose collection is affected
+
+are reported in Appendix C.)
+Customs duty tax expenditures are given by
+
+TES, = (tho — 8°) CIFi, + [EG
+
+© Ministry of Finance, Ethiopia
+

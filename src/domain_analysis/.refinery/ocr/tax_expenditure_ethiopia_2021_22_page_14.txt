@@ -1,0 +1,43 @@
+14 Import tax expenditure report: FY 2018/19 — 2020/21
+
+where TP © and T/4° are, respectively, the customs duty rate in the benchmark system for shipment
+i in fiscal year t and the rate actually charged on shipment i in fiscal year t. CIF;, is, as above,
+the cost, insurance and freight of imports of shipment i in fiscal year t (the tax base for customs
+duty). [Ej is the indirect effect of customs duty exemptions or reduced rates on the collection of
+other import taxes for shipment i in fiscal year t. For details on the calculation of [Ej., see
+
+Appendix B.
+
+Customs duty tax expenditures due to exemptions arise where the benchmark duty rate T? ix is
+positive, but the actual rate charged t/;° is zero. Customs duty tax expenditures due to reduced
+
+rates arise when the actual rate charged t/;° is non-zero but smaller than the benchmark duty rate
+bc
+
+Tit
+Similarly, excise tax expenditures are computed as
+
+TES = (ti? — tH) + th CIF, + LES
+
+where variables with e superscripts for excise are defined analogously to those with c
+superscripts for customs. Note that the tax base for excise tax is (1 + T#°)CIFi,, i.e. the import
+
+value including customs duty. Again, details on the calculation of JE, are given in Appendix B.
+For VAT, the tax expenditure is computed analogously as
+ER = (ci? — cH’). + 18°) + cH) CIF, + LER
+
+where variables with v superscripts for VAT are again defined analogously,
+(1 + t7°)(1 + T°) CI Fiz is the tax base for VAT (import value including customs duty and
+
+excise tax), and details on the calculation of JE}, are given in Appendix B.
+Finally, for surtax, the tax expenditure is
+Ex = (ci — tH )(1 + 18") + 89) (1 + TEC Fit
+
+where variables with s superscripts for surtax are again defined analogously and
+(14+ 77")(1 + t2°)(1 + tH°) CIF; is the tax base for surtax (import value including customs
+duty, excise and VAT). There are no indirect effects of surtax on other taxes because it is the last
+
+tax in the import tax sequence.
+
+© Ministry of Finance, Ethiopia
+

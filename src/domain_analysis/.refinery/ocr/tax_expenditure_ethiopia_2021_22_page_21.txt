@@ -1,0 +1,57 @@
+21 Import tax expenditure report: FY 2018/19 — 2020/21
+
+Overall estimated tax expenditures are somewhat higher than, but in line with previous
+estimates. Differences appear to arise primarily from differences in the definition of the
+
+benchmark tax system. Details are given in Box 4.1 below.
+
+ 
+
+Box 4.1. Tax expenditures estimated using other methods
+
+Alternative methods of estimating tax expenditures differ primarily in the definition of the benchmark
+tax system. In the context of Ethiopian import tax expenditures, two alternatives to our approach are
+worth discussing. The first is to use standard rates as assessed by the Ethiopian Customs Commission
+(ECC) as the benchmark tax system, which can be calculated from theoretical collection amounts that
+are provided in the ECC customs microdata; this was done in a recent Ministry of Finance report
+(Ministry of Finance, 2022). The second is the definition adopted by the Ministry of Finance’s
+previous report on import tax expenditures in Ethiopia for 2018/19 (Ministry of Finance, 2020).
+
+Table 4.4. Different estimates of total tax expenditures (in ETB billions)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+2018/19 2019/20 2020/21
+This report 99.3 78.3 120.7
+This report, 68.7 76.4 120.7
+eCMS only
+ECC standard 40.0 45.3 81.4
+rates as
+benchmark
+Ministry of 68.5
+Finance (2022)
+Ministry of 73.9
+Finance (2020)
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+© Ministry of Finance, Ethiopia
+

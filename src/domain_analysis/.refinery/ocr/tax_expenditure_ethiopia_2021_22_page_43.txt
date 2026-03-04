@@ -1,0 +1,35 @@
+43 Import tax expenditure report: FY 2018/19 — 2020/21
+
+Appendices
+
+A. Negative tax expenditures
+
+In the main text of this report, we study positive tax expenditures — cases in which an importer is
+charged at a lower (possibly zero) customs duty/tax rate than the rate in the benchmark tax
+system. However, for a small minority of shipments in our data, we observe the opposite: a
+higher customs duty or tax rate being charged than under the benchmark tax system. This can
+arise for a variety of reasons, including ad hoc increases in import tax rates, the application of
+
+the wrong tax rate by the Ethiopian Customs Commission, or recording errors in the data.
+
+For the main estimates in this report, we rule out negative tax expenditures by assumption:
+actual applied tax rates that are higher than the standard rates in the relevant proclamation are
+considered part of the benchmark tax system. In other words, we impose the actually observed
+tax rate as a lower bound for the benchmark rate. In this appendix, we briefly consider the
+
+negative tax expenditures that would arise in the absence of this assumption.
+
+As shown in Figure A.1, negative tax expenditures are generally very small, except for customs
+duty expenditures in FY 2018/19 and FY 2019/20, when they were ETB —1.2 billion and
+
+ETB -2.6 billion, respectively. These negative customs duty expenditures are likely a by-product
+of the introduction of the HS 2017 tariff book in 2018, which changed customs duty rates for
+certain HS codes. The Ethiopia Customs Commission appears to have continued to apply the
+previous customs duty rates (1.e. the HS 2012 tariff book) in some cases even after the
+introduction of HS 2017, giving rise to negative tax expenditures when the new HS 2017 duty
+rate was lower than the HS 2012 rate. Nevertheless, these issues are minor relative to the overall
+
+level of tax expenditures.
+
+© Ministry of Finance, Ethiopia
+

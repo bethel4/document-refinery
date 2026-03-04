@@ -1,0 +1,141 @@
+document_categories:
+  high_complexity:
+    confidence_threshold: 0.6
+    criteria:
+      avg_chars_per_page_min: 1766.7346774193547
+      detected_table_count_min: 235.0
+      image_area_ratio_min: 0.00043551567535401244
+      x_cluster_count_min: 3
+    description: Complex documents with rich layout and content
+    recommended_strategy: vision
+  moderate_complexity:
+    confidence_threshold: 0.7
+    criteria:
+      avg_chars_per_page_max: 1766.7346774193547
+      avg_chars_per_page_min: 1693.4897849462366
+      detected_table_count_max: 235.0
+      image_area_ratio_max: 0.00043551567535401244
+      x_cluster_count_max: 3
+    description: Documents with moderate layout complexity
+    recommended_strategy: layout
+  simple_text:
+    confidence_threshold: 0.8
+    criteria:
+      avg_chars_per_page_max: 1693.4897849462366
+      detected_table_count_max: 170.5
+      image_area_ratio_max: 3.078526070521643e-05
+      x_cluster_count_max: 2
+    description: Simple text documents with low complexity
+    recommended_strategy: fast_text
+escalation_rules:
+  confidence_escalation_threshold: 0.7
+  fallback_to_manual_after: 9
+  max_attempts_per_strategy: 3
+metadata:
+  analyzer_version: '1.0'
+  corpus_size: 0
+  generated_at: '2026-03-03T23:21:22.710141'
+strategy_priorities:
+  fast_text: 1
+  layout: 2
+  vision: 3
+thresholds:
+  avg_chars_per_page:
+    max: 1826.5
+    mean: 1303.6909451046972
+    min: 1.2842105263157895
+    p10: 492.94894736842116
+    p25: 1230.446052631579
+    p50: 1693.4897849462366
+    p75: 1766.7346774193547
+    p90: 1802.5938709677419
+    p95: 1814.546935483871
+    std: 754.8452806909136
+  char_variance_across_pages:
+    max: 93.99999999999999
+    mean: 23.72025679612677
+    min: 0.14062883813987817
+    p10: 0.16486586821109372
+    p25: 0.20122141331791707
+    p50: 0.37019917318360485
+    p75: 23.889234555992456
+    p90: 65.955693822397
+    p95: 79.97784691119844
+    std: 40.57627327806704
+  detected_table_count:
+    max: 449.0
+    mean: 230.0
+    min: 1.0
+    p10: 68.80000000000001
+    p25: 170.5
+    p50: 235.0
+    p75: 294.5
+    p90: 387.20000000000005
+    p95: 418.0999999999999
+    std: 158.5717503214239
+  file_size_bytes:
+    max: 35828477.0
+    mean: 15052492.0
+    min: 999665.0
+    p10: 1563893.9000000001
+    p25: 2410237.25
+    p50: 11690913.0
+    p75: 24333167.75
+    p90: 31230353.300000004
+    p95: 33529415.149999995
+    std: 14203637.016879568
+  image_area_ratio:
+    max: 0.0010040552786852995
+    mean: 0.00046890080875777246
+    min: 5.166056377656585e-07
+    p10: 1.262406766474597e-05
+    p25: 3.078526070521643e-05
+    p50: 0.00043551567535401244
+    p75: 0.0008736312234065685
+    p90: 0.0009518856565738071
+    p95: 0.0009779704676295532
+    std: 0.0004526273368113159
+  tables_per_page:
+    max: 7.483333333333333
+    mean: 3.2112337294850026
+    min: 0.010526315789473684
+    p10: 0.4776910016977929
+    p25: 1.1784380305602715
+    p50: 2.675537634408602
+    p75: 4.708333333333333
+    p90: 6.373333333333334
+    p95: 6.928333333333332
+    std: 2.8072996904035317
+  total_chars:
+    max: 270756.0
+    mean: 119719.5
+    min: 122.0
+    p10: 29608.400000000005
+    p25: 73838.0
+    p50: 104000.0
+    p75: 149881.5
+    p90: 222406.2
+    p95: 246581.09999999995
+    std: 97046.75148993911
+  total_pages:
+    max: 155.0
+    mean: 92.5
+    min: 60.0
+    p10: 60.0
+    p25: 60.0
+    p50: 77.5
+    p75: 110.0
+    p90: 137.0
+    p95: 145.99999999999997
+    std: 38.81043674065006
+  x_cluster_count:
+    max: 5.0
+    mean: 3.0
+    min: 1.0
+    p10: 1.3
+    p25: 1.75
+    p50: 3.0
+    p75: 4.25
+    p90: 4.7
+    p95: 4.85
+    std: 1.5811388300841898
