@@ -1,12 +1,12 @@
 {
-  "document_id": "fta_performance_survey_final_report_2022_1772624239",
+  "document_id": "fta_performance_survey_final_report_2022_1772630745",
   "strategy_used": "layout",
   "pages": [
     {
       "page_num": 1,
       "text": "Mock structured text for page 1 with layout analysis.",
       "text_length": 53,
-      "confidence": 0.8369820479717033,
+      "confidence": 0.7900051995038374,
       "tables": [],
       "extraction_method": "mock_layout",
       "page_metadata": {
@@ -22,11 +22,11 @@
       "page_num": 2,
       "text": "Mock structured text for page 2 with layout analysis.",
       "text_length": 53,
-      "confidence": 0.8108395622396849,
+      "confidence": 0.9275298447385536,
       "tables": [
         {
           "table_id": 1,
-          "rows": 6,
+          "rows": 14,
           "columns": 8,
           "headers": [
             "Column 0",
@@ -39,28 +39,26 @@
               "Data 0-0",
               "Data 0-1",
               "Data 0-2",
-              "Data 0-3",
-              "Data 0-4",
-              "Data 0-5"
+              "Data 0-3"
             ],
             [
               "Data 1-0",
               "Data 1-1",
               "Data 1-2",
-              "Data 1-3",
-              "Data 1-4",
-              "Data 1-5"
+              "Data 1-3"
             ],
             [
               "Data 2-0",
               "Data 2-1",
-              "Data 2-2",
-              "Data 2-3"
+              "Data 2-2"
             ],
             [
               "Data 3-0",
               "Data 3-1",
-              "Data 3-2"
+              "Data 3-2",
+              "Data 3-3",
+              "Data 3-4",
+              "Data 3-5"
             ],
             [
               "Data 4-0",
@@ -96,7 +94,7 @@
       "page_num": 3,
       "text": "Mock structured text for page 3 with layout analysis.",
       "text_length": 53,
-      "confidence": 0.893980881558531,
+      "confidence": 0.8410917706261056,
       "tables": [],
       "extraction_method": "mock_layout",
       "page_metadata": {
@@ -112,43 +110,37 @@
       "page_num": 4,
       "text": "Mock structured text for page 4 with layout analysis.",
       "text_length": 53,
-      "confidence": 0.7178007095429285,
+      "confidence": 0.9362559719886154,
       "tables": [
         {
           "table_id": 1,
-          "rows": 15,
+          "rows": 12,
           "columns": 4,
           "headers": [
             "Column 0",
             "Column 1",
             "Column 2",
             "Column 3",
-            "Column 4",
-            "Column 5"
+            "Column 4"
           ],
           "data": [
             [
               "Data 0-0",
               "Data 0-1",
               "Data 0-2",
-              "Data 0-3",
-              "Data 0-4"
+              "Data 0-3"
             ],
             [
               "Data 1-0",
               "Data 1-1",
               "Data 1-2",
               "Data 1-3",
-              "Data 1-4",
-              "Data 1-5"
+              "Data 1-4"
             ],
             [
               "Data 2-0",
               "Data 2-1",
-              "Data 2-2",
-              "Data 2-3",
-              "Data 2-4",
-              "Data 2-5"
+              "Data 2-2"
             ],
             [
               "Data 3-0",
@@ -161,7 +153,10 @@
             [
               "Data 4-0",
               "Data 4-1",
-              "Data 4-2"
+              "Data 4-2",
+              "Data 4-3",
+              "Data 4-4",
+              "Data 4-5"
             ],
             [
               "Data 5-0",
@@ -174,7 +169,8 @@
               "Data 6-1",
               "Data 6-2",
               "Data 6-3",
-              "Data 6-4"
+              "Data 6-4",
+              "Data 6-5"
             ],
             [
               "Data 7-0",
@@ -185,17 +181,7 @@
             [
               "Data 8-0",
               "Data 8-1",
-              "Data 8-2",
-              "Data 8-3",
-              "Data 8-4",
-              "Data 8-5"
-            ],
-            [
-              "Data 9-0",
-              "Data 9-1",
-              "Data 9-2",
-              "Data 9-3",
-              "Data 9-4"
+              "Data 8-2"
             ]
           ],
           "confidence": 0.85,
@@ -216,7 +202,7 @@
       "page_num": 5,
       "text": "Mock structured text for page 5 with layout analysis.",
       "text_length": 53,
-      "confidence": 0.7056387712254578,
+      "confidence": 0.7165408136079778,
       "tables": [],
       "extraction_method": "mock_layout",
       "page_metadata": {
@@ -233,7 +219,7 @@
     "total_pages": 5,
     "total_text_length": 265,
     "total_tables": 2,
-    "average_confidence": 0.7930483945076612,
+    "average_confidence": 0.842284720093018,
     "extraction_cost": "medium",
     "processing_time_seconds": 1.5,
     "docling_version": "mock"
@@ -242,7 +228,7 @@
     "recommended_strategy": "layout",
     "actual_strategy": "layout",
     "escalated": false,
-    "average_confidence": 0.7930483945076612,
+    "average_confidence": 0.842284720093018,
     "confidence_threshold": 0.7,
     "pages_processed": 5
   },

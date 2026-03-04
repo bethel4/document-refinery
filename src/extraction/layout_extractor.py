@@ -16,8 +16,9 @@ logger = logging.getLogger(__name__)
 try:
     from docling.document_converter import DocumentConverter
     DOCLING_AVAILABLE = True
-except ImportError:
-    logger.warning("Docling not installed. Layout extractor will use mock implementation.")
+    logger.info("Docling imported successfully")
+except ImportError as e:
+    logger.warning(f"Docling import failed: {e}. Layout extractor will use mock implementation.")
     DocumentConverter = None
     DOCLING_AVAILABLE = False
 

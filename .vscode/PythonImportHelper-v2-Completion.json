@@ -1,0 +1,2492 @@
+[
+    {
+        "label": "runpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "site",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "os.path",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os.path",
+        "description": "os.path",
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "ArgumentParser",
+        "importPath": "argparse",
+        "description": "argparse",
+        "isExtraImport": true,
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "Container",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "Iterable",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "Container",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "Iterable",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TextIO",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "cast",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "pdfminer",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pdfminer",
+        "description": "pdfminer",
+        "detail": "pdfminer",
+        "documentation": {}
+    },
+    {
+        "label": "PDFDocument",
+        "importPath": "pdfminer.pdfdocument",
+        "description": "pdfminer.pdfdocument",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfdocument",
+        "documentation": {}
+    },
+    {
+        "label": "PDFNoOutlines",
+        "importPath": "pdfminer.pdfdocument",
+        "description": "pdfminer.pdfdocument",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfdocument",
+        "documentation": {}
+    },
+    {
+        "label": "PDFXRefFallback",
+        "importPath": "pdfminer.pdfdocument",
+        "description": "pdfminer.pdfdocument",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfdocument",
+        "documentation": {}
+    },
+    {
+        "label": "PDFIOError",
+        "importPath": "pdfminer.pdfexceptions",
+        "description": "pdfminer.pdfexceptions",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfexceptions",
+        "documentation": {}
+    },
+    {
+        "label": "PDFObjectNotFound",
+        "importPath": "pdfminer.pdfexceptions",
+        "description": "pdfminer.pdfexceptions",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfexceptions",
+        "documentation": {}
+    },
+    {
+        "label": "PDFTypeError",
+        "importPath": "pdfminer.pdfexceptions",
+        "description": "pdfminer.pdfexceptions",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfexceptions",
+        "documentation": {}
+    },
+    {
+        "label": "PDFValueError",
+        "importPath": "pdfminer.pdfexceptions",
+        "description": "pdfminer.pdfexceptions",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfexceptions",
+        "documentation": {}
+    },
+    {
+        "label": "PDFValueError",
+        "importPath": "pdfminer.pdfexceptions",
+        "description": "pdfminer.pdfexceptions",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfexceptions",
+        "documentation": {}
+    },
+    {
+        "label": "PDFPage",
+        "importPath": "pdfminer.pdfpage",
+        "description": "pdfminer.pdfpage",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfpage",
+        "documentation": {}
+    },
+    {
+        "label": "PDFParser",
+        "importPath": "pdfminer.pdfparser",
+        "description": "pdfminer.pdfparser",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdfparser",
+        "documentation": {}
+    },
+    {
+        "label": "PDFObjRef",
+        "importPath": "pdfminer.pdftypes",
+        "description": "pdfminer.pdftypes",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdftypes",
+        "documentation": {}
+    },
+    {
+        "label": "PDFStream",
+        "importPath": "pdfminer.pdftypes",
+        "description": "pdfminer.pdftypes",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdftypes",
+        "documentation": {}
+    },
+    {
+        "label": "resolve1",
+        "importPath": "pdfminer.pdftypes",
+        "description": "pdfminer.pdftypes",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdftypes",
+        "documentation": {}
+    },
+    {
+        "label": "stream_value",
+        "importPath": "pdfminer.pdftypes",
+        "description": "pdfminer.pdftypes",
+        "isExtraImport": true,
+        "detail": "pdfminer.pdftypes",
+        "documentation": {}
+    },
+    {
+        "label": "LIT",
+        "importPath": "pdfminer.psparser",
+        "description": "pdfminer.psparser",
+        "isExtraImport": true,
+        "detail": "pdfminer.psparser",
+        "documentation": {}
+    },
+    {
+        "label": "PSKeyword",
+        "importPath": "pdfminer.psparser",
+        "description": "pdfminer.psparser",
+        "isExtraImport": true,
+        "detail": "pdfminer.psparser",
+        "documentation": {}
+    },
+    {
+        "label": "PSLiteral",
+        "importPath": "pdfminer.psparser",
+        "description": "pdfminer.psparser",
+        "isExtraImport": true,
+        "detail": "pdfminer.psparser",
+        "documentation": {}
+    },
+    {
+        "label": "isnumber",
+        "importPath": "pdfminer.utils",
+        "description": "pdfminer.utils",
+        "isExtraImport": true,
+        "detail": "pdfminer.utils",
+        "documentation": {}
+    },
+    {
+        "label": "AnyIO",
+        "importPath": "pdfminer.utils",
+        "description": "pdfminer.utils",
+        "isExtraImport": true,
+        "detail": "pdfminer.utils",
+        "documentation": {}
+    },
+    {
+        "label": "pdfminer.high_level",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pdfminer.high_level",
+        "description": "pdfminer.high_level",
+        "detail": "pdfminer.high_level",
+        "documentation": {}
+    },
+    {
+        "label": "LAParams",
+        "importPath": "pdfminer.layout",
+        "description": "pdfminer.layout",
+        "isExtraImport": true,
+        "detail": "pdfminer.layout",
+        "documentation": {}
+    },
+    {
+        "label": "BadZipFile",
+        "importPath": "zipfile",
+        "description": "zipfile",
+        "isExtraImport": true,
+        "detail": "zipfile",
+        "documentation": {}
+    },
+    {
+        "label": "ZipFile",
+        "importPath": "zipfile",
+        "description": "zipfile",
+        "isExtraImport": true,
+        "detail": "zipfile",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "asdict",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "CorpusAnalyzer",
+        "importPath": "src.domain_analysis.calibration.corpus_analyzer",
+        "description": "src.domain_analysis.calibration.corpus_analyzer",
+        "isExtraImport": true,
+        "detail": "src.domain_analysis.calibration.corpus_analyzer",
+        "documentation": {}
+    },
+    {
+        "label": "TriageClassifier",
+        "importPath": "src.domain_analysis.triage.document_classifier",
+        "description": "src.domain_analysis.triage.document_classifier",
+        "isExtraImport": true,
+        "detail": "src.domain_analysis.triage.document_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "TriageClassifier",
+        "importPath": "src.domain_analysis.triage.document_classifier",
+        "description": "src.domain_analysis.triage.document_classifier",
+        "isExtraImport": true,
+        "detail": "src.domain_analysis.triage.document_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "TriageClassifier",
+        "importPath": "src.domain_analysis.triage.document_classifier",
+        "description": "src.domain_analysis.triage.document_classifier",
+        "isExtraImport": true,
+        "detail": "src.domain_analysis.triage.document_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "TriageClassifier",
+        "importPath": "src.domain_analysis.triage.document_classifier",
+        "description": "src.domain_analysis.triage.document_classifier",
+        "isExtraImport": true,
+        "detail": "src.domain_analysis.triage.document_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "TriageClassifier",
+        "importPath": "src.domain_analysis.triage.document_classifier",
+        "description": "src.domain_analysis.triage.document_classifier",
+        "isExtraImport": true,
+        "detail": "src.domain_analysis.triage.document_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "TriageClassifier",
+        "importPath": "src.domain_analysis.triage.document_classifier",
+        "description": "src.domain_analysis.triage.document_classifier",
+        "isExtraImport": true,
+        "detail": "src.domain_analysis.triage.document_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "yaml",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "yaml",
+        "description": "yaml",
+        "detail": "yaml",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentProfile",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "OriginType",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "LayoutComplexity",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentCategory",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionStrategy",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentProfile",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "OriginType",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentCategory",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionStrategy",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentProfile",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "OriginType",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentCategory",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionStrategy",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentProfile",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "OriginType",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentCategory",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionStrategy",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DoclingDocument",
+        "importPath": "docling",
+        "description": "docling",
+        "isExtraImport": true,
+        "detail": "docling",
+        "documentation": {}
+    },
+    {
+        "label": "convert_from_path",
+        "importPath": "pdf2image",
+        "description": "pdf2image",
+        "isExtraImport": true,
+        "detail": "pdf2image",
+        "documentation": {}
+    },
+    {
+        "label": "pytesseract",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytesseract",
+        "description": "pytesseract",
+        "detail": "pytesseract",
+        "documentation": {}
+    },
+    {
+        "label": "pdfplumber",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pdfplumber",
+        "description": "pdfplumber",
+        "detail": "pdfplumber",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "ThreadPoolExecutor",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "as_completed",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "ThreadPoolExecutor",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "as_completed",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionRouter",
+        "importPath": "src.extraction.extraction_router",
+        "description": "src.extraction.extraction_router",
+        "isExtraImport": true,
+        "detail": "src.extraction.extraction_router",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionRouter",
+        "importPath": "src.extraction.extraction_router",
+        "description": "src.extraction.extraction_router",
+        "isExtraImport": true,
+        "detail": "src.extraction.extraction_router",
+        "documentation": {}
+    },
+    {
+        "label": "BytesIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "Mock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "MagicMock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "Mock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "Mock",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "patch",
+        "importPath": "unittest.mock",
+        "description": "unittest.mock",
+        "isExtraImport": true,
+        "detail": "unittest.mock",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractedDocument",
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "isExtraImport": true,
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "PageExtraction",
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "isExtraImport": true,
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionMethod",
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "isExtraImport": true,
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"document-refinery\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.14/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"document-refinery\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.14/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"document-refinery\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.14/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"document-refinery\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.14/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"document-refinery\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.14/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.14/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "escape",
+        "kind": 2,
+        "importPath": ".venv.bin.dumppdf",
+        "description": ".venv.bin.dumppdf",
+        "peekOfCode": "def escape(s: str | bytes) -> str:\n    us = str(s, \"latin-1\") if isinstance(s, bytes) else s\n    return ESC_PAT.sub(lambda m: f\"&#{ord(m.group(0))};\", us)\ndef dumpxml(out: TextIO, obj: object, codec: str | None = None) -> None:\n    if obj is None:\n        out.write(\"<null />\")\n        return\n    if isinstance(obj, dict):\n        out.write(f'<dict size=\"{len(obj)}\">\\n')\n        for k, v in obj.items():",
+        "detail": ".venv.bin.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "dumpxml",
+        "kind": 2,
+        "importPath": ".venv.bin.dumppdf",
+        "description": ".venv.bin.dumppdf",
+        "peekOfCode": "def dumpxml(out: TextIO, obj: object, codec: str | None = None) -> None:\n    if obj is None:\n        out.write(\"<null />\")\n        return\n    if isinstance(obj, dict):\n        out.write(f'<dict size=\"{len(obj)}\">\\n')\n        for k, v in obj.items():\n            out.write(f\"<key>{k}</key>\\n\")\n            out.write(\"<value>\")\n            dumpxml(out, v)",
+        "detail": ".venv.bin.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "dumptrailers",
+        "kind": 2,
+        "importPath": ".venv.bin.dumppdf",
+        "description": ".venv.bin.dumppdf",
+        "peekOfCode": "def dumptrailers(\n    out: TextIO,\n    doc: PDFDocument,\n    show_fallback_xref: bool = False,\n) -> None:\n    for xref in doc.xrefs:\n        if not isinstance(xref, PDFXRefFallback) or show_fallback_xref:\n            out.write(\"<trailer>\\n\")\n            dumpxml(out, xref.get_trailer())\n            out.write(\"\\n</trailer>\\n\\n\")",
+        "detail": ".venv.bin.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "dumpallobjs",
+        "kind": 2,
+        "importPath": ".venv.bin.dumppdf",
+        "description": ".venv.bin.dumppdf",
+        "peekOfCode": "def dumpallobjs(\n    out: TextIO,\n    doc: PDFDocument,\n    codec: str | None = None,\n    show_fallback_xref: bool = False,\n) -> None:\n    visited = set()\n    out.write(\"<pdf>\")\n    for xref in doc.xrefs:\n        for objid in xref.get_objids():",
+        "detail": ".venv.bin.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "dumpoutline",
+        "kind": 2,
+        "importPath": ".venv.bin.dumppdf",
+        "description": ".venv.bin.dumppdf",
+        "peekOfCode": "def dumpoutline(\n    outfp: TextIO,\n    fname: str,\n    objids: Any,\n    pagenos: Container[int],\n    password: str = \"\",\n    dumpall: bool = False,\n    codec: str | None = None,\n    extractdir: str | None = None,\n) -> None:",
+        "detail": ".venv.bin.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "extractembedded",
+        "kind": 2,
+        "importPath": ".venv.bin.dumppdf",
+        "description": ".venv.bin.dumppdf",
+        "peekOfCode": "def extractembedded(fname: str, password: str, extractdir: str) -> None:\n    def extract1(objid: int, obj: dict[str, Any]) -> None:\n        filename = os.path.basename(obj.get(\"UF\") or cast(bytes, obj.get(\"F\")).decode())\n        fileref = obj[\"EF\"].get(\"UF\") or obj[\"EF\"].get(\"F\")\n        fileobj = doc.getobj(fileref.objid)\n        if not isinstance(fileobj, PDFStream):\n            error_msg = (\n                f\"unable to process PDF: reference for {filename!r} is not a PDFStream\"\n            )\n            raise PDFValueError(error_msg)",
+        "detail": ".venv.bin.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "dumppdf",
+        "kind": 2,
+        "importPath": ".venv.bin.dumppdf",
+        "description": ".venv.bin.dumppdf",
+        "peekOfCode": "def dumppdf(\n    outfp: TextIO,\n    fname: str,\n    objids: Iterable[int],\n    pagenos: Container[int],\n    password: str = \"\",\n    dumpall: bool = False,\n    codec: str | None = None,\n    extractdir: str | None = None,\n    show_fallback_xref: bool = False,",
+        "detail": ".venv.bin.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "create_parser",
+        "kind": 2,
+        "importPath": ".venv.bin.dumppdf",
+        "description": ".venv.bin.dumppdf",
+        "peekOfCode": "def create_parser() -> ArgumentParser:\n    parser = ArgumentParser(description=__doc__, add_help=True)\n    parser.add_argument(\n        \"files\",\n        type=str,\n        default=None,\n        nargs=\"+\",\n        help=\"One or more paths to PDF files.\",\n    )\n    parser.add_argument(",
+        "detail": ".venv.bin.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": ".venv.bin.dumppdf",
+        "description": ".venv.bin.dumppdf",
+        "peekOfCode": "def main(argv: list[str] | None = None) -> None:\n    parser = create_parser()\n    args = parser.parse_args(args=argv)\n    if args.debug:\n        logging.getLogger().setLevel(logging.DEBUG)\n    objids = [int(x) for x in args.objects.split(\",\")] if args.objects else []\n    if args.page_numbers:\n        pagenos = {x - 1 for x in args.page_numbers}\n    elif args.pagenos:\n        pagenos = {int(x) - 1 for x in args.pagenos.split(\",\")}",
+        "detail": ".venv.bin.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": ".venv.bin.dumppdf",
+        "description": ".venv.bin.dumppdf",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nESC_PAT = re.compile(r'[\\000-\\037&<>()\"\\042\\047\\134\\177-\\377]')\ndef escape(s: str | bytes) -> str:\n    us = str(s, \"latin-1\") if isinstance(s, bytes) else s\n    return ESC_PAT.sub(lambda m: f\"&#{ord(m.group(0))};\", us)\ndef dumpxml(out: TextIO, obj: object, codec: str | None = None) -> None:\n    if obj is None:\n        out.write(\"<null />\")\n        return\n    if isinstance(obj, dict):",
+        "detail": ".venv.bin.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "ESC_PAT",
+        "kind": 5,
+        "importPath": ".venv.bin.dumppdf",
+        "description": ".venv.bin.dumppdf",
+        "peekOfCode": "ESC_PAT = re.compile(r'[\\000-\\037&<>()\"\\042\\047\\134\\177-\\377]')\ndef escape(s: str | bytes) -> str:\n    us = str(s, \"latin-1\") if isinstance(s, bytes) else s\n    return ESC_PAT.sub(lambda m: f\"&#{ord(m.group(0))};\", us)\ndef dumpxml(out: TextIO, obj: object, codec: str | None = None) -> None:\n    if obj is None:\n        out.write(\"<null />\")\n        return\n    if isinstance(obj, dict):\n        out.write(f'<dict size=\"{len(obj)}\">\\n')",
+        "detail": ".venv.bin.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "LITERAL_FILESPEC",
+        "kind": 5,
+        "importPath": ".venv.bin.dumppdf",
+        "description": ".venv.bin.dumppdf",
+        "peekOfCode": "LITERAL_FILESPEC = LIT(\"Filespec\")\nLITERAL_EMBEDDEDFILE = LIT(\"EmbeddedFile\")\ndef extractembedded(fname: str, password: str, extractdir: str) -> None:\n    def extract1(objid: int, obj: dict[str, Any]) -> None:\n        filename = os.path.basename(obj.get(\"UF\") or cast(bytes, obj.get(\"F\")).decode())\n        fileref = obj[\"EF\"].get(\"UF\") or obj[\"EF\"].get(\"F\")\n        fileobj = doc.getobj(fileref.objid)\n        if not isinstance(fileobj, PDFStream):\n            error_msg = (\n                f\"unable to process PDF: reference for {filename!r} is not a PDFStream\"",
+        "detail": ".venv.bin.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "LITERAL_EMBEDDEDFILE",
+        "kind": 5,
+        "importPath": ".venv.bin.dumppdf",
+        "description": ".venv.bin.dumppdf",
+        "peekOfCode": "LITERAL_EMBEDDEDFILE = LIT(\"EmbeddedFile\")\ndef extractembedded(fname: str, password: str, extractdir: str) -> None:\n    def extract1(objid: int, obj: dict[str, Any]) -> None:\n        filename = os.path.basename(obj.get(\"UF\") or cast(bytes, obj.get(\"F\")).decode())\n        fileref = obj[\"EF\"].get(\"UF\") or obj[\"EF\"].get(\"F\")\n        fileobj = doc.getobj(fileref.objid)\n        if not isinstance(fileobj, PDFStream):\n            error_msg = (\n                f\"unable to process PDF: reference for {filename!r} is not a PDFStream\"\n            )",
+        "detail": ".venv.bin.dumppdf",
+        "documentation": {}
+    },
+    {
+        "label": "float_or_disabled",
+        "kind": 2,
+        "importPath": ".venv.bin.pdf2txt",
+        "description": ".venv.bin.pdf2txt",
+        "peekOfCode": "def float_or_disabled(x: str) -> float | None:\n    if x.lower().strip() == \"disabled\":\n        return None\n    try:\n        return float(x)\n    except ValueError as err:\n        raise argparse.ArgumentTypeError(f\"invalid float value: {x}\") from err\ndef extract_text(\n    files: Iterable[str] = [],\n    outfile: str = \"-\",",
+        "detail": ".venv.bin.pdf2txt",
+        "documentation": {}
+    },
+    {
+        "label": "extract_text",
+        "kind": 2,
+        "importPath": ".venv.bin.pdf2txt",
+        "description": ".venv.bin.pdf2txt",
+        "peekOfCode": "def extract_text(\n    files: Iterable[str] = [],\n    outfile: str = \"-\",\n    laparams: LAParams | None = None,\n    output_type: str = \"text\",\n    codec: str = \"utf-8\",\n    strip_control: bool = False,\n    maxpages: int = 0,\n    page_numbers: Container[int] | None = None,\n    password: str = \"\",",
+        "detail": ".venv.bin.pdf2txt",
+        "documentation": {}
+    },
+    {
+        "label": "create_parser",
+        "kind": 2,
+        "importPath": ".venv.bin.pdf2txt",
+        "description": ".venv.bin.pdf2txt",
+        "peekOfCode": "def create_parser() -> argparse.ArgumentParser:\n    parser = argparse.ArgumentParser(description=__doc__, add_help=True)\n    parser.add_argument(\n        \"files\",\n        type=str,\n        default=None,\n        nargs=\"+\",\n        help=\"One or more paths to PDF files.\",\n    )\n    parser.add_argument(",
+        "detail": ".venv.bin.pdf2txt",
+        "documentation": {}
+    },
+    {
+        "label": "parse_args",
+        "kind": 2,
+        "importPath": ".venv.bin.pdf2txt",
+        "description": ".venv.bin.pdf2txt",
+        "peekOfCode": "def parse_args(args: list[str] | None) -> argparse.Namespace:\n    parsed_args = create_parser().parse_args(args=args)\n    # Propagate parsed layout parameters to LAParams object\n    if parsed_args.no_laparams:\n        parsed_args.laparams = None\n    else:\n        parsed_args.laparams = LAParams(\n            line_overlap=parsed_args.line_overlap,\n            char_margin=parsed_args.char_margin,\n            line_margin=parsed_args.line_margin,",
+        "detail": ".venv.bin.pdf2txt",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": ".venv.bin.pdf2txt",
+        "description": ".venv.bin.pdf2txt",
+        "peekOfCode": "def main(args: list[str] | None = None) -> int:\n    parsed_args = parse_args(args)\n    extract_text(**vars(parsed_args))\n    return 0\nif __name__ == \"__main__\":\n    sys.exit(main())",
+        "detail": ".venv.bin.pdf2txt",
+        "documentation": {}
+    },
+    {
+        "label": "OUTPUT_TYPES",
+        "kind": 5,
+        "importPath": ".venv.bin.pdf2txt",
+        "description": ".venv.bin.pdf2txt",
+        "peekOfCode": "OUTPUT_TYPES = ((\".htm\", \"html\"), (\".html\", \"html\"), (\".xml\", \"xml\"), (\".tag\", \"tag\"))\ndef float_or_disabled(x: str) -> float | None:\n    if x.lower().strip() == \"disabled\":\n        return None\n    try:\n        return float(x)\n    except ValueError as err:\n        raise argparse.ArgumentTypeError(f\"invalid float value: {x}\") from err\ndef extract_text(\n    files: Iterable[str] = [],",
+        "detail": ".venv.bin.pdf2txt",
+        "documentation": {}
+    },
+    {
+        "label": "extract_file",
+        "kind": 2,
+        "importPath": ".venv.bin.vba_extract",
+        "description": ".venv.bin.vba_extract",
+        "peekOfCode": "def extract_file(xlsm_zip, filename):\n    # Extract a single file from an Excel xlsm macro file.\n    data = xlsm_zip.read(\"xl/\" + filename)\n    # Write the data to a local file.\n    file = open(filename, \"wb\")\n    file.write(data)\n    file.close()\n# The VBA project file and project signature file we want to extract.\nvba_filename = \"vbaProject.bin\"\nvba_signature_filename = \"vbaProjectSignature.bin\"",
+        "detail": ".venv.bin.vba_extract",
+        "documentation": {}
+    },
+    {
+        "label": "vba_filename",
+        "kind": 5,
+        "importPath": ".venv.bin.vba_extract",
+        "description": ".venv.bin.vba_extract",
+        "peekOfCode": "vba_filename = \"vbaProject.bin\"\nvba_signature_filename = \"vbaProjectSignature.bin\"\n# Get the xlsm file name from the commandline.\nif len(sys.argv) > 1:\n    xlsm_file = sys.argv[1]\nelse:\n    print(\n        \"\\nUtility to extract a vbaProject.bin binary from an Excel 2007+ \"\n        \"xlsm macro file for insertion into an XlsxWriter file.\\n\"\n        \"If the macros are digitally signed, extracts also a vbaProjectSignature.bin \"",
+        "detail": ".venv.bin.vba_extract",
+        "documentation": {}
+    },
+    {
+        "label": "vba_signature_filename",
+        "kind": 5,
+        "importPath": ".venv.bin.vba_extract",
+        "description": ".venv.bin.vba_extract",
+        "peekOfCode": "vba_signature_filename = \"vbaProjectSignature.bin\"\n# Get the xlsm file name from the commandline.\nif len(sys.argv) > 1:\n    xlsm_file = sys.argv[1]\nelse:\n    print(\n        \"\\nUtility to extract a vbaProject.bin binary from an Excel 2007+ \"\n        \"xlsm macro file for insertion into an XlsxWriter file.\\n\"\n        \"If the macros are digitally signed, extracts also a vbaProjectSignature.bin \"\n        \"file.\\n\"",
+        "detail": ".venv.bin.vba_extract",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentMetrics",
+        "kind": 6,
+        "importPath": "src.domain_analysis.calibration.corpus_analyzer",
+        "description": "src.domain_analysis.calibration.corpus_analyzer",
+        "peekOfCode": "class DocumentMetrics:\n    \"\"\"Metrics for a single document in the corpus.\"\"\"\n    filename: str\n    total_pages: int\n    total_chars: int\n    avg_chars_per_page: float\n    image_area_ratio: float\n    detected_table_count: int\n    tables_per_page: float\n    x_cluster_count: int",
+        "detail": "src.domain_analysis.calibration.corpus_analyzer",
+        "documentation": {}
+    },
+    {
+        "label": "CorpusAnalyzer",
+        "kind": 6,
+        "importPath": "src.domain_analysis.calibration.corpus_analyzer",
+        "description": "src.domain_analysis.calibration.corpus_analyzer",
+        "peekOfCode": "class CorpusAnalyzer:\n    \"\"\"Analyzes PDF corpus to generate extraction rules based on statistical distributions.\"\"\"\n    def __init__(self, raw_data_dir: str, logs_dir: str, rules_dir: str):\n        self.raw_data_dir = Path(raw_data_dir)\n        self.logs_dir = Path(logs_dir)\n        self.rules_dir = Path(rules_dir)\n        self.metrics_file = self.logs_dir / \"corpus_metrics.jsonl\"\n        self.rules_file = self.rules_dir / \"extraction_rules.yaml\"\n        # Ensure directories exist\n        self.logs_dir.mkdir(parents=True, exist_ok=True)",
+        "detail": "src.domain_analysis.calibration.corpus_analyzer",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.domain_analysis.calibration.run_calibration",
+        "description": "src.domain_analysis.calibration.run_calibration",
+        "peekOfCode": "def main():\n    \"\"\"Run corpus calibration on the document refinery.\"\"\"\n    # Setup logging\n    logging.basicConfig(\n        level=logging.INFO,\n        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'\n    )\n    logger = logging.getLogger(__name__)\n    # Initialize analyzer\n    analyzer = CorpusAnalyzer(",
+        "detail": "src.domain_analysis.calibration.run_calibration",
+        "documentation": {}
+    },
+    {
+        "label": "find_pdf_files",
+        "kind": 2,
+        "importPath": "src.domain_analysis.triage.batch_triage",
+        "description": "src.domain_analysis.triage.batch_triage",
+        "peekOfCode": "def find_pdf_files(raw_dir: Path) -> List[Path]:\n    \"\"\"Find all PDF files in the raw directory.\"\"\"\n    pdf_files = []\n    if not raw_dir.exists():\n        logger.error(f\"Raw directory does not exist: {raw_dir}\")\n        return pdf_files\n    # Find all PDF files\n    for pdf_file in raw_dir.glob(\"*.pdf\"):\n        pdf_files.append(pdf_file)\n    logger.info(f\"Found {len(pdf_files)} PDF files in {raw_dir}\")",
+        "detail": "src.domain_analysis.triage.batch_triage",
+        "documentation": {}
+    },
+    {
+        "label": "process_all_pdfs",
+        "kind": 2,
+        "importPath": "src.domain_analysis.triage.batch_triage",
+        "description": "src.domain_analysis.triage.batch_triage",
+        "peekOfCode": "def process_all_pdfs(raw_dir: str = \"data/raw\", profiles_dir: str = \".refinery/profiles\"):\n    \"\"\"Process all PDFs in the raw directory.\"\"\"\n    raw_path = Path(raw_dir)\n    profiles_path = Path(profiles_dir)\n    # Create profiles directory if it doesn't exist\n    profiles_path.mkdir(parents=True, exist_ok=True)\n    # Find all PDF files\n    pdf_files = find_pdf_files(raw_path)\n    if not pdf_files:\n        logger.warning(\"No PDF files found to process\")",
+        "detail": "src.domain_analysis.triage.batch_triage",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.domain_analysis.triage.batch_triage",
+        "description": "src.domain_analysis.triage.batch_triage",
+        "peekOfCode": "logger = logging.getLogger(__name__)\ndef find_pdf_files(raw_dir: Path) -> List[Path]:\n    \"\"\"Find all PDF files in the raw directory.\"\"\"\n    pdf_files = []\n    if not raw_dir.exists():\n        logger.error(f\"Raw directory does not exist: {raw_dir}\")\n        return pdf_files\n    # Find all PDF files\n    for pdf_file in raw_dir.glob(\"*.pdf\"):\n        pdf_files.append(pdf_file)",
+        "detail": "src.domain_analysis.triage.batch_triage",
+        "documentation": {}
+    },
+    {
+        "label": "ProcessingPriority",
+        "kind": 6,
+        "importPath": "src.domain_analysis.triage.document_classifier",
+        "description": "src.domain_analysis.triage.document_classifier",
+        "peekOfCode": "class ProcessingPriority(str, Enum):\n    LOW = \"low\"\n    MEDIUM = \"medium\"\n    HIGH = \"high\"\n    CRITICAL = \"critical\"\nclass TriageClassifier:\n    \"\"\"Document triage classifier using calibrated thresholds.\"\"\"\n    def __init__(self, rules_file: str, profiles_dir: str):\n        self.rules_file = Path(rules_file)\n        self.profiles_dir = Path(profiles_dir)",
+        "detail": "src.domain_analysis.triage.document_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "TriageClassifier",
+        "kind": 6,
+        "importPath": "src.domain_analysis.triage.document_classifier",
+        "description": "src.domain_analysis.triage.document_classifier",
+        "peekOfCode": "class TriageClassifier:\n    \"\"\"Document triage classifier using calibrated thresholds.\"\"\"\n    def __init__(self, rules_file: str, profiles_dir: str):\n        self.rules_file = Path(rules_file)\n        self.profiles_dir = Path(profiles_dir)\n        self.rules = self._load_rules()\n        # Ensure profiles directory exists\n        self.profiles_dir.mkdir(parents=True, exist_ok=True)\n        self.logger = logging.getLogger(__name__)\n        # Domain keywords for classification",
+        "detail": "src.domain_analysis.triage.document_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.domain_analysis.triage.run_triage",
+        "description": "src.domain_analysis.triage.run_triage",
+        "peekOfCode": "def main():\n    \"\"\"Run document triage on a single PDF.\"\"\"\n    parser = argparse.ArgumentParser(description='Classify a PDF document')\n    parser.add_argument('pdf_path', help='Path to the PDF file to classify')\n    parser.add_argument('--rules', default='.refinery/rules/extraction_rules.yaml', \n                       help='Path to extraction rules file')\n    parser.add_argument('--profiles', default='.refinery/profiles',\n                       help='Directory to save document profiles')\n    args = parser.parse_args()\n    # Setup logging",
+        "detail": "src.domain_analysis.triage.run_triage",
+        "documentation": {}
+    },
+    {
+        "label": "pdf_folder",
+        "kind": 5,
+        "importPath": "src.domain_analysis.docling_analysis",
+        "description": "src.domain_analysis.docling_analysis",
+        "peekOfCode": "pdf_folder = Path(\"../../data/raw\")\noutput_file = Path(\"../../.refinery/logs/docling_output.txt\")\nwith open(output_file, \"w\") as log:\n    for pdf_path in pdf_folder.glob(\"*.pdf\"):\n        doc = DoclingDocument(str(pdf_path))\n        log.write(f\"Document: {pdf_path.name}\\n\")\n        log.write(f\" Pages: {len(doc.pages)}\\n\")\n        log.write(f\" Tables found: {len(doc.tables)}\\n\")\n        log.write(f\" Figures found: {len(doc.figures)}\\n\")\n        log.write(f\" Text blocks: {len(doc.blocks)}\\n\")",
+        "detail": "src.domain_analysis.docling_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "output_file",
+        "kind": 5,
+        "importPath": "src.domain_analysis.docling_analysis",
+        "description": "src.domain_analysis.docling_analysis",
+        "peekOfCode": "output_file = Path(\"../../.refinery/logs/docling_output.txt\")\nwith open(output_file, \"w\") as log:\n    for pdf_path in pdf_folder.glob(\"*.pdf\"):\n        doc = DoclingDocument(str(pdf_path))\n        log.write(f\"Document: {pdf_path.name}\\n\")\n        log.write(f\" Pages: {len(doc.pages)}\\n\")\n        log.write(f\" Tables found: {len(doc.tables)}\\n\")\n        log.write(f\" Figures found: {len(doc.figures)}\\n\")\n        log.write(f\" Text blocks: {len(doc.blocks)}\\n\")\n        log.write(\"\\n\")",
+        "detail": "src.domain_analysis.docling_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "pdf_folder",
+        "kind": 5,
+        "importPath": "src.domain_analysis.ocr_pipeline",
+        "description": "src.domain_analysis.ocr_pipeline",
+        "peekOfCode": "pdf_folder = Path(\"../../data/raw\")\n# Folder to save page images\nIMAGE_DIR = Path(\".refinery/pages\")\n# Folder to save OCR text\nOCR_DIR = Path(\".refinery/ocr\")\n# Make sure output directories exist\nos.makedirs(IMAGE_DIR, exist_ok=True)\nos.makedirs(OCR_DIR, exist_ok=True)\n# Loop over each PDF in the folder\nfor pdf_file in pdf_folder.glob(\"*.pdf\"):",
+        "detail": "src.domain_analysis.ocr_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "IMAGE_DIR",
+        "kind": 5,
+        "importPath": "src.domain_analysis.ocr_pipeline",
+        "description": "src.domain_analysis.ocr_pipeline",
+        "peekOfCode": "IMAGE_DIR = Path(\".refinery/pages\")\n# Folder to save OCR text\nOCR_DIR = Path(\".refinery/ocr\")\n# Make sure output directories exist\nos.makedirs(IMAGE_DIR, exist_ok=True)\nos.makedirs(OCR_DIR, exist_ok=True)\n# Loop over each PDF in the folder\nfor pdf_file in pdf_folder.glob(\"*.pdf\"):\n    print(f\"Processing {pdf_file.name}...\")\n    try:",
+        "detail": "src.domain_analysis.ocr_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "OCR_DIR",
+        "kind": 5,
+        "importPath": "src.domain_analysis.ocr_pipeline",
+        "description": "src.domain_analysis.ocr_pipeline",
+        "peekOfCode": "OCR_DIR = Path(\".refinery/ocr\")\n# Make sure output directories exist\nos.makedirs(IMAGE_DIR, exist_ok=True)\nos.makedirs(OCR_DIR, exist_ok=True)\n# Loop over each PDF in the folder\nfor pdf_file in pdf_folder.glob(\"*.pdf\"):\n    print(f\"Processing {pdf_file.name}...\")\n    try:\n        # Convert PDF to images\n        pages = convert_from_path(pdf_file, dpi=300)",
+        "detail": "src.domain_analysis.ocr_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "pdf_folder",
+        "kind": 5,
+        "importPath": "src.domain_analysis.pdf_analysis",
+        "description": "src.domain_analysis.pdf_analysis",
+        "peekOfCode": "pdf_folder = Path(\"../../data/raw\")  # adjust path\noutput_file = Path(\"../../.refinery/logs/pdf_analysis.txt\")\nwith open(output_file, \"w\") as log:\n    for pdf_path in pdf_folder.glob(\"*.pdf\"):\n        with pdfplumber.open(pdf_path) as pdf:\n            log.write(f\"Document: {pdf_path.name}\\n\")\n            for i, page in enumerate(pdf.pages):\n                chars = page.chars\n                char_count = len(chars)\n                bbox_areas = [ (float(c['x1'])-float(c['x0']))*(float(c['top'])-float(c['bottom'])) for c in chars ]",
+        "detail": "src.domain_analysis.pdf_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "output_file",
+        "kind": 5,
+        "importPath": "src.domain_analysis.pdf_analysis",
+        "description": "src.domain_analysis.pdf_analysis",
+        "peekOfCode": "output_file = Path(\"../../.refinery/logs/pdf_analysis.txt\")\nwith open(output_file, \"w\") as log:\n    for pdf_path in pdf_folder.glob(\"*.pdf\"):\n        with pdfplumber.open(pdf_path) as pdf:\n            log.write(f\"Document: {pdf_path.name}\\n\")\n            for i, page in enumerate(pdf.pages):\n                chars = page.chars\n                char_count = len(chars)\n                bbox_areas = [ (float(c['x1'])-float(c['x0']))*(float(c['top'])-float(c['bottom'])) for c in chars ]\n                total_bbox_area = sum(abs(a) for a in bbox_areas)",
+        "detail": "src.domain_analysis.pdf_analysis",
+        "documentation": {}
+    },
+    {
+        "label": "load_extraction_rules",
+        "kind": 2,
+        "importPath": "src.extraction.config_loader",
+        "description": "src.extraction.config_loader",
+        "peekOfCode": "def load_extraction_rules(rules_path: str) -> Dict[str, Any]:\n    \"\"\"Load extraction rules from YAML file.\"\"\"\n    try:\n        rules_file = Path(rules_path)\n        if not rules_file.exists():\n            logger.warning(f\"Extraction rules file not found: {rules_path}\")\n            return get_default_extraction_rules()\n        with open(rules_file, 'r', encoding='utf-8') as f:\n            rules = yaml.safe_load(f)\n        logger.info(f\"Loaded extraction rules from {rules_path}\")",
+        "detail": "src.extraction.config_loader",
+        "documentation": {}
+    },
+    {
+        "label": "get_default_extraction_rules",
+        "kind": 2,
+        "importPath": "src.extraction.config_loader",
+        "description": "src.extraction.config_loader",
+        "peekOfCode": "def get_default_extraction_rules() -> Dict[str, Any]:\n    \"\"\"Get default extraction rules when config file is missing.\"\"\"\n    return {\n        \"confidence_threshold\": 0.7,\n        \"escalation_rules\": {\n            \"fast_to_layout_threshold\": 0.6,\n            \"layout_to_vision_threshold\": 0.7\n        },\n        \"fast_text\": {\n            \"min_text_length\": 100",
+        "detail": "src.extraction.config_loader",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.extraction.config_loader",
+        "description": "src.extraction.config_loader",
+        "peekOfCode": "logger = logging.getLogger(__name__)\ndef load_extraction_rules(rules_path: str) -> Dict[str, Any]:\n    \"\"\"Load extraction rules from YAML file.\"\"\"\n    try:\n        rules_file = Path(rules_path)\n        if not rules_file.exists():\n            logger.warning(f\"Extraction rules file not found: {rules_path}\")\n            return get_default_extraction_rules()\n        with open(rules_file, 'r', encoding='utf-8') as f:\n            rules = yaml.safe_load(f)",
+        "detail": "src.extraction.config_loader",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionRouter",
+        "kind": 6,
+        "importPath": "src.extraction.extraction_router",
+        "description": "src.extraction.extraction_router",
+        "peekOfCode": "class ExtractionRouter:\n    \"\"\"Stage 2-ready Router for multi-strategy extraction with page-level confidence escalation.\"\"\"\n    def __init__(self, rules_path: str = \".refinery/rules/extraction_rules.yaml\"):\n        # Load thresholds and rules\n        self.rules = load_extraction_rules(rules_path)\n        self.conf_threshold = self.rules.get(\"confidence_threshold\", 0.7)\n        # Initialize extractors\n        self.fast_extractor = FastTextExtractor(**self.rules.get(\"fast_text\", {}))\n        self.layout_extractor = LayoutExtractor(**self.rules.get(\"layout\", {}))\n        self.vision_extractor = VisionExtractor(**self.rules.get(\"vision\", {}))",
+        "detail": "src.extraction.extraction_router",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.extraction.extraction_router",
+        "description": "src.extraction.extraction_router",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass ExtractionRouter:\n    \"\"\"Stage 2-ready Router for multi-strategy extraction with page-level confidence escalation.\"\"\"\n    def __init__(self, rules_path: str = \".refinery/rules/extraction_rules.yaml\"):\n        # Load thresholds and rules\n        self.rules = load_extraction_rules(rules_path)\n        self.conf_threshold = self.rules.get(\"confidence_threshold\", 0.7)\n        # Initialize extractors\n        self.fast_extractor = FastTextExtractor(**self.rules.get(\"fast_text\", {}))\n        self.layout_extractor = LayoutExtractor(**self.rules.get(\"layout\", {}))",
+        "detail": "src.extraction.extraction_router",
+        "documentation": {}
+    },
+    {
+        "label": "BaseExtractor",
+        "kind": 6,
+        "importPath": "src.extraction.extractor_base",
+        "description": "src.extraction.extractor_base",
+        "peekOfCode": "class BaseExtractor(ABC):\n    \"\"\"Abstract base class for document extraction strategies.\"\"\"\n    def __init__(self, name: str):\n        self.name = name\n        self.logger = logging.getLogger(f\"{__name__}.{name}\")\n    @abstractmethod\n    def extract(self, pdf_path: str, profile: Dict[str, Any]) -> Dict[str, Any]:\n        \"\"\"\n        Extract content from PDF using specific strategy.\n        Args:",
+        "detail": "src.extraction.extractor_base",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.extraction.extractor_base",
+        "description": "src.extraction.extractor_base",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass BaseExtractor(ABC):\n    \"\"\"Abstract base class for document extraction strategies.\"\"\"\n    def __init__(self, name: str):\n        self.name = name\n        self.logger = logging.getLogger(f\"{__name__}.{name}\")\n    @abstractmethod\n    def extract(self, pdf_path: str, profile: Dict[str, Any]) -> Dict[str, Any]:\n        \"\"\"\n        Extract content from PDF using specific strategy.",
+        "detail": "src.extraction.extractor_base",
+        "documentation": {}
+    },
+    {
+        "label": "MockPDFPage",
+        "kind": 6,
+        "importPath": "src.extraction.fast_text_extractor",
+        "description": "src.extraction.fast_text_extractor",
+        "peekOfCode": "class MockPDFPage:\n    \"\"\"Mock PDF page for testing without pdfplumber.\"\"\"\n    def __init__(self, page_num: int, width: float = 612, height: float = 792):\n        self.page_num = page_num\n        self.width = width\n        self.height = height\n        self.text = f\"Mock text content for page {page_num}\"\n        self.images = []\n        self.chars = []\n    def extract_text(self):",
+        "detail": "src.extraction.fast_text_extractor",
+        "documentation": {}
+    },
+    {
+        "label": "FastTextExtractor",
+        "kind": 6,
+        "importPath": "src.extraction.fast_text_extractor",
+        "description": "src.extraction.fast_text_extractor",
+        "peekOfCode": "class FastTextExtractor(BaseExtractor):\n    \"\"\"Fast text extraction for simple digital documents.\"\"\"\n    def __init__(self, char_threshold: int = 100, image_ratio_threshold: float = 0.5):\n        super().__init__(\"FastTextExtractor\")\n        self.char_threshold = char_threshold\n        self.image_ratio_threshold = image_ratio_threshold\n        self.pdfplumber_available = pdfplumber is not None\n    def extract(self, pdf_path: str, profile: Dict[str, Any]) -> Dict[str, Any]:\n        \"\"\"Extract text content using pdfplumber.\"\"\"\n        self.log_extraction_start(pdf_path, \"fast_text\")",
+        "detail": "src.extraction.fast_text_extractor",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.extraction.fast_text_extractor",
+        "description": "src.extraction.fast_text_extractor",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass MockPDFPage:\n    \"\"\"Mock PDF page for testing without pdfplumber.\"\"\"\n    def __init__(self, page_num: int, width: float = 612, height: float = 792):\n        self.page_num = page_num\n        self.width = width\n        self.height = height\n        self.text = f\"Mock text content for page {page_num}\"\n        self.images = []\n        self.chars = []",
+        "detail": "src.extraction.fast_text_extractor",
+        "documentation": {}
+    },
+    {
+        "label": "LayoutExtractor",
+        "kind": 6,
+        "importPath": "src.extraction.layout_extractor",
+        "description": "src.extraction.layout_extractor",
+        "peekOfCode": "class LayoutExtractor(BaseExtractor):\n    \"\"\"Layout extraction using Docling 2.x\"\"\"\n    def __init__(self):\n        super().__init__(\"LayoutExtractor\")\n        self.docling_available = DOCLING_AVAILABLE\n    # --------------------------------------------------\n    # Main Extraction Entry\n    # --------------------------------------------------\n    def extract(self, pdf_path: str, profile: Dict[str, Any]) -> Dict[str, Any]:\n        self.log_extraction_start(pdf_path, \"layout\")",
+        "detail": "src.extraction.layout_extractor",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.extraction.layout_extractor",
+        "description": "src.extraction.layout_extractor",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n# ----------------------------\n# Docling Import (Modern API)\n# ----------------------------\ntry:\n    from docling.document_converter import DocumentConverter\n    DOCLING_AVAILABLE = True\n    logger.info(\"Docling imported successfully\")\nexcept ImportError as e:\n    logger.warning(f\"Docling import failed: {e}. Layout extractor will use mock implementation.\")",
+        "detail": "src.extraction.layout_extractor",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionPipeline",
+        "kind": 6,
+        "importPath": "src.extraction.pipeline_runner",
+        "description": "src.extraction.pipeline_runner",
+        "peekOfCode": "class ExtractionPipeline:\n    \"\"\"Production-ready extraction pipeline with parallel processing.\"\"\"\n    def __init__(self, \n                 max_workers: int = 4,\n                 confidence_threshold: float = 0.7,\n                 extraction_config: Dict[str, Any] = None):\n        \"\"\"\n        Initialize extraction pipeline.\n        Args:\n            max_workers: Number of parallel workers",
+        "detail": "src.extraction.pipeline_runner",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.extraction.pipeline_runner",
+        "description": "src.extraction.pipeline_runner",
+        "peekOfCode": "def main():\n    import argparse\n    import torch\n    parser = argparse.ArgumentParser(description=\"Parallel Document Extraction Pipeline\")\n    parser.add_argument(\"--pdf-folder\", default=\"data/raw\", help=\"PDF folder path\")\n    parser.add_argument(\"--workers\", type=int, default=3, help=\"Number of parallel workers\")\n    parser.add_argument(\"--confidence-threshold\", type=float, default=0.7, help=\"Confidence threshold for escalation\")\n    parser.add_argument(\"--single\", help=\"Process single PDF file\")\n    parser.add_argument(\"--dpi\", type=int, default=150, help=\"DPI for vision extraction\")\n    parser.add_argument(\"--max-vision-pages\", type=int, default=5, help=\"Max pages to process in vision escalation\")",
+        "detail": "src.extraction.pipeline_runner",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.extraction.pipeline_runner",
+        "description": "src.extraction.pipeline_runner",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass ExtractionPipeline:\n    \"\"\"Production-ready extraction pipeline with parallel processing.\"\"\"\n    def __init__(self, \n                 max_workers: int = 4,\n                 confidence_threshold: float = 0.7,\n                 extraction_config: Dict[str, Any] = None):\n        \"\"\"\n        Initialize extraction pipeline.\n        Args:",
+        "detail": "src.extraction.pipeline_runner",
+        "documentation": {}
+    },
+    {
+        "label": "VisionExtractor",
+        "kind": 6,
+        "importPath": "src.extraction.vision_extractor",
+        "description": "src.extraction.vision_extractor",
+        "peekOfCode": "class VisionExtractor(BaseExtractor):\n    \"\"\"Vision extraction for scanned documents using Tesseract OCR.\"\"\"\n    def __init__(self, dpi: int = 150, language: str = 'eng', max_vision_pages: int = 5):\n        super().__init__(\"VisionExtractor\")\n        self.dpi = dpi\n        self.language = language\n        self.max_vision_pages = max_vision_pages  # NEW: Limit pages processed\n        self.pdf2image_available = PDF2IMAGE_AVAILABLE\n        self.tesseract_available = TESSERACT_AVAILABLE\n        # Output directories",
+        "detail": "src.extraction.vision_extractor",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.extraction.vision_extractor",
+        "description": "src.extraction.vision_extractor",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass VisionExtractor(BaseExtractor):\n    \"\"\"Vision extraction for scanned documents using Tesseract OCR.\"\"\"\n    def __init__(self, dpi: int = 150, language: str = 'eng', max_vision_pages: int = 5):\n        super().__init__(\"VisionExtractor\")\n        self.dpi = dpi\n        self.language = language\n        self.max_vision_pages = max_vision_pages  # NEW: Limit pages processed\n        self.pdf2image_available = PDF2IMAGE_AVAILABLE\n        self.tesseract_available = TESSERACT_AVAILABLE",
+        "detail": "src.extraction.vision_extractor",
+        "documentation": {}
+    },
+    {
+        "label": "OriginType",
+        "kind": 6,
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "peekOfCode": "class OriginType(str, Enum):\n    \"\"\"Document origin type classification.\"\"\"\n    NATIVE_DIGITAL = \"native_digital\"\n    SCANNED_IMAGE = \"scanned_image\"\n    MIXED = \"mixed\"\n    UNKNOWN = \"unknown\"\nclass LayoutComplexity(str, Enum):\n    \"\"\"Document layout complexity classification.\"\"\"\n    SINGLE_COLUMN = \"single_column\"\n    MULTI_COLUMN = \"multi_column\"",
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "LayoutComplexity",
+        "kind": 6,
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "peekOfCode": "class LayoutComplexity(str, Enum):\n    \"\"\"Document layout complexity classification.\"\"\"\n    SINGLE_COLUMN = \"single_column\"\n    MULTI_COLUMN = \"multi_column\"\n    TABLE_HEAVY = \"table_heavy\"\n    FIGURE_HEAVY = \"figure_heavy\"\n    MIXED = \"mixed\"\nclass DocumentCategory(str, Enum):\n    \"\"\"Document processing category.\"\"\"\n    HIGH_COMPLEXITY = \"high_complexity\"",
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentCategory",
+        "kind": 6,
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "peekOfCode": "class DocumentCategory(str, Enum):\n    \"\"\"Document processing category.\"\"\"\n    HIGH_COMPLEXITY = \"high_complexity\"\n    MODERATE_COMPLEXITY = \"moderate_complexity\"\n    SIMPLE_TEXT = \"simple_text\"\nclass ExtractionStrategy(str, Enum):\n    \"\"\"Recommended extraction strategy.\"\"\"\n    FAST_TEXT = \"fast_text\"\n    LAYOUT = \"layout\"\n    VISION = \"vision\"",
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionStrategy",
+        "kind": 6,
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "peekOfCode": "class ExtractionStrategy(str, Enum):\n    \"\"\"Recommended extraction strategy.\"\"\"\n    FAST_TEXT = \"fast_text\"\n    LAYOUT = \"layout\"\n    VISION = \"vision\"\n    HYBRID = \"hybrid\"\nclass DocumentProfile(BaseModel):\n    \"\"\"Pydantic model for document classification results.\"\"\"\n    # Basic metadata\n    document_id: str",
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentProfile",
+        "kind": 6,
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "peekOfCode": "class DocumentProfile(BaseModel):\n    \"\"\"Pydantic model for document classification results.\"\"\"\n    # Basic metadata\n    document_id: str\n    filename: str\n    file_path: str\n    file_size_bytes: int\n    analyzed_at: datetime = Field(default_factory=datetime.now)\n    # Classification results\n    origin_type: OriginType",
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionMethod",
+        "kind": 6,
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "peekOfCode": "class ExtractionMethod(str, Enum):\n    \"\"\"Extraction method used.\"\"\"\n    FAST_TEXT = \"fast_text\"\n    LAYOUT = \"layout\"\n    VISION = \"vision\"\n    HYBRID = \"hybrid\"\n    MOCK = \"mock\"\nclass TableData(BaseModel):\n    \"\"\"Table extraction data.\"\"\"\n    table_id: str",
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "TableData",
+        "kind": 6,
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "peekOfCode": "class TableData(BaseModel):\n    \"\"\"Table extraction data.\"\"\"\n    table_id: str\n    page_num: int\n    rows: int\n    columns: int\n    headers: List[str]\n    data: List[List[str]]\n    confidence: float = Field(ge=0.0, le=1.0)\n    bbox: Optional[Dict[str, int]] = None",
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "PageExtraction",
+        "kind": 6,
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "peekOfCode": "class PageExtraction(BaseModel):\n    \"\"\"Page-level extraction results.\"\"\"\n    page_num: int\n    text: str\n    text_length: int\n    tables: List[TableData] = Field(default_factory=list)\n    confidence: float = Field(ge=0.0, le=1.0)\n    extraction_method: ExtractionMethod\n    escalated_from: Optional[ExtractionMethod] = None\n    strategy_used: str",
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionMetadata",
+        "kind": 6,
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "peekOfCode": "class ExtractionMetadata(BaseModel):\n    \"\"\"Extraction process metadata.\"\"\"\n    total_pages: int\n    total_text_length: int\n    total_tables: int\n    average_confidence: float = Field(ge=0.0, le=1.0)\n    extraction_cost: str\n    processing_time_seconds: float\n    ocr_engine: Optional[str] = None\n    dpi: Optional[int] = None",
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "RoutingMetadata",
+        "kind": 6,
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "peekOfCode": "class RoutingMetadata(BaseModel):\n    \"\"\"Strategy routing metadata.\"\"\"\n    recommended_strategy: str\n    actual_strategy: str\n    escalated: bool\n    confidence_threshold: float\n    average_confidence: float\n    pages_processed: int\nclass PerformanceMetrics(BaseModel):\n    \"\"\"Performance metrics for the extraction.\"\"\"",
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "PerformanceMetrics",
+        "kind": 6,
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "peekOfCode": "class PerformanceMetrics(BaseModel):\n    \"\"\"Performance metrics for the extraction.\"\"\"\n    triage_speed: str\n    extraction_speed: str\n    overall_efficiency: str\nclass ExtractedDocument(BaseModel):\n    \"\"\"Complete extracted document with all metadata.\"\"\"\n    # Document identification\n    document_id: str\n    filename: str",
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractedDocument",
+        "kind": 6,
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "peekOfCode": "class ExtractedDocument(BaseModel):\n    \"\"\"Complete extracted document with all metadata.\"\"\"\n    # Document identification\n    document_id: str\n    filename: str\n    file_path: str\n    # Timing information\n    total_duration: float\n    # Triage results\n    triage: Dict[str, Any]",
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "LDUType",
+        "kind": 6,
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "peekOfCode": "class LDUType(str, Enum):\n    \"\"\"Logical Document Unit types.\"\"\"\n    SECTION = \"section\"\n    CHAPTER = \"chapter\"\n    PARAGRAPH = \"paragraph\"\n    TABLE = \"table\"\n    FIGURE = \"figure\"\n    FOOTNOTE = \"footnote\"\n    HEADER = \"header\"\n    FOOTER = \"footer\"",
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDURole",
+        "kind": 6,
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "peekOfCode": "class LDURole(str, Enum):\n    \"\"\"Logical Document Unit roles.\"\"\"\n    TITLE = \"title\"\n    CONTENT = \"content\"\n    METADATA = \"metadata\"\n    NAVIGATION = \"navigation\"\n    REFERENCE = \"reference\"\n    APPENDIX = \"appendix\"\n    GLOSSARY = \"glossary\"\n    INDEX = \"index\"",
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "BoundingBox",
+        "kind": 6,
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "peekOfCode": "class BoundingBox(BaseModel):\n    \"\"\"Bounding box for spatial information.\"\"\"\n    left: float\n    top: float\n    width: float\n    height: float\n    page_num: int\n    def get_area(self) -> float:\n        \"\"\"Calculate bounding box area.\"\"\"\n        return self.width * self.height",
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "SemanticMetadata",
+        "kind": 6,
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "peekOfCode": "class SemanticMetadata(BaseModel):\n    \"\"\"Semantic metadata for LDU.\"\"\"\n    topic: Optional[str] = None\n    keywords: List[str] = Field(default_factory=list)\n    entities: List[Dict[str, Any]] = Field(default_factory=list)\n    sentiment: Optional[float] = Field(None, ge=-1.0, le=1.0)\n    language: Optional[str] = None\n    readability_score: Optional[float] = Field(None, ge=0.0, le=100.0)\nclass StructuralMetadata(BaseModel):\n    \"\"\"Structural metadata for LDU.\"\"\"",
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "StructuralMetadata",
+        "kind": 6,
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "peekOfCode": "class StructuralMetadata(BaseModel):\n    \"\"\"Structural metadata for LDU.\"\"\"\n    level: Optional[int] = None  # Header level, list level, etc.\n    parent_id: Optional[str] = None\n    child_ids: List[str] = Field(default_factory=list)\n    sibling_ids: List[str] = Field(default_factory=list)\n    section_number: Optional[str] = None\n    outline_path: Optional[str] = None\nclass LDU(BaseModel):\n    \"\"\"Logical Document Unit - a semantic chunk of a document.\"\"\"",
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDU",
+        "kind": 6,
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "peekOfCode": "class LDU(BaseModel):\n    \"\"\"Logical Document Unit - a semantic chunk of a document.\"\"\"\n    # Basic identification\n    ldu_id: str\n    document_id: str\n    ldu_type: LDUType\n    role: LDURole\n    # Content\n    text: str\n    text_length: int",
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "PageType",
+        "kind": 6,
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "peekOfCode": "class PageType(str, Enum):\n    \"\"\"Page type classification.\"\"\"\n    COVER = \"cover\"\n    TITLE = \"title\"\n    TOC = \"table_of_contents\"\n    CONTENT = \"content\"\n    CHAPTER_START = \"chapter_start\"\n    SECTION_START = \"section_start\"\n    APPENDIX = \"appendix\"\n    BIBLIOGRAPHY = \"bibliography\"",
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "ContentType",
+        "kind": 6,
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "peekOfCode": "class ContentType(str, Enum):\n    \"\"\"Content type on page.\"\"\"\n    TEXT_ONLY = \"text_only\"\n    TABLE_HEAVY = \"table_heavy\"\n    FIGURE_HEAVY = \"figure_heavy\"\n    MIXED_CONTENT = \"mixed_content\"\n    FORM = \"form\"\n    CHART = \"chart\"\n    DIAGRAM = \"diagram\"\nclass PageFeatures(BaseModel):",
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "PageFeatures",
+        "kind": 6,
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "peekOfCode": "class PageFeatures(BaseModel):\n    \"\"\"Extracted features from a page.\"\"\"\n    word_count: int\n    line_count: int\n    paragraph_count: int\n    table_count: int\n    figure_count: int\n    image_count: int\n    font_count: int\n    column_count: int",
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "PageNavigation",
+        "kind": 6,
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "peekOfCode": "class PageNavigation(BaseModel):\n    \"\"\"Navigation information for a page.\"\"\"\n    page_number: Optional[int] = None\n    section_number: Optional[str] = None\n    chapter_number: Optional[str] = None\n    title: Optional[str] = None\n    subtitle: Optional[str] = None\n    outline_level: Optional[int] = None\n    is_section_start: bool = False\n    is_chapter_start: bool = False",
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "PageQuality",
+        "kind": 6,
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "peekOfCode": "class PageQuality(BaseModel):\n    \"\"\"Quality metrics for a page.\"\"\"\n    ocr_confidence: float = Field(ge=0.0, le=1.0)\n    text_clarity: float = Field(ge=0.0, le=1.0)\n    layout_quality: float = Field(ge=0.0, le=1.0)\n    scan_quality: Optional[float] = Field(None, ge=0.0, le=1.0)\n    noise_level: float = Field(ge=0.0, le=1.0)\n    skew_angle: Optional[float] = None\n    brightness: Optional[float] = Field(None, ge=0.0, le=1.0)\n    contrast: Optional[float] = Field(None, ge=0.0, le=1.0)",
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "PageIndex",
+        "kind": 6,
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "peekOfCode": "class PageIndex(BaseModel):\n    \"\"\"Page index entry for document navigation and analysis.\"\"\"\n    # Basic identification\n    page_id: str\n    document_id: str\n    page_num: int\n    # Classification\n    page_type: PageType\n    content_type: ContentType\n    primary_language: str",
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "ProcessingStep",
+        "kind": 6,
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "peekOfCode": "class ProcessingStep(str, Enum):\n    \"\"\"Processing step types.\"\"\"\n    INGESTION = \"ingestion\"\n    TRIAGE = \"triage\"\n    EXTRACTION = \"extraction\"\n    CHUNKING = \"chunking\"\n    ENRICHMENT = \"enrichment\"\n    VALIDATION = \"validation\"\n    QUALITY_CHECK = \"quality_check\"\n    TRANSFORMATION = \"transformation\"",
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "AgentType",
+        "kind": 6,
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "peekOfCode": "class AgentType(str, Enum):\n    \"\"\"Agent types that perform processing.\"\"\"\n    HUMAN = \"human\"\n    AUTOMATED = \"automated\"\n    HYBRID = \"hybrid\"\n    EXTERNAL = \"external\"\nclass ProcessingStatus(str, Enum):\n    \"\"\"Processing status.\"\"\"\n    PENDING = \"pending\"\n    RUNNING = \"running\"",
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProcessingStatus",
+        "kind": 6,
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "peekOfCode": "class ProcessingStatus(str, Enum):\n    \"\"\"Processing status.\"\"\"\n    PENDING = \"pending\"\n    RUNNING = \"running\"\n    COMPLETED = \"completed\"\n    FAILED = \"failed\"\n    SKIPPED = \"skipped\"\n    CANCELLED = \"cancelled\"\nclass AgentInfo(BaseModel):\n    \"\"\"Information about the processing agent.\"\"\"",
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "AgentInfo",
+        "kind": 6,
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "peekOfCode": "class AgentInfo(BaseModel):\n    \"\"\"Information about the processing agent.\"\"\"\n    agent_id: str\n    agent_type: AgentType\n    agent_name: str\n    version: str\n    configuration: Dict[str, Any] = Field(default_factory=dict)\n    def is_automated(self) -> bool:\n        \"\"\"Check if agent is automated.\"\"\"\n        return self.agent_type == AgentType.AUTOMATED",
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProcessingMetrics",
+        "kind": 6,
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "peekOfCode": "class ProcessingMetrics(BaseModel):\n    \"\"\"Metrics for a processing step.\"\"\"\n    duration_seconds: float\n    cpu_usage_percent: Optional[float] = Field(None, ge=0.0, le=100.0)\n    memory_usage_mb: Optional[float] = Field(None, ge=0.0)\n    pages_processed: int = 0\n    confidence_score: Optional[float] = Field(None, ge=0.0, le=1.0)\n    error_count: int = 0\n    warning_count: int = 0\n    def get_efficiency_score(self) -> float:",
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProcessingStep",
+        "kind": 6,
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "peekOfCode": "class ProcessingStep(BaseModel):\n    \"\"\"Single processing step in the provenance chain.\"\"\"\n    # Step identification\n    step_id: str\n    step_type: ProcessingStep\n    step_name: str\n    sequence_order: int\n    # Agent information\n    agent: AgentInfo\n    # Timing",
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProvenanceChain",
+        "kind": 6,
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "peekOfCode": "class ProvenanceChain(BaseModel):\n    \"\"\"Complete provenance chain for document processing.\"\"\"\n    # Chain identification\n    chain_id: str\n    document_id: str\n    chain_version: str = \"1.0\"\n    # Chain metadata\n    created_at: datetime = Field(default_factory=datetime.now)\n    updated_at: datetime = Field(default_factory=datetime.now)\n    created_by: str",
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentRefinery",
+        "kind": 6,
+        "importPath": "src.refinery.parallel_refinery",
+        "description": "src.refinery.parallel_refinery",
+        "peekOfCode": "class DocumentRefinery:\n    \"\"\"Parallel document refinery with ThreadPool architecture.\"\"\"\n    def __init__(self, max_workers: int = 4):\n        self.max_workers = max_workers\n        self.rules_file = Path(\".refinery/rules/extraction_rules.yaml\")\n        self.profiles_dir = Path(\".refinery/profiles\")\n        self.extraction_dir = Path(\".refinery/extractions\")\n        # Create directories\n        self.profiles_dir.mkdir(parents=True, exist_ok=True)\n        self.extraction_dir.mkdir(parents=True, exist_ok=True)",
+        "detail": "src.refinery.parallel_refinery",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.refinery.parallel_refinery",
+        "description": "src.refinery.parallel_refinery",
+        "peekOfCode": "def main():\n    \"\"\"Main entry point.\"\"\"\n    import argparse\n    parser = argparse.ArgumentParser(description=\"Parallel Document Refinery\")\n    parser.add_argument(\"--pdf-folder\", default=\"data/raw\", help=\"PDF folder path\")\n    parser.add_argument(\"--workers\", type=int, default=4, help=\"Number of parallel workers\")\n    args = parser.parse_args()\n    # Initialize refinery\n    refinery = DocumentRefinery(max_workers=args.workers)\n    # Process batch",
+        "detail": "src.refinery.parallel_refinery",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.refinery.parallel_refinery",
+        "description": "src.refinery.parallel_refinery",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass DocumentRefinery:\n    \"\"\"Parallel document refinery with ThreadPool architecture.\"\"\"\n    def __init__(self, max_workers: int = 4):\n        self.max_workers = max_workers\n        self.rules_file = Path(\".refinery/rules/extraction_rules.yaml\")\n        self.profiles_dir = Path(\".refinery/profiles\")\n        self.extraction_dir = Path(\".refinery/extractions\")\n        # Create directories\n        self.profiles_dir.mkdir(parents=True, exist_ok=True)",
+        "detail": "src.refinery.parallel_refinery",
+        "documentation": {}
+    },
+    {
+        "label": "TestExtraction",
+        "kind": 6,
+        "importPath": "tests.test_extraction",
+        "description": "tests.test_extraction",
+        "peekOfCode": "class TestExtraction:\n    \"\"\"Test suite for extraction confidence scoring and routing.\"\"\"\n    @pytest.fixture\n    def temp_dirs(self):\n        \"\"\"Create temporary directories for testing.\"\"\"\n        temp_dir = tempfile.mkdtemp()\n        rules_file = Path(temp_dir) / \"rules.yaml\"\n        # Create extraction rules\n        rules_content = \"\"\"\nextraction_strategies:",
+        "detail": "tests.test_extraction",
+        "documentation": {}
+    },
+    {
+        "label": "TestTriageAgent",
+        "kind": 6,
+        "importPath": "tests.test_triage_agent",
+        "description": "tests.test_triage_agent",
+        "peekOfCode": "class TestTriageAgent:\n    \"\"\"Test suite for Triage Agent classification functionality.\"\"\"\n    @pytest.fixture\n    def temp_dirs(self):\n        \"\"\"Create temporary directories for testing.\"\"\"\n        temp_dir = tempfile.mkdtemp()\n        profiles_dir = Path(temp_dir) / \"profiles\"\n        profiles_dir.mkdir(parents=True, exist_ok=True)\n        rules_file = Path(temp_dir) / \"rules.yaml\"\n        # Create minimal rules file",
+        "detail": "tests.test_triage_agent",
+        "documentation": {}
+    },
+    {
+        "label": "TestTriageAgent",
+        "kind": 6,
+        "importPath": "tests.test_working",
+        "description": "tests.test_working",
+        "peekOfCode": "class TestTriageAgent:\n    \"\"\"Test suite for Triage Agent classification functionality.\"\"\"\n    @pytest.fixture\n    def temp_dirs(self):\n        \"\"\"Create temporary directories for testing.\"\"\"\n        temp_dir = tempfile.mkdtemp()\n        profiles_dir = Path(temp_dir) / \"profiles\"\n        profiles_dir.mkdir(parents=True, exist_ok=True)\n        rules_file = Path(temp_dir) / \"rules.yaml\"\n        # Create minimal rules file",
+        "detail": "tests.test_working",
+        "documentation": {}
+    },
+    {
+        "label": "TestExtraction",
+        "kind": 6,
+        "importPath": "tests.test_working",
+        "description": "tests.test_working",
+        "peekOfCode": "class TestExtraction:\n    \"\"\"Test suite for extraction confidence scoring and routing.\"\"\"\n    @pytest.fixture\n    def temp_dirs(self):\n        \"\"\"Create temporary directories for testing.\"\"\"\n        temp_dir = tempfile.mkdtemp()\n        rules_file = Path(temp_dir) / \"rules.yaml\"\n        # Create extraction rules\n        rules_content = \"\"\"\nextraction_strategies:",
+        "detail": "tests.test_working",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def main():\n    print(\"Hello from document-refinery!\")\nif __name__ == \"__main__\":\n    main()",
+        "detail": "main",
+        "documentation": {}
+    }
+]

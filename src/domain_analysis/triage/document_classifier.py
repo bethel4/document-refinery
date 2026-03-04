@@ -14,76 +14,14 @@ from enum import Enum
 import yaml
 from pydantic import BaseModel, Field
 
-class OriginType(str, Enum):
-    SCANNED = "scanned"
-    DIGITAL_NATIVE = "digital_native"
-    CONVERTED = "converted"
-    UNKNOWN = "unknown"
-
-class LayoutComplexity(str, Enum):
-    SIMPLE = "simple"
-    MODERATE = "moderate"
-    COMPLEX = "complex"
-    VERY_COMPLEX = "very_complex"
+# Import from new models
+from src.models.document_profile import DocumentProfile, OriginType, LayoutComplexity, DocumentCategory, ExtractionStrategy
 
 class ProcessingPriority(str, Enum):
     LOW = "low"
     MEDIUM = "medium"
     HIGH = "high"
     CRITICAL = "critical"
-
-class DocumentProfile(BaseModel):
-    """Pydantic model for document classification results."""
-    
-    # Basic metadata
-    document_id: str
-    filename: str
-    file_path: str
-    file_size_bytes: int
-    analyzed_at: datetime = Field(default_factory=datetime.now)
-    
-    # Classification results
-    origin_type: str  # native_digital, scanned_image, mixed
-    layout_complexity: str  # single_column, multi_column, table_heavy, figure_heavy, mixed
-    language: str
-    language_confidence: float = Field(ge=0.0, le=1.0)
-    
-    domain_hint: str
-    domain_confidence: float = Field(ge=0.0, le=1.0)
-    
-    # Category assignment from YAML
-    category: str  # high_complexity, moderate_complexity, simple_text
-    category_confidence: float = Field(ge=0.0, le=1.0)
-    
-    # Processing recommendations
-    recommended_strategy: str
-    estimated_extraction_cost: str  # fast_text, needs_layout_model, needs_vision_model
-    
-    # Document metrics (computed)
-    total_pages: int
-    total_chars: int
-    avg_chars_per_page: float
-    image_area_ratio: float
-    detected_table_count: int
-    x_cluster_count: int
-    
-    # Mixed document metrics (optional)
-    scanned_page_ratio: Optional[float] = None
-    digital_page_ratio: Optional[float] = None
-    
-    # Quality scores
-    text_quality_score: float = Field(ge=0.0, le=1.0)
-    structure_quality_score: float = Field(ge=0.0, le=1.0)
-    overall_quality_score: float = Field(ge=0.0, le=1.0)
-    
-    # Additional document properties
-    detected_fonts: List[str] = Field(default_factory=list)
-    has_watermarks: bool = False
-    has_signatures: bool = False
-    is_searchable: bool = True
-    
-    class Config:
-        use_enum_values = True
 
 class TriageClassifier:
     """Document triage classifier using calibrated thresholds."""
@@ -221,7 +159,9 @@ class TriageClassifier:
             detected_fonts=metrics.get('fonts', []),
             has_watermarks=metrics.get('has_watermarks', False),
             has_signatures=metrics.get('has_signatures', False),
-            is_searchable=metrics.get('is_searchable', True)
+            is_searchable=metrics.get('is_searchable', True),
+            confidence=category_confidence,  # Use category confidence as overall confidence
+            pages=metrics.get('total_pages', 0)
         )
         
         # Save profile

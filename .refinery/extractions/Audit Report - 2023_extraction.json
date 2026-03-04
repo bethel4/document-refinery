@@ -2,11 +2,11 @@
   "document_id": "Audit Report - 2023",
   "filename": "Audit Report - 2023.pdf",
   "file_path": "data/raw/Audit Report - 2023.pdf",
-  "total_duration": 537.1471078395844,
+  "total_duration": 85.87927603721619,
   "triage": {
-    "duration": 2.3770713806152344,
+    "duration": 2.5748183727264404,
     "profile": {
-      "document_id": "Audit Report - 2023_1772611444",
+      "document_id": "Audit Report - 2023_1772650017",
       "origin_type": "scanned_image",
       "category": "high_complexity",
       "recommended_strategy": "vision",
@@ -16,9 +16,16 @@
     }
   },
   "extraction": {
-    "duration": 534.7681736946106,
+    "duration": 83.30317616462708,
     "strategy_used": "vision",
-    "routing_metadata": {},
+    "routing_metadata": {
+      "recommended_strategy": "vision",
+      "actual_strategy": "vision",
+      "escalated": false,
+      "confidence_threshold": 0.7,
+      "average_confidence": 0,
+      "pages_processed": 0
+    },
     "pages": [],
     "extraction_metadata": {
       "total_pages": 0,
@@ -27,15 +34,20 @@
       "average_confidence": 0,
       "extraction_cost": "high",
       "processing_time_seconds": 0,
-      "total_vision_cost": 0,
-      "budget_cap": 5.0,
+      "ocr_engine": "tesseract",
+      "dpi": 150,
+      "language": "eng",
+      "performance_limits": {
+        "max_vision_pages": 2,
+        "pages_skipped": 95
+      },
       "pages_processed": 0,
-      "pages_skipped": 0
+      "confidence_threshold": 0.7
     },
     "document_elements": {}
   },
   "performance": {
-    "triage_speed": "40.0 pages/sec",
+    "triage_speed": "36.9 pages/sec",
     "extraction_speed": "0.0 pages/sec",
     "overall_efficiency": "low"
   }

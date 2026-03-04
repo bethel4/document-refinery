@@ -14,7 +14,6 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Add src to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from src.domain_analysis.triage.document_classifier import TriageClassifier
 from src.extraction.extraction_router import ExtractionRouter
@@ -61,45 +60,33 @@ class ExtractionPipeline:
         )
         
         # Initialize extraction router
-        router_config = extraction_config or {}
-        self.router = ExtractionRouter(
-            confidence_threshold=confidence_threshold,
-            fast_text_config=router_config.get("fast_text"),
-            layout_config=router_config.get("layout"),
-            vision_config=router_config.get("vision")
-        )
+        self.router = ExtractionRouter()
+        
+        # Set confidence_threshold if router has that attribute
+        if hasattr(self.router, "confidence_threshold"):
+            self.router.confidence_threshold = confidence_threshold
         
         logger.info(f"ExtractionPipeline initialized: {max_workers} workers, confidence_threshold={confidence_threshold}")
     
     def process_document(self, pdf_path: Path) -> Dict[str, Any]:
-        """
-        Process a single document: Phase 1 (triage) → Phase 2 (extraction).
-        
-        Args:
-            pdf_path: Path to PDF file
-            
-        Returns:
-            Complete processing result with triage and extraction data
-        """
+        """Process a single document: Phase 1 → Phase 2."""
         doc_id = pdf_path.stem
         logger.info(f"🔄 Processing {pdf_path.name}")
         start_time = time.time()
         
         try:
-            # Phase 1: Document triage and characterization
+            # Phase 1: Document triage
             logger.info(f"[Phase1] Starting triage for {doc_id}")
             triage_start = time.time()
-            
             profile = self.classifier.classify_document(str(pdf_path))
             triage_duration = time.time() - triage_start
             
-            # Check triage success
             if not hasattr(profile, 'document_id'):
                 raise ValueError(f"Triage failed for {doc_id}")
             
             logger.info(f"[Phase1] Triage completed: {profile.origin_type} → {profile.recommended_strategy} ({triage_duration:.2f}s)")
             
-            # Phase 2: Strategy-based extraction
+            # Phase 2: Extraction
             logger.info(f"[Phase2] Starting extraction for {doc_id}")
             extraction_start = time.time()
             
@@ -120,13 +107,11 @@ class ExtractionPipeline:
             extraction_result = self.router.route(str(pdf_path), profile_dict)
             extraction_duration = time.time() - extraction_start
             
-            # Check extraction success
             if "error" in extraction_result:
                 raise ValueError(f"Extraction failed: {extraction_result['error']}")
             
             logger.info(f"[Phase2] Extraction completed: {extraction_result['strategy_used']} ({extraction_duration:.2f}s)")
             
-            # Create comprehensive result
             total_duration = time.time() - start_time
             
             result = {
@@ -161,9 +146,7 @@ class ExtractionPipeline:
                 }
             }
             
-            # Save extraction result
             self._save_extraction_result(doc_id, result)
-            
             logger.info(f"✅ Completed {pdf_path.name} in {total_duration:.2f}s")
             return result
             
@@ -177,15 +160,7 @@ class ExtractionPipeline:
             }
     
     def process_batch(self, pdf_folder: str = "data/raw") -> List[Dict[str, Any]]:
-        """
-        Process all PDFs in folder using parallel ThreadPool.
-        
-        Args:
-            pdf_folder: Path to PDF folder
-            
-        Returns:
-            List of processing results
-        """
+        """Process all PDFs in folder using parallel ThreadPool."""
         pdf_path = Path(pdf_folder)
         pdf_files = list(pdf_path.glob("*.pdf"))
         
@@ -195,57 +170,60 @@ class ExtractionPipeline:
         
         logger.info(f"🚀 Starting batch processing: {len(pdf_files)} documents")
         start_time = time.time()
-        
         results = []
+        
         with ThreadPoolExecutor(max_workers=self.max_workers) as executor:
-            # Submit all documents for parallel processing
             futures = [executor.submit(self.process_document, pdf) for pdf in pdf_files]
-            
-            # Collect results as they complete
             for future in as_completed(futures):
                 try:
-                    result = future.result()
-                    results.append(result)
+                    results.append(future.result())
                 except Exception as e:
                     logger.error(f"Document processing failed: {e}")
         
-        # Print comprehensive summary
         self._print_batch_summary(results, time.time() - start_time)
         return results
     
     def _save_extraction_result(self, doc_id: str, result: Dict[str, Any]):
-        """Save extraction result to JSON file."""
         try:
             output_file = self.extractions_dir / f"{doc_id}_extraction.json"
-            
             with open(output_file, 'w', encoding='utf-8') as f:
                 json.dump(result, f, indent=2, ensure_ascii=False)
-            
-            # Also save to extraction ledger
             self._save_to_ledger(doc_id, result)
-            
         except Exception as e:
             logger.error(f"Failed to save extraction result: {e}")
     
     def _save_to_ledger(self, doc_id: str, result: Dict[str, Any]):
-        """Save extraction entry to ledger file."""
+        """Save extraction entry to ledger with cost estimation."""
         try:
             ledger_file = self.logs_dir / "extraction_ledger.jsonl"
             
-            # Create ledger entry
+            # Extract key metrics for ledger
+            triage_profile = result.get("triage", {}).get("profile", {})
+            extraction_meta = result.get("extraction", {})
+            routing_meta = extraction_meta.get("routing_metadata", {})
+            
+            # Calculate cost estimate based on strategy and pages
+            strategy_used = extraction_meta.get("strategy_used", "unknown")
+            pages_processed = routing_meta.get("pages_processed", 0)
+            confidence_score = routing_meta.get("average_confidence", 0.0)
+            processing_time = result.get("total_duration", 0.0)
+            
+            # Cost estimation logic (based on your picture)
+            cost_estimate = self._calculate_cost_estimate(strategy_used, pages_processed, processing_time)
+            
+            # Create comprehensive ledger entry
             ledger_entry = {
                 "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
                 "document_id": doc_id,
-                "filename": result.get("filename", ""),
-                "origin_type": result.get("triage", {}).get("profile", {}).get("origin_type", ""),
-                "category": result.get("triage", {}).get("profile", {}).get("category", ""),
-                "recommended_strategy": result.get("triage", {}).get("profile", {}).get("recommended_strategy", ""),
-                "actual_strategy": result.get("extraction", {}).get("strategy_used", ""),
-                "escalated": result.get("extraction", {}).get("routing_metadata", {}).get("escalated", False),
-                "confidence": result.get("extraction", {}).get("routing_metadata", {}).get("average_confidence", 0),
-                "pages_processed": len(result.get("extraction", {}).get("pages", [])),
-                "total_duration": result.get("total_duration", 0),
-                "extraction_cost": result.get("extraction", {}).get("extraction_metadata", {}).get("extraction_cost", "unknown"),
+                "filename": result.get("filename", "unknown"),
+                "origin_type": triage_profile.get("origin_type", "unknown"),
+                "category": triage_profile.get("category", "unknown"),
+                "strategy_used": strategy_used,
+                "confidence_score": round(confidence_score, 3),
+                "pages_processed": pages_processed,
+                "processing_time_seconds": round(processing_time, 2),
+                "cost_estimate": cost_estimate,
+                "escalated": routing_meta.get("escalated", False),
                 "status": "success" if "error" not in result else "failed"
             }
             
@@ -256,29 +234,64 @@ class ExtractionPipeline:
         except Exception as e:
             logger.error(f"Failed to save to ledger: {e}")
     
+    def _calculate_cost_estimate(self, strategy: str, pages: int, processing_time: float) -> Dict[str, Any]:
+        """Calculate cost estimate based on strategy and processing metrics."""
+        
+        # Base costs per strategy (in credits/units)
+        base_costs = {
+            "fast_text": {"base": 1, "per_page": 0.1, "unit": "credits"},
+            "layout": {"base": 5, "per_page": 0.5, "unit": "credits"}, 
+            "vision": {"base": 10, "per_page": 2.0, "unit": "credits"}
+        }
+        
+        # Get strategy cost info
+        cost_info = base_costs.get(strategy, {"base": 10, "per_page": 1.0, "unit": "credits"})
+        
+        # Calculate total cost
+        base_cost = cost_info["base"]
+        page_cost = pages * cost_info["per_page"]
+        total_cost = base_cost + page_cost
+        
+        # Time-based adjustment (processing efficiency)
+        if processing_time > 0:
+            pages_per_second = pages / processing_time
+            if pages_per_second < 0.1:  # Very slow processing
+                total_cost *= 1.5  # 50% penalty
+            elif pages_per_second > 1.0:  # Very fast processing
+                total_cost *= 0.8  # 20% discount
+        
+        return {
+            "total_cost": round(total_cost, 2),
+            "base_cost": base_cost,
+            "page_cost": round(page_cost, 2),
+            "pages": pages,
+            "unit": cost_info["unit"],
+            "processing_efficiency": round(pages / processing_time, 2) if processing_time > 0 else 0,
+            "cost_breakdown": {
+                "strategy": strategy,
+                "base_rate": base_cost,
+                "per_page_rate": cost_info["per_page"],
+                "time_adjustment": "penalty" if processing_time > 0 and pages/processing_time < 0.1 else "discount" if processing_time > 0 and pages/processing_time > 1.0 else "none"
+            }
+        }
+    
     def _print_batch_summary(self, results: List[Dict[str, Any]], total_time: float):
-        """Print comprehensive batch processing summary."""
         print("\n" + "="*80)
         print("📊 EXTRACTION PIPELINE SUMMARY")
         print("="*80)
-        
         successful = [r for r in results if "error" not in r]
         failed = [r for r in results if "error" in r]
-        
         print(f"\n✅ Successfully processed: {len(successful)} documents")
         print(f"❌ Failed: {len(failed)} documents")
         print(f"⏱️  Total time: {total_time:.2f}s")
         
         if successful:
-            # Strategy distribution
             strategy_counts = {}
             escalation_counts = {"escalated": 0, "not_escalated": 0}
-            
-            for result in successful:
-                strategy = result["extraction"]["strategy_used"]
+            for r in successful:
+                strategy = r["extraction"]["strategy_used"]
                 strategy_counts[strategy] = strategy_counts.get(strategy, 0) + 1
-                
-                routing_meta = result["extraction"].get("routing_metadata", {})
+                routing_meta = r["extraction"].get("routing_metadata", {})
                 if routing_meta.get("escalated", False):
                     escalation_counts["escalated"] += 1
                 else:
@@ -287,39 +300,14 @@ class ExtractionPipeline:
             print(f"\n📋 Strategy Distribution:")
             for strategy, count in strategy_counts.items():
                 print(f"   {strategy}: {count} documents")
-            
             print(f"\n🔄 Escalation Summary:")
             print(f"   Escalated: {escalation_counts['escalated']} documents")
             print(f"   Not escalated: {escalation_counts['not_escalated']} documents")
-            
-            # Performance metrics
-            avg_duration = sum(r["total_duration"] for r in successful) / len(successful)
-            total_pages = sum(r["extraction"]["pages_processed"] for r in successful)
-            
-            print(f"\n⚡ Performance Metrics:")
-            print(f"   Average duration: {avg_duration:.2f}s")
-            print(f"   Total pages processed: {total_pages}")
-            print(f"   Overall throughput: {total_pages/total_time:.1f} pages/sec")
-            
-            # Detailed results table
-            print(f"\n📄 Processing Details:")
-            print(f"{'Filename':<35} {'Strategy':<12} {'Escalated':<10} {'Confidence':<10} {'Pages':<6} {'Duration':<8}")
-            print("-" * 85)
-            
-            for result in successful:
-                triage_profile = result["triage"]["profile"]
-                extraction_meta = result["extraction"]["routing_metadata"]
-                
-                print(f"{result['filename']:<35} {result['extraction']['strategy_used']:<12} "
-                      f"{str(extraction_meta.get('escalated', False)):<10} "
-                      f"{extraction_meta.get('average_confidence', 0):<10.2f} "
-                      f"{result['extraction']['pages_processed']:<6} "
-                      f"{result['total_duration']:<8.2f}")
         
         if failed:
             print(f"\n❌ Failed Documents:")
-            for result in failed:
-                print(f"   {result['filename']}: {result['error']}")
+            for r in failed:
+                print(f"   {r['filename']}: {r['error']}")
         
         print(f"\n📁 Output Locations:")
         print(f"   Profiles: {self.profiles_dir}")
@@ -328,39 +316,50 @@ class ExtractionPipeline:
         print("="*80)
 
 def main():
-    """Main entry point for extraction pipeline."""
     import argparse
+    import torch
     
     parser = argparse.ArgumentParser(description="Parallel Document Extraction Pipeline")
     parser.add_argument("--pdf-folder", default="data/raw", help="PDF folder path")
-    parser.add_argument("--workers", type=int, default=4, help="Number of parallel workers")
+    parser.add_argument("--workers", type=int, default=3, help="Number of parallel workers")
     parser.add_argument("--confidence-threshold", type=float, default=0.7, help="Confidence threshold for escalation")
     parser.add_argument("--single", help="Process single PDF file")
-    
+    parser.add_argument("--dpi", type=int, default=150, help="DPI for vision extraction")
+    parser.add_argument("--max-vision-pages", type=int, default=5, help="Max pages to process in vision escalation")
+    parser.add_argument("--torch-threads", type=int, default=2, help="Torch thread limit")
     args = parser.parse_args()
     
+    torch.set_num_threads(args.torch_threads)
+    print(f"🔧 Torch threads limited to {args.torch_threads}")
+    
     # Initialize pipeline
+    extraction_config = {}  # populate if needed
     pipeline = ExtractionPipeline(
         max_workers=args.workers,
-        confidence_threshold=args.confidence_threshold
+        confidence_threshold=args.confidence_threshold,
+        extraction_config=extraction_config
     )
     
-    # Process documents
+    # Update vision extractor if present
+    if hasattr(pipeline.router, 'vision_extractor'):
+        pipeline.router.vision_extractor.dpi = args.dpi
+        pipeline.router.vision_extractor.max_vision_pages = args.max_vision_pages
+        print(f"🔧 Vision extractor configured: DPI={args.dpi}, max_pages={args.max_vision_pages}")
+    
+    print(f"🚀 Starting pipeline with {args.workers} workers")
+    
+    # Single or batch processing
     if args.single:
-        # Process single document
         pdf_path = Path(args.single)
         if pdf_path.exists():
             result = pipeline.process_document(pdf_path)
-            print(f"\nSingle document result:")
             print(json.dumps(result, indent=2))
         else:
             print(f"Error: File not found: {args.single}")
-        return [result] if pdf_path.exists() else []
+            return []
+        return [result]
     else:
-        # Process batch
-        results = pipeline.process_batch(args.pdf_folder)
-    
-    return results
+        return pipeline.process_batch(args.pdf_folder)
 
 if __name__ == "__main__":
     main()

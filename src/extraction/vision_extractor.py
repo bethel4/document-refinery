@@ -32,10 +32,11 @@ logger = logging.getLogger(__name__)
 class VisionExtractor(BaseExtractor):
     """Vision extraction for scanned documents using Tesseract OCR."""
     
-    def __init__(self, dpi: int = 300, language: str = 'eng'):
+    def __init__(self, dpi: int = 150, language: str = 'eng', max_vision_pages: int = 5):
         super().__init__("VisionExtractor")
         self.dpi = dpi
         self.language = language
+        self.max_vision_pages = max_vision_pages  # NEW: Limit pages processed
         self.pdf2image_available = PDF2IMAGE_AVAILABLE
         self.tesseract_available = TESSERACT_AVAILABLE
         
@@ -47,10 +48,10 @@ class VisionExtractor(BaseExtractor):
         self.image_dir.mkdir(parents=True, exist_ok=True)
         self.ocr_dir.mkdir(parents=True, exist_ok=True)
         
-        logger.info(f"VisionExtractor initialized: DPI={dpi}, Language={language}")
+        logger.info(f"VisionExtractor initialized: DPI={dpi}, Language={language}, MaxPages={max_vision_pages}")
     
     def extract(self, pdf_path: str, profile: Dict[str, Any]) -> Dict[str, Any]:
-        """Extract content using Tesseract OCR approach."""
+        """Extract content using Tesseract OCR approach with performance limits."""
         self.log_extraction_start(pdf_path, "vision")
         
         if not self.pdf2image_available or not self.tesseract_available:
@@ -65,8 +66,13 @@ class VisionExtractor(BaseExtractor):
             total_text_length = 0
             tables_found = 0
             
-            # Process each page with OCR
+            # Process each page with OCR - SEQUENTIAL (no nested parallelism)
             for page_num, page_image in enumerate(page_images, start=1):
+                # PERFORMANCE LIMIT: Stop after max_vision_pages
+                if page_num > self.max_vision_pages:
+                    logger.warning(f"Vision page limit reached ({self.max_vision_pages}), skipping remaining pages")
+                    break
+                
                 # Extract with Tesseract
                 page_result = self._extract_with_tesseract(page_image, page_num, profile)
                 
@@ -91,7 +97,11 @@ class VisionExtractor(BaseExtractor):
                     "processing_time_seconds": 0,  # Will be set by pipeline
                     "ocr_engine": "tesseract",
                     "dpi": self.dpi,
-                    "language": self.language
+                    "language": self.language,
+                    "performance_limits": {
+                        "max_vision_pages": self.max_vision_pages,
+                        "pages_skipped": max(0, len(page_images) - len(pages_output))
+                    }
                 }
             }
             
@@ -108,30 +118,93 @@ class VisionExtractor(BaseExtractor):
             }
     
     def _extract_with_tesseract(self, page_image, page_num: int, profile: Dict[str, Any]) -> Dict[str, Any]:
-        """Extract content from image using Tesseract OCR."""
+        """Extract content from image using Tesseract OCR with bounding boxes."""
         try:
             # Save page image
             pdf_name = Path(profile.get("file_path", "unknown")).stem
             image_path = self.image_dir / f"{pdf_name}_page_{page_num}.png"
             page_image.save(image_path, "PNG")
             
-            # Run OCR with Tesseract
+            # Run OCR with Tesseract - get both text and bounding box data
             ocr_text = pytesseract.image_to_string(page_image, lang=self.language)
-            
-            # Get OCR confidence data
             ocr_data = pytesseract.image_to_data(page_image, lang=self.language, output_type=pytesseract.Output.DICT)
             
             # Calculate confidence
             confidences = [int(conf) for conf in ocr_data['conf'] if int(conf) > 0]
             avg_confidence = sum(confidences) / len(confidences) / 100 if confidences else 0.5
             
-            # Detect tables (basic approach)
-            tables = self._detect_tables_from_text(ocr_text, page_num)
+            # Extract bounding boxes and detailed OCR data
+            bounding_boxes = []
+            words = []
+            lines = []
             
-            # Save OCR text file
+            for i in range(len(ocr_data.get('text', []))):
+                if ocr_data['text'][i].strip():
+                    word_data = {
+                        'word': ocr_data['text'][i],
+                        'confidence': ocr_data['conf'][i] / 100,
+                        'bbox': {
+                            'left': ocr_data['left'][i],
+                            'top': ocr_data['top'][i],
+                            'width': ocr_data['width'][i],
+                            'height': ocr_data['height'][i]
+                        },
+                        'line_num': ocr_data['line_num'][i],
+                        'page_num': ocr_data['page_num'][i],
+                        'block_num': ocr_data['block_num'][i]
+                    }
+                    words.append(word_data)
+                    
+                    # Group words into lines
+                    line_num = ocr_data['line_num'][i]
+                    if line_num not in [l['line_num'] for l in lines]:
+                        line_words = [w for w in words if w['line_num'] == line_num]
+                        if line_words:
+                            line_bbox = {
+                                'line_num': line_num,
+                                'words': line_words,
+                                'bbox': {
+                                    'left': min(w['bbox']['left'] for w in line_words),
+                                    'top': min(w['bbox']['top'] for w in line_words),
+                                    'right': max(w['bbox']['left'] + w['bbox']['width'] for w in line_words),
+                                    'bottom': max(w['bbox']['top'] + w['bbox']['height'] for w in line_words)
+                                },
+                                'confidence': sum(w['confidence'] for w in line_words) / len(line_words)
+                            }
+                            lines.append(line_bbox)
+            
+            # Save detailed OCR data with bounding boxes
+            ocr_detailed_path = self.ocr_dir / f"{pdf_name}_page_{page_num}_detailed.json"
+            ocr_detailed_data = {
+                'page_num': page_num,
+                'image_path': str(image_path),
+                'text': ocr_text.strip(),
+                'avg_confidence': avg_confidence,
+                'word_count': len(words),
+                'line_count': len(lines),
+                'words': words,
+                'lines': lines,
+                'bounding_boxes': bounding_boxes,
+                'extraction_metadata': {
+                    'dpi': self.dpi,
+                    'language': self.language,
+                    'tesseract_config': {
+                        'psm': pytesseract.PSM.AUTO,
+                        'oem': pytesseract.OEM.DEFAULT
+                    }
+                }
+            }
+            
+            with open(ocr_detailed_path, 'w', encoding='utf-8') as f:
+                json.dump(ocr_detailed_data, f, indent=2, ensure_ascii=False)
+            
+            # Save plain text file (for compatibility)
             ocr_path = self.ocr_dir / f"{pdf_name}_page_{page_num}.txt"
             with open(ocr_path, "w", encoding="utf-8") as f:
-                f.write(ocr_text)
+                f.write(ocr_text.strip())
+            
+            # Detect tables (basic approach)
+            tables = self._detect_tables_from_text(ocr_text, page_num)
             
             return {
                 "page_num": page_num,
@@ -143,10 +216,13 @@ class VisionExtractor(BaseExtractor):
                 "page_metadata": {
                     "image_path": str(image_path),
                     "ocr_path": str(ocr_path),
+                    "ocr_detailed_path": str(ocr_detailed_path),
                     "dpi": self.dpi,
                     "language": self.language,
-                    "word_count": len(ocr_text.split()),
-                    "line_count": len(ocr_text.strip().split('\n'))
+                    "word_count": len(words),
+                    "line_count": len(lines),
+                    "bounding_boxes_count": len(words),
+                    "avg_confidence": avg_confidence
                 }
             }
             

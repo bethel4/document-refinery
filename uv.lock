@@ -387,6 +387,7 @@ dependencies = [
     { name = "pymupdf" },
     { name = "pyyaml" },
     { name = "tiktoken" },
+    { name = "torchvision" },
 ]
 
 [package.metadata]
@@ -400,6 +401,7 @@ requires-dist = [
     { name = "pymupdf", specifier = ">=1.27.1" },
     { name = "pyyaml", specifier = ">=6.0" },
     { name = "tiktoken", specifier = ">=0.12.0" },
+    { name = "torchvision", specifier = ">=0.25.0" },
 ]
 
 [[package]]
