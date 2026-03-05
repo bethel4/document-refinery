@@ -34,6 +34,7 @@ class ExtractionRouter:
         """Route document and escalate pages individually if needed."""
         recommended_strategy = profile.get("recommended_strategy", "fast_text")
         doc_id = profile.get("document_id", "unknown")
+        page_results_cache: Dict[str, List[Dict[str, Any]]] = {}
 
         logger.info(f"Routing document {doc_id} using {recommended_strategy}")
         extractor = self.strategy_map.get(recommended_strategy, self.fast_extractor)
@@ -51,7 +52,13 @@ class ExtractionRouter:
                 logger.warning(f"Page {page_num} below threshold {conf:.2f}, escalating")
                 # Decide next strategy
                 next_strategy = self._next_strategy(recommended_strategy)
-                page_result = self.strategy_map[next_strategy].extract_page(page, profile)
+                page_result = self._extract_escalated_page(
+                    pdf_path=pdf_path,
+                    profile=profile,
+                    strategy=next_strategy,
+                    page=page,
+                    page_results_cache=page_results_cache,
+                )
                 page_result["escalated_from"] = recommended_strategy
                 page_result["strategy_used"] = next_strategy
                 escalated_pages.append(page_result)
@@ -89,10 +96,48 @@ class ExtractionRouter:
     def _next_strategy(self, current: str) -> str:
         """Determine the next strategy in escalation."""
         order = ["fast_text", "layout", "vision"]
+        if current not in order:
+            return "vision"
         idx = order.index(current)
         if idx + 1 < len(order):
             return order[idx + 1]
         return "vision"  # ultimate fallback
+
+    def _extract_escalated_page(
+        self,
+        pdf_path: str,
+        profile: Dict[str, Any],
+        strategy: str,
+        page: Dict[str, Any],
+        page_results_cache: Dict[str, List[Dict[str, Any]]],
+    ) -> Dict[str, Any]:
+        """Extract a single page using target strategy with compatibility fallback.
+
+        Preferred path uses extractor.extract_page(page, profile) when implemented.
+        Fallback runs extractor.extract(pdf_path, profile) once per strategy and selects the page.
+        """
+        extractor = self.strategy_map[strategy]
+        page_num = page.get("page_num", page.get("page_number"))
+
+        if hasattr(extractor, "extract_page"):
+            return extractor.extract_page(page, profile)
+
+        if strategy not in page_results_cache:
+            full_result = extractor.extract(pdf_path, profile)
+            page_results_cache[strategy] = full_result.get("pages", [])
+
+        strategy_pages = page_results_cache.get(strategy, [])
+        for candidate in strategy_pages:
+            candidate_num = candidate.get("page_num", candidate.get("page_number"))
+            if page_num is not None and candidate_num == page_num:
+                return candidate
+
+        logger.warning(
+            "Escalation fallback could not find page %s for strategy %s; keeping original page output",
+            page_num,
+            strategy,
+        )
+        return page
 
     def get_strategy_stats(self) -> Dict[str, Any]:
         return {
