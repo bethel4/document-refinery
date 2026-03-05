@@ -2,11 +2,11 @@
   "document_id": "Audit Report - 2023",
   "filename": "Audit Report - 2023.pdf",
   "file_path": "data/raw/Audit Report - 2023.pdf",
-  "total_duration": 85.87927603721619,
+  "total_duration": 165.4885687828064,
   "triage": {
-    "duration": 2.5748183727264404,
+    "duration": 3.2200069427490234,
     "profile": {
-      "document_id": "Audit Report - 2023_1772650017",
+      "document_id": "Audit Report - 2023_1772696541",
       "origin_type": "scanned_image",
       "category": "high_complexity",
       "recommended_strategy": "vision",
@@ -16,14 +16,14 @@
     }
   },
   "extraction": {
-    "duration": 83.30317616462708,
+    "duration": 162.2674970626831,
     "strategy_used": "vision",
     "routing_metadata": {
       "recommended_strategy": "vision",
       "actual_strategy": "vision",
       "escalated": false,
       "confidence_threshold": 0.7,
-      "average_confidence": 0,
+      "average_confidence": 0.0,
       "pages_processed": 0
     },
     "pages": [],
@@ -31,24 +31,119 @@
       "total_pages": 0,
       "total_text_length": 0,
       "total_tables": 0,
-      "average_confidence": 0,
+      "average_confidence": 0.0,
       "extraction_cost": "high",
-      "processing_time_seconds": 0,
+      "processing_time_seconds": 0.0,
       "ocr_engine": "tesseract",
       "dpi": 150,
       "language": "eng",
-      "performance_limits": {
-        "max_vision_pages": 2,
-        "pages_skipped": 95
-      },
+      "docling_version": null,
       "pages_processed": 0,
-      "confidence_threshold": 0.7
+      "confidence_threshold": 0.7,
+      "performance_limits": {
+        "max_vision_pages": 5,
+        "pages_skipped": 95
+      }
     },
     "document_elements": {}
   },
   "performance": {
-    "triage_speed": "36.9 pages/sec",
+    "triage_speed": "29.5 pages/sec",
     "extraction_speed": "0.0 pages/sec",
     "overall_efficiency": "low"
+  },
+  "processed_at": "2026-03-05T10:45:07.290596",
+  "ldus": [],
+  "page_index": [],
+  "provenance_chain": {
+    "chain_id": "Audit Report - 2023_provenance",
+    "document_id": "Audit Report - 2023_1772696541",
+    "chain_version": "1.0",
+    "created_at": "2026-03-05T10:45:07.291085",
+    "updated_at": "2026-03-05T10:45:07.291336",
+    "created_by": "ExtractionPipeline",
+    "content_hash": null,
+    "page_refs": [],
+    "bbox": null,
+    "citations": [],
+    "steps": [
+      {
+        "step_id": "Audit Report - 2023_triage",
+        "step_type": "triage",
+        "step_name": "document_triage",
+        "sequence_order": 1,
+        "agent": {
+          "agent_id": "document_refinery_pipeline",
+          "agent_type": "automated",
+          "agent_name": "ExtractionPipeline",
+          "version": "1.0",
+          "configuration": {}
+        },
+        "started_at": "2026-03-05T10:45:07.290760",
+        "completed_at": "2026-03-05T10:45:07.290768",
+        "status": "completed",
+        "input_artifacts": [],
+        "output_artifacts": [],
+        "input_parameters": {},
+        "metrics": {
+          "duration_seconds": 3.2200069427490234,
+          "cpu_usage_percent": null,
+          "memory_usage_mb": null,
+          "pages_processed": 0,
+          "confidence_score": null,
+          "error_count": 0,
+          "warning_count": 0
+        },
+        "result_summary": null,
+        "error_message": null,
+        "quality_score": null,
+        "validation_results": {},
+        "content_hash": null,
+        "page_refs": [],
+        "bbox": null,
+        "citations": []
+      },
+      {
+        "step_id": "Audit Report - 2023_extraction",
+        "step_type": "extraction",
+        "step_name": "content_extraction",
+        "sequence_order": 2,
+        "agent": {
+          "agent_id": "document_refinery_pipeline",
+          "agent_type": "automated",
+          "agent_name": "ExtractionPipeline",
+          "version": "1.0",
+          "configuration": {}
+        },
+        "started_at": "2026-03-05T10:45:07.290923",
+        "completed_at": "2026-03-05T10:45:07.290931",
+        "status": "completed",
+        "input_artifacts": [],
+        "output_artifacts": [],
+        "input_parameters": {},
+        "metrics": {
+          "duration_seconds": 162.2674970626831,
+          "cpu_usage_percent": null,
+          "memory_usage_mb": null,
+          "pages_processed": 0,
+          "confidence_score": null,
+          "error_count": 0,
+          "warning_count": 0
+        },
+        "result_summary": null,
+        "error_message": null,
+        "quality_score": null,
+        "validation_results": {},
+        "content_hash": null,
+        "page_refs": [],
+        "bbox": null,
+        "citations": []
+      }
+    ],
+    "total_duration": 1.6e-05,
+    "total_cost": null,
+    "overall_quality_score": null,
+    "status": "completed",
+    "completion_percentage": 100.0
   }
 }

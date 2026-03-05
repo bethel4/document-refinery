@@ -8,6 +8,8 @@ import sys
 import logging
 import time
 import json
+import hashlib
+from datetime import datetime
 from pathlib import Path
 from typing import Dict, Any, List
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -17,6 +19,19 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from src.domain_analysis.triage.document_classifier import TriageClassifier
 from src.extraction.extraction_router import ExtractionRouter
+from src.models.extracted_document import ExtractedDocument, PerformanceMetrics
+from src.models.ldu import BoundingBox, LDU, LDURole, LDUType
+from src.models.page_index import ContentType, PageFeatures, PageIndex, PageNavigation, PageQuality, PageType
+from src.models.provenance_chain import (
+    AgentInfo,
+    AgentType,
+    ProcessingMetrics,
+    ProcessingStatus,
+    ProcessingStep,
+    ProcessingStepType,
+    ProvenanceChain,
+    ProvenanceCitation,
+)
 
 # Setup logging
 logging.basicConfig(
@@ -62,9 +77,9 @@ class ExtractionPipeline:
         # Initialize extraction router
         self.router = ExtractionRouter()
         
-        # Set confidence_threshold if router has that attribute
-        if hasattr(self.router, "confidence_threshold"):
-            self.router.confidence_threshold = confidence_threshold
+        # Set confidence threshold on the router.
+        if hasattr(self.router, "conf_threshold"):
+            self.router.conf_threshold = confidence_threshold
         
         logger.info(f"ExtractionPipeline initialized: {max_workers} workers, confidence_threshold={confidence_threshold}")
     
@@ -113,38 +128,51 @@ class ExtractionPipeline:
             logger.info(f"[Phase2] Extraction completed: {extraction_result['strategy_used']} ({extraction_duration:.2f}s)")
             
             total_duration = time.time() - start_time
-            
-            result = {
-                "document_id": doc_id,
-                "filename": pdf_path.name,
-                "file_path": str(pdf_path),
-                "total_duration": total_duration,
-                "triage": {
-                    "duration": triage_duration,
-                    "profile": {
-                        "document_id": profile.document_id,
-                        "origin_type": profile.origin_type,
-                        "category": profile.category,
-                        "recommended_strategy": profile.recommended_strategy,
-                        "confidence": profile.category_confidence,
-                        "pages": profile.total_pages,
-                        "file_size": profile.file_size_bytes
-                    }
+
+            triage_payload = {
+                "duration": triage_duration,
+                "profile": {
+                    "document_id": profile.document_id,
+                    "origin_type": profile.origin_type,
+                    "category": profile.category,
+                    "recommended_strategy": profile.recommended_strategy,
+                    "confidence": profile.category_confidence,
+                    "pages": profile.total_pages,
+                    "file_size": profile.file_size_bytes,
                 },
-                "extraction": {
-                    "duration": extraction_duration,
-                    "strategy_used": extraction_result["strategy_used"],
-                    "routing_metadata": extraction_result.get("routing_metadata", {}),
-                    "pages": extraction_result.get("pages", []),
-                    "extraction_metadata": extraction_result.get("extraction_metadata", {}),
-                    "document_elements": extraction_result.get("document_elements", {})
-                },
-                "performance": {
-                    "triage_speed": f"{profile.total_pages/triage_duration:.1f} pages/sec",
-                    "extraction_speed": f"{len(extraction_result.get('pages', []))/extraction_duration:.1f} pages/sec",
-                    "overall_efficiency": "high" if total_duration < 30 else "medium" if total_duration < 60 else "low"
-                }
             }
+            extraction_payload = {
+                "duration": extraction_duration,
+                "strategy_used": extraction_result["strategy_used"],
+                "routing_metadata": extraction_result.get("routing_metadata", {}),
+                "pages": extraction_result.get("pages", []),
+                "extraction_metadata": extraction_result.get("extraction_metadata", {}),
+                "document_elements": extraction_result.get("document_elements", {}),
+            }
+            performance_payload = PerformanceMetrics(
+                triage_speed=f"{profile.total_pages/triage_duration:.1f} pages/sec",
+                extraction_speed=f"{len(extraction_result.get('pages', []))/extraction_duration:.1f} pages/sec",
+                overall_efficiency="high" if total_duration < 30 else "medium" if total_duration < 60 else "low",
+            )
+
+            extracted_doc = ExtractedDocument(
+                document_id=doc_id,
+                filename=pdf_path.name,
+                file_path=str(pdf_path),
+                total_duration=total_duration,
+                triage=triage_payload,
+                extraction=extraction_payload,
+                performance=performance_payload,
+            )
+
+            ldus = self._build_ldus(doc_id, extraction_result.get("pages", []), extracted_doc.get_strategy_used())
+            page_index_nodes = self._build_page_index(doc_id, extraction_result.get("pages", []), extracted_doc.get_strategy_used())
+            provenance_chain = self._build_provenance_chain(doc_id, profile.document_id, ldus, triage_duration, extraction_duration)
+
+            result = extracted_doc.model_dump(mode="json")
+            result["ldus"] = [ldu.model_dump(mode="json") for ldu in ldus]
+            result["page_index"] = [page.model_dump(mode="json") for page in page_index_nodes]
+            result["provenance_chain"] = provenance_chain.model_dump(mode="json")
             
             self._save_extraction_result(doc_id, result)
             logger.info(f"✅ Completed {pdf_path.name} in {total_duration:.2f}s")
@@ -158,6 +186,168 @@ class ExtractionPipeline:
                 "error": str(e),
                 "total_duration": time.time() - start_time
             }
+
+    def _build_ldus(self, document_id: str, pages: List[Dict[str, Any]], strategy_used: str) -> List[LDU]:
+        """Build validated logical document units from extracted pages."""
+        ldus: List[LDU] = []
+        for idx, page in enumerate(pages):
+            text = page.get("text", "") or ""
+            if not text.strip():
+                continue
+
+            page_num = int(page.get("page_num", idx + 1))
+            bbox_data = page.get("bbox") or page.get("bounding_box")
+            bbox = None
+            if isinstance(bbox_data, dict):
+                bbox_payload = {
+                    "x": bbox_data.get("x", bbox_data.get("left", 0.0)),
+                    "y": bbox_data.get("y", bbox_data.get("top", 0.0)),
+                    "width": bbox_data.get("width", 1.0),
+                    "height": bbox_data.get("height", 1.0),
+                    "page_num": page_num,
+                }
+                bbox = BoundingBox(**bbox_payload)
+
+            ldu = LDU(
+                ldu_id=f"{document_id}_ldu_{idx+1}",
+                document_id=document_id,
+                ldu_type=LDUType.PARAGRAPH,
+                role=LDURole.CONTENT,
+                text=text,
+                text_length=len(text),
+                content_hash=hashlib.sha256(text.encode("utf-8")).hexdigest(),
+                confidence=float(page.get("confidence", 0.0)),
+                page_num=page_num,
+                page_refs=[page_num],
+                bounding_box=bbox,
+                position_in_document=idx,
+                parent_section=f"{document_id}_section_root",
+                extraction_method=strategy_used,
+            )
+            ldus.append(ldu)
+        return ldus
+
+    def _build_page_index(self, document_id: str, pages: List[Dict[str, Any]], strategy_used: str) -> List[PageIndex]:
+        """Build validated page index entries from extracted pages."""
+        page_index_nodes: List[PageIndex] = []
+        for idx, page in enumerate(pages):
+            text = page.get("text", "") or ""
+            page_num = int(page.get("page_num", idx + 1))
+            table_count = len(page.get("tables", []) or [])
+            confidence = float(page.get("confidence", 0.0))
+
+            page_type = PageType.CONTENT
+            content_type = ContentType.TABLE_HEAVY if table_count > 0 else ContentType.TEXT_ONLY
+
+            words = len(text.split())
+            lines = text.count("\n") + 1 if text else 0
+            paragraphs = len([p for p in text.split("\n\n") if p.strip()]) if text else 0
+
+            node = PageIndex(
+                page_id=f"{document_id}_page_{page_num}",
+                document_id=document_id,
+                page_num=page_num,
+                page_type=page_type,
+                content_type=content_type,
+                primary_language="unknown",
+                language_confidence=0.5,
+                title=None,
+                summary=text[:200] if text else None,
+                keywords=[],
+                features=PageFeatures(
+                    word_count=words,
+                    line_count=lines,
+                    paragraph_count=paragraphs,
+                    table_count=table_count,
+                    figure_count=0,
+                    image_count=0,
+                    font_count=0,
+                    column_count=1,
+                    text_density=min(1.0, words / 1000.0),
+                    image_coverage=0.0,
+                ),
+                quality=PageQuality(
+                    ocr_confidence=confidence,
+                    text_clarity=confidence,
+                    layout_quality=confidence,
+                    noise_level=max(0.0, 1.0 - confidence),
+                ),
+                navigation=PageNavigation(page_number=page_num, outline_level=0),
+                extraction_method=strategy_used,
+                parent_section=f"{document_id}_section_root",
+                children=[],
+            )
+            page_index_nodes.append(node)
+        return page_index_nodes
+
+    def _build_provenance_chain(
+        self,
+        chain_id_prefix: str,
+        source_document_id: str,
+        ldus: List[LDU],
+        triage_duration: float,
+        extraction_duration: float,
+    ) -> ProvenanceChain:
+        """Build a provenance chain capturing triage and extraction lineage."""
+        all_pages = sorted({page for ldu in ldus for page in ldu.page_refs})
+        combined_hash = hashlib.sha256("".join(ldu.content_hash for ldu in ldus).encode("utf-8")).hexdigest() if ldus else None
+
+        citations = [
+            ProvenanceCitation(
+                citation_id=f"{chain_id_prefix}_citation_{idx+1}",
+                page_refs=ldu.page_refs,
+                bbox=ldu.bounding_box,
+                content_hash=ldu.content_hash,
+                source_artifact=source_document_id,
+            )
+            for idx, ldu in enumerate(ldus)
+        ]
+
+        agent = AgentInfo(
+            agent_id="document_refinery_pipeline",
+            agent_type=AgentType.AUTOMATED,
+            agent_name="ExtractionPipeline",
+            version="1.0",
+        )
+
+        triage_step = ProcessingStep(
+            step_id=f"{chain_id_prefix}_triage",
+            step_type=ProcessingStepType.TRIAGE,
+            step_name="document_triage",
+            sequence_order=1,
+            agent=agent,
+            started_at=datetime.now(),
+            completed_at=datetime.now(),
+            status=ProcessingStatus.COMPLETED,
+            metrics=ProcessingMetrics(duration_seconds=triage_duration, pages_processed=len(all_pages)),
+            page_refs=all_pages,
+        )
+        extraction_step = ProcessingStep(
+            step_id=f"{chain_id_prefix}_extraction",
+            step_type=ProcessingStepType.EXTRACTION,
+            step_name="content_extraction",
+            sequence_order=2,
+            agent=agent,
+            started_at=datetime.now(),
+            completed_at=datetime.now(),
+            status=ProcessingStatus.COMPLETED,
+            metrics=ProcessingMetrics(duration_seconds=extraction_duration, pages_processed=len(all_pages)),
+            page_refs=all_pages,
+            citations=citations,
+        )
+
+        chain = ProvenanceChain(
+            chain_id=f"{chain_id_prefix}_provenance",
+            document_id=source_document_id,
+            created_by="ExtractionPipeline",
+            content_hash=combined_hash,
+            page_refs=all_pages,
+            citations=citations,
+            status=ProcessingStatus.COMPLETED if ldus else ProcessingStatus.PENDING,
+        )
+        chain.add_step(triage_step)
+        chain.add_step(extraction_step)
+        return chain
     
     def process_batch(self, pdf_folder: str = "data/raw") -> List[Dict[str, Any]]:
         """Process all PDFs in folder using parallel ThreadPool."""

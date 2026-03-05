@@ -3,10 +3,10 @@ PageIndex Pydantic model for document page indexing and navigation.
 """
 
 from datetime import datetime
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Optional
 from enum import Enum
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 
 class PageType(str, Enum):
@@ -61,7 +61,7 @@ class PageNavigation(BaseModel):
     chapter_number: Optional[str] = None
     title: Optional[str] = None
     subtitle: Optional[str] = None
-    outline_level: Optional[int] = None
+    outline_level: Optional[int] = Field(default=None, ge=0)
     is_section_start: bool = False
     is_chapter_start: bool = False
     previous_page_id: Optional[str] = None
@@ -86,7 +86,7 @@ class PageIndex(BaseModel):
     # Basic identification
     page_id: str
     document_id: str
-    page_num: int
+    page_num: int = Field(ge=1)
     
     # Classification
     page_type: PageType
@@ -98,6 +98,7 @@ class PageIndex(BaseModel):
     title: Optional[str] = None
     summary: Optional[str] = None
     keywords: List[str] = Field(default_factory=list)
+    section_label: Optional[str] = None
     
     # Features and metrics
     features: PageFeatures
@@ -117,11 +118,18 @@ class PageIndex(BaseModel):
     processing_version: str = "1.0"
     
     # Relationships
+    parent_section: Optional[str] = None
+    children: List["PageIndex"] = Field(default_factory=list)
     linked_pages: List[str] = Field(default_factory=list)
     referenced_pages: List[str] = Field(default_factory=list)
     
-    class Config:
-        use_enum_values = True
+    model_config = ConfigDict(use_enum_values=True)
+
+    @model_validator(mode="after")
+    def validate_parent_relations(self) -> "PageIndex":
+        if self.parent_section and self.parent_section == self.page_id:
+            raise ValueError("parent_section cannot reference the same page_id")
+        return self
         
     def is_content_page(self) -> bool:
         """Check if this is a main content page."""
@@ -192,13 +200,18 @@ class PageIndex(BaseModel):
         return {
             "page_id": self.page_id,
             "page_num": self.page_num,
-            "page_type": self.page_type.value,
+            "page_type": self.page_type.value if hasattr(self.page_type, "value") else self.page_type,
             "title": self.title,
-            "content_type": self.content_type.value,
+            "content_type": self.content_type.value if hasattr(self.content_type, "value") else self.content_type,
             "has_tables": self.has_tables(),
             "has_figures": self.has_figures(),
             "quality_score": self.quality.ocr_confidence,
             "complexity_score": self.get_complexity_score(),
             "is_content": self.is_content_page(),
+            "parent_section": self.parent_section,
+            "children_count": len(self.children),
             "summary": self.summary
         }
+
+
+PageIndex.model_rebuild()

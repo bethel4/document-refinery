@@ -2,11 +2,11 @@
   "document_id": "tax_expenditure_ethiopia_2021_22",
   "filename": "tax_expenditure_ethiopia_2021_22.pdf",
   "file_path": "data/raw/tax_expenditure_ethiopia_2021_22.pdf",
-  "total_duration": 101.30154037475586,
+  "total_duration": 145.05634021759033,
   "triage": {
-    "duration": 6.782822370529175,
+    "duration": 3.0830907821655273,
     "profile": {
-      "document_id": "tax_expenditure_ethiopia_2021_22_1772642963",
+      "document_id": "tax_expenditure_ethiopia_2021_22_1772696396",
       "origin_type": "native_digital",
       "category": "high_complexity",
       "recommended_strategy": "vision",
@@ -16,130 +16,134 @@
     }
   },
   "extraction": {
-    "duration": 94.51783204078674,
+    "duration": 141.9722707271576,
     "strategy_used": "vision",
     "routing_metadata": {
       "recommended_strategy": "vision",
       "actual_strategy": "vision",
       "escalated": false,
       "confidence_threshold": 0.7,
-      "average_confidence": 0.9312056921485979,
-      "pages_processed": 5
+      "average_confidence": 0.0,
+      "pages_processed": 0
     },
-    "pages": [
-      {
-        "page_num": 1,
-        "text": "Import tax expenditure report:\nFY 2018/19 — 2020/21\n\nTax Policy Directorate, Ministry of Finance, Ethiopia\n\nSeptember 2022",
-        "text_length": 122,
-        "tables": [],
-        "confidence": 0.9457894736842105,
-        "extraction_method": "tesseract_ocr",
-        "page_metadata": {
-          "image_path": ".refinery/pages/unknown_page_1.png",
-          "ocr_path": ".refinery/ocr/unknown_page_1.txt",
-          "dpi": 150,
-          "language": "eng",
-          "word_count": 17,
-          "line_count": 6
-        },
-        "escalated_from": null,
-        "strategy_used": "vision"
-      },
-      {
-        "page_num": 2,
-        "text": "2 Import tax expenditure report: FY 2018/19 — 2020/21\n\nPreface\n\nThis report has been prepared by the IFS Centre for Tax Analysis in Developing Countries\n(TaxDev) team (Daniel Prinz, Edris Seid and Ben Waltmann) in collaboration with the Ethiopian\nMinistry of Finance Tax Policy Directorate team (led by Mulay Weldu).\n\nThe authors would like to thank David Phillips (IFS) for useful comments and feedback. They\nalso thank the staff of the Ministry of Finance Tax Policy Directorate and the staff of the\n\nEthiopian Customs Commission for providing access to data and clarifying certain data issues.\n\nThis report has been funded by UK aid from the UK government through a grant to TaxDev.\n\nSS] LZ\n\n\"aN\nUuKaid\n\nfrom the British people\n\n© Ministry of Finance, Ethiopia",
-        "text_length": 763,
-        "tables": [],
-        "confidence": 0.9333333333333332,
-        "extraction_method": "tesseract_ocr",
-        "page_metadata": {
-          "image_path": ".refinery/pages/unknown_page_2.png",
-          "ocr_path": ".refinery/ocr/unknown_page_2.txt",
-          "dpi": 150,
-          "language": "eng",
-          "word_count": 125,
-          "line_count": 23
-        },
-        "escalated_from": null,
-        "strategy_used": "vision"
-      },
-      {
-        "page_num": 3,
-        "text": "3 Import tax expenditure report: FY 2018/19 — 2020/21\n\nContents\n\nExecutive summary\n\n \n \n  \n\n1. Introduction\n\nPolicy rationale for and issues with tax expenditures ..\n\nNS\n\nDefinitions and data\n\n \n\n3.1 Defining the benchmark tax system\n\n \n\n3.2 Estimating tax expenditures .........\n\n3.3. Data\n\n \n\n \n\n4. Tax expenditure estimates\n\n \n\n4.1 Overall tax expenditures........00.....\n\n \n\n4.2 Customs duty\n\n \n\n4.3 Excise duty\n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n44 VAT\n4.5 Surtax ....\n\n5.\n\nAppendices...\nA. Negative tax expenditures ............\nB Details on the calculation of indirect effects of tax expenditures........0.0.cccceeee 44\nCc Alternative measures of tax expenditures .........0.0000.\nD. Duplicate records in customs microdata ....\nE Commodity categorisation based on two-digit HS code\nF. Supplementary tables 0.00.00...\n\nReferences...\n\n \n\n© Ministry of Finance, Ethiopia",
-        "text_length": 867,
-        "tables": [],
-        "confidence": 0.8666935483870968,
-        "extraction_method": "tesseract_ocr",
-        "page_metadata": {
-          "image_path": ".refinery/pages/unknown_page_3.png",
-          "ocr_path": ".refinery/ocr/unknown_page_3.txt",
-          "dpi": 150,
-          "language": "eng",
-          "word_count": 110,
-          "line_count": 82
-        },
-        "escalated_from": null,
-        "strategy_used": "vision"
-      },
-      {
-        "page_num": 4,
-        "text": "4 Import tax expenditure report: FY 2018/19 — 2020/21\n\nExecutive summary\n\nUnderstanding, estimating and reporting on tax expenditures is an important exercise in\npublic financial management. Tax expenditures — cases in which the tax liability of an\nindividual, a firm or other entity is reduced below the liability under a benchmark tax system —\nuse limited public financial resources. Ethiopia, like other countries, incurs significant tax\nexpenditures each year. To understand whether these tax expenditures serve the government’s\n\ndevelopment agenda, tax expenditures must first be measured.\n\nThis report uses shipment-level microdata from the Ethiopian Customs Commission to\nestimate import tax expenditures for fiscal years 2018/19, 2019/20 and 2020/21. It covers the\nfour taxes levied on imports: customs duty, excise duty, VAT and surtax. (It does not cover\n\nwithholding tax, which is not designed as a final tax.)\n\nWhere appropriate, exemptions and rate reductions are considered separately, and\n\nestimates are presented for different categories of commodities. In addition to estimating\noverall tax expenditures and tax expenditures for each tax type, it is useful to understand the\nsource of tax expenditures. Estimates by categories of commodities can help the government\n\nassess whether expenditures are in line with development objectives.\n\nThe report uses the revenue forgone method and does not attempt to incorporate the\nbehavioural or compliance effects of tax expenditures. This implicitly assumes that if all tax\nexpenditures were eliminated, the government would collect the full difference between what is\ncurrently collected and what would be collected under the benchmark system. This, however,\nneed not be the case, as imports are potentially responsive to tax rates both on the real and the\ncompliance margin. Furthermore, import tax expenditures likely lead to higher collection of\ndomestic taxes, and especially domestic VAT. Thus, the cost of tax expenditures calculated in\n\nthis report likely overstates their true fiscal cost.\n\nImport tax expenditures were ETB 120.7 billion in FY 2020/21, which represented around\n2.8% of GDP, between ETB 76.4 billion and ETB 78.3 billion (or 2.3% of GDP) in FY\n2019/20, and between ETB 68.7 billion and ETB 99.3 billion (2.6% to 3.7% of GDP) in FY\n2018/19. Of total import tax expenditures in FY 2020/21, VAT expenditures constituted the\nlargest share at 37% of the total (ETB 44.6 billion), followed by customs duty expenditures at\n32% (ETB 38.9 billion), excise tax expenditures at around 16% (ETB 18.8 billion) and surtax\nexpenditures at 15% (ETB 18.4 billion). On average, tax expenditures were worth 21.3% of the\n\n \n\nstry of Finance, Ethiopia",
-        "text_length": 2713,
-        "tables": [],
-        "confidence": 0.9549156626506025,
-        "extraction_method": "tesseract_ocr",
-        "page_metadata": {
-          "image_path": ".refinery/pages/unknown_page_4.png",
-          "ocr_path": ".refinery/ocr/unknown_page_4.txt",
-          "dpi": 150,
-          "language": "eng",
-          "word_count": 414,
-          "line_count": 47
-        },
-        "escalated_from": null,
-        "strategy_used": "vision"
-      },
-      {
-        "page_num": 5,
-        "text": "5 Import tax expenditure report: FY 2018/19 — 2020/21\n\nimport value of affected goods in FY 2020/21, 16% in FY 2019/20 and around 20% in FY\n2018/19.\n\nIn FY 2020/21, import tax expenditures were especially large on motor vehicles and on\nanimal and vegetable fats. Together, these two categories of imports made up nearly 40% of\ntotal tax expenditures. At around 50%, average tax expenditures in both of these categories are\nalso especially large relative to the value of imports. For vehicles, these high expenditures\nprimarily arise from much higher statutory surtax rates since FY 2020/21 that have not been\nconsistently applied. For animal and vegetable fats (largely palm oil), high FY 2020/21 tax\nexpenditures are the result of ad hoc exemptions for the importation of cooking oil to stabilise\n\nlocal prices, combined with a high value of imports in this category.\n\nTax exemptions for capital and investment goods and ‘second schedule’ preferential\ncustoms and surtax rates respectively only account for 2.3% and 1.0% of tax expenditures.\nThis is primarily because only a very small share of imports by value are eligible for them: 0.5%\nfor capital goods exemptions and 1.0% for second schedule rates. The share of tax expenditures\ndue to second schedule rates has fallen substantially in recent years as the share of eligible goods\nhas been reduced. However, between the 2019/20 and 2020/21 fiscal years, the fall in second\nschedule expenditures was far outweighed by the growth in the value of other ad hoc\nexpenditures.\n\n© Ministry of Finance, Ethiopia",
-        "text_length": 1559,
-        "tables": [],
-        "confidence": 0.955296442687747,
-        "extraction_method": "tesseract_ocr",
-        "page_metadata": {
-          "image_path": ".refinery/pages/unknown_page_5.png",
-          "ocr_path": ".refinery/ocr/unknown_page_5.txt",
-          "dpi": 150,
-          "language": "eng",
-          "word_count": 253,
-          "line_count": 25
-        },
-        "escalated_from": null,
-        "strategy_used": "vision"
-      }
-    ],
+    "pages": [],
     "extraction_metadata": {
-      "total_pages": 5,
-      "total_text_length": 6024,
+      "total_pages": 0,
+      "total_text_length": 0,
       "total_tables": 0,
-      "average_confidence": 0.9312056921485979,
+      "average_confidence": 0.0,
       "extraction_cost": "high",
-      "processing_time_seconds": 0,
+      "processing_time_seconds": 0.0,
       "ocr_engine": "tesseract",
       "dpi": 150,
       "language": "eng",
+      "docling_version": null,
+      "pages_processed": 0,
+      "confidence_threshold": 0.7,
       "performance_limits": {
         "max_vision_pages": 5,
-        "pages_skipped": 55
-      },
-      "pages_processed": 5,
-      "confidence_threshold": 0.7
+        "pages_skipped": 60
+      }
     },
     "document_elements": {}
   },
   "performance": {
-    "triage_speed": "8.8 pages/sec",
-    "extraction_speed": "0.1 pages/sec",
+    "triage_speed": "19.5 pages/sec",
+    "extraction_speed": "0.0 pages/sec",
     "overall_efficiency": "low"
+  },
+  "processed_at": "2026-03-05T10:42:21.684316",
+  "ldus": [],
+  "page_index": [],
+  "provenance_chain": {
+    "chain_id": "tax_expenditure_ethiopia_2021_22_provenance",
+    "document_id": "tax_expenditure_ethiopia_2021_22_1772696396",
+    "chain_version": "1.0",
+    "created_at": "2026-03-05T10:42:21.684765",
+    "updated_at": "2026-03-05T10:42:21.685137",
+    "created_by": "ExtractionPipeline",
+    "content_hash": null,
+    "page_refs": [],
+    "bbox": null,
+    "citations": [],
+    "steps": [
+      {
+        "step_id": "tax_expenditure_ethiopia_2021_22_triage",
+        "step_type": "triage",
+        "step_name": "document_triage",
+        "sequence_order": 1,
+        "agent": {
+          "agent_id": "document_refinery_pipeline",
+          "agent_type": "automated",
+          "agent_name": "ExtractionPipeline",
+          "version": "1.0",
+          "configuration": {}
+        },
+        "started_at": "2026-03-05T10:42:21.684471",
+        "completed_at": "2026-03-05T10:42:21.684477",
+        "status": "completed",
+        "input_artifacts": [],
+        "output_artifacts": [],
+        "input_parameters": {},
+        "metrics": {
+          "duration_seconds": 3.0830907821655273,
+          "cpu_usage_percent": null,
+          "memory_usage_mb": null,
+          "pages_processed": 0,
+          "confidence_score": null,
+          "error_count": 0,
+          "warning_count": 0
+        },
+        "result_summary": null,
+        "error_message": null,
+        "quality_score": null,
+        "validation_results": {},
+        "content_hash": null,
+        "page_refs": [],
+        "bbox": null,
+        "citations": []
+      },
+      {
+        "step_id": "tax_expenditure_ethiopia_2021_22_extraction",
+        "step_type": "extraction",
+        "step_name": "content_extraction",
+        "sequence_order": 2,
+        "agent": {
+          "agent_id": "document_refinery_pipeline",
+          "agent_type": "automated",
+          "agent_name": "ExtractionPipeline",
+          "version": "1.0",
+          "configuration": {}
+        },
+        "started_at": "2026-03-05T10:42:21.684658",
+        "completed_at": "2026-03-05T10:42:21.684665",
+        "status": "completed",
+        "input_artifacts": [],
+        "output_artifacts": [],
+        "input_parameters": {},
+        "metrics": {
+          "duration_seconds": 141.9722707271576,
+          "cpu_usage_percent": null,
+          "memory_usage_mb": null,
+          "pages_processed": 0,
+          "confidence_score": null,
+          "error_count": 0,
+          "warning_count": 0
+        },
+        "result_summary": null,
+        "error_message": null,
+        "quality_score": null,
+        "validation_results": {},
+        "content_hash": null,
+        "page_refs": [],
+        "bbox": null,
+        "citations": []
+      }
+    ],
+    "total_duration": 1.3000000000000001e-05,
+    "total_cost": null,
+    "overall_quality_score": null,
+    "status": "completed",
+    "completion_percentage": 100.0
   }
 }

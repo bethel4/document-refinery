@@ -125,9 +125,15 @@ class VisionExtractor(BaseExtractor):
             image_path = self.image_dir / f"{pdf_name}_page_{page_num}.png"
             page_image.save(image_path, "PNG")
             
-            # Run OCR with Tesseract - get both text and bounding box data
-            ocr_text = pytesseract.image_to_string(page_image, lang=self.language)
-            ocr_data = pytesseract.image_to_data(page_image, lang=self.language, output_type=pytesseract.Output.DICT)
+            # Run OCR with stable CLI-style config (works across pytesseract versions).
+            tesseract_config = "--psm 3 --oem 3"
+            ocr_text = pytesseract.image_to_string(page_image, lang=self.language, config=tesseract_config)
+            ocr_data = pytesseract.image_to_data(
+                page_image,
+                lang=self.language,
+                config=tesseract_config,
+                output_type=pytesseract.Output.DICT
+            )
             
             # Calculate confidence
             confidences = [int(conf) for conf in ocr_data['conf'] if int(conf) > 0]
@@ -189,8 +195,8 @@ class VisionExtractor(BaseExtractor):
                     'dpi': self.dpi,
                     'language': self.language,
                     'tesseract_config': {
-                        'psm': pytesseract.PSM.AUTO,
-                        'oem': pytesseract.OEM.DEFAULT
+                        'psm': 3,
+                        'oem': 3
                     }
                 }
             }

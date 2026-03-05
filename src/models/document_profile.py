@@ -6,7 +6,7 @@ from datetime import datetime
 from typing import List, Optional
 from enum import Enum
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 
 class OriginType(str, Enum):
@@ -41,6 +41,25 @@ class ExtractionStrategy(str, Enum):
     HYBRID = "hybrid"
 
 
+class EstimatedExtractionCost(str, Enum):
+    """Estimated extraction resource cost categories."""
+    FAST_TEXT = "fast_text"
+    NEEDS_LAYOUT_MODEL = "needs_layout_model"
+    NEEDS_VISION_MODEL = "needs_vision_model"
+    LOW = "low"
+    MEDIUM = "medium"
+    HIGH = "high"
+
+
+class DocumentSource(str, Enum):
+    """Source channel for the input document."""
+    UPLOAD = "upload"
+    EMAIL = "email"
+    API = "api"
+    ARCHIVE = "archive"
+    UNKNOWN = "unknown"
+
+
 class DocumentProfile(BaseModel):
     """Pydantic model for document classification results."""
     
@@ -48,8 +67,10 @@ class DocumentProfile(BaseModel):
     document_id: str
     filename: str
     file_path: str
-    file_size_bytes: int
+    file_size_bytes: int = Field(ge=0)
     analyzed_at: datetime = Field(default_factory=datetime.now)
+    author: Optional[str] = None
+    source: DocumentSource = DocumentSource.UNKNOWN
     
     # Classification results
     origin_type: OriginType
@@ -67,15 +88,15 @@ class DocumentProfile(BaseModel):
     
     # Processing recommendations
     recommended_strategy: ExtractionStrategy
-    estimated_extraction_cost: str  # fast_text, needs_layout_model, needs_vision_model
+    estimated_extraction_cost: EstimatedExtractionCost
     
     # Document metrics (computed)
-    total_pages: int
-    total_chars: int
-    avg_chars_per_page: float
+    total_pages: int = Field(ge=0)
+    total_chars: int = Field(ge=0)
+    avg_chars_per_page: float = Field(ge=0.0)
     image_area_ratio: float
-    detected_table_count: int
-    x_cluster_count: int
+    detected_table_count: int = Field(ge=0)
+    x_cluster_count: int = Field(ge=0)
     
     # Mixed document metrics (optional)
     scanned_page_ratio: Optional[float] = Field(None, ge=0.0, le=1.0)
@@ -94,10 +115,21 @@ class DocumentProfile(BaseModel):
     
     # Processing metadata
     confidence: float = Field(ge=0.0, le=1.0)
-    pages: int
-    
-    class Config:
-        use_enum_values = True
+    pages: int = Field(ge=0)
+
+    model_config = ConfigDict(use_enum_values=True)
+
+    @model_validator(mode="after")
+    def enforce_consistency(self) -> "DocumentProfile":
+        if self.pages != self.total_pages:
+            self.pages = self.total_pages
+        if self.total_pages == 0 and self.total_chars > 0:
+            raise ValueError("total_pages must be > 0 when total_chars is > 0")
+        if self.total_pages > 0:
+            derived_avg = self.total_chars / self.total_pages
+            if abs(self.avg_chars_per_page - derived_avg) > 1.0:
+                self.avg_chars_per_page = derived_avg
+        return self
         
     def to_dict(self) -> dict:
         """Convert to dictionary for JSON serialization."""

@@ -6,7 +6,7 @@ from datetime import datetime
 from typing import List, Dict, Any, Optional
 from enum import Enum
 
-from pydantic import BaseModel, Field
+from pydantic import AliasChoices, BaseModel, ConfigDict, Field, field_validator, model_validator
 
 
 class LDUType(str, Enum):
@@ -37,11 +37,24 @@ class LDURole(str, Enum):
 
 class BoundingBox(BaseModel):
     """Bounding box for spatial information."""
-    left: float
-    top: float
-    width: float
-    height: float
-    page_num: int
+    x: float = Field(validation_alias=AliasChoices("x", "left"))
+    y: float = Field(validation_alias=AliasChoices("y", "top"))
+    width: float = Field(gt=0.0)
+    height: float = Field(gt=0.0)
+    page_num: int = Field(ge=1)
+    page_width: Optional[float] = Field(default=None, gt=0.0)
+    page_height: Optional[float] = Field(default=None, gt=0.0)
+
+    model_config = ConfigDict(populate_by_name=True)
+
+    @model_validator(mode="after")
+    def validate_within_page(self) -> "BoundingBox":
+        """Enforce geometric constraints when page bounds are provided."""
+        if self.page_width is not None and (self.x + self.width) > self.page_width:
+            raise ValueError("Bounding box exceeds page width")
+        if self.page_height is not None and (self.y + self.height) > self.page_height:
+            raise ValueError("Bounding box exceeds page height")
+        return self
     
     def get_area(self) -> float:
         """Calculate bounding box area."""
@@ -49,7 +62,7 @@ class BoundingBox(BaseModel):
     
     def get_center(self) -> tuple[float, float]:
         """Get center coordinates."""
-        return (self.left + self.width / 2, self.top + self.height / 2)
+        return (self.x + self.width / 2, self.y + self.height / 2)
 
 
 class SemanticMetadata(BaseModel):
@@ -72,6 +85,24 @@ class StructuralMetadata(BaseModel):
     outline_path: Optional[str] = None
 
 
+class ChunkRelationType(str, Enum):
+    """Supported LDU-to-LDU chunk relationships."""
+    PARENT = "parent"
+    CHILD = "child"
+    PREVIOUS = "previous"
+    NEXT = "next"
+    RELATED = "related"
+    SOURCE = "source"
+    DERIVED = "derived"
+
+
+class ChunkRelationship(BaseModel):
+    """Explicit typed relationship between LDUs/chunks."""
+    relation_type: ChunkRelationType
+    target_ldu_id: str = Field(min_length=1)
+    confidence: Optional[float] = Field(default=None, ge=0.0, le=1.0)
+
+
 class LDU(BaseModel):
     """Logical Document Unit - a semantic chunk of a document."""
     
@@ -82,14 +113,19 @@ class LDU(BaseModel):
     role: LDURole
     
     # Content
-    text: str
-    text_length: int
+    text: str = Field(min_length=1)
+    text_length: int = Field(ge=0)
+    content_hash: str = Field(min_length=16)
     confidence: float = Field(ge=0.0, le=1.0)
     
     # Position and structure
-    page_num: int
+    page_num: int = Field(ge=1)
+    page_refs: List[int] = Field(default_factory=list)
+    bounding_box: Optional[BoundingBox] = None
+    # Backward-compatible alias for older payloads.
     bbox: Optional[BoundingBox] = None
-    position_in_document: int  # Sequential position
+    position_in_document: int = Field(ge=0)  # Sequential position
+    parent_section: Optional[str] = None
     structural_metadata: StructuralMetadata = Field(default_factory=StructuralMetadata)
     
     # Semantic information
@@ -103,9 +139,40 @@ class LDU(BaseModel):
     # Relationships
     related_ldus: List[str] = Field(default_factory=list)
     references: List[str] = Field(default_factory=list)
+    chunk_relationships: List[ChunkRelationship] = Field(default_factory=list)
     
-    class Config:
-        use_enum_values = True
+    model_config = ConfigDict(use_enum_values=True)
+
+    @field_validator("text")
+    @classmethod
+    def validate_text_non_empty(cls, value: str) -> str:
+        if not value.strip():
+            raise ValueError("text must not be blank")
+        return value
+
+    @field_validator("page_refs")
+    @classmethod
+    def validate_page_refs(cls, value: List[int]) -> List[int]:
+        if any(page <= 0 for page in value):
+            raise ValueError("page_refs must contain only positive page numbers")
+        return sorted(set(value))
+
+    @model_validator(mode="after")
+    def normalize_fields(self) -> "LDU":
+        """Keep legacy and canonical fields in sync and enforce invariants."""
+        if self.bbox and not self.bounding_box:
+            self.bounding_box = self.bbox
+        elif self.bounding_box and not self.bbox:
+            self.bbox = self.bounding_box
+
+        if not self.page_refs:
+            self.page_refs = [self.page_num]
+        elif self.page_num not in self.page_refs:
+            self.page_refs = sorted({*self.page_refs, self.page_num})
+
+        if self.text_length != len(self.text):
+            self.text_length = len(self.text)
+        return self
         
     def get_text_preview(self, max_length: int = 100) -> str:
         """Get a preview of the LDU text."""
@@ -123,7 +190,7 @@ class LDU(BaseModel):
     
     def has_spatial_info(self) -> bool:
         """Check if LDU has spatial/bounding box information."""
-        return self.bbox is not None
+        return self.bounding_box is not None or self.bbox is not None
     
     def get_hierarchy_level(self) -> int:
         """Get the hierarchy level of this LDU."""
@@ -144,15 +211,19 @@ class LDU(BaseModel):
         return {
             "ldu_id": self.ldu_id,
             "document_id": self.document_id,
-            "ldu_type": self.ldu_type.value,
-            "role": self.role.value,
+            "ldu_type": self.ldu_type.value if hasattr(self.ldu_type, "value") else self.ldu_type,
+            "role": self.role.value if hasattr(self.role, "value") else self.role,
             "text": self.text,
             "text_length": self.text_length,
             "confidence": self.confidence,
             "page_num": self.page_num,
+            "page_refs": self.page_refs,
             "position": self.position_in_document,
+            "parent_section": self.parent_section,
             "extraction_method": self.extraction_method,
             "created_at": self.created_at.isoformat(),
-            "bbox": self.bbox.dict() if self.bbox else None,
+            "bounding_box": self.bounding_box.model_dump() if self.bounding_box else None,
+            "bbox": self.bbox.model_dump() if self.bbox else None,
+            "content_hash": self.content_hash,
             "preview": self.get_text_preview()
         }

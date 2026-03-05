@@ -2,11 +2,11 @@
   "document_id": "CBE Annual Report 2008-9 ",
   "filename": "CBE Annual Report 2008-9 .pdf",
   "file_path": "data/raw/CBE Annual Report 2008-9 .pdf",
-  "total_duration": 181.6164174079895,
+  "total_duration": 189.32951045036316,
   "triage": {
-    "duration": 4.534975051879883,
+    "duration": 1.8640398979187012,
     "profile": {
-      "document_id": "CBE Annual Report 2008-9 _1772642963",
+      "document_id": "CBE Annual Report 2008-9 _1772696396",
       "origin_type": "scanned_image",
       "category": "high_complexity",
       "recommended_strategy": "vision",
@@ -16,130 +16,134 @@
     }
   },
   "extraction": {
-    "duration": 177.03472542762756,
+    "duration": 187.46464657783508,
     "strategy_used": "vision",
     "routing_metadata": {
       "recommended_strategy": "vision",
       "actual_strategy": "vision",
       "escalated": false,
       "confidence_threshold": 0.7,
-      "average_confidence": 0.9277943009127447,
-      "pages_processed": 5
+      "average_confidence": 0.0,
+      "pages_processed": 0
     },
-    "pages": [
-      {
-        "page_num": 1,
-        "text": "i. ..\n\nAnnual Report 2008/09\n\n \n\nReliability and care with\n\nan innovative touch\n\nPATRAS TIS VA\nCommercial Bank of Ethiopia",
-        "text_length": 122,
-        "tables": [],
-        "confidence": 0.8495,
-        "extraction_method": "tesseract_ocr",
-        "page_metadata": {
-          "image_path": ".refinery/pages/unknown_page_1.png",
-          "ocr_path": ".refinery/ocr/unknown_page_1.txt",
-          "dpi": 150,
-          "language": "eng",
-          "word_count": 19,
-          "line_count": 12
-        },
-        "escalated_from": null,
-        "strategy_used": "vision"
-      },
-      {
-        "page_num": 2,
-        "text": "The President’s Message\nProfile\nMacroeconomic Highlights\nFinancial Position\nNet-Interest Income\nNet-Interest Margin\nNon-Interest Income\nOperating Expenses\nNet-Interest\nEarning Capability\nLiquidity\nBalance Sheet Analysis\nAssets’ Structure\nLoan Portfolio\nLiabilities\nCapital Adequacy\nForeign Banking Operations\nHuman Resource Activities\nBusiness Development Highlights\nAuditors' Report\n\nCBE's Future Head Quarters\n\nTo Become a World-Class Commercial Bank\n\nWe are committed to maximizing shareholder value through enhanced financial\nintermediation and unparalleled customer satisfaction. We deploy highly motivated, skilled\nand disciplined employees capable of providing banking products and services that meet\ninternational best practices and standards. We strongly believe that reliability and public\nconfidence are the bases of our success.\n\nWe stand for quality;\n\nWe are a learning organization;\n\nWe are committed to unparalleled customer satisfaction;\nOur employees are our valuable assets;\n\nWe are committed to maximizing shareholder value;\n\nWe uphold transparency, accountability and professionalism;\nWe are an equal-opportunity employer; and\n\nWe are corporate citizens.",
-        "text_length": 1174,
-        "tables": [],
-        "confidence": 0.9478523489932885,
-        "extraction_method": "tesseract_ocr",
-        "page_metadata": {
-          "image_path": ".refinery/pages/unknown_page_2.png",
-          "ocr_path": ".refinery/ocr/unknown_page_2.txt",
-          "dpi": 150,
-          "language": "eng",
-          "word_count": 147,
-          "line_count": 44
-        },
-        "escalated_from": null,
-        "strategy_used": "vision"
-      },
-      {
-        "page_num": 3,
-        "text": "COMMERCIAL BANK OF ETHIOPIA\nBOARD OF DIRECTORS\n\n   \n  \n\nH.E. Ato Abay Tsehaye,\nMinister,\n\nBoard Chairman\n\nDr. Wolday Amha\nExecutive Director,\nAssociation of Ethiopian\nMicro Finance Institution\n\nBoard Member\nH.E Ato Fikru Dessalegn\n\nState Minister,\nMinistry of Capacity Building\nBoard Member\n\n \n\nWzo. Genet Abera\nGeneral Manager,\nGAWT International Businesses PLC\nDr. Mesfin Belachew Board Member\nAssistant Director,\nEthiopian Information\nCommunication\nTechnology Agency\nBoard Member\n\n \n\nNational Security Affairs Adviser\n\n \n\n \n\n \n\n \n\n \n\nAto Getachew Negera\n\nTreasury Business Process Owner\nMinistry of Finance and\nEconomic Development\n\nBoard Member\n\n \n   \n\nAto Esayas Kebede\n\nAgricultural Investment Suppport\nDirectorate Director\n\nMinistry of Agriculture\n\nBoard Member\n\nAto Belay Gorfu\nCBE\nBoard Member\n\n \n\nAto Nebiyou Samuel\n\nChange Management and Support\nDeputy Director General\nEthiopian Revenue and Customs\nAuthority\n\nBorard Member\n\n \n\nAto Alemayehu Hunde\nBoard Secretary\n\nAto Wondwessen Assefa\nCBE\nBoard Member",
-        "text_length": 1015,
-        "tables": [],
-        "confidence": 0.9445454545454546,
-        "extraction_method": "tesseract_ocr",
-        "page_metadata": {
-          "image_path": ".refinery/pages/unknown_page_3.png",
-          "ocr_path": ".refinery/ocr/unknown_page_3.txt",
-          "dpi": 150,
-          "language": "eng",
-          "word_count": 128,
-          "line_count": 92
-        },
-        "escalated_from": null,
-        "strategy_used": "vision"
-      },
-      {
-        "page_num": 4,
-        "text": "COMMERCIAL BANK OF ETHIOPIA\n\nTHE PROCESS COUNCIL\n\n \n\n{\n\n \n\n \n\nAto Abay Mehari\nVice President,\nCredit Management\n\n \n\nAto Mohammed Nuredin\nVice President,\nTrade Services\n\n \n\nPresident\n\nAto Wendemagegnehu Negera\nVice President, Customer\nAccounts & Transaction Services\n\nAto Yehuala Gessesse\nVice President,\n\nCredit Appraisal and\nPortfolio Management\n\n \n\nAto Bekalu Zeleke\n\n \n\n \n\n \n\n \n\nAto Endale Gebru\nVice President,\n\nHuman Resource Management\n\nAto Negussu G/Egziabher\n\nVice President, Finance\n\n \n\nAto Solomon Alula\nChief Internal Auditor\n\n \n\nAto Mulugeta Alemayehu\nChief Risk and Compliance\nManagement Officer\n\n \n\nWoy. Melika Bedri\nVice President,\nInformation Systems\n\n \n\nAto Seifu Bogale\nVice President,\nFacilities Management\n\n \n\nAto Kefletsion Mamo\nChief Legal and Loan\nRecovery Officer\n\nAto Habtu Dimtsu\nDirector,\nBusiness Development",
-        "text_length": 836,
-        "tables": [],
-        "confidence": 0.9416129032258064,
-        "extraction_method": "tesseract_ocr",
-        "page_metadata": {
-          "image_path": ".refinery/pages/unknown_page_4.png",
-          "ocr_path": ".refinery/ocr/unknown_page_4.txt",
-          "dpi": 150,
-          "language": "eng",
-          "word_count": 104,
-          "line_count": 89
-        },
-        "escalated_from": null,
-        "strategy_used": "vision"
-      },
-      {
-        "page_num": 5,
-        "text": "THE PRESIDENT’S MESSAGE\n\n \n\nThe Ethiopian economy continued the double digit growth of the last five years during the fiscal year\n2008/09 by recording 10.2 percent real GDP growth, significantly above the average growth realized in\nsub-Saharan Africa. The good performance of the agricultural sector, due to favorable weather, is the\nhandmaiden of this robust and steady growth, despite the relatively significant contribution of other\nsectors, notably manufacturing, construction and services. This is a testimony to the fact that the\nexpansion strategy of the country has been broad-based, though inflation grew to steadily become a\nchallenge to the economy.\n\nAs a result of the robust growth of the country’s economy, the CBE has outperformed its target in the\nfiscal year. As at the end of fiscal year 2008/09, the total assets of the Bank stood at Birr 59.4 billion,\nwhile total deposits and other liabilities reached Birr 43.5 billion, reflecting a growth of 18 and 17.5\npercent, respectively over the preceding year. This performance proves that the Bank still maintains its\nleadership in the industry and, is marching towards accomplishing its vision.\n\nThe overall income recorded by the Bank during the fiscal year reached Birr 3.8 billion about Birr 886.41\nmillion higher than the previous fiscal year, and of course an all time high compared with the past\nyears. Its gross profit surged as well to 2.7 billion, showing a 45.5 percent rise when, compared to the\npreceding fiscal year. The profit would in fact have stood at Birr 3.2 billion, had Birr 480.3 million not\nbeen deducted to recompense the rise of the paid-up capital of the Bank to Birr 5.04 billion, suggesting\nthe continued financial strength of the CBE.\n\n \n\nA look into the operating results shows that the commendable performance was, mainly the outcome of\nthe growing volume of business in the economy and the unreserved efforts of the staff in handling tasks\nwith due diligence.\n\nFiscal year 2008/09 was a period during which the CBE undertook various business development efforts,\naimed at achieving service excellence. In order to respond to the ever growing needs customers of the\nBank has signed agreement with the government to finance housing developments, hence diversifying\nthe range of its credit portfolio and mopping up unutilized funds.\n\nThe CBE has, in the fiscal year, demonstrated its commitment of reaching out potential customers by\nopening 3 additional branches. The opening of these branches not only enables the Bank to widen its\ncustomer base, but is also one of the key ways of fulfilling its social responsibility.\n\nThe attempt to develop the Bank’s IT infrastructure continued in the year, reflecting the Management's\ncommitment to achieve the Bank’s vision of becoming a “world-class” bank and remain on top of the\nbanking sector. The Management believes that the Bank should go a long way to further improve its IT\nstructure so that customers could get quality service and the Bank sustains its leading position.\n\nDuring the fiscal year the Bank has also exercised a massive transformation effort that is believed to\nenable it to leap forward, and achieve its vision in the dynamic environment. The Business Process\nReengineering (BPR), which would bring about a radical and fundamental change in service delivery, was\ncarried out in both the core and support areas of the CBE in the fiscal year.\n\nThe transformation endeavor reflects the Bank's strong commitment not only to efficiently deliver the\nexisting products to the various market segments, but also explore new and niche businesses that can\nbecome engines of growth. The Management strongly believes that the transformation effort would help\nthe Bank to realize its core principles of becoming performance-oriented, market-driven and customer-\noriented. To this end, the Management will invest all the required efforts to bring about a paradigm shift\nthrough the implementation of the BPR.\n\nThe astonishing operational results would not have come true without the unstinted efforts of the Board\nof Directors, the Process Council and employees of the Bank, and the loyalty and confidence on the part\nof customers. Hence, I would like to seize this opportunity to thank all of them for the commitment they\ndemonstrated in achieving such an all-time-high and outstanding results. I hope this commitment will\ncontinue with us all in the years ahead as it is the only way to attain our vision of becoming a “world-\nclass” bank.\n\nBekalu Zeleke\nPresident",
-        "text_length": 4511,
-        "tables": [],
-        "confidence": 0.9554607977991746,
-        "extraction_method": "tesseract_ocr",
-        "page_metadata": {
-          "image_path": ".refinery/pages/unknown_page_5.png",
-          "ocr_path": ".refinery/ocr/unknown_page_5.txt",
-          "dpi": 150,
-          "language": "eng",
-          "word_count": 725,
-          "line_count": 66
-        },
-        "escalated_from": null,
-        "strategy_used": "vision"
-      }
-    ],
+    "pages": [],
     "extraction_metadata": {
-      "total_pages": 5,
-      "total_text_length": 7658,
+      "total_pages": 0,
+      "total_text_length": 0,
       "total_tables": 0,
-      "average_confidence": 0.9277943009127447,
+      "average_confidence": 0.0,
       "extraction_cost": "high",
-      "processing_time_seconds": 0,
+      "processing_time_seconds": 0.0,
       "ocr_engine": "tesseract",
       "dpi": 150,
       "language": "eng",
+      "docling_version": null,
+      "pages_processed": 0,
+      "confidence_threshold": 0.7,
       "performance_limits": {
         "max_vision_pages": 5,
-        "pages_skipped": 27
-      },
-      "pages_processed": 5,
-      "confidence_threshold": 0.7
+        "pages_skipped": 32
+      }
     },
     "document_elements": {}
   },
   "performance": {
-    "triage_speed": "7.1 pages/sec",
+    "triage_speed": "17.2 pages/sec",
     "extraction_speed": "0.0 pages/sec",
     "overall_efficiency": "low"
+  },
+  "processed_at": "2026-03-05T10:43:05.955542",
+  "ldus": [],
+  "page_index": [],
+  "provenance_chain": {
+    "chain_id": "CBE Annual Report 2008-9 _provenance",
+    "document_id": "CBE Annual Report 2008-9 _1772696396",
+    "chain_version": "1.0",
+    "created_at": "2026-03-05T10:43:05.955776",
+    "updated_at": "2026-03-05T10:43:05.955942",
+    "created_by": "ExtractionPipeline",
+    "content_hash": null,
+    "page_refs": [],
+    "bbox": null,
+    "citations": [],
+    "steps": [
+      {
+        "step_id": "CBE Annual Report 2008-9 _triage",
+        "step_type": "triage",
+        "step_name": "document_triage",
+        "sequence_order": 1,
+        "agent": {
+          "agent_id": "document_refinery_pipeline",
+          "agent_type": "automated",
+          "agent_name": "ExtractionPipeline",
+          "version": "1.0",
+          "configuration": {}
+        },
+        "started_at": "2026-03-05T10:43:05.955632",
+        "completed_at": "2026-03-05T10:43:05.955636",
+        "status": "completed",
+        "input_artifacts": [],
+        "output_artifacts": [],
+        "input_parameters": {},
+        "metrics": {
+          "duration_seconds": 1.8640398979187012,
+          "cpu_usage_percent": null,
+          "memory_usage_mb": null,
+          "pages_processed": 0,
+          "confidence_score": null,
+          "error_count": 0,
+          "warning_count": 0
+        },
+        "result_summary": null,
+        "error_message": null,
+        "quality_score": null,
+        "validation_results": {},
+        "content_hash": null,
+        "page_refs": [],
+        "bbox": null,
+        "citations": []
+      },
+      {
+        "step_id": "CBE Annual Report 2008-9 _extraction",
+        "step_type": "extraction",
+        "step_name": "content_extraction",
+        "sequence_order": 2,
+        "agent": {
+          "agent_id": "document_refinery_pipeline",
+          "agent_type": "automated",
+          "agent_name": "ExtractionPipeline",
+          "version": "1.0",
+          "configuration": {}
+        },
+        "started_at": "2026-03-05T10:43:05.955713",
+        "completed_at": "2026-03-05T10:43:05.955717",
+        "status": "completed",
+        "input_artifacts": [],
+        "output_artifacts": [],
+        "input_parameters": {},
+        "metrics": {
+          "duration_seconds": 187.46464657783508,
+          "cpu_usage_percent": null,
+          "memory_usage_mb": null,
+          "pages_processed": 0,
+          "confidence_score": null,
+          "error_count": 0,
+          "warning_count": 0
+        },
+        "result_summary": null,
+        "error_message": null,
+        "quality_score": null,
+        "validation_results": {},
+        "content_hash": null,
+        "page_refs": [],
+        "bbox": null,
+        "citations": []
+      }
+    ],
+    "total_duration": 8e-06,
+    "total_cost": null,
+    "overall_quality_score": null,
+    "status": "completed",
+    "completion_percentage": 100.0
   }
 }
