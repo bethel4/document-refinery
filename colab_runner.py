@@ -111,6 +111,8 @@ def run_pipeline(
     workers: int = 1,
     confidence_threshold: float = 0.7,
     single: Optional[str] = None,
+    vision_dpi: Optional[int] = None,
+    max_vision_pages: Optional[int] = None,
 ) -> list[dict[str, Any]]:
     """Import and run the extraction pipeline."""
     configure_imports(repo_dir)
@@ -124,6 +126,12 @@ def run_pipeline(
             max_workers=workers,
             confidence_threshold=confidence_threshold,
         )
+
+        if hasattr(pipeline.router, "vision_extractor"):
+            if vision_dpi is not None:
+                pipeline.router.vision_extractor.dpi = int(vision_dpi)
+            if max_vision_pages is not None:
+                pipeline.router.vision_extractor.max_vision_pages = int(max_vision_pages)
 
         if single:
             result = pipeline.process_document(Path(single))
@@ -142,6 +150,8 @@ def setup_and_run(
     single: Optional[str] = None,
     relax_python_for_colab: bool = True,
     install_docling: bool = True,
+    vision_dpi: Optional[int] = 120,
+    max_vision_pages: Optional[int] = 2,
 ) -> list[dict[str, Any]]:
     """One-call helper: clone/pull, install, import, run."""
     clone_or_update(repo_url=repo_url, repo_dir=repo_dir)
@@ -156,6 +166,8 @@ def setup_and_run(
         workers=workers,
         confidence_threshold=confidence_threshold,
         single=single,
+        vision_dpi=vision_dpi,
+        max_vision_pages=max_vision_pages,
     )
 
 
