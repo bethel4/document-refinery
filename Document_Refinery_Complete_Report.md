@@ -538,56 +538,149 @@ The honest cost statement for this project is:
 
 ---
 
-## 4. Performance Metrics & KPIs
+## 4. Extraction Quality Analysis
 
-### Processing Speed Benchmarks
-- **Fast Text**: 10-20 pages/second
-- **Layout**: 5-10 pages/second
-- **Vision**: 1-3 pages/second
+### Scope Of Evidence
 
-### Quality Metrics
-- **Text Accuracy**: 85-95% (digital), 60-80% (scanned)
-- **Structure Preservation**: 90-98% (layout), 70-85% (vision)
-- **Table Extraction**: 80-95% (simple), 60-80% (complex)
+The repository currently supports **qualitative, artifact-backed extraction quality analysis**, but it does not yet contain a full corpus-level benchmark with manually established ground truth for precision/recall computation across all document classes.
 
-### Resource Utilization
-- **Memory Usage**: 100-500MB (fast text), 500MB-2GB (vision)
-- **CPU Usage**: 20-50% (fast text), 50-90% (vision)
-- **Disk I/O**: Minimal (text), High (vision processing)
+Therefore, the strongest defensible claims in this report come from:
+
+- saved extraction JSON artifacts
+- PageIndex trees
+- provenance-grounded query results
+- numerical fact index behavior
+- documented failure cases and fixes
+
+This section should be read as an evidence-based qualitative analysis rather than a complete quantitative benchmark.
+
+### What Was Evaluated
+
+The implemented system was evaluated in four practical dimensions:
+
+1. **Text fidelity**
+   - whether extracted text preserved the relevant wording needed to answer document questions
+2. **Structural fidelity**
+   - whether the extraction preserved section boundaries, table rows, and page associations
+3. **Grounded retrieval quality**
+   - whether PageIndex navigation and provenance chains pointed to the correct supporting pages
+4. **Numerical answer usability**
+   - whether the extracted content and fact index were sufficient to answer metric questions such as net profit, total assets, and inflation values
+
+### Representative Success Cases
+
+#### **Case 1: `sample_financial_report_5_pages.pdf`**
+- **Question**: `What was the net profit in 2024?`
+- **Initial behavior**: returned a long raw table excerpt instead of the exact value
+- **Current behavior**: returns `The document reports net profit of 85 in 2024 on page 2.`
+- **Interpretation**: when table rows are preserved in extraction text, row-level financial QA performs well
+
+#### **Case 2: `2022_Audited_Financial_Statement_Report.pdf`**
+- **Question**: `What is the total assets of 30 June 2022?`
+- **Current behavior**: returns the total assets value from the extracted row text and cites the supporting page
+- **Interpretation**: digital financial statements with readable tabular rows are handled reliably by the current extraction plus query pipeline
+
+#### **Case 3: `Consumer Price Index June 2025.pdf`**
+- **Observation**: the extraction and provenance layers successfully identify inflation-related supporting pages and sentences
+- **Interpretation**: economic reports with searchable text can be navigated and cited effectively, although ranking of competing numeric facts still needs improvement
+
+### Representative Failure Cases
+
+#### **Failure 1: `2018_Audited_Financial_Statement_Report.pdf`**
+- **Question**: `On what date were the financial statements approved and authorised for issue?`
+- **Initial failure**: the system returned the first visible date on the page rather than the approval date
+- **Root cause**: generic date extraction was not anchored to approval-language
+- **Fix**: date extraction was constrained around terms such as `approved`, `authorised`, and `issue`
+- **Lesson**: date questions require question-type-specific grounding, not generic semantic matching
+
+#### **Failure 2: `CBE Annual Report 2008-9.pdf`**
+- **Question**: `What was the amount of cash in hand in 2009?`
+- **Initial failure**: the system returned headings or unrelated content instead of the table value
+- **Root cause**: the relevant `cash in hand` row was not present in the saved extraction artifacts, so the numeric answer was not grounded in extracted text
+- **Fix**: the query layer was changed to refuse unsupported numeric answers and return `No grounded numeric fact found in the extracted text for this question.`
+- **Lesson**: when extraction/indexing misses the row, the correct behavior is explicit refusal, not weak semantic fallback
+
+#### **Failure 3: Early scanned-PDF OCR runs**
+- **Initial failure**: outputs contained placeholder OCR text and unreliable downstream answers
+- **Root cause**: OCR dependency failure previously allowed silent degradation
+- **Fix**: mock OCR fallback was removed and OCR failure now surfaces as an explicit extractor error path
+- **Lesson**: bad OCR contaminates PageIndex, fact extraction, and query outputs simultaneously
+
+### Table Extraction Assessment
+
+The repository does not yet include a complete manually labeled table benchmark, so it is not defensible to claim corpus-wide table precision/recall values. However, the current implementation supports two practical observations:
+
+1. **Textual table preservation is strongest on digital financial statements**
+   - row-level values such as `net profit` and `total assets` can be recovered when the extracted text preserves row ordering
+2. **Scanned and OCR-heavy tables remain the weakest area**
+   - long annual reports and noisy scanned pages are more likely to lose row semantics, produce fragmented numeric facts, or miss the target row entirely
+
+### Text Fidelity vs Structural Fidelity
+
+It is important to distinguish between these two quality dimensions:
+
+- **Text fidelity** asks whether the wording or numeric values were extracted correctly
+- **Structural fidelity** asks whether sections, page references, and table rows were preserved in a usable form
+
+In the current system:
+
+- text fidelity is strongest on native digital and mixed-but-readable financial documents
+- structural fidelity is acceptable for section navigation and PageIndex generation
+- structural fidelity is weakest for OCR-heavy tables and long scanned annual reports
+
+### Honest Quantitative Limitation
+
+The current repository does **not** yet provide:
+
+- corpus-wide precision/recall for table extraction
+- per-class extraction scorecards across all four classes
+- a documented ground-truth annotation set for every evaluation example
+
+As a result, the extraction quality analysis in this report is strongest when framed as:
+
+- representative successes
+- representative failures
+- concrete before/after fixes
+- grounded examples from saved artifacts
 
 ---
 
 ## 5. Recommendations & Next Steps
 
 ### Immediate Improvements
-1. **Enhanced OCR**: Multiple OCR engines for better accuracy
-2. **Image Preprocessing**: Improve scanned document quality
-3. **Table Detection**: Specialized algorithms for complex tables
-4. **Confidence Calibration**: Better threshold tuning
+1. **Improve scanned-table extraction**: prioritize row-preserving OCR/table parsing for annual reports and other OCR-heavy PDFs.
+2. **Build a small ground-truth evaluation set**: annotate representative tables and answers from each document class.
+3. **Tighten fact extraction**: improve metric labeling and reduce noisy numeric facts in CPI-style reports.
+4. **Calibrate escalation thresholds**: reduce unnecessary `vision` use while preserving answer quality.
 
 ### Long-term Enhancements
-1. **ML-Based Classification**: Train models on document types
-2. **Parallel Processing**: Multi-GPU vision processing
-3. **Real-time Processing**: Streaming document processing
-4. **Quality Assurance**: Automated validation and correction
+1. **Per-class evaluation harness**: compute extraction-quality metrics by document class.
+2. **Richer table models**: preserve row/column semantics more explicitly for fact retrieval.
+3. **Better citation ranking**: prioritize exact row evidence over broad page excerpts.
+4. **Expanded provenance checks**: validate answer claims against extracted rows and PDF snippets more strictly.
 
 ### Cost Optimization Opportunities
-1. **Caching**: Reuse processed document components
-2. **Batch Processing**: Group similar documents
-3. **Selective Processing**: Process only changed sections
-4. **Cloud Offloading**: Use cloud services for peak loads
+1. **Keep extraction local by default** and reserve Gemini only for navigation summaries when needed.
+2. **Limit OCR page counts in demo mode** to avoid unnecessary long-running scanned-document processing.
+3. **Use page-level hybrid routing** so only image-heavy pages incur OCR runtime.
+4. **Cache reusable artifacts** such as PageIndex trees and fact tables for repeated queries.
 
 ---
 
 ## 6. Conclusion
 
-The Document Refinery system provides a robust, scalable solution for automated document processing with intelligent strategy routing and cost optimization. The 5-stage pipeline ensures high-quality extraction while maintaining competitive processing costs through smart classification and confidence-gated escalation.
+The Document Refinery system now demonstrates a coherent multi-stage pipeline for triage, extraction, chunking, PageIndex generation, provenance-grounded querying, and numerical fact indexing. Its strongest evidence is in the saved artifacts and concrete failure/fix cycles documented during development.
 
-**Key Achievements:**
-- ✅ 238x speed improvement (10+ minutes → 2.6 seconds)
-- ✅ 40-60% cost savings through smart routing
-- ✅ 85-95% accuracy on digital documents
-- ✅ Scalable architecture for enterprise processing
-- ✅ Comprehensive error handling and fallback mechanisms
+The system is strongest on:
 
-The system is production-ready and can handle diverse document types with appropriate cost controls and quality assurance.
+- native digital and semi-structured financial documents
+- provenance-grounded question answering when the target row or sentence is preserved in extraction
+- local-cost operation, since extraction and indexing are performed with local tools
+
+The system remains weakest on:
+
+- long scanned annual reports
+- OCR-heavy numeric tables
+- corpus-level quantitative quality benchmarking, which still needs a proper ground-truth evaluation set
+
+The most accurate overall conclusion is that the repository contains a solid engineering foundation with working provenance, routing, and artifact generation, while extraction quality evaluation should currently be presented as artifact-backed qualitative evidence rather than a complete quantitative benchmark.

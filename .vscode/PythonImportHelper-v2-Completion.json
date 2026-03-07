@@ -33,6 +33,126 @@
         "documentation": {}
     },
     {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -168,6 +288,174 @@
         "documentation": {}
     },
     {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Dict",
         "importPath": "typing",
         "description": "typing",
@@ -232,7 +520,23 @@
         "documentation": {}
     },
     {
-        "label": "Optional",
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -264,14 +568,6 @@
         "documentation": {}
     },
     {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "Dict",
         "importPath": "typing",
         "description": "typing",
@@ -560,6 +856,86 @@
         "documentation": {}
     },
     {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -577,6 +953,38 @@
     },
     {
         "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -811,11 +1219,45 @@
         "documentation": {}
     },
     {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
+        "label": "time",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "pathlib",
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "defaultdict",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
         "documentation": {}
     },
     {
@@ -952,6 +1394,345 @@
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "fitz",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "fitz",
+        "description": "fitz",
+        "detail": "fitz",
+        "documentation": {}
+    },
+    {
+        "label": "PageIndexerAgent",
+        "importPath": "src.agents.indexer",
+        "description": "src.agents.indexer",
+        "isExtraImport": true,
+        "detail": "src.agents.indexer",
+        "documentation": {}
+    },
+    {
+        "label": "PageIndexerAgent",
+        "importPath": "src.agents.indexer",
+        "description": "src.agents.indexer",
+        "isExtraImport": true,
+        "detail": "src.agents.indexer",
+        "documentation": {}
+    },
+    {
+        "label": "PageIndexerAgent",
+        "importPath": "src.agents.indexer",
+        "description": "src.agents.indexer",
+        "isExtraImport": true,
+        "detail": "src.agents.indexer",
+        "documentation": {}
+    },
+    {
+        "label": "FactTableExtractor",
+        "importPath": "src.data_layer.fact_table_extractor",
+        "description": "src.data_layer.fact_table_extractor",
+        "isExtraImport": true,
+        "detail": "src.data_layer.fact_table_extractor",
+        "documentation": {}
+    },
+    {
+        "label": "FactTableExtractor",
+        "importPath": "src.data_layer.fact_table_extractor",
+        "description": "src.data_layer.fact_table_extractor",
+        "isExtraImport": true,
+        "detail": "src.data_layer.fact_table_extractor",
+        "documentation": {}
+    },
+    {
+        "label": "FactTableExtractor",
+        "importPath": "src.data_layer.fact_table_extractor",
+        "description": "src.data_layer.fact_table_extractor",
+        "isExtraImport": true,
+        "detail": "src.data_layer.fact_table_extractor",
+        "documentation": {}
+    },
+    {
+        "label": "VectorStoreIngestor",
+        "importPath": "src.query.vector_store",
+        "description": "src.query.vector_store",
+        "isExtraImport": true,
+        "detail": "src.query.vector_store",
+        "documentation": {}
+    },
+    {
+        "label": "_hash_embedding",
+        "importPath": "src.query.vector_store",
+        "description": "src.query.vector_store",
+        "isExtraImport": true,
+        "detail": "src.query.vector_store",
+        "documentation": {}
+    },
+    {
+        "label": "VectorStoreIngestor",
+        "importPath": "src.query.vector_store",
+        "description": "src.query.vector_store",
+        "isExtraImport": true,
+        "detail": "src.query.vector_store",
+        "documentation": {}
+    },
+    {
+        "label": "VisionExtractor",
+        "importPath": "src.extraction.vision_extractor",
+        "description": "src.extraction.vision_extractor",
+        "isExtraImport": true,
+        "detail": "src.extraction.vision_extractor",
+        "documentation": {}
+    },
+    {
+        "label": "LDU",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDURole",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDUType",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDU",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDU",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDU",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDURole",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDUType",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDU",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "BoundingBox",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDU",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDURole",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDUType",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDU",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDU",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDU",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDURole",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDUType",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "pdfplumber",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pdfplumber",
+        "description": "pdfplumber",
+        "detail": "pdfplumber",
+        "documentation": {}
+    },
+    {
+        "label": "ChunkingEngine",
+        "importPath": "src.chunking.chunking_engine",
+        "description": "src.chunking.chunking_engine",
+        "isExtraImport": true,
+        "detail": "src.chunking.chunking_engine",
+        "documentation": {}
+    },
+    {
+        "label": "ChunkingRules",
+        "importPath": "src.chunking.chunking_engine",
+        "description": "src.chunking.chunking_engine",
+        "isExtraImport": true,
+        "detail": "src.chunking.chunking_engine",
+        "documentation": {}
+    },
+    {
+        "label": "PageIndexTreeBuilder",
+        "importPath": "src.pageindex.tree_builder",
+        "description": "src.pageindex.tree_builder",
+        "isExtraImport": true,
+        "detail": "src.pageindex.tree_builder",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
         "documentation": {}
     },
     {
@@ -961,6 +1742,54 @@
         "importPath": "numpy",
         "description": "numpy",
         "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "PageIndexQuery",
+        "importPath": "src.query.pageindex_query",
+        "description": "src.query.pageindex_query",
+        "isExtraImport": true,
+        "detail": "src.query.pageindex_query",
+        "documentation": {}
+    },
+    {
+        "label": "PageIndexQuery",
+        "importPath": "src.query.pageindex_query",
+        "description": "src.query.pageindex_query",
+        "isExtraImport": true,
+        "detail": "src.query.pageindex_query",
+        "documentation": {}
+    },
+    {
+        "label": "precision_at_k",
+        "importPath": "src.query.pageindex_query",
+        "description": "src.query.pageindex_query",
+        "isExtraImport": true,
+        "detail": "src.query.pageindex_query",
+        "documentation": {}
+    },
+    {
+        "label": "PageIndexQuery",
+        "importPath": "src.query.pageindex_query",
+        "description": "src.query.pageindex_query",
+        "isExtraImport": true,
+        "detail": "src.query.pageindex_query",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "field",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
         "documentation": {}
     },
     {
@@ -988,15 +1817,15 @@
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "field",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
         "isExtraImport": true,
-        "detail": "datetime",
+        "detail": "dataclasses",
         "documentation": {}
     },
     {
-        "label": "datetime",
+        "label": "date",
         "importPath": "datetime",
         "description": "datetime",
         "isExtraImport": true,
@@ -1124,6 +1953,14 @@
         "documentation": {}
     },
     {
+        "label": "TriageClassifier",
+        "importPath": "src.domain_analysis.triage.document_classifier",
+        "description": "src.domain_analysis.triage.document_classifier",
+        "isExtraImport": true,
+        "detail": "src.domain_analysis.triage.document_classifier",
+        "documentation": {}
+    },
+    {
         "label": "Enum",
         "importPath": "enum",
         "description": "enum",
@@ -1181,19 +2018,462 @@
         "documentation": {}
     },
     {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "DocumentProfile",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
         "isExtraImport": true,
-        "detail": "pydantic",
+        "detail": "src.models.document_profile",
         "documentation": {}
     },
     {
-        "label": "Field",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "OriginType",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
         "isExtraImport": true,
-        "detail": "pydantic",
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "LayoutComplexity",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentCategory",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionStrategy",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentProfile",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "OriginType",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentCategory",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionStrategy",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentProfile",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "OriginType",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentCategory",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionStrategy",
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "isExtraImport": true,
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DomainClassifier",
+        "importPath": "src.domain_analysis.triage.domain_classifier",
+        "description": "src.domain_analysis.triage.domain_classifier",
+        "isExtraImport": true,
+        "detail": "src.domain_analysis.triage.domain_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "KeywordDomainClassifier",
+        "importPath": "src.domain_analysis.triage.domain_classifier",
+        "description": "src.domain_analysis.triage.domain_classifier",
+        "isExtraImport": true,
+        "detail": "src.domain_analysis.triage.domain_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "DomainClassifier",
+        "importPath": "src.domain_analysis.triage.domain_classifier",
+        "description": "src.domain_analysis.triage.domain_classifier",
+        "isExtraImport": true,
+        "detail": "src.domain_analysis.triage.domain_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "DoclingDocument",
+        "importPath": "docling",
+        "description": "docling",
+        "isExtraImport": true,
+        "detail": "docling",
+        "documentation": {}
+    },
+    {
+        "label": "convert_from_path",
+        "importPath": "pdf2image",
+        "description": "pdf2image",
+        "isExtraImport": true,
+        "detail": "pdf2image",
+        "documentation": {}
+    },
+    {
+        "label": "pytesseract",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytesseract",
+        "description": "pytesseract",
+        "detail": "pytesseract",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "TemporaryDirectory",
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "isExtraImport": true,
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "TemporaryDirectory",
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "isExtraImport": true,
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "ThreadPoolExecutor",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "as_completed",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "ProcessPoolExecutor",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "ThreadPoolExecutor",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "as_completed",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "isExtraImport": true,
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "SemanticChunkerAgent",
+        "importPath": "src.agents.chunker",
+        "description": "src.agents.chunker",
+        "isExtraImport": true,
+        "detail": "src.agents.chunker",
+        "documentation": {}
+    },
+    {
+        "label": "QueryAgent",
+        "importPath": "src.agents.query_agent",
+        "description": "src.agents.query_agent",
+        "isExtraImport": true,
+        "detail": "src.agents.query_agent",
+        "documentation": {}
+    },
+    {
+        "label": "QueryAgent",
+        "importPath": "src.agents.query_agent",
+        "description": "src.agents.query_agent",
+        "isExtraImport": true,
+        "detail": "src.agents.query_agent",
+        "documentation": {}
+    },
+    {
+        "label": "QueryAgent",
+        "importPath": "src.agents.query_agent",
+        "description": "src.agents.query_agent",
+        "isExtraImport": true,
+        "detail": "src.agents.query_agent",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionRouter",
+        "importPath": "src.extraction.extraction_router",
+        "description": "src.extraction.extraction_router",
+        "isExtraImport": true,
+        "detail": "src.extraction.extraction_router",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionRouter",
+        "importPath": "src.extraction.extraction_router",
+        "description": "src.extraction.extraction_router",
+        "isExtraImport": true,
+        "detail": "src.extraction.extraction_router",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractedDocument",
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "isExtraImport": true,
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "PerformanceMetrics",
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "isExtraImport": true,
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractedDocument",
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "isExtraImport": true,
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "PageExtraction",
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "isExtraImport": true,
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionMethod",
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "isExtraImport": true,
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "ContentType",
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "isExtraImport": true,
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "PageFeatures",
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "isExtraImport": true,
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "PageIndex",
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "isExtraImport": true,
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "PageNavigation",
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "isExtraImport": true,
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "PageQuality",
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "isExtraImport": true,
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "PageType",
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "isExtraImport": true,
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "AgentInfo",
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "isExtraImport": true,
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "AgentType",
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "isExtraImport": true,
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProcessingMetrics",
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "isExtraImport": true,
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProcessingStatus",
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "isExtraImport": true,
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProcessingStep",
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "isExtraImport": true,
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProcessingStepType",
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "isExtraImport": true,
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProvenanceChain",
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "isExtraImport": true,
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProvenanceCitation",
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "isExtraImport": true,
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
         "documentation": {}
     },
     {
@@ -1373,515 +2653,47 @@
         "documentation": {}
     },
     {
-        "label": "DocumentProfile",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "OriginType",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "LayoutComplexity",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "DocumentCategory",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "ExtractionStrategy",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "DocumentProfile",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "OriginType",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "DocumentCategory",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "ExtractionStrategy",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "DocumentProfile",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "OriginType",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "DocumentCategory",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "ExtractionStrategy",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "DocumentProfile",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "OriginType",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "DocumentCategory",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "ExtractionStrategy",
-        "importPath": "src.models.document_profile",
-        "description": "src.models.document_profile",
-        "isExtraImport": true,
-        "detail": "src.models.document_profile",
-        "documentation": {}
-    },
-    {
-        "label": "DoclingDocument",
-        "importPath": "docling",
-        "description": "docling",
-        "isExtraImport": true,
-        "detail": "docling",
-        "documentation": {}
-    },
-    {
-        "label": "convert_from_path",
-        "importPath": "pdf2image",
-        "description": "pdf2image",
-        "isExtraImport": true,
-        "detail": "pdf2image",
-        "documentation": {}
-    },
-    {
-        "label": "pytesseract",
+        "label": "urllib.error",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "pytesseract",
-        "description": "pytesseract",
-        "detail": "pytesseract",
+        "importPath": "urllib.error",
+        "description": "urllib.error",
+        "detail": "urllib.error",
         "documentation": {}
     },
     {
-        "label": "pdfplumber",
+        "label": "urllib.request",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "pdfplumber",
-        "description": "pdfplumber",
-        "detail": "pdfplumber",
+        "importPath": "urllib.request",
+        "description": "urllib.request",
+        "detail": "urllib.request",
         "documentation": {}
     },
     {
-        "label": "shutil",
+        "label": "html",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "shutil",
-        "description": "shutil",
-        "detail": "shutil",
+        "importPath": "html",
+        "description": "html",
+        "detail": "html",
         "documentation": {}
     },
     {
-        "label": "subprocess",
+        "label": "GeminiSummarizer",
+        "importPath": "src.pageindex.llm_client",
+        "description": "src.pageindex.llm_client",
+        "isExtraImport": true,
+        "detail": "src.pageindex.llm_client",
+        "documentation": {}
+    },
+    {
+        "label": "math",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "subprocess",
-        "description": "subprocess",
-        "detail": "subprocess",
-        "documentation": {}
-    },
-    {
-        "label": "time",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "time",
-        "description": "time",
-        "detail": "time",
-        "documentation": {}
-    },
-    {
-        "label": "ThreadPoolExecutor",
-        "importPath": "concurrent.futures",
-        "description": "concurrent.futures",
-        "isExtraImport": true,
-        "detail": "concurrent.futures",
-        "documentation": {}
-    },
-    {
-        "label": "as_completed",
-        "importPath": "concurrent.futures",
-        "description": "concurrent.futures",
-        "isExtraImport": true,
-        "detail": "concurrent.futures",
-        "documentation": {}
-    },
-    {
-        "label": "ThreadPoolExecutor",
-        "importPath": "concurrent.futures",
-        "description": "concurrent.futures",
-        "isExtraImport": true,
-        "detail": "concurrent.futures",
-        "documentation": {}
-    },
-    {
-        "label": "as_completed",
-        "importPath": "concurrent.futures",
-        "description": "concurrent.futures",
-        "isExtraImport": true,
-        "detail": "concurrent.futures",
-        "documentation": {}
-    },
-    {
-        "label": "ProcessPoolExecutor",
-        "importPath": "concurrent.futures",
-        "description": "concurrent.futures",
-        "isExtraImport": true,
-        "detail": "concurrent.futures",
-        "documentation": {}
-    },
-    {
-        "label": "ThreadPoolExecutor",
-        "importPath": "concurrent.futures",
-        "description": "concurrent.futures",
-        "isExtraImport": true,
-        "detail": "concurrent.futures",
-        "documentation": {}
-    },
-    {
-        "label": "as_completed",
-        "importPath": "concurrent.futures",
-        "description": "concurrent.futures",
-        "isExtraImport": true,
-        "detail": "concurrent.futures",
-        "documentation": {}
-    },
-    {
-        "label": "tempfile",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "tempfile",
-        "description": "tempfile",
-        "detail": "tempfile",
-        "documentation": {}
-    },
-    {
-        "label": "TemporaryDirectory",
-        "importPath": "tempfile",
-        "description": "tempfile",
-        "isExtraImport": true,
-        "detail": "tempfile",
-        "documentation": {}
-    },
-    {
-        "label": "TemporaryDirectory",
-        "importPath": "tempfile",
-        "description": "tempfile",
-        "isExtraImport": true,
-        "detail": "tempfile",
-        "documentation": {}
-    },
-    {
-        "label": "fitz",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "fitz",
-        "description": "fitz",
-        "detail": "fitz",
-        "documentation": {}
-    },
-    {
-        "label": "ABC",
-        "importPath": "abc",
-        "description": "abc",
-        "isExtraImport": true,
-        "detail": "abc",
-        "documentation": {}
-    },
-    {
-        "label": "abstractmethod",
-        "importPath": "abc",
-        "description": "abc",
-        "isExtraImport": true,
-        "detail": "abc",
-        "documentation": {}
-    },
-    {
-        "label": "hashlib",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "hashlib",
-        "description": "hashlib",
-        "detail": "hashlib",
-        "documentation": {}
-    },
-    {
-        "label": "ExtractionRouter",
-        "importPath": "src.extraction.extraction_router",
-        "description": "src.extraction.extraction_router",
-        "isExtraImport": true,
-        "detail": "src.extraction.extraction_router",
-        "documentation": {}
-    },
-    {
-        "label": "ExtractionRouter",
-        "importPath": "src.extraction.extraction_router",
-        "description": "src.extraction.extraction_router",
-        "isExtraImport": true,
-        "detail": "src.extraction.extraction_router",
-        "documentation": {}
-    },
-    {
-        "label": "ExtractedDocument",
-        "importPath": "src.models.extracted_document",
-        "description": "src.models.extracted_document",
-        "isExtraImport": true,
-        "detail": "src.models.extracted_document",
-        "documentation": {}
-    },
-    {
-        "label": "PerformanceMetrics",
-        "importPath": "src.models.extracted_document",
-        "description": "src.models.extracted_document",
-        "isExtraImport": true,
-        "detail": "src.models.extracted_document",
-        "documentation": {}
-    },
-    {
-        "label": "ExtractedDocument",
-        "importPath": "src.models.extracted_document",
-        "description": "src.models.extracted_document",
-        "isExtraImport": true,
-        "detail": "src.models.extracted_document",
-        "documentation": {}
-    },
-    {
-        "label": "PageExtraction",
-        "importPath": "src.models.extracted_document",
-        "description": "src.models.extracted_document",
-        "isExtraImport": true,
-        "detail": "src.models.extracted_document",
-        "documentation": {}
-    },
-    {
-        "label": "ExtractionMethod",
-        "importPath": "src.models.extracted_document",
-        "description": "src.models.extracted_document",
-        "isExtraImport": true,
-        "detail": "src.models.extracted_document",
-        "documentation": {}
-    },
-    {
-        "label": "BoundingBox",
-        "importPath": "src.models.ldu",
-        "description": "src.models.ldu",
-        "isExtraImport": true,
-        "detail": "src.models.ldu",
-        "documentation": {}
-    },
-    {
-        "label": "LDU",
-        "importPath": "src.models.ldu",
-        "description": "src.models.ldu",
-        "isExtraImport": true,
-        "detail": "src.models.ldu",
-        "documentation": {}
-    },
-    {
-        "label": "LDURole",
-        "importPath": "src.models.ldu",
-        "description": "src.models.ldu",
-        "isExtraImport": true,
-        "detail": "src.models.ldu",
-        "documentation": {}
-    },
-    {
-        "label": "LDUType",
-        "importPath": "src.models.ldu",
-        "description": "src.models.ldu",
-        "isExtraImport": true,
-        "detail": "src.models.ldu",
-        "documentation": {}
-    },
-    {
-        "label": "ContentType",
-        "importPath": "src.models.page_index",
-        "description": "src.models.page_index",
-        "isExtraImport": true,
-        "detail": "src.models.page_index",
-        "documentation": {}
-    },
-    {
-        "label": "PageFeatures",
-        "importPath": "src.models.page_index",
-        "description": "src.models.page_index",
-        "isExtraImport": true,
-        "detail": "src.models.page_index",
-        "documentation": {}
-    },
-    {
-        "label": "PageIndex",
-        "importPath": "src.models.page_index",
-        "description": "src.models.page_index",
-        "isExtraImport": true,
-        "detail": "src.models.page_index",
-        "documentation": {}
-    },
-    {
-        "label": "PageNavigation",
-        "importPath": "src.models.page_index",
-        "description": "src.models.page_index",
-        "isExtraImport": true,
-        "detail": "src.models.page_index",
-        "documentation": {}
-    },
-    {
-        "label": "PageQuality",
-        "importPath": "src.models.page_index",
-        "description": "src.models.page_index",
-        "isExtraImport": true,
-        "detail": "src.models.page_index",
-        "documentation": {}
-    },
-    {
-        "label": "PageType",
-        "importPath": "src.models.page_index",
-        "description": "src.models.page_index",
-        "isExtraImport": true,
-        "detail": "src.models.page_index",
-        "documentation": {}
-    },
-    {
-        "label": "AgentInfo",
-        "importPath": "src.models.provenance_chain",
-        "description": "src.models.provenance_chain",
-        "isExtraImport": true,
-        "detail": "src.models.provenance_chain",
-        "documentation": {}
-    },
-    {
-        "label": "AgentType",
-        "importPath": "src.models.provenance_chain",
-        "description": "src.models.provenance_chain",
-        "isExtraImport": true,
-        "detail": "src.models.provenance_chain",
-        "documentation": {}
-    },
-    {
-        "label": "ProcessingMetrics",
-        "importPath": "src.models.provenance_chain",
-        "description": "src.models.provenance_chain",
-        "isExtraImport": true,
-        "detail": "src.models.provenance_chain",
-        "documentation": {}
-    },
-    {
-        "label": "ProcessingStatus",
-        "importPath": "src.models.provenance_chain",
-        "description": "src.models.provenance_chain",
-        "isExtraImport": true,
-        "detail": "src.models.provenance_chain",
-        "documentation": {}
-    },
-    {
-        "label": "ProcessingStep",
-        "importPath": "src.models.provenance_chain",
-        "description": "src.models.provenance_chain",
-        "isExtraImport": true,
-        "detail": "src.models.provenance_chain",
-        "documentation": {}
-    },
-    {
-        "label": "ProcessingStepType",
-        "importPath": "src.models.provenance_chain",
-        "description": "src.models.provenance_chain",
-        "isExtraImport": true,
-        "detail": "src.models.provenance_chain",
-        "documentation": {}
-    },
-    {
-        "label": "ProvenanceChain",
-        "importPath": "src.models.provenance_chain",
-        "description": "src.models.provenance_chain",
-        "isExtraImport": true,
-        "detail": "src.models.provenance_chain",
-        "documentation": {}
-    },
-    {
-        "label": "ProvenanceCitation",
-        "importPath": "src.models.provenance_chain",
-        "description": "src.models.provenance_chain",
-        "isExtraImport": true,
-        "detail": "src.models.provenance_chain",
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
         "documentation": {}
     },
     {
@@ -1934,19 +2746,54 @@
         "documentation": {}
     },
     {
-        "label": "Mock",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
+        "label": "BytesIO",
+        "importPath": "io",
+        "description": "io",
         "isExtraImport": true,
-        "detail": "unittest.mock",
+        "detail": "io",
         "documentation": {}
     },
     {
-        "label": "patch",
-        "importPath": "unittest.mock",
-        "description": "unittest.mock",
+        "label": "pandas",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "unittest.mock",
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionPipeline",
+        "importPath": "src.extraction.pipeline_runner",
+        "description": "src.extraction.pipeline_runner",
+        "isExtraImport": true,
+        "detail": "src.extraction.pipeline_runner",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
         "documentation": {}
     },
     {
@@ -2229,6 +3076,177 @@
         "documentation": {}
     },
     {
+        "label": "main",
+        "kind": 2,
+        "importPath": "scripts.build_corpus_artifacts",
+        "description": "scripts.build_corpus_artifacts",
+        "peekOfCode": "def main() -> int:\n    _ensure_dirs()\n    indexer = PageIndexerAgent(out_dir=str(PAGEINDEX_DIR))\n    fact_extractor = FactTableExtractor()\n    vector_store = VectorStoreIngestor()\n    qna_by_class: Dict[str, List[Dict[str, Any]]] = defaultdict(list)\n    ledger_entries: List[Dict[str, Any]] = []\n    for document_class, filenames in DOC_CLASSES.items():\n        for filename in filenames:\n            pdf_path = RAW_DIR / filename",
+        "detail": "scripts.build_corpus_artifacts",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT",
+        "kind": 5,
+        "importPath": "scripts.build_corpus_artifacts",
+        "description": "scripts.build_corpus_artifacts",
+        "peekOfCode": "ROOT = Path(__file__).resolve().parents[1]\nif str(ROOT) not in sys.path:\n    sys.path.insert(0, str(ROOT))\nfrom src.agents.indexer import PageIndexerAgent\nfrom src.data_layer.fact_table_extractor import FactTableExtractor\nfrom src.query.vector_store import VectorStoreIngestor\nfrom src.extraction.vision_extractor import VisionExtractor\nfrom src.models.ldu import LDU, LDURole, LDUType\nRAW_DIR = ROOT / \"data\" / \"raw\"\nREFINERY_DIR = ROOT / \".refinery\"",
+        "detail": "scripts.build_corpus_artifacts",
+        "documentation": {}
+    },
+    {
+        "label": "RAW_DIR",
+        "kind": 5,
+        "importPath": "scripts.build_corpus_artifacts",
+        "description": "scripts.build_corpus_artifacts",
+        "peekOfCode": "RAW_DIR = ROOT / \"data\" / \"raw\"\nREFINERY_DIR = ROOT / \".refinery\"\nEXTRACTIONS_DIR = REFINERY_DIR / \"extractions\"\nPAGEINDEX_DIR = REFINERY_DIR / \"pageindex\"\nQNA_DIR = REFINERY_DIR / \"qna\"\nLEDGER_PATH = REFINERY_DIR / \"extraction_ledger.jsonl\"\nDOC_CLASSES: Dict[str, List[str]] = {\n    \"financial_statement\": [\n        \"2020_Audited_Financial_Statement_Report.pdf\",\n        \"2021_Audited_Financial_Statement_Report.pdf\",",
+        "detail": "scripts.build_corpus_artifacts",
+        "documentation": {}
+    },
+    {
+        "label": "REFINERY_DIR",
+        "kind": 5,
+        "importPath": "scripts.build_corpus_artifacts",
+        "description": "scripts.build_corpus_artifacts",
+        "peekOfCode": "REFINERY_DIR = ROOT / \".refinery\"\nEXTRACTIONS_DIR = REFINERY_DIR / \"extractions\"\nPAGEINDEX_DIR = REFINERY_DIR / \"pageindex\"\nQNA_DIR = REFINERY_DIR / \"qna\"\nLEDGER_PATH = REFINERY_DIR / \"extraction_ledger.jsonl\"\nDOC_CLASSES: Dict[str, List[str]] = {\n    \"financial_statement\": [\n        \"2020_Audited_Financial_Statement_Report.pdf\",\n        \"2021_Audited_Financial_Statement_Report.pdf\",\n        \"2022_Audited_Financial_Statement_Report.pdf\",",
+        "detail": "scripts.build_corpus_artifacts",
+        "documentation": {}
+    },
+    {
+        "label": "EXTRACTIONS_DIR",
+        "kind": 5,
+        "importPath": "scripts.build_corpus_artifacts",
+        "description": "scripts.build_corpus_artifacts",
+        "peekOfCode": "EXTRACTIONS_DIR = REFINERY_DIR / \"extractions\"\nPAGEINDEX_DIR = REFINERY_DIR / \"pageindex\"\nQNA_DIR = REFINERY_DIR / \"qna\"\nLEDGER_PATH = REFINERY_DIR / \"extraction_ledger.jsonl\"\nDOC_CLASSES: Dict[str, List[str]] = {\n    \"financial_statement\": [\n        \"2020_Audited_Financial_Statement_Report.pdf\",\n        \"2021_Audited_Financial_Statement_Report.pdf\",\n        \"2022_Audited_Financial_Statement_Report.pdf\",\n    ],",
+        "detail": "scripts.build_corpus_artifacts",
+        "documentation": {}
+    },
+    {
+        "label": "PAGEINDEX_DIR",
+        "kind": 5,
+        "importPath": "scripts.build_corpus_artifacts",
+        "description": "scripts.build_corpus_artifacts",
+        "peekOfCode": "PAGEINDEX_DIR = REFINERY_DIR / \"pageindex\"\nQNA_DIR = REFINERY_DIR / \"qna\"\nLEDGER_PATH = REFINERY_DIR / \"extraction_ledger.jsonl\"\nDOC_CLASSES: Dict[str, List[str]] = {\n    \"financial_statement\": [\n        \"2020_Audited_Financial_Statement_Report.pdf\",\n        \"2021_Audited_Financial_Statement_Report.pdf\",\n        \"2022_Audited_Financial_Statement_Report.pdf\",\n    ],\n    \"economic_report\": [",
+        "detail": "scripts.build_corpus_artifacts",
+        "documentation": {}
+    },
+    {
+        "label": "QNA_DIR",
+        "kind": 5,
+        "importPath": "scripts.build_corpus_artifacts",
+        "description": "scripts.build_corpus_artifacts",
+        "peekOfCode": "QNA_DIR = REFINERY_DIR / \"qna\"\nLEDGER_PATH = REFINERY_DIR / \"extraction_ledger.jsonl\"\nDOC_CLASSES: Dict[str, List[str]] = {\n    \"financial_statement\": [\n        \"2020_Audited_Financial_Statement_Report.pdf\",\n        \"2021_Audited_Financial_Statement_Report.pdf\",\n        \"2022_Audited_Financial_Statement_Report.pdf\",\n    ],\n    \"economic_report\": [\n        \"Consumer Price Index June 2025.pdf\",",
+        "detail": "scripts.build_corpus_artifacts",
+        "documentation": {}
+    },
+    {
+        "label": "LEDGER_PATH",
+        "kind": 5,
+        "importPath": "scripts.build_corpus_artifacts",
+        "description": "scripts.build_corpus_artifacts",
+        "peekOfCode": "LEDGER_PATH = REFINERY_DIR / \"extraction_ledger.jsonl\"\nDOC_CLASSES: Dict[str, List[str]] = {\n    \"financial_statement\": [\n        \"2020_Audited_Financial_Statement_Report.pdf\",\n        \"2021_Audited_Financial_Statement_Report.pdf\",\n        \"2022_Audited_Financial_Statement_Report.pdf\",\n    ],\n    \"economic_report\": [\n        \"Consumer Price Index June 2025.pdf\",\n        \"Consumer Price Index, April 2025.pdf\",",
+        "detail": "scripts.build_corpus_artifacts",
+        "documentation": {}
+    },
+    {
+        "label": "extract_tables_with_pdfplumber",
+        "kind": 2,
+        "importPath": "scripts.extract_tables_to_json",
+        "description": "scripts.extract_tables_to_json",
+        "peekOfCode": "def extract_tables_with_pdfplumber(pdf_path: Path) -> List[Dict[str, Any]]:\n    extracted_tables: List[Dict[str, Any]] = []\n    with pdfplumber.open(str(pdf_path)) as pdf:\n        for page_number, page in enumerate(pdf.pages, start=1):\n            tables = page.extract_tables() or []\n            for table_index, table in enumerate(tables, start=1):\n                if not table or len(table) < 2:\n                    continue\n                headers = _normalize_headers(table[0])\n                rows = []",
+        "detail": "scripts.extract_tables_to_json",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "scripts.extract_tables_to_json",
+        "description": "scripts.extract_tables_to_json",
+        "peekOfCode": "def main() -> None:\n    parser = argparse.ArgumentParser(\n        description=\"Extract PDF tables and save them as JSON rows keyed by table headers.\"\n    )\n    parser.add_argument(\"pdf_path\", help=\"Path to the input PDF file.\")\n    parser.add_argument(\n        \"-o\",\n        \"--output\",\n        help=\"Path to the output JSON file. Defaults to <pdf_stem>_tables.json in the same directory.\",\n    )",
+        "detail": "scripts.extract_tables_to_json",
+        "documentation": {}
+    },
+    {
+        "label": "SemanticChunkerAgent",
+        "kind": 6,
+        "importPath": "src.agents.chunker",
+        "description": "src.agents.chunker",
+        "peekOfCode": "class SemanticChunkerAgent:\n    \"\"\"Semantic chunking agent enforcing all chunking rules via ChunkValidator.\"\"\"\n    def __init__(self, rules: ChunkingRules | None = None) -> None:\n        self.engine = ChunkingEngine(rules=rules)\n    def run(self, document_id: str, pages: List[Dict[str, Any]], strategy_used: str) -> List[LDU]:\n        return self.engine.build_ldus(document_id=document_id, pages=pages, strategy_used=strategy_used)\n    def run_with_report(\n        self,\n        document_id: str,\n        pages: List[Dict[str, Any]],",
+        "detail": "src.agents.chunker",
+        "documentation": {}
+    },
+    {
+        "label": "PageIndexerAgent",
+        "kind": 6,
+        "importPath": "src.agents.indexer",
+        "description": "src.agents.indexer",
+        "peekOfCode": "class PageIndexerAgent:\n    \"\"\"Build and persist PageIndex section trees with LLM summaries.\"\"\"\n    def __init__(self, out_dir: str = \".refinery/pageindex\") -> None:\n        self.builder = PageIndexTreeBuilder()\n        self.out_dir = Path(out_dir)\n        self.out_dir.mkdir(parents=True, exist_ok=True)\n    def run(self, document_id: str, ldus: List[LDU]) -> Dict:\n        root = self.builder.build(document_id=document_id, ldus=ldus)\n        tree = self._serialize_tree(document_id=document_id, ldus=ldus, tree=root.to_dict())\n        out_path = self.out_dir / f\"{document_id}_pageindex.json\"",
+        "detail": "src.agents.indexer",
+        "documentation": {}
+    },
+    {
+        "label": "QueryAgent",
+        "kind": 6,
+        "importPath": "src.agents.query_agent",
+        "description": "src.agents.query_agent",
+        "peekOfCode": "class QueryAgent:\n    \"\"\"Query agent exposing 3 tools + audit mode.\n    Tools:\n    - pageindex_navigate\n    - semantic_search\n    - structured_query\n    \"\"\"\n    def __init__(\n        self,\n        vector_store_dir: str = \".refinery/vector_store\",",
+        "detail": "src.agents.query_agent",
+        "documentation": {}
+    },
+    {
+        "label": "ChunkingRules",
+        "kind": 6,
+        "importPath": "src.chunking.chunking_engine",
+        "description": "src.chunking.chunking_engine",
+        "peekOfCode": "class ChunkingRules:\n    # Rule 1: minimum chunk length for semantic usefulness.\n    min_chars: int = 200\n    # Rule 2: hard cap chunk size for retrieval efficiency.\n    max_chars: int = 1200\n    # Rule 3: keep chunk structure bounded.\n    max_paragraphs: int = 6\n    # Rule 4: keep contextual continuity between adjacent chunks.\n    overlap_words: int = 30\n    # Rule 5: preserve table-heavy page chunks as page-contained units.",
+        "detail": "src.chunking.chunking_engine",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationIssue",
+        "kind": 6,
+        "importPath": "src.chunking.chunking_engine",
+        "description": "src.chunking.chunking_engine",
+        "peekOfCode": "class ValidationIssue:\n    rule_name: str\n    ldu_id: str\n    message: str\n@dataclass\nclass ValidationReport:\n    passed: bool\n    issues: List[ValidationIssue] = field(default_factory=list)\n    checked_chunks: int = 0\n    def to_dict(self) -> Dict[str, Any]:",
+        "detail": "src.chunking.chunking_engine",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationReport",
+        "kind": 6,
+        "importPath": "src.chunking.chunking_engine",
+        "description": "src.chunking.chunking_engine",
+        "peekOfCode": "class ValidationReport:\n    passed: bool\n    issues: List[ValidationIssue] = field(default_factory=list)\n    checked_chunks: int = 0\n    def to_dict(self) -> Dict[str, Any]:\n        return {\n            \"passed\": self.passed,\n            \"checked_chunks\": self.checked_chunks,\n            \"issues\": [\n                {\"rule_name\": i.rule_name, \"ldu_id\": i.ldu_id, \"message\": i.message}",
+        "detail": "src.chunking.chunking_engine",
+        "documentation": {}
+    },
+    {
+        "label": "ChunkValidator",
+        "kind": 6,
+        "importPath": "src.chunking.chunking_engine",
+        "description": "src.chunking.chunking_engine",
+        "peekOfCode": "class ChunkValidator:\n    \"\"\"Validate that emitted chunks satisfy all chunking rules.\"\"\"\n    def __init__(self, rules: ChunkingRules | None = None) -> None:\n        self.rules = rules or ChunkingRules()\n    def validate_ldus(self, ldus: List[LDU]) -> None:\n        report = self.validate_with_report(ldus)\n        if not report.passed:\n            first = report.issues[0]\n            raise ValueError(f\"Chunk validation failed [{first.rule_name}] {first.ldu_id}: {first.message}\")\n    def validate_with_report(self, ldus: List[LDU]) -> ValidationReport:",
+        "detail": "src.chunking.chunking_engine",
+        "documentation": {}
+    },
+    {
+        "label": "ChunkingEngine",
+        "kind": 6,
+        "importPath": "src.chunking.chunking_engine",
+        "description": "src.chunking.chunking_engine",
+        "peekOfCode": "class ChunkingEngine:\n    \"\"\"Create validated LDUs from extraction page payloads.\"\"\"\n    def __init__(self, rules: ChunkingRules | None = None) -> None:\n        self.rules = rules or ChunkingRules()\n        self.validator = ChunkValidator(self.rules)\n        self.last_validation_report: ValidationReport | None = None\n    @property\n    def hard_max_chars(self) -> int:\n        return self.rules.max_chars + 200\n    def build_ldus(self, document_id: str, pages: List[Dict[str, Any]], strategy_used: str) -> List[LDU]:",
+        "detail": "src.chunking.chunking_engine",
+        "documentation": {}
+    },
+    {
+        "label": "FactTableExtractor",
+        "kind": 6,
+        "importPath": "src.data_layer.fact_table_extractor",
+        "description": "src.data_layer.fact_table_extractor",
+        "peekOfCode": "class FactTableExtractor:\n    \"\"\"Extract numeric claims/facts from LDUs into SQLite for structured querying.\"\"\"\n    def __init__(self, db_path: str = \".refinery/facts/facts.db\") -> None:\n        self.db_path = Path(db_path)\n        self.db_path.parent.mkdir(parents=True, exist_ok=True)\n        self._init_db()\n    def _init_db(self) -> None:\n        with sqlite3.connect(self.db_path) as conn:\n            conn.execute(\n                \"\"\"",
+        "detail": "src.data_layer.fact_table_extractor",
+        "documentation": {}
+    },
+    {
         "label": "DocumentMetrics",
         "kind": 6,
         "importPath": "src.domain_analysis.calibration.corpus_analyzer",
@@ -2287,7 +3305,7 @@
         "kind": 6,
         "importPath": "src.domain_analysis.triage.document_classifier",
         "description": "src.domain_analysis.triage.document_classifier",
-        "peekOfCode": "class ProcessingPriority(str, Enum):\n    LOW = \"low\"\n    MEDIUM = \"medium\"\n    HIGH = \"high\"\n    CRITICAL = \"critical\"\nclass TriageClassifier:\n    \"\"\"Document triage classifier using calibrated thresholds.\"\"\"\n    def __init__(self, rules_file: str, profiles_dir: str):\n        self.rules_file = Path(rules_file)\n        self.profiles_dir = Path(profiles_dir)",
+        "peekOfCode": "class ProcessingPriority(str, Enum):\n    LOW = \"low\"\n    MEDIUM = \"medium\"\n    HIGH = \"high\"\n    CRITICAL = \"critical\"\nclass TriageClassifier:\n    \"\"\"Document triage classifier using calibrated thresholds.\"\"\"\n    def __init__(\n        self,\n        rules_file: str,",
         "detail": "src.domain_analysis.triage.document_classifier",
         "documentation": {}
     },
@@ -2296,8 +3314,26 @@
         "kind": 6,
         "importPath": "src.domain_analysis.triage.document_classifier",
         "description": "src.domain_analysis.triage.document_classifier",
-        "peekOfCode": "class TriageClassifier:\n    \"\"\"Document triage classifier using calibrated thresholds.\"\"\"\n    def __init__(self, rules_file: str, profiles_dir: str):\n        self.rules_file = Path(rules_file)\n        self.profiles_dir = Path(profiles_dir)\n        self.rules = self._load_rules()\n        # Ensure profiles directory exists\n        self.profiles_dir.mkdir(parents=True, exist_ok=True)\n        self.logger = logging.getLogger(__name__)\n        # Domain keywords for classification",
+        "peekOfCode": "class TriageClassifier:\n    \"\"\"Document triage classifier using calibrated thresholds.\"\"\"\n    def __init__(\n        self,\n        rules_file: str,\n        profiles_dir: str,\n        domain_classifier: DomainClassifier | None = None,\n    ):\n        self.rules_file = Path(rules_file)\n        self.profiles_dir = Path(profiles_dir)",
         "detail": "src.domain_analysis.triage.document_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "DomainClassifier",
+        "kind": 6,
+        "importPath": "src.domain_analysis.triage.domain_classifier",
+        "description": "src.domain_analysis.triage.domain_classifier",
+        "peekOfCode": "class DomainClassifier(ABC):\n    \"\"\"Strategy interface for domain classification.\"\"\"\n    @abstractmethod\n    def classify(self, text: str) -> Tuple[str, float]:\n        \"\"\"Return (domain_hint, confidence).\"\"\"\nclass KeywordDomainClassifier(DomainClassifier):\n    \"\"\"Keyword-based default classifier; lightweight and fast.\"\"\"\n    def __init__(self, domain_keywords: Dict[str, List[str]] | None = None) -> None:\n        self.domain_keywords = domain_keywords or {\n            \"legal\": [\"contract\", \"agreement\", \"legal\", \"law\", \"court\", \"judge\", \"attorney\"],",
+        "detail": "src.domain_analysis.triage.domain_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "KeywordDomainClassifier",
+        "kind": 6,
+        "importPath": "src.domain_analysis.triage.domain_classifier",
+        "description": "src.domain_analysis.triage.domain_classifier",
+        "peekOfCode": "class KeywordDomainClassifier(DomainClassifier):\n    \"\"\"Keyword-based default classifier; lightweight and fast.\"\"\"\n    def __init__(self, domain_keywords: Dict[str, List[str]] | None = None) -> None:\n        self.domain_keywords = domain_keywords or {\n            \"legal\": [\"contract\", \"agreement\", \"legal\", \"law\", \"court\", \"judge\", \"attorney\"],\n            \"financial\": [\"invoice\", \"payment\", \"balance\", \"account\", \"bank\", \"financial\", \"tax\", \"revenue\"],\n            \"medical\": [\"patient\", \"medical\", \"diagnosis\", \"treatment\", \"prescription\", \"hospital\"],\n            \"technical\": [\"specification\", \"manual\", \"technical\", \"engineering\", \"diagram\"],\n            \"business\": [\"report\", \"meeting\", \"proposal\", \"business\", \"company\", \"corporate\"],\n            \"academic\": [\"research\", \"study\", \"university\", \"paper\", \"journal\", \"academic\"],",
+        "detail": "src.domain_analysis.triage.domain_classifier",
         "documentation": {}
     },
     {
@@ -2400,29 +3436,11 @@
         "documentation": {}
     },
     {
-        "label": "DoclingBatchProcessor",
-        "kind": 6,
-        "importPath": "src.extraction.docling_batch_processor",
-        "description": "src.extraction.docling_batch_processor",
-        "peekOfCode": "class DoclingBatchProcessor:\n    \"\"\"Run Docling on multiple PDF files with a thread pool.\"\"\"\n    def __init__(self, input_dir: str, output_dir: str | None = None, max_workers: int = 8):\n        self.input_dir = Path(input_dir).expanduser().resolve()\n        if not self.input_dir.exists():\n            raise FileNotFoundError(f\"Input directory does not exist: {self.input_dir}\")\n        self.max_workers = max(1, int(max_workers))\n        self.output_dir = (\n            Path(output_dir).expanduser().resolve()\n            if output_dir",
-        "detail": "src.extraction.docling_batch_processor",
-        "documentation": {}
-    },
-    {
-        "label": "main",
-        "kind": 2,
-        "importPath": "src.extraction.docling_batch_processor",
-        "description": "src.extraction.docling_batch_processor",
-        "peekOfCode": "def main() -> None:\n    parser = argparse.ArgumentParser(description=\"Batch process PDFs with Docling\")\n    parser.add_argument(\n        \"--input\",\n        type=str,\n        default=\"data/raw\",\n        help=\"Input directory containing PDFs\",\n    )\n    parser.add_argument(\n        \"--output\",",
-        "detail": "src.extraction.docling_batch_processor",
-        "documentation": {}
-    },
-    {
         "label": "ExtractionRouter",
         "kind": 6,
         "importPath": "src.extraction.extraction_router",
         "description": "src.extraction.extraction_router",
-        "peekOfCode": "class ExtractionRouter:\n    \"\"\"Stage 2-ready Router for multi-strategy extraction with page-level confidence escalation.\"\"\"\n    def __init__(self, rules_path: str = \".refinery/rules/extraction_rules.yaml\"):\n        # Load thresholds and rules\n        self.rules = load_extraction_rules(rules_path)\n        self.conf_threshold = self.rules.get(\"confidence_threshold\", 0.7)\n        # Initialize extractors\n        self.fast_extractor = FastTextExtractor(**self.rules.get(\"fast_text\", {}))\n        self.layout_extractor = LayoutExtractor(**self.rules.get(\"layout\", {}))\n        self.vision_extractor = VisionExtractor(**self.rules.get(\"vision\", {}))",
+        "peekOfCode": "class ExtractionRouter:\n    \"\"\"Stage 2-ready Router for multi-strategy extraction with page-level confidence escalation.\"\"\"\n    def __init__(self, rules_path: str = \".refinery/rules/extraction_rules.yaml\", max_workers: int = 4):\n        # Load thresholds and rules\n        self.rules = load_extraction_rules(rules_path)\n        self.conf_threshold = self.rules.get(\"confidence_threshold\", 0.7)\n        self.max_workers = max(1, int(max_workers or 1))\n        # Initialize extractors\n        # Import extractors lazily (Docling/transformers can be expensive at import time).\n        from .fast_text_extractor import FastTextExtractor",
         "detail": "src.extraction.extraction_router",
         "documentation": {}
     },
@@ -2431,7 +3449,7 @@
         "kind": 5,
         "importPath": "src.extraction.extraction_router",
         "description": "src.extraction.extraction_router",
-        "peekOfCode": "logger = logging.getLogger(__name__)\nclass ExtractionRouter:\n    \"\"\"Stage 2-ready Router for multi-strategy extraction with page-level confidence escalation.\"\"\"\n    def __init__(self, rules_path: str = \".refinery/rules/extraction_rules.yaml\"):\n        # Load thresholds and rules\n        self.rules = load_extraction_rules(rules_path)\n        self.conf_threshold = self.rules.get(\"confidence_threshold\", 0.7)\n        # Initialize extractors\n        self.fast_extractor = FastTextExtractor(**self.rules.get(\"fast_text\", {}))\n        self.layout_extractor = LayoutExtractor(**self.rules.get(\"layout\", {}))",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass ExtractionRouter:\n    \"\"\"Stage 2-ready Router for multi-strategy extraction with page-level confidence escalation.\"\"\"\n    def __init__(self, rules_path: str = \".refinery/rules/extraction_rules.yaml\", max_workers: int = 4):\n        # Load thresholds and rules\n        self.rules = load_extraction_rules(rules_path)\n        self.conf_threshold = self.rules.get(\"confidence_threshold\", 0.7)\n        self.max_workers = max(1, int(max_workers or 1))\n        # Initialize extractors\n        # Import extractors lazily (Docling/transformers can be expensive at import time).",
         "detail": "src.extraction.extraction_router",
         "documentation": {}
     },
@@ -2485,7 +3503,7 @@
         "kind": 6,
         "importPath": "src.extraction.layout_extractor",
         "description": "src.extraction.layout_extractor",
-        "peekOfCode": "class LayoutExtractor(BaseExtractor):\n    \"\"\"Layout extraction using Docling 2.x\"\"\"\n    def __init__(self):\n        super().__init__(\"LayoutExtractor\")\n        self.docling_available = DOCLING_AVAILABLE\n    # --------------------------------------------------\n    # Main Extraction Entry\n    # --------------------------------------------------\n    def extract(self, pdf_path: str, profile: Dict[str, Any]) -> Dict[str, Any]:\n        self.log_extraction_start(pdf_path, \"layout\")",
+        "peekOfCode": "class LayoutExtractor(BaseExtractor):\n    \"\"\"Layout extraction using Docling 2.x\"\"\"\n    def __init__(self, max_num_pages: int | None = None, max_file_size: int | None = None, **_: Any):\n        super().__init__(\"LayoutExtractor\")\n        self.max_num_pages = max_num_pages\n        self.max_file_size = max_file_size\n    def _get_docling_converter(self):\n        \"\"\"Import Docling lazily to avoid long import times at startup.\"\"\"\n        global DocumentConverter, DOCLING_AVAILABLE\n        if DOCLING_AVAILABLE is False:",
         "detail": "src.extraction.layout_extractor",
         "documentation": {}
     },
@@ -2494,7 +3512,25 @@
         "kind": 5,
         "importPath": "src.extraction.layout_extractor",
         "description": "src.extraction.layout_extractor",
-        "peekOfCode": "logger = logging.getLogger(__name__)\n# ----------------------------\n# Docling Import (Modern API)\n# ----------------------------\ntry:\n    from docling.document_converter import DocumentConverter\n    DOCLING_AVAILABLE = True\n    logger.info(\"Docling imported successfully\")\nexcept ImportError as e:\n    logger.warning(f\"Docling import failed: {e}.\")",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nDocumentConverter = None\nDOCLING_AVAILABLE = None  # lazily determined at runtime\nfrom .extractor_base import BaseExtractor\nclass LayoutExtractor(BaseExtractor):\n    \"\"\"Layout extraction using Docling 2.x\"\"\"\n    def __init__(self, max_num_pages: int | None = None, max_file_size: int | None = None, **_: Any):\n        super().__init__(\"LayoutExtractor\")\n        self.max_num_pages = max_num_pages\n        self.max_file_size = max_file_size",
+        "detail": "src.extraction.layout_extractor",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentConverter",
+        "kind": 5,
+        "importPath": "src.extraction.layout_extractor",
+        "description": "src.extraction.layout_extractor",
+        "peekOfCode": "DocumentConverter = None\nDOCLING_AVAILABLE = None  # lazily determined at runtime\nfrom .extractor_base import BaseExtractor\nclass LayoutExtractor(BaseExtractor):\n    \"\"\"Layout extraction using Docling 2.x\"\"\"\n    def __init__(self, max_num_pages: int | None = None, max_file_size: int | None = None, **_: Any):\n        super().__init__(\"LayoutExtractor\")\n        self.max_num_pages = max_num_pages\n        self.max_file_size = max_file_size\n    def _get_docling_converter(self):",
+        "detail": "src.extraction.layout_extractor",
+        "documentation": {}
+    },
+    {
+        "label": "DOCLING_AVAILABLE",
+        "kind": 5,
+        "importPath": "src.extraction.layout_extractor",
+        "description": "src.extraction.layout_extractor",
+        "peekOfCode": "DOCLING_AVAILABLE = None  # lazily determined at runtime\nfrom .extractor_base import BaseExtractor\nclass LayoutExtractor(BaseExtractor):\n    \"\"\"Layout extraction using Docling 2.x\"\"\"\n    def __init__(self, max_num_pages: int | None = None, max_file_size: int | None = None, **_: Any):\n        super().__init__(\"LayoutExtractor\")\n        self.max_num_pages = max_num_pages\n        self.max_file_size = max_file_size\n    def _get_docling_converter(self):\n        \"\"\"Import Docling lazily to avoid long import times at startup.\"\"\"",
         "detail": "src.extraction.layout_extractor",
         "documentation": {}
     },
@@ -2503,7 +3539,7 @@
         "kind": 6,
         "importPath": "src.extraction.pipeline_runner",
         "description": "src.extraction.pipeline_runner",
-        "peekOfCode": "class ExtractionPipeline:\n    \"\"\"Production-ready extraction pipeline with parallel processing.\"\"\"\n    def __init__(self, \n                 max_workers: int = 4,\n                 confidence_threshold: float = 0.7,\n                 extraction_config: Dict[str, Any] = None):\n        \"\"\"\n        Initialize extraction pipeline.\n        Args:\n            max_workers: Number of parallel workers",
+        "peekOfCode": "class ExtractionPipeline:\n    \"\"\"Production-ready extraction pipeline with parallel processing.\"\"\"\n    def __init__(self, \n                 max_workers: int = 4,\n                 confidence_threshold: float = 0.7,\n                 extract_only: bool = False,\n                 forced_strategy: str | None = None,\n                 extraction_config: Dict[str, Any] = None):\n        \"\"\"\n        Initialize extraction pipeline.",
         "detail": "src.extraction.pipeline_runner",
         "documentation": {}
     },
@@ -2512,7 +3548,7 @@
         "kind": 2,
         "importPath": "src.extraction.pipeline_runner",
         "description": "src.extraction.pipeline_runner",
-        "peekOfCode": "def main():\n    import argparse\n    import torch\n    parser = argparse.ArgumentParser(description=\"Parallel Document Extraction Pipeline\")\n    parser.add_argument(\"--pdf-folder\", default=\"data/raw\", help=\"PDF folder path\")\n    parser.add_argument(\"--workers\", type=int, default=3, help=\"Number of parallel workers\")\n    parser.add_argument(\"--confidence-threshold\", type=float, default=0.7, help=\"Confidence threshold for escalation\")\n    parser.add_argument(\"--single\", help=\"Process single PDF file\")\n    parser.add_argument(\"--dpi\", type=int, default=150, help=\"DPI for vision extraction\")\n    parser.add_argument(\"--max-vision-pages\", type=int, default=5, help=\"Max pages to process in vision escalation\")",
+        "peekOfCode": "def main():\n    import argparse\n    parser = argparse.ArgumentParser(description=\"Parallel Document Extraction Pipeline\")\n    parser.add_argument(\"--pdf-folder\", default=\"data/raw\", help=\"PDF folder path\")\n    parser.add_argument(\"--workers\", type=int, default=3, help=\"Number of parallel workers\")\n    parser.add_argument(\"--confidence-threshold\", type=float, default=0.7, help=\"Confidence threshold for escalation\")\n    parser.add_argument(\"--extract-only\", action=\"store_true\", help=\"Run only triage + extraction (skip chunking/indexing/query)\")\n    parser.add_argument(\n        \"--force-strategy\",\n        choices=[\"fast_text\", \"layout\", \"vision\", \"hybrid\"],",
         "detail": "src.extraction.pipeline_runner",
         "documentation": {}
     },
@@ -2521,7 +3557,7 @@
         "kind": 5,
         "importPath": "src.extraction.pipeline_runner",
         "description": "src.extraction.pipeline_runner",
-        "peekOfCode": "logger = logging.getLogger(__name__)\nclass ExtractionPipeline:\n    \"\"\"Production-ready extraction pipeline with parallel processing.\"\"\"\n    def __init__(self, \n                 max_workers: int = 4,\n                 confidence_threshold: float = 0.7,\n                 extraction_config: Dict[str, Any] = None):\n        \"\"\"\n        Initialize extraction pipeline.\n        Args:",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass ExtractionPipeline:\n    \"\"\"Production-ready extraction pipeline with parallel processing.\"\"\"\n    def __init__(self, \n                 max_workers: int = 4,\n                 confidence_threshold: float = 0.7,\n                 extract_only: bool = False,\n                 forced_strategy: str | None = None,\n                 extraction_config: Dict[str, Any] = None):\n        \"\"\"",
         "detail": "src.extraction.pipeline_runner",
         "documentation": {}
     },
@@ -2530,7 +3566,7 @@
         "kind": 6,
         "importPath": "src.extraction.vision_extractor",
         "description": "src.extraction.vision_extractor",
-        "peekOfCode": "class VisionExtractor(BaseExtractor):\n    \"\"\"Vision extraction for scanned documents using Tesseract OCR.\"\"\"\n    def __init__(self, dpi: int = 150, language: str = 'eng', max_vision_pages: int = 5, ocr_workers: int = 0):\n        super().__init__(\"VisionExtractor\")\n        self.dpi = dpi\n        self.language = language\n        self.max_vision_pages = max_vision_pages  # NEW: Limit pages processed\n        self.ocr_workers = ocr_workers\n        self.pdf2image_available = PDF2IMAGE_AVAILABLE\n        self.tesseract_available = TESSERACT_AVAILABLE",
+        "peekOfCode": "class VisionExtractor(BaseExtractor):\n    \"\"\"Vision extraction for scanned documents using local Tesseract OCR.\"\"\"\n    def __init__(\n        self,\n        dpi: int = 150,\n        language: str = \"eng\",\n        max_vision_pages: int = 5,\n        ocr_workers: int = 0,\n    ):\n        super().__init__(\"VisionExtractor\")",
         "detail": "src.extraction.vision_extractor",
         "documentation": {}
     },
@@ -2539,7 +3575,7 @@
         "kind": 5,
         "importPath": "src.extraction.vision_extractor",
         "description": "src.extraction.vision_extractor",
-        "peekOfCode": "logger = logging.getLogger(__name__)\ndef _ocr_page_worker(task: tuple[str, int, str, str]) -> Dict[str, Any]:\n    \"\"\"OCR a single page image in a separate process.\"\"\"\n    image_path, page_num, language, tesseract_config = task\n    try:\n        from PIL import Image as WorkerImage\n        import pytesseract as worker_pytesseract\n        with WorkerImage.open(image_path) as page_image:\n            ocr_text = worker_pytesseract.image_to_string(\n                page_image,",
+        "peekOfCode": "logger = logging.getLogger(__name__)\ntry:\n    from pdf2image import convert_from_path\n    from PIL import Image\n    PDF2IMAGE_AVAILABLE = True\nexcept ImportError as e:\n    logger.warning(f\"pdf2image/PIL not available: {e}\")\n    PDF2IMAGE_AVAILABLE = False\n    convert_from_path = None\n    Image = None",
         "detail": "src.extraction.vision_extractor",
         "documentation": {}
     },
@@ -2895,6 +3931,69 @@
         "documentation": {}
     },
     {
+        "label": "GeminiSummarizer",
+        "kind": 6,
+        "importPath": "src.pageindex.llm_client",
+        "description": "src.pageindex.llm_client",
+        "peekOfCode": "class GeminiSummarizer:\n    \"\"\"Tiny Gemini client for short section summaries.\"\"\"\n    def __init__(self, model: str = \"gemini-2.0-flash\", timeout_seconds: int = 20) -> None:\n        self.api_key = os.getenv(\"GEMINI_API_KEY\", \"\")\n        self.model = model\n        self.timeout_seconds = timeout_seconds\n    @property\n    def enabled(self) -> bool:\n        return bool(self.api_key)\n    def summarize(self, text: str, max_chars: int = 220) -> str:",
+        "detail": "src.pageindex.llm_client",
+        "documentation": {}
+    },
+    {
+        "label": "SectionNode",
+        "kind": 6,
+        "importPath": "src.pageindex.tree_builder",
+        "description": "src.pageindex.tree_builder",
+        "peekOfCode": "class SectionNode:\n    section_id: str\n    title: str\n    page_refs: List[int] = field(default_factory=list)\n    ldu_ids: List[str] = field(default_factory=list)\n    children: List[\"SectionNode\"] = field(default_factory=list)\n    summary: str = \"\"\n    def to_dict(self) -> Dict:\n        return {\n            \"section_id\": self.section_id,",
+        "detail": "src.pageindex.tree_builder",
+        "documentation": {}
+    },
+    {
+        "label": "PageIndexTreeBuilder",
+        "kind": 6,
+        "importPath": "src.pageindex.tree_builder",
+        "description": "src.pageindex.tree_builder",
+        "peekOfCode": "class PageIndexTreeBuilder:\n    \"\"\"Build simple section tree from chunk stream and add summaries.\"\"\"\n    def __init__(self) -> None:\n        self.summarizer = GeminiSummarizer()\n    def build(self, document_id: str, ldus: List[LDU]) -> SectionNode:\n        root = SectionNode(section_id=f\"{document_id}_root\", title=\"Document Root\")\n        current = root\n        section_idx = 0\n        for ldu in ldus:\n            title = self._detect_section_title(ldu.text)",
+        "detail": "src.pageindex.tree_builder",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.query.ask_with_provenance",
+        "description": "src.query.ask_with_provenance",
+        "peekOfCode": "def main() -> int:\n    parser = argparse.ArgumentParser(description=\"Ask a document question and print provenance chain.\")\n    parser.add_argument(\"--document-id\", required=True)\n    parser.add_argument(\"--document-name\", required=True)\n    parser.add_argument(\"--question\", required=True)\n    parser.add_argument(\"--pageindex\", required=True, help=\"Path to pageindex tree json\")\n    parser.add_argument(\"--open-first\", action=\"store_true\", help=\"Open first cited page using xdg-open\")\n    args = parser.parse_args()\n    pageindex_path = Path(args.pageindex)\n    if not pageindex_path.exists():",
+        "detail": "src.query.ask_with_provenance",
+        "documentation": {}
+    },
+    {
+        "label": "PageIndexQuery",
+        "kind": 6,
+        "importPath": "src.query.pageindex_query",
+        "description": "src.query.pageindex_query",
+        "peekOfCode": "class PageIndexQuery:\n    \"\"\"Topic traversal over PageIndex tree returning top-k sections.\"\"\"\n    def top_k_sections(self, tree: Dict, topic: str, k: int = 3) -> List[Dict]:\n        query_vec = Counter(_tokenize(topic))\n        scored: List[Tuple[float, Dict]] = []\n        section_nodes = self._flatten_sections(tree.get(\"children\") or tree.get(\"sections\") or [])\n        for section in section_nodes:\n            text = f\"{section.get('title', '')} {section.get('summary', '')}\"\n            score = _cosine(query_vec, Counter(_tokenize(text)))\n            scored.append((score, section))",
+        "detail": "src.query.pageindex_query",
+        "documentation": {}
+    },
+    {
+        "label": "precision_at_k",
+        "kind": 2,
+        "importPath": "src.query.pageindex_query",
+        "description": "src.query.pageindex_query",
+        "peekOfCode": "def precision_at_k(predicted: Sequence[str], relevant: Sequence[str], k: int = 3) -> float:\n    if k <= 0:\n        return 0.0\n    pred_k = list(predicted)[:k]\n    if not pred_k:\n        return 0.0\n    rel = set(relevant)\n    hits = sum(1 for item in pred_k if item in rel)\n    return hits / len(pred_k)",
+        "detail": "src.query.pageindex_query",
+        "documentation": {}
+    },
+    {
+        "label": "VectorStoreIngestor",
+        "kind": 6,
+        "importPath": "src.query.vector_store",
+        "description": "src.query.vector_store",
+        "peekOfCode": "class VectorStoreIngestor:\n    \"\"\"Ingest LDUs into FAISS/Chroma if available, else local numpy store.\"\"\"\n    def __init__(self, base_dir: str = \".refinery/vector_store\") -> None:\n        self.base_dir = Path(base_dir)\n        self.base_dir.mkdir(parents=True, exist_ok=True)\n    def ingest(self, document_id: str, ldus: List[LDU]) -> Dict[str, str]:\n        if not ldus:\n            return {\"backend\": \"none\", \"path\": \"\"}\n        embeddings = np.stack([_hash_embedding(ldu.text) for ldu in ldus])\n        metadata = [",
+        "detail": "src.query.vector_store",
+        "documentation": {}
+    },
+    {
         "label": "DocumentRefinery",
         "kind": 6,
         "importPath": "src.refinery.parallel_refinery",
@@ -2922,6 +4021,24 @@
         "documentation": {}
     },
     {
+        "label": "test_indexer_outputs_page_section_ldu_structure",
+        "kind": 2,
+        "importPath": "tests.test_corpus_artifacts",
+        "description": "tests.test_corpus_artifacts",
+        "peekOfCode": "def test_indexer_outputs_page_section_ldu_structure(tmp_path):\n    agent = PageIndexerAgent(out_dir=str(tmp_path))\n    tree = agent.run(\"doc\", [_sample_ldu()])\n    assert tree[\"document_id\"] == \"doc\"\n    assert tree[\"pages\"][0][\"page_number\"] == 1\n    assert tree[\"pages\"][0][\"ldus\"][0][\"ldu_id\"] == \"doc_ldu_1\"\n    assert tree[\"sections\"][0][\"section_title\"]\ndef test_fact_table_schema_includes_requested_fields(tmp_path):\n    db_path = tmp_path / \"facts.db\"\n    extractor = FactTableExtractor(db_path=str(db_path))",
+        "detail": "tests.test_corpus_artifacts",
+        "documentation": {}
+    },
+    {
+        "label": "test_fact_table_schema_includes_requested_fields",
+        "kind": 2,
+        "importPath": "tests.test_corpus_artifacts",
+        "description": "tests.test_corpus_artifacts",
+        "peekOfCode": "def test_fact_table_schema_includes_requested_fields(tmp_path):\n    db_path = tmp_path / \"facts.db\"\n    extractor = FactTableExtractor(db_path=str(db_path))\n    rows = extractor.ingest_ldus(\"doc\", [_sample_ldu()])\n    assert rows >= 1\n    with sqlite3.connect(db_path) as conn:\n        cols = [row[1] for row in conn.execute(\"PRAGMA table_info(facts)\").fetchall()]\n        assert \"section\" in cols\n        assert \"line_number\" in cols\n        assert \"description\" in cols",
+        "detail": "tests.test_corpus_artifacts",
+        "documentation": {}
+    },
+    {
         "label": "TestExtraction",
         "kind": 6,
         "importPath": "tests.test_extraction",
@@ -2935,7 +4052,43 @@
         "kind": 6,
         "importPath": "tests.test_triage_agent",
         "description": "tests.test_triage_agent",
-        "peekOfCode": "class TestTriageAgent:\n    \"\"\"Test suite for Triage Agent classification functionality.\"\"\"\n    @pytest.fixture\n    def temp_dirs(self):\n        \"\"\"Create temporary directories for testing.\"\"\"\n        temp_dir = tempfile.mkdtemp()\n        profiles_dir = Path(temp_dir) / \"profiles\"\n        profiles_dir.mkdir(parents=True, exist_ok=True)\n        rules_file = Path(temp_dir) / \"rules.yaml\"\n        # Create minimal rules file",
+        "peekOfCode": "class TestTriageAgent:\n    \"\"\"Compatibility wrapper for tests/__init__.py imports.\"\"\"\n    def test_origin_type_digital_vs_scanned_vs_mixed(self, triage_classifier: TriageClassifier) -> None:\n        test_origin_type_digital_vs_scanned_vs_mixed(triage_classifier)\n    def test_layout_complexity_heuristics(self, triage_classifier: TriageClassifier) -> None:\n        test_layout_complexity_heuristics(triage_classifier)\n    def test_domain_hint_is_pluggable(self, tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:\n        test_domain_hint_is_pluggable(tmp_path, monkeypatch)",
+        "detail": "tests.test_triage_agent",
+        "documentation": {}
+    },
+    {
+        "label": "triage_classifier",
+        "kind": 2,
+        "importPath": "tests.test_triage_agent",
+        "description": "tests.test_triage_agent",
+        "peekOfCode": "def triage_classifier(tmp_path: Path) -> TriageClassifier:\n    rules_file = tmp_path / \"rules.yaml\"\n    profiles_dir = tmp_path / \"profiles\"\n    rules_file.write_text(\n        \"\"\"\ndocument_categories:\n  high_complexity:\n    confidence_threshold: 0.6\n    criteria:\n      avg_chars_per_page_min: 1200",
+        "detail": "tests.test_triage_agent",
+        "documentation": {}
+    },
+    {
+        "label": "test_origin_type_digital_vs_scanned_vs_mixed",
+        "kind": 2,
+        "importPath": "tests.test_triage_agent",
+        "description": "tests.test_triage_agent",
+        "peekOfCode": "def test_origin_type_digital_vs_scanned_vs_mixed(triage_classifier: TriageClassifier) -> None:\n    digital_metrics = {\n        \"total_pages\": 4,\n        \"avg_chars_per_page\": 1800,\n        \"image_area_ratio\": 0.05,\n        \"fonts\": [\"Arial\"],\n        \"page_metrics\": [\n            {\"page_num\": 1, \"chars\": 1500, \"image_area_ratio\": 0.01, \"is_searchable\": True},\n            {\"page_num\": 2, \"chars\": 1700, \"image_area_ratio\": 0.02, \"is_searchable\": True},\n            {\"page_num\": 3, \"chars\": 1600, \"image_area_ratio\": 0.01, \"is_searchable\": True},",
+        "detail": "tests.test_triage_agent",
+        "documentation": {}
+    },
+    {
+        "label": "test_layout_complexity_heuristics",
+        "kind": 2,
+        "importPath": "tests.test_triage_agent",
+        "description": "tests.test_triage_agent",
+        "peekOfCode": "def test_layout_complexity_heuristics(triage_classifier: TriageClassifier) -> None:\n    assert triage_classifier._classify_layout_complexity({\"column_count\": 1, \"table_count\": 0, \"image_area_ratio\": 0.05}) == \"single_column\"\n    assert triage_classifier._classify_layout_complexity({\"column_count\": 3, \"table_count\": 0, \"image_area_ratio\": 0.05}) == \"multi_column\"\n    assert triage_classifier._classify_layout_complexity({\"column_count\": 2, \"table_count\": 6, \"image_area_ratio\": 0.05}) == \"table_heavy\"\n    assert triage_classifier._classify_layout_complexity({\"column_count\": 1, \"table_count\": 0, \"image_area_ratio\": 0.5}) == \"figure_heavy\"\ndef test_domain_hint_is_pluggable(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:\n    class StubDomainClassifier(DomainClassifier):\n        def classify(self, text: str) -> tuple[str, float]:\n            return \"medical\", 0.99\n    rules_file = tmp_path / \"rules.yaml\"",
+        "detail": "tests.test_triage_agent",
+        "documentation": {}
+    },
+    {
+        "label": "test_domain_hint_is_pluggable",
+        "kind": 2,
+        "importPath": "tests.test_triage_agent",
+        "description": "tests.test_triage_agent",
+        "peekOfCode": "def test_domain_hint_is_pluggable(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:\n    class StubDomainClassifier(DomainClassifier):\n        def classify(self, text: str) -> tuple[str, float]:\n            return \"medical\", 0.99\n    rules_file = tmp_path / \"rules.yaml\"\n    profiles_dir = tmp_path / \"profiles\"\n    rules_file.write_text(\"document_categories: {}\", encoding=\"utf-8\")\n    classifier = TriageClassifier(\n        rules_file=str(rules_file),\n        profiles_dir=str(profiles_dir),",
         "detail": "tests.test_triage_agent",
         "documentation": {}
     },
@@ -2955,6 +4108,96 @@
         "description": "tests.test_working",
         "peekOfCode": "class TestExtraction:\n    \"\"\"Test suite for extraction confidence scoring and routing.\"\"\"\n    @pytest.fixture\n    def temp_dirs(self):\n        \"\"\"Create temporary directories for testing.\"\"\"\n        temp_dir = tempfile.mkdtemp()\n        rules_file = Path(temp_dir) / \"rules.yaml\"\n        # Create extraction rules\n        rules_content = \"\"\"\nextraction_strategies:",
         "detail": "tests.test_working",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def main() -> None:\n    st.set_page_config(page_title=\"Document Refinery Demo\", layout=\"wide\")\n    _ensure_dirs()\n    st.title(\"Document Refinery \")\n    st.caption(\"Triage -> Extraction -> PageIndex -> Query with Provenance\")\n    if \"uploaded_pdf_path\" not in st.session_state:\n        st.session_state.uploaded_pdf_path = None\n    if \"uploaded_pdf_name\" not in st.session_state:\n        st.session_state.uploaded_pdf_name = None\n    if \"triage_profile\" not in st.session_state:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "REFINERY_DIR",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "REFINERY_DIR = Path(\".refinery\")\nUPLOADS_DIR = REFINERY_DIR / \"uploads\"\nEXTRACTIONS_DIR = REFINERY_DIR / \"extractions\"\nPAGEINDEX_DIR = REFINERY_DIR / \"pageindex\"\nLEDGER_PATH = REFINERY_DIR / \"extraction_ledger.jsonl\"\nRULES_PATH = REFINERY_DIR / \"rules\" / \"extraction_rules.yaml\"\nPROFILES_DIR = REFINERY_DIR / \"profiles\"\nQNA_DIR = REFINERY_DIR / \"qna\"\nQUERY_LOG_PATH = QNA_DIR / \"asked_queries.jsonl\"\ndef _ensure_dirs() -> None:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "UPLOADS_DIR",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "UPLOADS_DIR = REFINERY_DIR / \"uploads\"\nEXTRACTIONS_DIR = REFINERY_DIR / \"extractions\"\nPAGEINDEX_DIR = REFINERY_DIR / \"pageindex\"\nLEDGER_PATH = REFINERY_DIR / \"extraction_ledger.jsonl\"\nRULES_PATH = REFINERY_DIR / \"rules\" / \"extraction_rules.yaml\"\nPROFILES_DIR = REFINERY_DIR / \"profiles\"\nQNA_DIR = REFINERY_DIR / \"qna\"\nQUERY_LOG_PATH = QNA_DIR / \"asked_queries.jsonl\"\ndef _ensure_dirs() -> None:\n    for directory in [REFINERY_DIR, UPLOADS_DIR, EXTRACTIONS_DIR, PAGEINDEX_DIR, PROFILES_DIR, QNA_DIR]:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "EXTRACTIONS_DIR",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "EXTRACTIONS_DIR = REFINERY_DIR / \"extractions\"\nPAGEINDEX_DIR = REFINERY_DIR / \"pageindex\"\nLEDGER_PATH = REFINERY_DIR / \"extraction_ledger.jsonl\"\nRULES_PATH = REFINERY_DIR / \"rules\" / \"extraction_rules.yaml\"\nPROFILES_DIR = REFINERY_DIR / \"profiles\"\nQNA_DIR = REFINERY_DIR / \"qna\"\nQUERY_LOG_PATH = QNA_DIR / \"asked_queries.jsonl\"\ndef _ensure_dirs() -> None:\n    for directory in [REFINERY_DIR, UPLOADS_DIR, EXTRACTIONS_DIR, PAGEINDEX_DIR, PROFILES_DIR, QNA_DIR]:\n        directory.mkdir(parents=True, exist_ok=True)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "PAGEINDEX_DIR",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "PAGEINDEX_DIR = REFINERY_DIR / \"pageindex\"\nLEDGER_PATH = REFINERY_DIR / \"extraction_ledger.jsonl\"\nRULES_PATH = REFINERY_DIR / \"rules\" / \"extraction_rules.yaml\"\nPROFILES_DIR = REFINERY_DIR / \"profiles\"\nQNA_DIR = REFINERY_DIR / \"qna\"\nQUERY_LOG_PATH = QNA_DIR / \"asked_queries.jsonl\"\ndef _ensure_dirs() -> None:\n    for directory in [REFINERY_DIR, UPLOADS_DIR, EXTRACTIONS_DIR, PAGEINDEX_DIR, PROFILES_DIR, QNA_DIR]:\n        directory.mkdir(parents=True, exist_ok=True)\ndef _read_json(path: Path) -> Dict[str, Any]:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "LEDGER_PATH",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "LEDGER_PATH = REFINERY_DIR / \"extraction_ledger.jsonl\"\nRULES_PATH = REFINERY_DIR / \"rules\" / \"extraction_rules.yaml\"\nPROFILES_DIR = REFINERY_DIR / \"profiles\"\nQNA_DIR = REFINERY_DIR / \"qna\"\nQUERY_LOG_PATH = QNA_DIR / \"asked_queries.jsonl\"\ndef _ensure_dirs() -> None:\n    for directory in [REFINERY_DIR, UPLOADS_DIR, EXTRACTIONS_DIR, PAGEINDEX_DIR, PROFILES_DIR, QNA_DIR]:\n        directory.mkdir(parents=True, exist_ok=True)\ndef _read_json(path: Path) -> Dict[str, Any]:\n    return json.loads(path.read_text(encoding=\"utf-8\"))",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "RULES_PATH",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "RULES_PATH = REFINERY_DIR / \"rules\" / \"extraction_rules.yaml\"\nPROFILES_DIR = REFINERY_DIR / \"profiles\"\nQNA_DIR = REFINERY_DIR / \"qna\"\nQUERY_LOG_PATH = QNA_DIR / \"asked_queries.jsonl\"\ndef _ensure_dirs() -> None:\n    for directory in [REFINERY_DIR, UPLOADS_DIR, EXTRACTIONS_DIR, PAGEINDEX_DIR, PROFILES_DIR, QNA_DIR]:\n        directory.mkdir(parents=True, exist_ok=True)\ndef _read_json(path: Path) -> Dict[str, Any]:\n    return json.loads(path.read_text(encoding=\"utf-8\"))\ndef _save_upload(uploaded_file) -> Path:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "PROFILES_DIR",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "PROFILES_DIR = REFINERY_DIR / \"profiles\"\nQNA_DIR = REFINERY_DIR / \"qna\"\nQUERY_LOG_PATH = QNA_DIR / \"asked_queries.jsonl\"\ndef _ensure_dirs() -> None:\n    for directory in [REFINERY_DIR, UPLOADS_DIR, EXTRACTIONS_DIR, PAGEINDEX_DIR, PROFILES_DIR, QNA_DIR]:\n        directory.mkdir(parents=True, exist_ok=True)\ndef _read_json(path: Path) -> Dict[str, Any]:\n    return json.loads(path.read_text(encoding=\"utf-8\"))\ndef _save_upload(uploaded_file) -> Path:\n    _ensure_dirs()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "QNA_DIR",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "QNA_DIR = REFINERY_DIR / \"qna\"\nQUERY_LOG_PATH = QNA_DIR / \"asked_queries.jsonl\"\ndef _ensure_dirs() -> None:\n    for directory in [REFINERY_DIR, UPLOADS_DIR, EXTRACTIONS_DIR, PAGEINDEX_DIR, PROFILES_DIR, QNA_DIR]:\n        directory.mkdir(parents=True, exist_ok=True)\ndef _read_json(path: Path) -> Dict[str, Any]:\n    return json.loads(path.read_text(encoding=\"utf-8\"))\ndef _save_upload(uploaded_file) -> Path:\n    _ensure_dirs()\n    target = UPLOADS_DIR / uploaded_file.name",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "QUERY_LOG_PATH",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "QUERY_LOG_PATH = QNA_DIR / \"asked_queries.jsonl\"\ndef _ensure_dirs() -> None:\n    for directory in [REFINERY_DIR, UPLOADS_DIR, EXTRACTIONS_DIR, PAGEINDEX_DIR, PROFILES_DIR, QNA_DIR]:\n        directory.mkdir(parents=True, exist_ok=True)\ndef _read_json(path: Path) -> Dict[str, Any]:\n    return json.loads(path.read_text(encoding=\"utf-8\"))\ndef _save_upload(uploaded_file) -> Path:\n    _ensure_dirs()\n    target = UPLOADS_DIR / uploaded_file.name\n    target.write_bytes(uploaded_file.getbuffer())",
+        "detail": "app",
         "documentation": {}
     },
     {
