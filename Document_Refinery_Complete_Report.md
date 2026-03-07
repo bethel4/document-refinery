@@ -397,206 +397,144 @@ graph LR
 
 ## 3. Transparent Cost Analysis with Processing Time Integration
 
-### Cost Structure & Formulas
+### Cost Model Used In This Project
 
-#### **Strategy A: Fast Text (Low Cost)**
-- **Target**: Simple text documents, native digital
-- **Base Cost Formula**: `$0.10 + (pages × $0.01)`
-- **LLM Cost Formula**: `(tokens_input / 1,000,000 × $1.00) + (tokens_output / 1,000,000 × $3.00)`
-- **Assumptions**: 
-  - Average document length: 10 pages
-  - Average tokens per page: 800
-  - 70% of documents use standard path
-  - Processing time: 1.3s P95 latency
+This system does **not** use an LLM for extraction. Extraction is performed locally with:
 
-**Example Calculation**:
-```
-Tokens per doc: 10 pages × 800 tokens = 8,000 tokens
-LLM input cost: 8,000 / 1,000,000 × $1.00 = $0.008
-LLM output (summary + entities): 1,000 tokens
-LLM output cost: 1,000 / 1,000,000 × $3.00 = $0.003
-Base processing cost: $0.10 + (10 × $0.01) = $0.20
-Total LLM cost per doc: $0.008 + $0.003 = $0.011
-Total cost per doc: $0.20 + $0.011 = $0.211
-```
+- `pdfplumber` for `fast_text`
+- `Docling` for `layout`
+- `Tesseract` for `vision`
+- local chunking, PageIndex generation, SQLite fact indexing, and local vector indexing
 
-#### **Strategy B: Layout (Medium Cost)**
-- **Target**: Structured documents, tables, multi-column
-- **Base Cost Formula**: `$0.50 + (pages × $0.05)`
-- **LLM Cost Formula**: `(tokens_input / 1,000,000 × $1.00) + (tokens_output / 1,000,000 × $3.00)`
-- **Assumptions**:
-  - Average document length: 15 pages
-  - Average tokens per page: 900 (structure adds complexity)
-  - 20% of documents require escalation
-  - Processing time: 4.0s P95 latency
+Because of this, the extraction ledger records **zero external API cost** for the extraction step. In [pipeline_runner.py](/home/bethel/Documents/10academy/document-refinery/src/extraction/pipeline_runner.py), `_calculate_cost_estimate()` returns `0.0` for all active extraction strategies:
 
-**Example Calculation**:
-```
-Tokens per doc: 15 pages × 900 tokens = 13,500 tokens
-LLM input cost: 13,500 / 1,000,000 × $1.00 = $0.0135
-LLM output (structured extraction): 1,500 tokens
-LLM output cost: 1,500 / 1,000,000 × $3.00 = $0.0045
-Base processing cost: $0.50 + (15 × $0.05) = $1.25
-Total LLM cost per doc: $0.0135 + $0.0045 = $0.018
-Total cost per doc: $1.25 + $0.018 = $1.268
+- `fast_text`
+- `layout`
+- `vision`
+- `hybrid`
+
+### What Actually Costs Money In Our Setup
+
+The only component that can create API cost is **PageIndex section summarization**, and even that is optional. In [llm_client.py](/home/bethel/Documents/10academy/document-refinery/src/pageindex/llm_client.py), Gemini is used only if `GEMINI_API_KEY` is set. Otherwise the system falls back to a local truncation summary and the cost is still `0.0`.
+
+So the real cost model for this project is:
+
+```text
+Total Document Cost
+= Extraction Cost + Query Cost + Fact Index Cost + Optional Summary Cost
+
+Extraction Cost = 0.0
+Query Cost = 0.0
+Fact Index Cost = 0.0
+Optional Summary Cost = 0.0 when Gemini is disabled
 ```
 
-#### **Strategy C: Vision (High Cost)**
-- **Target**: Scanned documents, complex layouts, images
-- **Base Cost Formula**: `$2.00 + (pages × $0.20)`
-- **OCR Cost Formula**: `pages × $0.05` (additional processing)
-- **LLM Cost Formula**: `(tokens_input × 1.3 / 1,000,000 × $1.00) + (tokens_output / 1,000,000 × $3.00)`
-- **Assumptions**:
-  - Average document length: 8 pages
-  - OCR adds 30% more tokens (noise, bounding boxes)
-  - Average tokens per page: 600 (lower quality)
-  - 10% of documents use vision path
-  - Processing time: 8.5s P95 latency
+### Strategy-Level Cost Interpretation
 
-**Example Calculation**:
-```
-Tokens per doc: 8 pages × 600 tokens × 1.3 = 6,240 tokens
-LLM input cost: 6,240 / 1,000,000 × $1.00 = $0.00624
-LLM output (vision-enhanced): 1,200 tokens
-LLM output cost: 1,200 / 1,000,000 × $3.00 = $0.0036
-OCR processing cost: 8 pages × $0.05 = $0.40
-Base processing cost: $2.00 + (8 × $0.20) = $3.60
-Total LLM cost per doc: $0.00624 + $0.0036 = $0.00984
-Total cost per doc: $3.60 + $0.40 + $0.00984 = $4.010
+| Strategy | Extraction Tooling | External API Cost | Operational Cost |
+|----------|--------------------|-------------------|------------------|
+| Fast Text | pdfplumber | 0.0 | low CPU / low latency |
+| Layout | Docling | 0.0 | moderate CPU / moderate latency |
+| Vision | Tesseract OCR | 0.0 | high CPU / high latency |
+| Hybrid | per-page mix of local tools | 0.0 | variable, depends on escalated pages |
+
+### Optional LLM Summary Cost Formula
+
+If Gemini summarization is enabled for PageIndex summaries, the cost is limited to the summarization stage only:
+
+```text
+Summary Cost per Document
+= (summary_input_tokens / 1,000,000 × input_price)
++ (summary_output_tokens / 1,000,000 × output_price)
 ```
 
-### Blended Average Cost Calculation
+Where:
 
-**Workload Distribution**:
-- Standard path (Fast Text): 70% of documents
-- Layout path: 20% of documents  
-- Vision path: 10% of documents
+- `summary_input_tokens` is the text passed into Gemini for section summaries
+- `summary_output_tokens` is the short summary returned
+- the price depends on the Gemini model configured at runtime
 
-**Expected Cost per Document**:
-```
-E[cost] = (0.7 × $0.211) + (0.2 × $1.268) + (0.1 × $4.010)
-E[cost] = $0.1477 + $0.2536 + $0.4010
-E[cost] = $0.802 per document
-```
+This is intentionally isolated from extraction cost because the system does not use Gemini for OCR, table extraction, or routing.
 
-**For 1M documents**: ≈ $802,000 total processing cost
+### Cost Conclusion For Our Implementation
+
+For the current repo configuration, the financially correct statement is:
+
+- **external extraction cost per document: 0.0**
+- **external query cost per document: 0.0**
+- **external fact-index cost per document: 0.0**
+- **external summary cost per document: 0.0 unless Gemini summarization is enabled**
+
+Therefore the main engineering tradeoff in this system is not API spend, but **processing time and compute usage**.
 
 ---
 
 ## 4. Processing Time Analysis & Business Impact
 
-### Per-Stage Timing Breakdown
+### What We Measure Instead Of API Cost
 
-#### **Standard Path (Fast Text)**
-| Stage | Time (ms) | P95 (ms) | Description |
-|--------|-------------|-------------|-------------|
-| Ingestion & Routing | 50 | 80 | File reception, format detection, strategy selection |
-| Layout Parsing | 300 | 450 | Text segmentation, basic structure analysis |
-| LLM Calls | 800 | 1,200 | Entity extraction, summarization |
-| Validation | 100 | 150 | Schema validation, quality checks |
-| **Total** | **1,250** | **1,880** | **~1.9s P95 latency** |
+Since extraction is local, the important tracked variables are:
 
-#### **Layout Path (Medium Complexity)**
-| Stage | Time (ms) | P95 (ms) | Description |
-|--------|-------------|-------------|-------------|
-| Ingestion & Routing | 50 | 80 | File reception, format detection, strategy selection |
-| Layout Parsing | 500 | 750 | Complex layout analysis, table detection |
-| LLM Calls | 1,200 | 1,800 | Structured extraction, entity mapping |
-| Validation | 300 | 450 | Schema validation, consistency checks |
-| **Total** | **2,050** | **3,080** | **~3.1s P95 latency** |
+- `processing_time`
+- `pages_processed`
+- `strategy_used`
+- `confidence_score`
+- `escalated`
 
-#### **Vision Path (High Complexity)**
-| Stage | Time (ms) | P95 (ms) | Description |
-|--------|-------------|-------------|-------------|
-| Ingestion & Routing | 50 | 80 | File reception, format detection, strategy selection |
-| OCR Processing | 2,000 | 3,000 | Image preprocessing, text extraction |
-| Layout Parsing | 500 | 750 | Vision-based structure analysis |
-| LLM Calls | 1,200 | 1,800 | Vision-enhanced extraction |
-| Validation + Consistency | 300 | 450 | Extended validation for OCR output |
-| **Total** | **4,050** | **6,080** | **~6.1s P95 latency** |
+These are written into the extraction ledger in [.refinery/extraction_logs/extraction_ledger.jsonl](/home/bethel/Documents/10academy/document-refinery/.refinery/extraction_logs/extraction_ledger.jsonl).
 
-### Throughput vs Latency Analysis
+### Practical Processing-Time Interpretation
 
-#### **Required Parallelism Calculation**
-```
-Throughput ≈ (Workers × 3600) / Latency per doc (s)
+In this architecture, time behaves roughly as follows:
 
-Standard Path:
-1,000 docs/hour ≈ (1 × 3600) / 3.6s → Requires 1 worker
+- `fast_text` is the cheapest operational path and is best for native digital text-heavy PDFs
+- `layout` is slower because Docling reconstructs blocks, reading order, and tables
+- `vision` is the most expensive operational path because it renders page images and runs Tesseract OCR
+- `hybrid` can reduce cost versus full-document vision by escalating only difficult pages
 
-Layout Path:
-500 docs/hour ≈ (2 × 3600) / 14.4s → Requires 2 workers
+### Example From Our Actual Runs
 
-Vision Path:
-200 docs/hour ≈ (4 × 3600) / 72s → Requires 4 workers
-```
+The ledger currently contains runs such as:
 
-#### **Business Constraint Analysis**
+- `CBE ANNUAL REPORT 2023-24.pdf`
+  - `strategy_used = hybrid`
+  - `pages_processed = 161`
+  - `processing_time = 289.88 seconds`
+  - `cost_estimate = 0.0`
 
-| Processing Requirement | Standard Path | Layout Path | Vision Path |
-|---------------------|----------------|---------------|--------------|
-| **100 docs/hour** | 1 worker, $0.21/doc | 1 worker, $1.27/doc | 2 workers, $4.01/doc |
-| **500 docs/hour** | 2 workers, $0.21/doc | 3 workers, $1.27/doc | 6 workers, $4.01/doc |
-| **1,000 docs/hour** | 4 workers, $0.21/doc | 6 workers, $1.27/doc | 12 workers, $4.01/doc |
+This shows the actual tradeoff in our system:
 
-### Speed vs Accuracy Trade-offs
+- monetary cost remained zero
+- runtime grew significantly because the document was long and mixed-complexity
 
-#### **Fast/Cheap Route**
-- **Advantages**: Low latency (1.9s), minimal infrastructure, 85% accuracy
-- **Disadvantages**: Higher failure rate on complex documents, 15% need rework
-- **Best For**: Simple correspondence, basic reports, known formats
+### Business Impact In Our Case
 
-#### **Standard Route**
-- **Advantages**: Balanced approach (3.1s), good accuracy (90%), reasonable cost
-- **Disadvantages**: Medium infrastructure requirements, some complex layouts fail
-- **Best For**: Financial reports, technical documents, forms
+For this implementation, the business constraint is not “How much do we pay per API call?” but:
 
-#### **Accurate Route**
-- **Advantages**: Highest accuracy (95%), handles all document types
-- **Disadvantages**: High latency (6.1s), expensive infrastructure
-- **Best For**: Legal contracts, critical documents, mixed media
+1. how long large scanned or mixed documents take to process
+2. how many pages escalate from `fast_text` or `layout` into `vision`
+3. whether the UI or batch pipeline accidentally removes page caps and forces full-document OCR
 
-#### **Recommended Routing Strategy**
-```
-IF document_class IN ['simple_correspondence', 'basic_reports']:
-    USE standard_path UNLESS validation_confidence < 0.8
-ELIF document_class IN ['financial', 'technical', 'forms']:
-    USE layout_path UNLESS table_confidence < 0.7
-ELIF document_class IN ['legal', 'contracts', 'mixed_media']:
-    USE vision_path UNLESS business_criticality = 'low'
-ELSE:
-    USE layout_path WITH enhanced_validation
-```
+### Optimization Priorities For This Cost Model
 
-### Infrastructure Cost Implications
+#### **Runtime Optimization**
+1. Keep `vision` page caps low in demo/UI mode.
+2. Use mixed-document page routing so only image-heavy pages go to OCR.
+3. Avoid unnecessary escalations by improving triage and confidence calibration.
+4. Prefer `fast_text` and `layout` whenever the text layer is reliable.
 
-#### **Compute Requirements**
-| Strategy | CPU Cores | Memory | GPU | Cost/Hour |
-|-----------|-------------|---------|-------|------------|
-| Standard | 2 cores | 2GB | None | $0.10 |
-| Layout | 4 cores | 4GB | None | $0.20 |
-| Vision | 8 cores | 8GB | 1 GPU | $0.50 |
+#### **Optional API-Cost Optimization**
+1. Disable Gemini summarization when not needed.
+2. Use fallback summaries for low-stakes navigation tasks.
+3. Restrict summarization to top-level sections rather than every node.
 
-#### **Total Cost of Ownership**
-For 1M documents/year:
-- **Processing Costs**: $802,000
-- **Infrastructure**: $146,000 (mixed workload)
-- **Total TCO**: $948,000
-- **Cost per Document**: $0.948
+### Cost Analysis Summary
 
-### Performance Optimization Opportunities
+The honest cost statement for this project is:
 
-#### **Latency Reduction**
-1. **Parallel Processing**: Process pages concurrently within documents
-2. **Model Caching**: Reuse expensive model loads
-3. **Batch LLM Calls**: Group multiple documents for API efficiency
-4. **Smart Routing**: Better upfront classification reduces escalations
-
-#### **Cost Optimization**
-1. **Volume Discounts**: 30% discount for >1M documents
-2. **Spot Instances**: Use cloud spot pricing for batch processing
-3. **Model Optimization**: Fine-tune models for specific domains
-4. **Selective Processing**: Skip expensive stages for known document types
+- **Monetary cost**: effectively zero for extraction and querying in the default local configuration
+- **Operational cost**: dominated by OCR runtime, document length, and escalation frequency
+- **Optional paid component**: Gemini section summarization only, if enabled
 
 ---
 
