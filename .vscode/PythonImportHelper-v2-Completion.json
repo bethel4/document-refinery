@@ -17,6 +17,22 @@
         "documentation": {}
     },
     {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
+        "isExtraImport": true,
+        "detail": "__future__",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -248,31 +264,7 @@
         "documentation": {}
     },
     {
-        "label": "Dict",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -400,30 +392,6 @@
         "documentation": {}
     },
     {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "Dict",
         "importPath": "typing",
         "description": "typing",
@@ -440,14 +408,6 @@
         "documentation": {}
     },
     {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -456,15 +416,7 @@
         "documentation": {}
     },
     {
-        "label": "Dict",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Any",
+        "label": "List",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -505,14 +457,6 @@
     },
     {
         "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Tuple",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -569,6 +513,94 @@
     },
     {
         "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -899,6 +931,30 @@
         "documentation": {}
     },
     {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
         "label": "numpy",
         "kind": 6,
         "isExtraImport": true,
@@ -929,6 +985,22 @@
         "description": "dataclasses",
         "isExtraImport": true,
         "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
         "documentation": {}
     },
     {
@@ -1133,7 +1205,135 @@
         "documentation": {}
     },
     {
+        "label": "ConfigDict",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "model_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigDict",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "model_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "AliasChoices",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigDict",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "field_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "model_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigDict",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "model_validator",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -1157,7 +1357,7 @@
         "documentation": {}
     },
     {
-        "label": "BaseModel",
+        "label": "field_validator",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -1165,39 +1365,7 @@
         "documentation": {}
     },
     {
-        "label": "Field",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "Field",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "Field",
+        "label": "model_validator",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -1375,19 +1543,21 @@
         "documentation": {}
     },
     {
-        "label": "ABC",
-        "importPath": "abc",
-        "description": "abc",
+        "label": "shutil",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "abc",
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
         "documentation": {}
     },
     {
-        "label": "abstractmethod",
-        "importPath": "abc",
-        "description": "abc",
+        "label": "subprocess",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "abc",
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
         "documentation": {}
     },
     {
@@ -1432,36 +1602,27 @@
         "documentation": {}
     },
     {
-        "label": "ExtractionRouter",
-        "importPath": "src.extraction.extraction_router",
-        "description": "src.extraction.extraction_router",
+        "label": "ProcessPoolExecutor",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
         "isExtraImport": true,
-        "detail": "src.extraction.extraction_router",
+        "detail": "concurrent.futures",
         "documentation": {}
     },
     {
-        "label": "ExtractionRouter",
-        "importPath": "src.extraction.extraction_router",
-        "description": "src.extraction.extraction_router",
+        "label": "ThreadPoolExecutor",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
         "isExtraImport": true,
-        "detail": "src.extraction.extraction_router",
+        "detail": "concurrent.futures",
         "documentation": {}
     },
     {
-        "label": "BytesIO",
-        "importPath": "io",
-        "description": "io",
+        "label": "as_completed",
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
         "isExtraImport": true,
-        "detail": "io",
-        "documentation": {}
-    },
-    {
-        "label": "pytest",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pytest",
-        "description": "pytest",
-        "detail": "pytest",
+        "detail": "concurrent.futures",
         "documentation": {}
     },
     {
@@ -1474,12 +1635,262 @@
         "documentation": {}
     },
     {
-        "label": "shutil",
+        "label": "TemporaryDirectory",
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "isExtraImport": true,
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "TemporaryDirectory",
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "isExtraImport": true,
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "fitz",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "shutil",
-        "description": "shutil",
-        "detail": "shutil",
+        "importPath": "fitz",
+        "description": "fitz",
+        "detail": "fitz",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionRouter",
+        "importPath": "src.extraction.extraction_router",
+        "description": "src.extraction.extraction_router",
+        "isExtraImport": true,
+        "detail": "src.extraction.extraction_router",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionRouter",
+        "importPath": "src.extraction.extraction_router",
+        "description": "src.extraction.extraction_router",
+        "isExtraImport": true,
+        "detail": "src.extraction.extraction_router",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractedDocument",
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "isExtraImport": true,
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "PerformanceMetrics",
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "isExtraImport": true,
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractedDocument",
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "isExtraImport": true,
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "PageExtraction",
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "isExtraImport": true,
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionMethod",
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "isExtraImport": true,
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "BoundingBox",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDU",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDURole",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "LDUType",
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "isExtraImport": true,
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "ContentType",
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "isExtraImport": true,
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "PageFeatures",
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "isExtraImport": true,
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "PageIndex",
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "isExtraImport": true,
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "PageNavigation",
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "isExtraImport": true,
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "PageQuality",
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "isExtraImport": true,
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "PageType",
+        "importPath": "src.models.page_index",
+        "description": "src.models.page_index",
+        "isExtraImport": true,
+        "detail": "src.models.page_index",
+        "documentation": {}
+    },
+    {
+        "label": "AgentInfo",
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "isExtraImport": true,
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "AgentType",
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "isExtraImport": true,
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProcessingMetrics",
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "isExtraImport": true,
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProcessingStatus",
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "isExtraImport": true,
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProcessingStep",
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "isExtraImport": true,
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProcessingStepType",
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "isExtraImport": true,
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProvenanceChain",
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "isExtraImport": true,
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProvenanceCitation",
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "isExtraImport": true,
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
         "documentation": {}
     },
     {
@@ -1536,30 +1947,6 @@
         "description": "unittest.mock",
         "isExtraImport": true,
         "detail": "unittest.mock",
-        "documentation": {}
-    },
-    {
-        "label": "ExtractedDocument",
-        "importPath": "src.models.extracted_document",
-        "description": "src.models.extracted_document",
-        "isExtraImport": true,
-        "detail": "src.models.extracted_document",
-        "documentation": {}
-    },
-    {
-        "label": "PageExtraction",
-        "importPath": "src.models.extracted_document",
-        "description": "src.models.extracted_document",
-        "isExtraImport": true,
-        "detail": "src.models.extracted_document",
-        "documentation": {}
-    },
-    {
-        "label": "ExtractionMethod",
-        "importPath": "src.models.extracted_document",
-        "description": "src.models.extracted_document",
-        "isExtraImport": true,
-        "detail": "src.models.extracted_document",
         "documentation": {}
     },
     {
@@ -2013,6 +2400,24 @@
         "documentation": {}
     },
     {
+        "label": "DoclingBatchProcessor",
+        "kind": 6,
+        "importPath": "src.extraction.docling_batch_processor",
+        "description": "src.extraction.docling_batch_processor",
+        "peekOfCode": "class DoclingBatchProcessor:\n    \"\"\"Run Docling on multiple PDF files with a thread pool.\"\"\"\n    def __init__(self, input_dir: str, output_dir: str | None = None, max_workers: int = 8):\n        self.input_dir = Path(input_dir).expanduser().resolve()\n        if not self.input_dir.exists():\n            raise FileNotFoundError(f\"Input directory does not exist: {self.input_dir}\")\n        self.max_workers = max(1, int(max_workers))\n        self.output_dir = (\n            Path(output_dir).expanduser().resolve()\n            if output_dir",
+        "detail": "src.extraction.docling_batch_processor",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.extraction.docling_batch_processor",
+        "description": "src.extraction.docling_batch_processor",
+        "peekOfCode": "def main() -> None:\n    parser = argparse.ArgumentParser(description=\"Batch process PDFs with Docling\")\n    parser.add_argument(\n        \"--input\",\n        type=str,\n        default=\"data/raw\",\n        help=\"Input directory containing PDFs\",\n    )\n    parser.add_argument(\n        \"--output\",",
+        "detail": "src.extraction.docling_batch_processor",
+        "documentation": {}
+    },
+    {
         "label": "ExtractionRouter",
         "kind": 6,
         "importPath": "src.extraction.extraction_router",
@@ -2089,7 +2494,7 @@
         "kind": 5,
         "importPath": "src.extraction.layout_extractor",
         "description": "src.extraction.layout_extractor",
-        "peekOfCode": "logger = logging.getLogger(__name__)\n# ----------------------------\n# Docling Import (Modern API)\n# ----------------------------\ntry:\n    from docling.document_converter import DocumentConverter\n    DOCLING_AVAILABLE = True\n    logger.info(\"Docling imported successfully\")\nexcept ImportError as e:\n    logger.warning(f\"Docling import failed: {e}. Layout extractor will use mock implementation.\")",
+        "peekOfCode": "logger = logging.getLogger(__name__)\n# ----------------------------\n# Docling Import (Modern API)\n# ----------------------------\ntry:\n    from docling.document_converter import DocumentConverter\n    DOCLING_AVAILABLE = True\n    logger.info(\"Docling imported successfully\")\nexcept ImportError as e:\n    logger.warning(f\"Docling import failed: {e}.\")",
         "detail": "src.extraction.layout_extractor",
         "documentation": {}
     },
@@ -2125,7 +2530,7 @@
         "kind": 6,
         "importPath": "src.extraction.vision_extractor",
         "description": "src.extraction.vision_extractor",
-        "peekOfCode": "class VisionExtractor(BaseExtractor):\n    \"\"\"Vision extraction for scanned documents using Tesseract OCR.\"\"\"\n    def __init__(self, dpi: int = 150, language: str = 'eng', max_vision_pages: int = 5):\n        super().__init__(\"VisionExtractor\")\n        self.dpi = dpi\n        self.language = language\n        self.max_vision_pages = max_vision_pages  # NEW: Limit pages processed\n        self.pdf2image_available = PDF2IMAGE_AVAILABLE\n        self.tesseract_available = TESSERACT_AVAILABLE\n        # Output directories",
+        "peekOfCode": "class VisionExtractor(BaseExtractor):\n    \"\"\"Vision extraction for scanned documents using Tesseract OCR.\"\"\"\n    def __init__(self, dpi: int = 150, language: str = 'eng', max_vision_pages: int = 5, ocr_workers: int = 0):\n        super().__init__(\"VisionExtractor\")\n        self.dpi = dpi\n        self.language = language\n        self.max_vision_pages = max_vision_pages  # NEW: Limit pages processed\n        self.ocr_workers = ocr_workers\n        self.pdf2image_available = PDF2IMAGE_AVAILABLE\n        self.tesseract_available = TESSERACT_AVAILABLE",
         "detail": "src.extraction.vision_extractor",
         "documentation": {}
     },
@@ -2134,7 +2539,7 @@
         "kind": 5,
         "importPath": "src.extraction.vision_extractor",
         "description": "src.extraction.vision_extractor",
-        "peekOfCode": "logger = logging.getLogger(__name__)\nclass VisionExtractor(BaseExtractor):\n    \"\"\"Vision extraction for scanned documents using Tesseract OCR.\"\"\"\n    def __init__(self, dpi: int = 150, language: str = 'eng', max_vision_pages: int = 5):\n        super().__init__(\"VisionExtractor\")\n        self.dpi = dpi\n        self.language = language\n        self.max_vision_pages = max_vision_pages  # NEW: Limit pages processed\n        self.pdf2image_available = PDF2IMAGE_AVAILABLE\n        self.tesseract_available = TESSERACT_AVAILABLE",
+        "peekOfCode": "logger = logging.getLogger(__name__)\ndef _ocr_page_worker(task: tuple[str, int, str, str]) -> Dict[str, Any]:\n    \"\"\"OCR a single page image in a separate process.\"\"\"\n    image_path, page_num, language, tesseract_config = task\n    try:\n        from PIL import Image as WorkerImage\n        import pytesseract as worker_pytesseract\n        with WorkerImage.open(image_path) as page_image:\n            ocr_text = worker_pytesseract.image_to_string(\n                page_image,",
         "detail": "src.extraction.vision_extractor",
         "documentation": {}
     },
@@ -2170,7 +2575,25 @@
         "kind": 6,
         "importPath": "src.models.document_profile",
         "description": "src.models.document_profile",
-        "peekOfCode": "class ExtractionStrategy(str, Enum):\n    \"\"\"Recommended extraction strategy.\"\"\"\n    FAST_TEXT = \"fast_text\"\n    LAYOUT = \"layout\"\n    VISION = \"vision\"\n    HYBRID = \"hybrid\"\nclass DocumentProfile(BaseModel):\n    \"\"\"Pydantic model for document classification results.\"\"\"\n    # Basic metadata\n    document_id: str",
+        "peekOfCode": "class ExtractionStrategy(str, Enum):\n    \"\"\"Recommended extraction strategy.\"\"\"\n    FAST_TEXT = \"fast_text\"\n    LAYOUT = \"layout\"\n    VISION = \"vision\"\n    HYBRID = \"hybrid\"\nclass EstimatedExtractionCost(str, Enum):\n    \"\"\"Estimated extraction resource cost categories.\"\"\"\n    FAST_TEXT = \"fast_text\"\n    NEEDS_LAYOUT_MODEL = \"needs_layout_model\"",
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "EstimatedExtractionCost",
+        "kind": 6,
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "peekOfCode": "class EstimatedExtractionCost(str, Enum):\n    \"\"\"Estimated extraction resource cost categories.\"\"\"\n    FAST_TEXT = \"fast_text\"\n    NEEDS_LAYOUT_MODEL = \"needs_layout_model\"\n    NEEDS_VISION_MODEL = \"needs_vision_model\"\n    LOW = \"low\"\n    MEDIUM = \"medium\"\n    HIGH = \"high\"\nclass DocumentSource(str, Enum):\n    \"\"\"Source channel for the input document.\"\"\"",
+        "detail": "src.models.document_profile",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentSource",
+        "kind": 6,
+        "importPath": "src.models.document_profile",
+        "description": "src.models.document_profile",
+        "peekOfCode": "class DocumentSource(str, Enum):\n    \"\"\"Source channel for the input document.\"\"\"\n    UPLOAD = \"upload\"\n    EMAIL = \"email\"\n    API = \"api\"\n    ARCHIVE = \"archive\"\n    UNKNOWN = \"unknown\"\nclass DocumentProfile(BaseModel):\n    \"\"\"Pydantic model for document classification results.\"\"\"\n    # Basic metadata",
         "detail": "src.models.document_profile",
         "documentation": {}
     },
@@ -2179,7 +2602,7 @@
         "kind": 6,
         "importPath": "src.models.document_profile",
         "description": "src.models.document_profile",
-        "peekOfCode": "class DocumentProfile(BaseModel):\n    \"\"\"Pydantic model for document classification results.\"\"\"\n    # Basic metadata\n    document_id: str\n    filename: str\n    file_path: str\n    file_size_bytes: int\n    analyzed_at: datetime = Field(default_factory=datetime.now)\n    # Classification results\n    origin_type: OriginType",
+        "peekOfCode": "class DocumentProfile(BaseModel):\n    \"\"\"Pydantic model for document classification results.\"\"\"\n    # Basic metadata\n    document_id: str\n    filename: str\n    file_path: str\n    file_size_bytes: int = Field(ge=0)\n    analyzed_at: datetime = Field(default_factory=datetime.now)\n    author: Optional[str] = None\n    source: DocumentSource = DocumentSource.UNKNOWN",
         "detail": "src.models.document_profile",
         "documentation": {}
     },
@@ -2188,7 +2611,16 @@
         "kind": 6,
         "importPath": "src.models.extracted_document",
         "description": "src.models.extracted_document",
-        "peekOfCode": "class ExtractionMethod(str, Enum):\n    \"\"\"Extraction method used.\"\"\"\n    FAST_TEXT = \"fast_text\"\n    LAYOUT = \"layout\"\n    VISION = \"vision\"\n    HYBRID = \"hybrid\"\n    MOCK = \"mock\"\nclass TableData(BaseModel):\n    \"\"\"Table extraction data.\"\"\"\n    table_id: str",
+        "peekOfCode": "class ExtractionMethod(str, Enum):\n    \"\"\"Extraction method used.\"\"\"\n    FAST_TEXT = \"fast_text\"\n    LAYOUT = \"layout\"\n    VISION = \"vision\"\n    HYBRID = \"hybrid\"\n    MOCK = \"mock\"\nclass ExtractionCost(str, Enum):\n    \"\"\"Estimated extraction cost band.\"\"\"\n    LOW = \"low\"",
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "ExtractionCost",
+        "kind": 6,
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "peekOfCode": "class ExtractionCost(str, Enum):\n    \"\"\"Estimated extraction cost band.\"\"\"\n    LOW = \"low\"\n    MEDIUM = \"medium\"\n    HIGH = \"high\"\nclass TableData(BaseModel):\n    \"\"\"Table extraction data.\"\"\"\n    table_id: str\n    page_num: int = Field(ge=1)\n    rows: int = Field(ge=0)",
         "detail": "src.models.extracted_document",
         "documentation": {}
     },
@@ -2197,7 +2629,7 @@
         "kind": 6,
         "importPath": "src.models.extracted_document",
         "description": "src.models.extracted_document",
-        "peekOfCode": "class TableData(BaseModel):\n    \"\"\"Table extraction data.\"\"\"\n    table_id: str\n    page_num: int\n    rows: int\n    columns: int\n    headers: List[str]\n    data: List[List[str]]\n    confidence: float = Field(ge=0.0, le=1.0)\n    bbox: Optional[Dict[str, int]] = None",
+        "peekOfCode": "class TableData(BaseModel):\n    \"\"\"Table extraction data.\"\"\"\n    table_id: str\n    page_num: int = Field(ge=1)\n    rows: int = Field(ge=0)\n    columns: int = Field(ge=0)\n    headers: List[str]\n    data: List[List[str]]\n    confidence: float = Field(ge=0.0, le=1.0)\n    bounding_box: Optional[BoundingBox] = None",
         "detail": "src.models.extracted_document",
         "documentation": {}
     },
@@ -2206,7 +2638,7 @@
         "kind": 6,
         "importPath": "src.models.extracted_document",
         "description": "src.models.extracted_document",
-        "peekOfCode": "class PageExtraction(BaseModel):\n    \"\"\"Page-level extraction results.\"\"\"\n    page_num: int\n    text: str\n    text_length: int\n    tables: List[TableData] = Field(default_factory=list)\n    confidence: float = Field(ge=0.0, le=1.0)\n    extraction_method: ExtractionMethod\n    escalated_from: Optional[ExtractionMethod] = None\n    strategy_used: str",
+        "peekOfCode": "class PageExtraction(BaseModel):\n    \"\"\"Page-level extraction results.\"\"\"\n    page_num: int = Field(ge=1)\n    text: str\n    text_length: int = Field(ge=0)\n    tables: List[TableData] = Field(default_factory=list)\n    confidence: float = Field(ge=0.0, le=1.0)\n    extraction_method: ExtractionMethod\n    escalated_from: Optional[ExtractionMethod] = None\n    strategy_used: ExtractionMethod",
         "detail": "src.models.extracted_document",
         "documentation": {}
     },
@@ -2215,7 +2647,7 @@
         "kind": 6,
         "importPath": "src.models.extracted_document",
         "description": "src.models.extracted_document",
-        "peekOfCode": "class ExtractionMetadata(BaseModel):\n    \"\"\"Extraction process metadata.\"\"\"\n    total_pages: int\n    total_text_length: int\n    total_tables: int\n    average_confidence: float = Field(ge=0.0, le=1.0)\n    extraction_cost: str\n    processing_time_seconds: float\n    ocr_engine: Optional[str] = None\n    dpi: Optional[int] = None",
+        "peekOfCode": "class ExtractionMetadata(BaseModel):\n    \"\"\"Extraction process metadata.\"\"\"\n    total_pages: int = Field(ge=0)\n    total_text_length: int = Field(ge=0)\n    total_tables: int = Field(ge=0)\n    average_confidence: float = Field(ge=0.0, le=1.0)\n    extraction_cost: ExtractionCost\n    processing_time_seconds: float = Field(ge=0.0)\n    ocr_engine: Optional[str] = None\n    dpi: Optional[int] = Field(default=None, gt=0)",
         "detail": "src.models.extracted_document",
         "documentation": {}
     },
@@ -2224,7 +2656,7 @@
         "kind": 6,
         "importPath": "src.models.extracted_document",
         "description": "src.models.extracted_document",
-        "peekOfCode": "class RoutingMetadata(BaseModel):\n    \"\"\"Strategy routing metadata.\"\"\"\n    recommended_strategy: str\n    actual_strategy: str\n    escalated: bool\n    confidence_threshold: float\n    average_confidence: float\n    pages_processed: int\nclass PerformanceMetrics(BaseModel):\n    \"\"\"Performance metrics for the extraction.\"\"\"",
+        "peekOfCode": "class RoutingMetadata(BaseModel):\n    \"\"\"Strategy routing metadata.\"\"\"\n    recommended_strategy: Optional[ExtractionMethod] = None\n    actual_strategy: Optional[ExtractionMethod] = None\n    escalated: bool = False\n    confidence_threshold: float = Field(default=0.0, ge=0.0, le=1.0)\n    average_confidence: float = Field(ge=0.0, le=1.0)\n    pages_processed: int = Field(default=0, ge=0)\nclass PerformanceMetrics(BaseModel):\n    \"\"\"Performance metrics for the extraction.\"\"\"",
         "detail": "src.models.extracted_document",
         "documentation": {}
     },
@@ -2233,7 +2665,25 @@
         "kind": 6,
         "importPath": "src.models.extracted_document",
         "description": "src.models.extracted_document",
-        "peekOfCode": "class PerformanceMetrics(BaseModel):\n    \"\"\"Performance metrics for the extraction.\"\"\"\n    triage_speed: str\n    extraction_speed: str\n    overall_efficiency: str\nclass ExtractedDocument(BaseModel):\n    \"\"\"Complete extracted document with all metadata.\"\"\"\n    # Document identification\n    document_id: str\n    filename: str",
+        "peekOfCode": "class PerformanceMetrics(BaseModel):\n    \"\"\"Performance metrics for the extraction.\"\"\"\n    triage_speed: str\n    extraction_speed: str\n    overall_efficiency: str\nclass TriageSnapshot(BaseModel):\n    \"\"\"Normalized triage output stored with extraction results.\"\"\"\n    duration: Optional[float] = Field(default=None, ge=0.0)\n    profile: Dict[str, Any] = Field(default_factory=dict)\nclass NormalizedExtractionOutput(BaseModel):",
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "TriageSnapshot",
+        "kind": 6,
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "peekOfCode": "class TriageSnapshot(BaseModel):\n    \"\"\"Normalized triage output stored with extraction results.\"\"\"\n    duration: Optional[float] = Field(default=None, ge=0.0)\n    profile: Dict[str, Any] = Field(default_factory=dict)\nclass NormalizedExtractionOutput(BaseModel):\n    \"\"\"Normalized extraction payload with typed nested models.\"\"\"\n    duration: Optional[float] = Field(default=None, ge=0.0)\n    strategy_used: ExtractionMethod\n    routing_metadata: RoutingMetadata\n    pages: List[PageExtraction] = Field(default_factory=list)",
+        "detail": "src.models.extracted_document",
+        "documentation": {}
+    },
+    {
+        "label": "NormalizedExtractionOutput",
+        "kind": 6,
+        "importPath": "src.models.extracted_document",
+        "description": "src.models.extracted_document",
+        "peekOfCode": "class NormalizedExtractionOutput(BaseModel):\n    \"\"\"Normalized extraction payload with typed nested models.\"\"\"\n    duration: Optional[float] = Field(default=None, ge=0.0)\n    strategy_used: ExtractionMethod\n    routing_metadata: RoutingMetadata\n    pages: List[PageExtraction] = Field(default_factory=list)\n    extraction_metadata: Optional[ExtractionMetadata] = None\n    document_elements: Dict[str, Any] = Field(default_factory=dict)\n    @model_validator(mode=\"after\")\n    def normalize_summary_counts(self) -> \"NormalizedExtractionOutput\":",
         "detail": "src.models.extracted_document",
         "documentation": {}
     },
@@ -2242,7 +2692,7 @@
         "kind": 6,
         "importPath": "src.models.extracted_document",
         "description": "src.models.extracted_document",
-        "peekOfCode": "class ExtractedDocument(BaseModel):\n    \"\"\"Complete extracted document with all metadata.\"\"\"\n    # Document identification\n    document_id: str\n    filename: str\n    file_path: str\n    # Timing information\n    total_duration: float\n    # Triage results\n    triage: Dict[str, Any]",
+        "peekOfCode": "class ExtractedDocument(BaseModel):\n    \"\"\"Complete extracted document with all metadata.\"\"\"\n    # Document identification\n    document_id: str\n    filename: str\n    file_path: str\n    # Timing information\n    total_duration: float = Field(ge=0.0)\n    # Triage output (normalized)\n    triage: TriageSnapshot",
         "detail": "src.models.extracted_document",
         "documentation": {}
     },
@@ -2269,7 +2719,7 @@
         "kind": 6,
         "importPath": "src.models.ldu",
         "description": "src.models.ldu",
-        "peekOfCode": "class BoundingBox(BaseModel):\n    \"\"\"Bounding box for spatial information.\"\"\"\n    left: float\n    top: float\n    width: float\n    height: float\n    page_num: int\n    def get_area(self) -> float:\n        \"\"\"Calculate bounding box area.\"\"\"\n        return self.width * self.height",
+        "peekOfCode": "class BoundingBox(BaseModel):\n    \"\"\"Bounding box for spatial information.\"\"\"\n    x: float = Field(validation_alias=AliasChoices(\"x\", \"left\"))\n    y: float = Field(validation_alias=AliasChoices(\"y\", \"top\"))\n    width: float = Field(gt=0.0)\n    height: float = Field(gt=0.0)\n    page_num: int = Field(ge=1)\n    page_width: Optional[float] = Field(default=None, gt=0.0)\n    page_height: Optional[float] = Field(default=None, gt=0.0)\n    model_config = ConfigDict(populate_by_name=True)",
         "detail": "src.models.ldu",
         "documentation": {}
     },
@@ -2287,7 +2737,25 @@
         "kind": 6,
         "importPath": "src.models.ldu",
         "description": "src.models.ldu",
-        "peekOfCode": "class StructuralMetadata(BaseModel):\n    \"\"\"Structural metadata for LDU.\"\"\"\n    level: Optional[int] = None  # Header level, list level, etc.\n    parent_id: Optional[str] = None\n    child_ids: List[str] = Field(default_factory=list)\n    sibling_ids: List[str] = Field(default_factory=list)\n    section_number: Optional[str] = None\n    outline_path: Optional[str] = None\nclass LDU(BaseModel):\n    \"\"\"Logical Document Unit - a semantic chunk of a document.\"\"\"",
+        "peekOfCode": "class StructuralMetadata(BaseModel):\n    \"\"\"Structural metadata for LDU.\"\"\"\n    level: Optional[int] = None  # Header level, list level, etc.\n    parent_id: Optional[str] = None\n    child_ids: List[str] = Field(default_factory=list)\n    sibling_ids: List[str] = Field(default_factory=list)\n    section_number: Optional[str] = None\n    outline_path: Optional[str] = None\nclass ChunkRelationType(str, Enum):\n    \"\"\"Supported LDU-to-LDU chunk relationships.\"\"\"",
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "ChunkRelationType",
+        "kind": 6,
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "peekOfCode": "class ChunkRelationType(str, Enum):\n    \"\"\"Supported LDU-to-LDU chunk relationships.\"\"\"\n    PARENT = \"parent\"\n    CHILD = \"child\"\n    PREVIOUS = \"previous\"\n    NEXT = \"next\"\n    RELATED = \"related\"\n    SOURCE = \"source\"\n    DERIVED = \"derived\"\nclass ChunkRelationship(BaseModel):",
+        "detail": "src.models.ldu",
+        "documentation": {}
+    },
+    {
+        "label": "ChunkRelationship",
+        "kind": 6,
+        "importPath": "src.models.ldu",
+        "description": "src.models.ldu",
+        "peekOfCode": "class ChunkRelationship(BaseModel):\n    \"\"\"Explicit typed relationship between LDUs/chunks.\"\"\"\n    relation_type: ChunkRelationType\n    target_ldu_id: str = Field(min_length=1)\n    confidence: Optional[float] = Field(default=None, ge=0.0, le=1.0)\nclass LDU(BaseModel):\n    \"\"\"Logical Document Unit - a semantic chunk of a document.\"\"\"\n    # Basic identification\n    ldu_id: str\n    document_id: str",
         "detail": "src.models.ldu",
         "documentation": {}
     },
@@ -2296,7 +2764,7 @@
         "kind": 6,
         "importPath": "src.models.ldu",
         "description": "src.models.ldu",
-        "peekOfCode": "class LDU(BaseModel):\n    \"\"\"Logical Document Unit - a semantic chunk of a document.\"\"\"\n    # Basic identification\n    ldu_id: str\n    document_id: str\n    ldu_type: LDUType\n    role: LDURole\n    # Content\n    text: str\n    text_length: int",
+        "peekOfCode": "class LDU(BaseModel):\n    \"\"\"Logical Document Unit - a semantic chunk of a document.\"\"\"\n    # Basic identification\n    ldu_id: str\n    document_id: str\n    ldu_type: LDUType\n    role: LDURole\n    # Content\n    text: str = Field(min_length=1)\n    text_length: int = Field(ge=0)",
         "detail": "src.models.ldu",
         "documentation": {}
     },
@@ -2332,7 +2800,7 @@
         "kind": 6,
         "importPath": "src.models.page_index",
         "description": "src.models.page_index",
-        "peekOfCode": "class PageNavigation(BaseModel):\n    \"\"\"Navigation information for a page.\"\"\"\n    page_number: Optional[int] = None\n    section_number: Optional[str] = None\n    chapter_number: Optional[str] = None\n    title: Optional[str] = None\n    subtitle: Optional[str] = None\n    outline_level: Optional[int] = None\n    is_section_start: bool = False\n    is_chapter_start: bool = False",
+        "peekOfCode": "class PageNavigation(BaseModel):\n    \"\"\"Navigation information for a page.\"\"\"\n    page_number: Optional[int] = None\n    section_number: Optional[str] = None\n    chapter_number: Optional[str] = None\n    title: Optional[str] = None\n    subtitle: Optional[str] = None\n    outline_level: Optional[int] = Field(default=None, ge=0)\n    is_section_start: bool = False\n    is_chapter_start: bool = False",
         "detail": "src.models.page_index",
         "documentation": {}
     },
@@ -2350,16 +2818,16 @@
         "kind": 6,
         "importPath": "src.models.page_index",
         "description": "src.models.page_index",
-        "peekOfCode": "class PageIndex(BaseModel):\n    \"\"\"Page index entry for document navigation and analysis.\"\"\"\n    # Basic identification\n    page_id: str\n    document_id: str\n    page_num: int\n    # Classification\n    page_type: PageType\n    content_type: ContentType\n    primary_language: str",
+        "peekOfCode": "class PageIndex(BaseModel):\n    \"\"\"Page index entry for document navigation and analysis.\"\"\"\n    # Basic identification\n    page_id: str\n    document_id: str\n    page_num: int = Field(ge=1)\n    # Classification\n    page_type: PageType\n    content_type: ContentType\n    primary_language: str",
         "detail": "src.models.page_index",
         "documentation": {}
     },
     {
-        "label": "ProcessingStep",
+        "label": "ProcessingStepType",
         "kind": 6,
         "importPath": "src.models.provenance_chain",
         "description": "src.models.provenance_chain",
-        "peekOfCode": "class ProcessingStep(str, Enum):\n    \"\"\"Processing step types.\"\"\"\n    INGESTION = \"ingestion\"\n    TRIAGE = \"triage\"\n    EXTRACTION = \"extraction\"\n    CHUNKING = \"chunking\"\n    ENRICHMENT = \"enrichment\"\n    VALIDATION = \"validation\"\n    QUALITY_CHECK = \"quality_check\"\n    TRANSFORMATION = \"transformation\"",
+        "peekOfCode": "class ProcessingStepType(str, Enum):\n    \"\"\"Processing step types.\"\"\"\n    INGESTION = \"ingestion\"\n    TRIAGE = \"triage\"\n    EXTRACTION = \"extraction\"\n    CHUNKING = \"chunking\"\n    ENRICHMENT = \"enrichment\"\n    VALIDATION = \"validation\"\n    QUALITY_CHECK = \"quality_check\"\n    TRANSFORMATION = \"transformation\"",
         "detail": "src.models.provenance_chain",
         "documentation": {}
     },
@@ -2386,7 +2854,7 @@
         "kind": 6,
         "importPath": "src.models.provenance_chain",
         "description": "src.models.provenance_chain",
-        "peekOfCode": "class AgentInfo(BaseModel):\n    \"\"\"Information about the processing agent.\"\"\"\n    agent_id: str\n    agent_type: AgentType\n    agent_name: str\n    version: str\n    configuration: Dict[str, Any] = Field(default_factory=dict)\n    def is_automated(self) -> bool:\n        \"\"\"Check if agent is automated.\"\"\"\n        return self.agent_type == AgentType.AUTOMATED",
+        "peekOfCode": "class AgentInfo(BaseModel):\n    \"\"\"Information about the processing agent.\"\"\"\n    agent_id: str\n    agent_type: AgentType\n    agent_name: str\n    version: str\n    configuration: Dict[str, Any] = Field(default_factory=dict)\n    def is_automated(self) -> bool:\n        \"\"\"Check if agent is automated.\"\"\"\n        return self.agent_type in (AgentType.AUTOMATED, AgentType.AUTOMATED.value)",
         "detail": "src.models.provenance_chain",
         "documentation": {}
     },
@@ -2395,7 +2863,16 @@
         "kind": 6,
         "importPath": "src.models.provenance_chain",
         "description": "src.models.provenance_chain",
-        "peekOfCode": "class ProcessingMetrics(BaseModel):\n    \"\"\"Metrics for a processing step.\"\"\"\n    duration_seconds: float\n    cpu_usage_percent: Optional[float] = Field(None, ge=0.0, le=100.0)\n    memory_usage_mb: Optional[float] = Field(None, ge=0.0)\n    pages_processed: int = 0\n    confidence_score: Optional[float] = Field(None, ge=0.0, le=1.0)\n    error_count: int = 0\n    warning_count: int = 0\n    def get_efficiency_score(self) -> float:",
+        "peekOfCode": "class ProcessingMetrics(BaseModel):\n    \"\"\"Metrics for a processing step.\"\"\"\n    duration_seconds: float = Field(ge=0.0)\n    cpu_usage_percent: Optional[float] = Field(None, ge=0.0, le=100.0)\n    memory_usage_mb: Optional[float] = Field(None, ge=0.0)\n    pages_processed: int = Field(default=0, ge=0)\n    confidence_score: Optional[float] = Field(None, ge=0.0, le=1.0)\n    error_count: int = Field(default=0, ge=0)\n    warning_count: int = Field(default=0, ge=0)\n    def get_efficiency_score(self) -> float:",
+        "detail": "src.models.provenance_chain",
+        "documentation": {}
+    },
+    {
+        "label": "ProvenanceCitation",
+        "kind": 6,
+        "importPath": "src.models.provenance_chain",
+        "description": "src.models.provenance_chain",
+        "peekOfCode": "class ProvenanceCitation(BaseModel):\n    \"\"\"Source citation for a content element.\"\"\"\n    citation_id: str\n    page_refs: List[int] = Field(default_factory=list)\n    bbox: Optional[BoundingBox] = None\n    content_hash: str = Field(min_length=16)\n    source_artifact: Optional[str] = None\n    note: Optional[str] = None\n    @field_validator(\"page_refs\")\n    @classmethod",
         "detail": "src.models.provenance_chain",
         "documentation": {}
     },
@@ -2404,7 +2881,7 @@
         "kind": 6,
         "importPath": "src.models.provenance_chain",
         "description": "src.models.provenance_chain",
-        "peekOfCode": "class ProcessingStep(BaseModel):\n    \"\"\"Single processing step in the provenance chain.\"\"\"\n    # Step identification\n    step_id: str\n    step_type: ProcessingStep\n    step_name: str\n    sequence_order: int\n    # Agent information\n    agent: AgentInfo\n    # Timing",
+        "peekOfCode": "class ProcessingStep(BaseModel):\n    \"\"\"Single processing step in the provenance chain.\"\"\"\n    # Step identification\n    step_id: str\n    step_type: ProcessingStepType\n    step_name: str\n    sequence_order: int = Field(ge=0)\n    # Agent information\n    agent: AgentInfo\n    # Timing",
         "detail": "src.models.provenance_chain",
         "documentation": {}
     },
@@ -2478,6 +2955,51 @@
         "description": "tests.test_working",
         "peekOfCode": "class TestExtraction:\n    \"\"\"Test suite for extraction confidence scoring and routing.\"\"\"\n    @pytest.fixture\n    def temp_dirs(self):\n        \"\"\"Create temporary directories for testing.\"\"\"\n        temp_dir = tempfile.mkdtemp()\n        rules_file = Path(temp_dir) / \"rules.yaml\"\n        # Create extraction rules\n        rules_content = \"\"\"\nextraction_strategies:",
         "detail": "tests.test_working",
+        "documentation": {}
+    },
+    {
+        "label": "clone_or_update",
+        "kind": 2,
+        "importPath": "colab_runner",
+        "description": "colab_runner",
+        "peekOfCode": "def clone_or_update(repo_url: str, repo_dir: str = \"/content/document-refinery\") -> str:\n    \"\"\"Clone repo if absent, otherwise pull latest.\"\"\"\n    repo_path = Path(repo_dir)\n    parent = repo_path.parent\n    parent.mkdir(parents=True, exist_ok=True)\n    if (repo_path / \".git\").exists():\n        _run([\"git\", \"pull\", \"--ff-only\"], cwd=str(repo_path))\n    elif repo_path.exists() and any(repo_path.iterdir()):\n        raise ValueError(\n            f\"{repo_path} exists but is not a git repository. \"",
+        "detail": "colab_runner",
+        "documentation": {}
+    },
+    {
+        "label": "install_project",
+        "kind": 2,
+        "importPath": "colab_runner",
+        "description": "colab_runner",
+        "peekOfCode": "def install_project(\n    repo_dir: str,\n    relax_python_for_colab: bool = True,\n    install_docling: bool = True,\n) -> None:\n    \"\"\"Install project in editable mode.\"\"\"\n    if relax_python_for_colab:\n        _relax_python_requirement_for_colab(repo_dir)\n    python_bin = sys.executable or \"python3\"\n    _run([python_bin, \"-m\", \"pip\", \"install\", \"-U\", \"pip\"], cwd=repo_dir)",
+        "detail": "colab_runner",
+        "documentation": {}
+    },
+    {
+        "label": "configure_imports",
+        "kind": 2,
+        "importPath": "colab_runner",
+        "description": "colab_runner",
+        "peekOfCode": "def configure_imports(repo_dir: str) -> None:\n    \"\"\"Ensure Python can import project packages.\"\"\"\n    repo = str(Path(repo_dir).resolve())\n    src = str((Path(repo_dir) / \"src\").resolve())\n    if repo not in sys.path:\n        sys.path.insert(0, repo)\n    if src not in sys.path:\n        sys.path.insert(0, src)\ndef run_pipeline(\n    repo_dir: str,",
+        "detail": "colab_runner",
+        "documentation": {}
+    },
+    {
+        "label": "run_pipeline",
+        "kind": 2,
+        "importPath": "colab_runner",
+        "description": "colab_runner",
+        "peekOfCode": "def run_pipeline(\n    repo_dir: str,\n    pdf_folder: str = \"data/raw\",\n    workers: int = 1,\n    confidence_threshold: float = 0.7,\n    single: Optional[str] = None,\n    vision_dpi: Optional[int] = None,\n    max_vision_pages: Optional[int] = None,\n) -> list[dict[str, Any]]:\n    \"\"\"Import and run the extraction pipeline.\"\"\"",
+        "detail": "colab_runner",
+        "documentation": {}
+    },
+    {
+        "label": "setup_and_run",
+        "kind": 2,
+        "importPath": "colab_runner",
+        "description": "colab_runner",
+        "peekOfCode": "def setup_and_run(\n    repo_url: str,\n    repo_dir: str = \"/content/document-refinery\",\n    pdf_folder: str = \"data/raw\",\n    workers: int = 1,\n    confidence_threshold: float = 0.7,\n    single: Optional[str] = None,\n    relax_python_for_colab: bool = True,\n    install_docling: bool = True,\n    vision_dpi: Optional[int] = 120,",
+        "detail": "colab_runner",
         "documentation": {}
     },
     {
