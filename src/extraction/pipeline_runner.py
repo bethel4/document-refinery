@@ -18,6 +18,10 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from src.domain_analysis.triage.document_classifier import TriageClassifier
+from src.agents.chunker import SemanticChunkerAgent
+from src.agents.indexer import PageIndexerAgent
+from src.agents.query_agent import QueryAgent
+from src.data_layer.fact_table_extractor import FactTableExtractor
 from src.extraction.extraction_router import ExtractionRouter
 from src.models.extracted_document import ExtractedDocument, PerformanceMetrics
 from src.models.ldu import BoundingBox, LDU, LDURole, LDUType
@@ -32,6 +36,8 @@ from src.models.provenance_chain import (
     ProvenanceChain,
     ProvenanceCitation,
 )
+from src.query.pageindex_query import PageIndexQuery, precision_at_k
+from src.query.vector_store import VectorStoreIngestor
 
 # Setup logging
 logging.basicConfig(
@@ -46,6 +52,8 @@ class ExtractionPipeline:
     def __init__(self, 
                  max_workers: int = 4,
                  confidence_threshold: float = 0.7,
+                 extract_only: bool = False,
+                 forced_strategy: str | None = None,
                  extraction_config: Dict[str, Any] = None):
         """
         Initialize extraction pipeline.
@@ -57,16 +65,22 @@ class ExtractionPipeline:
         """
         self.max_workers = max_workers
         self.confidence_threshold = confidence_threshold
+        self.extract_only = bool(extract_only)
+        self.forced_strategy = forced_strategy
         
         # Initialize components
         self.rules_file = Path(".refinery/rules/extraction_rules.yaml")
         self.profiles_dir = Path(".refinery/profiles")
         self.extractions_dir = Path(".refinery/extractions")
         self.logs_dir = Path(".refinery/extraction_logs")
-        
+        self.pageindex_dir = Path(".refinery/pageindex")
+        # Write ledger entries into the extraction_logs directory.
+        self.ledger_file = self.logs_dir / "extraction_ledger.jsonl"
+
         # Create directories
-        for directory in [self.profiles_dir, self.extractions_dir, self.logs_dir]:
+        for directory in [self.profiles_dir, self.extractions_dir, self.logs_dir, self.pageindex_dir]:
             directory.mkdir(parents=True, exist_ok=True)
+        self.ledger_file.parent.mkdir(parents=True, exist_ok=True)
         
         # Initialize triage classifier
         self.classifier = TriageClassifier(
@@ -75,7 +89,13 @@ class ExtractionPipeline:
         )
         
         # Initialize extraction router
-        self.router = ExtractionRouter()
+        self.router = ExtractionRouter(max_workers=max_workers)
+        self.chunker_agent = SemanticChunkerAgent()
+        self.indexer_agent = PageIndexerAgent(out_dir=str(self.pageindex_dir))
+        self.query_agent = QueryAgent()
+        self.fact_extractor = FactTableExtractor()
+        self.pageindex_query = PageIndexQuery()
+        self.vector_store_ingestor = VectorStoreIngestor()
         
         # Set confidence threshold on the router.
         if hasattr(self.router, "conf_threshold"):
@@ -108,9 +128,12 @@ class ExtractionPipeline:
             profile_dict = {
                 "document_id": profile.document_id,
                 "filename": profile.filename,
+                "file_path": str(pdf_path),
                 "origin_type": profile.origin_type,
+                "layout_complexity": getattr(profile, "layout_complexity", None),
                 "category": profile.category,
                 "recommended_strategy": profile.recommended_strategy,
+                "force_strategy": None,
                 "estimated_cost": profile.estimated_extraction_cost,
                 "total_pages": profile.total_pages,
                 "avg_chars_per_page": profile.avg_chars_per_page,
@@ -118,8 +141,14 @@ class ExtractionPipeline:
                 "scanned_page_ratio": getattr(profile, 'scanned_page_ratio', None),
                 "digital_page_ratio": getattr(profile, 'digital_page_ratio', None)
             }
+
+            # Allow CLI to force the initial strategy for debugging.
+            if hasattr(self, "forced_strategy") and self.forced_strategy:
+                profile_dict["force_strategy"] = self.forced_strategy
             
             extraction_result = self.router.route(str(pdf_path), profile_dict)
+            self._normalize_extraction_pages(extraction_result)
+            self._normalize_extraction_metadata(extraction_result)
             extraction_duration = time.time() - extraction_start
             
             if "error" in extraction_result:
@@ -149,6 +178,20 @@ class ExtractionPipeline:
                 "extraction_metadata": extraction_result.get("extraction_metadata", {}),
                 "document_elements": extraction_result.get("document_elements", {}),
             }
+
+            # Fast path for debugging extraction: skip chunking/indexing/query stages.
+            if self.extract_only:
+                minimal = {
+                    "document_id": doc_id,
+                    "filename": pdf_path.name,
+                    "file_path": str(pdf_path),
+                    "total_duration": total_duration,
+                    "triage": triage_payload,
+                    "extraction": extraction_payload,
+                }
+                self._save_extraction_result(doc_id, minimal)
+                logger.info(f"✅ Completed (extract-only) {pdf_path.name} in {total_duration:.2f}s")
+                return minimal
             performance_payload = PerformanceMetrics(
                 triage_speed=f"{profile.total_pages/triage_duration:.1f} pages/sec",
                 extraction_speed=f"{len(extraction_result.get('pages', []))/extraction_duration:.1f} pages/sec",
@@ -165,13 +208,35 @@ class ExtractionPipeline:
                 performance=performance_payload,
             )
 
-            ldus = self._build_ldus(doc_id, extraction_result.get("pages", []), extracted_doc.get_strategy_used())
+            ldus = self.chunker_agent.run(
+                document_id=doc_id,
+                pages=extraction_result.get("pages", []),
+                strategy_used=extracted_doc.get_strategy_used(),
+            )
             page_index_nodes = self._build_page_index(doc_id, extraction_result.get("pages", []), extracted_doc.get_strategy_used())
+            page_index_tree = self.indexer_agent.run(doc_id, ldus)
+            topic_query = f"{profile.domain_hint} {profile.category}"
+            top_sections = self.pageindex_query.top_k_sections(page_index_tree, topic_query, k=3)
+            retrieval_metrics = self._measure_retrieval_precision(page_index_tree, topic_query, top_sections)
+            vector_store_info = self.vector_store_ingestor.ingest(doc_id, ldus)
+            fact_rows = self.fact_extractor.ingest_ldus(doc_id, ldus)
+            audit_mode = self.query_agent.audit_claim(
+                claim=f"{profile.domain_hint} key metrics and figures",
+                document_id=doc_id,
+                pageindex_tree=page_index_tree,
+                document_name=pdf_path.name,
+            )
             provenance_chain = self._build_provenance_chain(doc_id, profile.document_id, ldus, triage_duration, extraction_duration)
 
             result = extracted_doc.model_dump(mode="json")
             result["ldus"] = [ldu.model_dump(mode="json") for ldu in ldus]
             result["page_index"] = [page.model_dump(mode="json") for page in page_index_nodes]
+            result["page_index_tree"] = page_index_tree
+            result["page_index_top_sections"] = top_sections
+            result["retrieval_metrics"] = retrieval_metrics
+            result["vector_store"] = vector_store_info
+            result["fact_table"] = {"sqlite_path": str(self.fact_extractor.db_path), "rows_inserted": fact_rows}
+            result["audit_mode"] = audit_mode
             result["provenance_chain"] = provenance_chain.model_dump(mode="json")
             
             self._save_extraction_result(doc_id, result)
@@ -186,6 +251,43 @@ class ExtractionPipeline:
                 "error": str(e),
                 "total_duration": time.time() - start_time
             }
+
+    def _normalize_extraction_pages(self, extraction_result: Dict[str, Any]) -> None:
+        """Repair extractor payloads so they conform to the typed extraction schema."""
+        for page_idx, page in enumerate(extraction_result.get("pages", []), start=1):
+            page_num = int(page.get("page_num", page.get("page_number", page_idx)))
+            page["page_num"] = page_num
+            normalized_tables = []
+            for table_idx, table in enumerate(page.get("tables", []) or [], start=1):
+                if not isinstance(table, dict):
+                    continue
+                fixed = dict(table)
+                fixed["table_id"] = str(fixed.get("table_id", f"table_{page_num}_{table_idx}"))
+                fixed["page_num"] = int(fixed.get("page_num") or page_num)
+                fixed["rows"] = int(fixed.get("rows", len(fixed.get("data", []) or [])))
+                fixed["columns"] = int(fixed.get("columns", len(fixed.get("headers", []) or [])))
+                fixed["headers"] = [str(v) for v in (fixed.get("headers") or [])]
+                fixed["data"] = [
+                    [str(cell) for cell in row]
+                    for row in (fixed.get("data") or [])
+                    if isinstance(row, list)
+                ]
+                fixed["confidence"] = float(fixed.get("confidence", 0.6))
+                normalized_tables.append(fixed)
+            page["tables"] = normalized_tables
+
+    def _normalize_extraction_metadata(self, extraction_result: Dict[str, Any]) -> None:
+        metadata = extraction_result.setdefault("extraction_metadata", {})
+        pages = extraction_result.get("pages", [])
+        total_tables = sum(len(page.get("tables", []) or []) for page in pages)
+        metadata.setdefault("total_pages", len(pages))
+        metadata.setdefault("total_text_length", sum(len(page.get("text", "") or "") for page in pages))
+        metadata.setdefault("total_tables", total_tables)
+        metadata.setdefault("average_confidence", extraction_result.get("routing_metadata", {}).get("average_confidence", 0.0))
+        metadata.setdefault("extraction_cost", "medium")
+        metadata.setdefault("processing_time_seconds", 0.0)
+        metadata.setdefault("pages_processed", len(pages))
+        metadata.setdefault("confidence_threshold", self.confidence_threshold)
 
     def _build_ldus(self, document_id: str, pages: List[Dict[str, Any]], strategy_used: str) -> List[LDU]:
         """Build validated logical document units from extracted pages."""
@@ -226,6 +328,32 @@ class ExtractionPipeline:
             )
             ldus.append(ldu)
         return ldus
+
+    def _measure_retrieval_precision(self, page_index_tree: Dict[str, Any], topic_query: str, top_sections: List[Dict[str, Any]]) -> Dict[str, float]:
+        """Measure precision@3 with and without PageIndex traversal using proxy relevance."""
+        sections = page_index_tree.get("children", [])
+        if not sections:
+            return {
+                "precision_with_pageindex_p3": 0.0,
+                "precision_without_pageindex_p3": 0.0,
+            }
+
+        topic_terms = {token for token in topic_query.lower().split() if token}
+        scored = []
+        for section in sections:
+            text = f"{section.get('title', '')} {section.get('summary', '')}".lower()
+            overlap = sum(1 for token in topic_terms if token in text)
+            scored.append((overlap, section))
+        scored.sort(key=lambda x: x[0], reverse=True)
+
+        relevant_section_ids = [sec.get("section_id") for score, sec in scored if score > 0][:3]
+        with_pageindex_ids = [sec.get("section_id") for sec in top_sections]
+        without_pageindex_ids = [sec.get("section_id") for _, sec in scored[:3]]
+
+        return {
+            "precision_with_pageindex_p3": precision_at_k(with_pageindex_ids, relevant_section_ids, k=3),
+            "precision_without_pageindex_p3": precision_at_k(without_pageindex_ids, relevant_section_ids, k=3),
+        }
 
     def _build_page_index(self, document_id: str, pages: List[Dict[str, Any]], strategy_used: str) -> List[PageIndex]:
         """Build validated page index entries from extracted pages."""
@@ -385,8 +513,6 @@ class ExtractionPipeline:
     def _save_to_ledger(self, doc_id: str, result: Dict[str, Any]):
         """Save extraction entry to ledger with cost estimation."""
         try:
-            ledger_file = self.logs_dir / "extraction_ledger.jsonl"
-            
             # Extract key metrics for ledger
             triage_profile = result.get("triage", {}).get("profile", {})
             extraction_meta = result.get("extraction", {})
@@ -397,10 +523,10 @@ class ExtractionPipeline:
             pages_processed = routing_meta.get("pages_processed", 0)
             confidence_score = routing_meta.get("average_confidence", 0.0)
             processing_time = result.get("total_duration", 0.0)
-            
+
             # Cost estimation logic (based on your picture)
             cost_estimate = self._calculate_cost_estimate(strategy_used, pages_processed, processing_time)
-            
+
             # Create comprehensive ledger entry
             ledger_entry = {
                 "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
@@ -411,14 +537,14 @@ class ExtractionPipeline:
                 "strategy_used": strategy_used,
                 "confidence_score": round(confidence_score, 3),
                 "pages_processed": pages_processed,
-                "processing_time_seconds": round(processing_time, 2),
+                "processing_time": round(processing_time, 2),
                 "cost_estimate": cost_estimate,
                 "escalated": routing_meta.get("escalated", False),
                 "status": "success" if "error" not in result else "failed"
             }
-            
+
             # Append to ledger
-            with open(ledger_file, 'a', encoding='utf-8') as f:
+            with open(self.ledger_file, 'a', encoding='utf-8') as f:
                 f.write(json.dumps(ledger_entry) + '\n')
                 
         except Exception as e:
@@ -426,44 +552,11 @@ class ExtractionPipeline:
     
     def _calculate_cost_estimate(self, strategy: str, pages: int, processing_time: float) -> Dict[str, Any]:
         """Calculate cost estimate based on strategy and processing metrics."""
-        
-        # Base costs per strategy (in credits/units)
-        base_costs = {
-            "fast_text": {"base": 1, "per_page": 0.1, "unit": "credits"},
-            "layout": {"base": 5, "per_page": 0.5, "unit": "credits"}, 
-            "vision": {"base": 10, "per_page": 2.0, "unit": "credits"}
-        }
-        
-        # Get strategy cost info
-        cost_info = base_costs.get(strategy, {"base": 10, "per_page": 1.0, "unit": "credits"})
-        
-        # Calculate total cost
-        base_cost = cost_info["base"]
-        page_cost = pages * cost_info["per_page"]
-        total_cost = base_cost + page_cost
-        
-        # Time-based adjustment (processing efficiency)
-        if processing_time > 0:
-            pages_per_second = pages / processing_time
-            if pages_per_second < 0.1:  # Very slow processing
-                total_cost *= 1.5  # 50% penalty
-            elif pages_per_second > 1.0:  # Very fast processing
-                total_cost *= 0.8  # 20% discount
-        
-        return {
-            "total_cost": round(total_cost, 2),
-            "base_cost": base_cost,
-            "page_cost": round(page_cost, 2),
-            "pages": pages,
-            "unit": cost_info["unit"],
-            "processing_efficiency": round(pages / processing_time, 2) if processing_time > 0 else 0,
-            "cost_breakdown": {
-                "strategy": strategy,
-                "base_rate": base_cost,
-                "per_page_rate": cost_info["per_page"],
-                "time_adjustment": "penalty" if processing_time > 0 and pages/processing_time < 0.1 else "discount" if processing_time > 0 and pages/processing_time > 1.0 else "none"
-            }
-        }
+        # Local extractors (docling/layout, tesseract vision, native text) have no external API cost.
+        local_free_strategies = {"fast_text", "layout", "vision", "hybrid"}
+        if strategy in local_free_strategies:
+            return 0.0
+        return 0.0
     
     def _print_batch_summary(self, results: List[Dict[str, Any]], total_time: float):
         print("\n" + "="*80)
@@ -502,31 +595,43 @@ class ExtractionPipeline:
         print(f"\n📁 Output Locations:")
         print(f"   Profiles: {self.profiles_dir}")
         print(f"   Extractions: {self.extractions_dir}")
-        print(f"   Ledger: {self.logs_dir}/extraction_ledger.jsonl")
+        print(f"   Ledger: {self.ledger_file}")
         print("="*80)
 
 def main():
     import argparse
-    import torch
     
     parser = argparse.ArgumentParser(description="Parallel Document Extraction Pipeline")
     parser.add_argument("--pdf-folder", default="data/raw", help="PDF folder path")
     parser.add_argument("--workers", type=int, default=3, help="Number of parallel workers")
     parser.add_argument("--confidence-threshold", type=float, default=0.7, help="Confidence threshold for escalation")
+    parser.add_argument("--extract-only", action="store_true", help="Run only triage + extraction (skip chunking/indexing/query)")
+    parser.add_argument(
+        "--force-strategy",
+        choices=["fast_text", "layout", "vision", "hybrid"],
+        help="Force the initial extraction strategy (debug/testing)",
+    )
     parser.add_argument("--single", help="Process single PDF file")
     parser.add_argument("--dpi", type=int, default=150, help="DPI for vision extraction")
     parser.add_argument("--max-vision-pages", type=int, default=5, help="Max pages to process in vision escalation")
     parser.add_argument("--torch-threads", type=int, default=2, help="Torch thread limit")
     args = parser.parse_args()
     
-    torch.set_num_threads(args.torch_threads)
-    print(f"🔧 Torch threads limited to {args.torch_threads}")
+    try:
+        import torch  # type: ignore
+
+        torch.set_num_threads(args.torch_threads)
+        print(f"🔧 Torch threads limited to {args.torch_threads}")
+    except Exception as exc:
+        print(f"ℹ️  Torch not available (or failed to import): {exc}. Skipping torch thread limits.")
     
     # Initialize pipeline
     extraction_config = {}  # populate if needed
     pipeline = ExtractionPipeline(
         max_workers=args.workers,
         confidence_threshold=args.confidence_threshold,
+        extract_only=args.extract_only,
+        forced_strategy=args.force_strategy,
         extraction_config=extraction_config
     )
     

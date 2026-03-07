@@ -1,0 +1,299 @@
+{
+  "document_id": "sample_financial_report_5_pages",
+  "title": "sample_financial_report_5_pages",
+  "pages": [
+    {
+      "page_number": 1,
+      "section_title": "Document Root",
+      "section_id": null,
+      "content_hash": "752007ad37d94e86833de17086d91ab544eb7da5abb3a2eff32d6c3bbad4f38f",
+      "provenance": [
+        "sample_financial_report_5_pages_page_1"
+      ],
+      "ldus": [
+        {
+          "ldu_id": "sample_financial_report_5_pages_ldu_1",
+          "page_number": 1,
+          "section_title": "Document Root",
+          "text": "Sample Financial Performance Report (Demo\nDocument)\nThis demonstration document is created to test document intelligence pipelines. It contains\nstructured sections, narrative text, and tables commonly found in financial or technical reports. The\ndocument is intentionally formatted across multiple pages to simulate real-world report structures\nused in enterprise analysis pipelines. Organizations rely on accurate financial reporting to evaluate performance, plan investments, and\nensure transparency with stakeholders. Document intelligence systems enable automated\nextraction of insights from reports like this by preserving structure, identifying tables, and\nmaintaining provenance information such as page numbers and coordinates. Organizations rely on accurate financial reporting to evaluate performance, plan investments, and\nensure transparency with stakeholders. Document intelligence systems enable automated\nextraction of insights from reports like this by preserving structure, identifying tables, and\nmaintaining provenance information such as page numbers and coordinates. Organizations rely on accurate financial reporting to evaluate performance, plan investments, and\nensure transparency with stakeholders.",
+          "content_hash": "ab92ea67bf63b99bac5c24d12f3ac2f8db9f5bf705b624576a968681112c4f50",
+          "provenance": [
+            "sample_financial_report_5_pages_page_1",
+            "sample_financial_report_5_pages_ldu_1"
+          ],
+          "bbox": null
+        },
+        {
+          "ldu_id": "sample_financial_report_5_pages_ldu_2",
+          "page_number": 1,
+          "section_title": "Document Root",
+          "text": "Document intelligence systems enable automated\nextraction of insights from reports like this by preserving structure, identifying tables, and\nmaintaining provenance information such as page numbers and coordinates.",
+          "content_hash": "d310f94b9df51eb5a84530955ef53f6aa823c36c8bb37d15ea27c9a085a01db8",
+          "provenance": [
+            "sample_financial_report_5_pages_page_1",
+            "sample_financial_report_5_pages_ldu_2"
+          ],
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "section_title": "Section 1: Revenue Overview",
+      "section_id": "sample_financial_report_5_pages_section_2",
+      "content_hash": "e6a92a670b583197302e16e94590cda57e76c6ee2e0a267eed33aafcbf9583e7",
+      "provenance": [
+        "sample_financial_report_5_pages_page_2"
+      ],
+      "ldus": [
+        {
+          "ldu_id": "sample_financial_report_5_pages_ldu_3",
+          "page_number": 2,
+          "section_title": "Section 1: Revenue Overview",
+          "text": "Section 1: Revenue Overview\nYear Revenue (Million USD) Operating Cost Net Profit\n2021 120 80 40\n2022 150 95 55\n2023 185 110 75\n2024 210 125 85\nTable 1 shows the revenue growth trend over four fiscal years. The organization experienced\nconsistent growth in both revenue and net profit due to increased market expansion and operational\nefficiency improvements.",
+          "content_hash": "e6a92a670b583197302e16e94590cda57e76c6ee2e0a267eed33aafcbf9583e7",
+          "provenance": [
+            "sample_financial_report_5_pages_page_2",
+            "sample_financial_report_5_pages_ldu_3"
+          ],
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "page_number": 3,
+      "section_title": "Section 2: Asset Summary",
+      "section_id": "sample_financial_report_5_pages_section_3",
+      "content_hash": "a8cbe5794933ad42795ba4619ec0eb6469bb0d0ad380ea66821c8c447015d3a8",
+      "provenance": [
+        "sample_financial_report_5_pages_page_3"
+      ],
+      "ldus": [
+        {
+          "ldu_id": "sample_financial_report_5_pages_ldu_4",
+          "page_number": 3,
+          "section_title": "Section 2: Asset Summary",
+          "text": "Section 2: Asset Summary\nTotal organizational assets represent the combined value of all financial, physical, and intellectual\nresources controlled by the organization. In 2024, the organization reported total assets valued at\n3.2 billion USD. This increase was primarily driven by investment in infrastructure, technology\nplatforms, and international partnerships. Total organizational assets represent the combined value of all financial, physical, and intellectual\nresources controlled by the organization. In 2024, the organization reported total assets valued at\n3.2 billion USD. This increase was primarily driven by investment in infrastructure, technology\nplatforms, and international partnerships. Total organizational assets represent the combined value of all financial, physical, and intellectual\nresources controlled by the organization. In 2024, the organization reported total assets valued at\n3.2 billion USD. This increase was primarily driven by investment in infrastructure, technology\nplatforms, and international partnerships. Total organizational assets represent the combined value of all financial, physical, and intellectual\nresources controlled by the organization. In 2024, the organization reported total assets valued at\n3.2 billion USD. This increase was primarily driven by investment in infrastructure, technology\nplatforms, and international partnerships.",
+          "content_hash": "6b153c566678217ee398dd5487e7831dd537be7fdd1e51bb74e35c3555bcc837",
+          "provenance": [
+            "sample_financial_report_5_pages_page_3",
+            "sample_financial_report_5_pages_ldu_4"
+          ],
+          "bbox": null
+        },
+        {
+          "ldu_id": "sample_financial_report_5_pages_ldu_5",
+          "page_number": 3,
+          "section_title": "Section 2: Asset Summary",
+          "text": "Total organizational assets represent the combined value of all financial, physical, and intellectual\nresources controlled by the organization. In 2024, the organization reported total assets valued at\n3.2 billion USD. This increase was primarily driven by investment in infrastructure, technology\nplatforms, and international partnerships.",
+          "content_hash": "c13ec6a902c889f3bd6c5d5de90ef824b60e7e2cb97707394449a038a282e087",
+          "provenance": [
+            "sample_financial_report_5_pages_page_3",
+            "sample_financial_report_5_pages_ldu_5"
+          ],
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "page_number": 4,
+      "section_title": "Risk Management",
+      "section_id": "sample_financial_report_5_pages_root_1",
+      "content_hash": "9da5e5e4a2086727766fffbd72b7d432c243602c13bc5e958bbfffc3ad42da24",
+      "provenance": [
+        "sample_financial_report_5_pages_page_4"
+      ],
+      "ldus": [
+        {
+          "ldu_id": "sample_financial_report_5_pages_ldu_6",
+          "page_number": 4,
+          "section_title": "Risk Management",
+          "text": "Section 3: Risk Management\nRisk management strategies focus on identifying, assessing, and mitigating potential threats to\norganizational stability. Major risk categories include financial volatility, regulatory changes,\ncybersecurity threats, and operational disruptions. Continuous monitoring systems are implemented\nto ensure rapid response to emerging risks. Risk management strategies focus on identifying, assessing, and mitigating potential threats to\norganizational stability. Major risk categories include financial volatility, regulatory changes,\ncybersecurity threats, and operational disruptions. Continuous monitoring systems are implemented\nto ensure rapid response to emerging risks. Risk management strategies focus on identifying, assessing, and mitigating potential threats to\norganizational stability. Major risk categories include financial volatility, regulatory changes,\ncybersecurity threats, and operational disruptions. Continuous monitoring systems are implemented\nto ensure rapid response to emerging risks. Risk management strategies focus on identifying, assessing, and mitigating potential threats to\norganizational stability. Major risk categories include financial volatility, regulatory changes,\ncybersecurity threats, and operational disruptions. Continuous monitoring systems are implemented\nto ensure rapid response to emerging risks.",
+          "content_hash": "5f1d69bc55d36e392c3713f1636c1e894c51bbf88c51da5b526496f6b5e7c256",
+          "provenance": [
+            "sample_financial_report_5_pages_page_4",
+            "sample_financial_report_5_pages_ldu_6"
+          ],
+          "bbox": null
+        },
+        {
+          "ldu_id": "sample_financial_report_5_pages_ldu_7",
+          "page_number": 4,
+          "section_title": "Risk Management",
+          "text": "Risk management strategies focus on identifying, assessing, and mitigating potential threats to\norganizational stability. Major risk categories include financial volatility, regulatory changes,\ncybersecurity threats, and operational disruptions. Continuous monitoring systems are implemented\nto ensure rapid response to emerging risks. Risk management strategies focus on identifying, assessing, and mitigating potential threats to\norganizational stability. Major risk categories include financial volatility, regulatory changes,\ncybersecurity threats, and operational disruptions. Continuous monitoring systems are implemented\nto ensure rapid response to emerging risks.",
+          "content_hash": "a209c46d59b0467b84d9195d6fe776a6adc12226b5aecb6102502310634a7372",
+          "provenance": [
+            "sample_financial_report_5_pages_page_4",
+            "sample_financial_report_5_pages_ldu_7"
+          ],
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "page_number": 5,
+      "section_title": "Section 4: Strategic Outlook",
+      "section_id": "sample_financial_report_5_pages_section_5",
+      "content_hash": "e8a44b5fd2d5d80c6bc036596de7ee4f4b8136009fbecd3d5bc2feb288687092",
+      "provenance": [
+        "sample_financial_report_5_pages_page_5"
+      ],
+      "ldus": [
+        {
+          "ldu_id": "sample_financial_report_5_pages_ldu_8",
+          "page_number": 5,
+          "section_title": "Section 4: Strategic Outlook",
+          "text": "Section 4: Strategic Outlook\nLooking ahead, the organization plans to expand digital services, increase regional partnerships,\nand invest in advanced analytics. Strategic initiatives will focus on sustainable growth, improved\nfinancial transparency, and enhanced operational resilience. Looking ahead, the organization plans to expand digital services, increase regional partnerships,\nand invest in advanced analytics. Strategic initiatives will focus on sustainable growth, improved\nfinancial transparency, and enhanced operational resilience. Looking ahead, the organization plans to expand digital services, increase regional partnerships,\nand invest in advanced analytics. Strategic initiatives will focus on sustainable growth, improved\nfinancial transparency, and enhanced operational resilience. Looking ahead, the organization plans to expand digital services, increase regional partnerships,\nand invest in advanced analytics. Strategic initiatives will focus on sustainable growth, improved\nfinancial transparency, and enhanced operational resilience. Looking ahead, the organization plans to expand digital services, increase regional partnerships,\nand invest in advanced analytics. Strategic initiatives will focus on sustainable growth, improved\nfinancial transparency, and enhanced operational resilience.",
+          "content_hash": "2268455e18fc1f900eea0fa31e533e80e4d4b8cf54333d65c2b3ce0d59e6f002",
+          "provenance": [
+            "sample_financial_report_5_pages_page_5",
+            "sample_financial_report_5_pages_ldu_8"
+          ],
+          "bbox": null
+        },
+        {
+          "ldu_id": "sample_financial_report_5_pages_ldu_9",
+          "page_number": 5,
+          "section_title": "Section 4: Strategic Outlook",
+          "text": "Looking ahead, the organization plans to expand digital services, increase regional partnerships,\nand invest in advanced analytics. Strategic initiatives will focus on sustainable growth, improved\nfinancial transparency, and enhanced operational resilience.",
+          "content_hash": "893007dfb84cc186eb0a5b6f60603eff4629f78723be26dc9ccab794bbc0113d",
+          "provenance": [
+            "sample_financial_report_5_pages_page_5",
+            "sample_financial_report_5_pages_ldu_9"
+          ],
+          "bbox": null
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "section_id": "sample_financial_report_5_pages_section_2",
+      "title": "Section 1: Revenue Overview",
+      "section_title": "Section 1: Revenue Overview",
+      "summary": "Section 1: Revenue Overview Year Revenue (Million USD) Operating Cost Net Profit 2021 120 80 40 2022 150 95 55 2023 185 110 75 2024 210 125 85 Table 1 shows the revenue growth trend over four fiscal years. The organizati",
+      "page_refs": [
+        2
+      ],
+      "ldu_ids": [
+        "sample_financial_report_5_pages_ldu_3"
+      ],
+      "content_hash": "e6a92a670b583197302e16e94590cda57e76c6ee2e0a267eed33aafcbf9583e7",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "sample_financial_report_5_pages_section_3",
+      "title": "Section 2: Asset Summary",
+      "section_title": "Section 2: Asset Summary",
+      "summary": "Section 2: Asset Summary Total organizational assets represent the combined value of all financial, physical, and intellectual resources controlled by the organization. In 2024, the organization reported total assets val",
+      "page_refs": [
+        3
+      ],
+      "ldu_ids": [
+        "sample_financial_report_5_pages_ldu_4",
+        "sample_financial_report_5_pages_ldu_5"
+      ],
+      "content_hash": "ba90fdc19b1d42288bbd8d10c3de35472921842865e36f9df8e131cff131cae3",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "sample_financial_report_5_pages_root_1",
+      "title": "Risk Management",
+      "section_title": "Risk Management",
+      "summary": "Section 3: Risk Management Risk management strategies focus on identifying, assessing, and mitigating potential threats to organizational stability. Major risk categories include financial volatility, regulatory changes,",
+      "page_refs": [
+        4
+      ],
+      "ldu_ids": [
+        "sample_financial_report_5_pages_ldu_6",
+        "sample_financial_report_5_pages_ldu_7"
+      ],
+      "content_hash": "e0307dfcfcaffe354bbb1466ad1a9021185a53297d0dbc164c984506e324df8f",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "sample_financial_report_5_pages_section_5",
+      "title": "Section 4: Strategic Outlook",
+      "section_title": "Section 4: Strategic Outlook",
+      "summary": "Section 4: Strategic Outlook Looking ahead, the organization plans to expand digital services, increase regional partnerships, and invest in advanced analytics. Strategic initiatives will focus on sustainable growth, imp",
+      "page_refs": [
+        5
+      ],
+      "ldu_ids": [
+        "sample_financial_report_5_pages_ldu_8",
+        "sample_financial_report_5_pages_ldu_9"
+      ],
+      "content_hash": "c7b65f16af7f14c8b04e8103663eeb9aa6510166d0ca8cd32278c8cd5248c4d6",
+      "child_nodes": [],
+      "children": []
+    }
+  ],
+  "children": [
+    {
+      "section_id": "sample_financial_report_5_pages_section_2",
+      "title": "Section 1: Revenue Overview",
+      "section_title": "Section 1: Revenue Overview",
+      "summary": "Section 1: Revenue Overview Year Revenue (Million USD) Operating Cost Net Profit 2021 120 80 40 2022 150 95 55 2023 185 110 75 2024 210 125 85 Table 1 shows the revenue growth trend over four fiscal years. The organizati",
+      "page_refs": [
+        2
+      ],
+      "ldu_ids": [
+        "sample_financial_report_5_pages_ldu_3"
+      ],
+      "content_hash": "e6a92a670b583197302e16e94590cda57e76c6ee2e0a267eed33aafcbf9583e7",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "sample_financial_report_5_pages_section_3",
+      "title": "Section 2: Asset Summary",
+      "section_title": "Section 2: Asset Summary",
+      "summary": "Section 2: Asset Summary Total organizational assets represent the combined value of all financial, physical, and intellectual resources controlled by the organization. In 2024, the organization reported total assets val",
+      "page_refs": [
+        3
+      ],
+      "ldu_ids": [
+        "sample_financial_report_5_pages_ldu_4",
+        "sample_financial_report_5_pages_ldu_5"
+      ],
+      "content_hash": "ba90fdc19b1d42288bbd8d10c3de35472921842865e36f9df8e131cff131cae3",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "sample_financial_report_5_pages_root_1",
+      "title": "Risk Management",
+      "section_title": "Risk Management",
+      "summary": "Section 3: Risk Management Risk management strategies focus on identifying, assessing, and mitigating potential threats to organizational stability. Major risk categories include financial volatility, regulatory changes,",
+      "page_refs": [
+        4
+      ],
+      "ldu_ids": [
+        "sample_financial_report_5_pages_ldu_6",
+        "sample_financial_report_5_pages_ldu_7"
+      ],
+      "content_hash": "e0307dfcfcaffe354bbb1466ad1a9021185a53297d0dbc164c984506e324df8f",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "sample_financial_report_5_pages_section_5",
+      "title": "Section 4: Strategic Outlook",
+      "section_title": "Section 4: Strategic Outlook",
+      "summary": "Section 4: Strategic Outlook Looking ahead, the organization plans to expand digital services, increase regional partnerships, and invest in advanced analytics. Strategic initiatives will focus on sustainable growth, imp",
+      "page_refs": [
+        5
+      ],
+      "ldu_ids": [
+        "sample_financial_report_5_pages_ldu_8",
+        "sample_financial_report_5_pages_ldu_9"
+      ],
+      "content_hash": "c7b65f16af7f14c8b04e8103663eeb9aa6510166d0ca8cd32278c8cd5248c4d6",
+      "child_nodes": [],
+      "children": []
+    }
+  ]
+}

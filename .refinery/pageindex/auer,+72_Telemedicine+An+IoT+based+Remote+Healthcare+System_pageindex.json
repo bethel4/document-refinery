@@ -1,0 +1,640 @@
+{
+  "document_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System",
+  "title": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System",
+  "pages": [
+    {
+      "page_number": 1,
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_1",
+      "content_hash": "e70afcd1db5b98267484abd535087f963612e69b127c3f5a2021daf69210cc80",
+      "provenance": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_1"
+      ],
+      "ldus": [
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_1",
+          "page_number": 1,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "Paper—Telemedicine: An IoT based Remote Healthcare System\nTelemedicine: An IoT Based Remote Healthcare System\nhttps://doi.org/10.3991/ijoe.v16i06.13651\nMohammad M. Abdellatif (), Walaa Mohamed\nThe British University, Cairo, Egypt\nMohammad.abdellatif@bue.edu.eg\nAbstract—This paper proposes a remote healthcare system which is referred\nto as Telemedicine. Telemedicine is a platform that estableshes a connection be-\ntween the patient and the doctor. This platform belongs to the internet of medical\nthings (IoMT) by enabling multiple medical sensors to connect to a server either\nusing multiple communication technologies such as Wi-Fi, Bluetooth or GSM\ntechnologies. The system collects data from several sensors and sends them using\none of the aforementioned technologies using an Arduino Board, while the inter-\nface is made with matlab and C#. Additionally, a comparative study between the\nthree communications technologies used to connect the medical sensors to the\nserver is investigated. And a recommendation of the best suited technology is\nprovided with regard to the nature of the application itself. Keywords—Telemedicine, IoT, IoMT, GSM, RF, Wifi. 1 Introduction\nO According to [1], it is expected that by 2021 that the health market will reach\n$136.8 billion across the world.",
+          "content_hash": "44d87f0dd8732ea5d4d2faac70015e377c46cf5802912b27838053eb22e0b523",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_1",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_1"
+          ],
+          "bbox": null
+        },
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_2",
+          "page_number": 1,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "However, the adoption of the internet of things (IoT)\nhas been a little slower in healthcare industry more than most of the other industries,\nThe Internet of Medical Things (IoMT) not only assures that the technology will pre-\nserve people safety and health, but also reduces healthcare costs over the coming years\n[1, 2]. IoMT was proposed to reduce the effort in monitoring, informing, and notifying pa-\ntients with updates. Additionally, it can provide doctors with statistics and actual data\nto be used to identify and understand the sources of medical issues [1, 2]. Telemedicine\nis a relatively new term which is being used intensively as of late. Telemedicine can\nhave many types, some are just used to take a remote advice of a doctor through some\nkind of messaging platform, some are used to set appointments with doctors, and some\nare used to detect any abnormalities in the patient's body by the use of special sensors\n[3]. For the communications part, some fitness and wearable headset applications use\nBluetooth [3, 4]. Wireless LAN is also an alternative. However, it is considered a power\nconsuming technology when compared to other methods [3, 4]. Cellular data such as\nGPRS is known to have quite a lot of limitations for its slow data rates compared to\npresent day solutions but it still have some use in the healthcare field. 72 http://www.i-joe.org",
+          "content_hash": "8efe5c331f7800d0e6049efad3b53d75868fe6a73ec0d11b0d7fcc7e7d3d8539",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_1",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_2"
+          ],
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "page_number": 2,
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_1",
+      "content_hash": "d3dfd57d468bc7ce86635bb5bc3a33372f2f90f34596bdb169e7daaa94f0060e",
+      "provenance": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_2"
+      ],
+      "ldus": [
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_3",
+          "page_number": 2,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "Paper—Telemedicine: An IoT based Remote Healthcare System All remote healthcare systems are made available using the internet of things as a platform, it could be as basic as measuring blood pressure for a patient and advanced that it would be responsible for sending updates on special organ within the body or even a implanted organ for monitoring purposes [3,4]. This paper proposes a framework of IoMT devices where patients are able to get in contact with one of the medical professionals in the field, and send to the system, in real-time, medical data that are collected from wearable sensors attached to the patient's body. Doctors are able to read the measured data online and advise the patient with the appropriate course of treatment. The proposed system is tested using five sensors; heart rate, humidity, temperature, blood pressure, and alcohol sensors using three different communication technologies to connect to the server which are; Bluetooth, GSM and Wi-Fi. A comparative study between the three communications technologies used to connect medical sensors to the servers is discussed. The rest of the paper is organized as follows; section 2 gives a brief background on telemedicine and healthcare applications. Section 3 discusses the network model and system interfaces. Section 4 discusses the implementation of the network model and the procedures taken during the",
+          "content_hash": "bb8ed04c5142b904ece462dd5d649a5809b5cc251b80a23d0260dea46f2af4fc",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_2",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_3"
+          ],
+          "bbox": null
+        },
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_4",
+          "page_number": 2,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "implementation.\n\nSection 5 Gives a discussion of the pro-\nposed system. And finally, Section 6 concludes the paper. 2 Background and Related Work\nTelemedicine started as just the transmission of radiology images in 1940s between\ntwo towns which formed the basis for creating the Telemedicine platform [5]. A Cana-\ndian scientist worked on the idea on 1950 and created the first sharing hub for the city\nof Montreal, this later developed into using video conferencing in hospitals for discuss-\ning patient's issues as well as remote surgery guidance from experts in the field [5]. One of the things that can enable Telemedicine is the incorporation of the Internet\nof things which allows remote health monitoring through peripherals you wear much\nlike fitness bands, remote heart rate sensors, and devices that maintain, and send up-\ndates on any implanted artificial organs within the human body [3]. Smart beds are now\na common occurrence in hospitals which measure the patient vitals while they lay on\nthem and could be used to send alarms in case of emergency as well as adjust the com-\nfort level of the bed without any interaction from the staff. As of the date of this paper,\nan estimated 300 billion Dollars are spent yearly on medical innovation in the US [3].",
+          "content_hash": "06d1def46958a53ec292c07956e5c55dd3aa15290a4de20c06216458934cee87",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_2",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_4"
+          ],
+          "bbox": null
+        },
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_5",
+          "page_number": 2,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "Devices that analyze the physiological factors are still being developed using the open\nsource and widely available hardware/software, what remains to be a challenge to this\nday is the experience of the end user who uses such systems, they should be easy to use\nand quite user friendly as placing sensors by the end user might be a hassle. The work\nin progress right now is trying to target the limitation in the available framework which\nis currently being used by products [5]. There are many obstructions to be overcome before Telemedicine can be generally\ndeployed. Presently, in the United States, specialists are required to acquire licenses in\neach state in which they intend to prescribe drugs and see patients [6]. Moreover, lawful\npriority for remote risk has not yet been built up. Repayment strategies are additionally\niJOE ‒ Vol. 16, No. 6, 2020 73",
+          "content_hash": "497a03158f3ae7295b9ccb2ecf7fc2212c7624bad76644c714e040832090d0da",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_2",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_5"
+          ],
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "page_number": 3,
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_2",
+      "content_hash": "23b39c043c3504a826c5de92289630908e89917b75c66c895e0b95e1ec8952aa",
+      "provenance": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_3"
+      ],
+      "ldus": [
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_6",
+          "page_number": 3,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "Paper—Telemedicine: An IoT based Remote Healthcare System\nnot all around well characterized. Tele-radiology exams are the main Telemedicine ses-\nsions that consistently get repayment [6]. Another real impediment to Telemedicine is\nthe shortage of high data transfer capacity in rural zones, which remains a noteworthy\nissue even as Telecommunications organizations across the nation are moved up to help\nthe national information infrastructure (NII). Moreover, the underlying expenses of\nhardware and the repeating costs of Telecommunications administrations are signifi-\ncant. Notwithstanding, late acknowledgment and sending of picture archiving and com-\nmunications systems (PACS) in healing centers and the Digital Imaging and Commu-\nnications in Medicine (DICOM) standard can give a foundation to encourage the usage\nof Telemedicine frameworks [6]. The DICOM standard can trace its roots to 1983, when the American College of\nRadiology and the National Electrical Manufacturers Association began to create a\nstandard method for the digital transmission of medical images. The resulting ACR-\nNEMA standard was first published in 1985 and later revised as version 2.0 in 1988. Version 3.0, published in 1993, was associated with a name change to Digital Imaging\nand Communications in Medicine.",
+          "content_hash": "0288f6302a4cde8baca5e26bb496eb644b0aa322797d8e30de11f5cb6dae8fd1",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_3",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_6"
+          ],
+          "bbox": null
+        },
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_7",
+          "page_number": 3,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "DICOM specifies a standard network protocol for communications and defines in-\nformation objects not only for images but also for patients, studies, reports, and other\nforms of related data. The goals of DICOM are to achieve compatibility and to improve\nworkflow efficiency between imaging systems and other information systems in\nhealthcare environments worldwide. Every major diagnostic medical imaging vendor in the world has incorporated the\nstandard into its product design, and most actively participate in the enhancement of\nthe standard. Most of the professional societies throughout the world have supported\nand are participating in the enhancement of the standard as well. 3 Network Model and Interfaces\nThis section discusses the network model and its interfaces. The system is considered\nas a platform that connects many patients with many doctors via servers as shown in\nFigure 1. The system consists of two GUIs; one for the doctor and the other for the\npatient. The doctor’s GUI enables them to monitor the status of the patients and advise\nthem through a notification with the right medicine that they can get. Moreover, there\nis a classic conversation application as the patient might have some questions to the\ndoctor. The implementation of the GUIs is conducted using MATLAB as it can do complex\ncalculations of matrices and big data.",
+          "content_hash": "0ac35a28f207bbe612ac77e683bf88f83f2d3b690c87b98c705684f7d96d32f7",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_3",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_7"
+          ],
+          "bbox": null
+        },
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_8",
+          "page_number": 3,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "But, in order to send more complex data using a\ncreated database, a high level language like C# was required to deal with the SQL server\nusing Visual Studio to make the server connection between the doctor and the patient\nable to handle other types of data such as the patient picture, chat and previously men-\ntioned medical data. As mentioned earlier, the system consists of two databases; one\nfor the doctors and the other for the patients as it is many-to-many system where many\npatients can be examined through the system and where many doctors are available. 74 http://www.i-joe.org",
+          "content_hash": "682355fed5a3028b1a805588c25cde05d8546ec13fa5baadb1ba9cd62c8a223e",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_3",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_8"
+          ],
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "page_number": 4,
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_3",
+      "content_hash": "2c8c70cc122d239acefececb2a76fab496e41c1edf1c8d15cff0616f3fcd7a66",
+      "provenance": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_4"
+      ],
+      "ldus": [
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_9",
+          "page_number": 4,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "Paper—Telemedicine: An IoT based Remote Healthcare System\nSystem\nPatients\nDoctors\nFig. 1. Network Architecture. Moreover, each row in the system's databases table represents a session between a\ndoctor and patient who will be automatically matched if the patient's session is available\nand can be handled by a doctor while both of them are either online or offline. Further-\nmore, the conversation box has flags that can be either active or seen, and one can leave\na message to the other for an advice or an inquiry. The (seen) flag tells the doctor that\na patient is available to begin a session, and the active flag notifies the doctor that the\nsession is running. There are other columns in the table that can carry other data like\n(visitID) which is unique to prevent two doctors from joining the same session. Another\ncolumn is (patient picture) which is simply a binary array which stores current patient\npicture in the database. To save space, only one picture is to be sent at the beginning of\neach conversation. The last columns are responsible for the chat between the doctor and patient as well\nas the status of each one of them being online or offline. It is simply two flags and two\nstrings one for each of them. This work is to let the database engine handle which doctor will contact which pa-\ntient. This is done with the help of C# code that is discussed later.",
+          "content_hash": "075d707b9c01ec9224633e17b659c43b1048eda1a3fc39c35a741dfad727ec93",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_4",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_9"
+          ],
+          "bbox": null
+        },
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_10",
+          "page_number": 4,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "For simplicity, the\nprogram was created as a portal for both of doctors and patients with some differences\nin the program based on the user chosen role. The patient's portal takes the input data from a webcam, keyboard, and the medical\nkit which will measure the vitals of the patient. The program then sends all this data\nover the cloud to the database server which will save it and make it ready for the doctors\nto access. iJOE ‒ Vol. 16, No. 6, 2020 75",
+          "content_hash": "cc7bad37a48e021d3cb0774d6675ba32d30b873632ee4d34e3aa52ccd8c8384c",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_4",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_10"
+          ],
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "page_number": 5,
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_4",
+      "content_hash": "15b8fbf8bfa604500af34de4479d3dd0af0dcc097aaf0182bb58629f3198015f",
+      "provenance": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_5"
+      ],
+      "ldus": [
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_11",
+          "page_number": 5,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "Paper—Telemedicine: An IoT based Remote Healthcare System\nFig. 2. System Homepage\nFig. 3. A chat example with a message from both sides.\nThe doctor's portal will take the input from the keyboard, get all the collected data\nfrom the database server, and sends the doctor's chat messages and status to the patient\nthrough the database as well. A simple story board has been created with some figures\nto make it easy to use the program and make it as useful as possible for the users.\nFigure 2 shows the Home Page of the portal where the user identifies themselves as\na doctor or patient. Figure 3 represents a chat example with a message from both sides.\n4 Implementation of The Network Model\nThis section shows the implementation of the network model that can enable the\ndoctor to connect with a patient via different wireless communications technologies and\nenable the doctor to monitor the patient and send consultancy messages in real time.\nFigure 4 shows the flow chart of the network model that facilitates a smooth operation\nof the network.\n76 http://www.i-joe.org",
+          "content_hash": "15b8fbf8bfa604500af34de4479d3dd0af0dcc097aaf0182bb58629f3198015f",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_5",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_11"
+          ],
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "page_number": 6,
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_5",
+      "content_hash": "4dfb24ce54fae50ed24efa63a133274138c8682574216daa112c30fbba366cfa",
+      "provenance": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_6"
+      ],
+      "ldus": [
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_12",
+          "page_number": 6,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "Paper—Telemedicine: An IoT based Remote Healthcare System\nFig. 4. Flow Chart of the Network Model\nTo have a full overview on the communications channels that can be used in this\nnetwork, the network model is implemented over three wireless communications tech-\nnologies; Wi-Fi, GSM, and Bluetooth with four different medical vital signs that can\niJOE ‒ Vol. 16, No. 6, 2020 77",
+          "content_hash": "4dfb24ce54fae50ed24efa63a133274138c8682574216daa112c30fbba366cfa",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_6",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_12"
+          ],
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "page_number": 7,
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_6",
+      "content_hash": "790405537a9055c5b342559e3ae7e7b5ea3c0fb5df594a9b7b0f6656e601f189",
+      "provenance": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_7"
+      ],
+      "ldus": [
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_13",
+          "page_number": 7,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "Paper—Telemedicine: An IoT based Remote Healthcare System\nbe measured using heart rate, humidity, temperature, blood pressure, and alcohol sen-\nsors. Three Arduino ATmega_32 boards are used to test them as each has one RX and\nTX (one UART) and each controller is equipped with a solar cell to make the system\navailable even if the power is disabled. The Wi-Fi module is used to transmit the data collected from humidity sensor. While, the Bluetooth, and GSM modules are used to connect the heart rate sensor. Moreover, temperature sensor and alcohol sensor are connected using GSM. A push\nbutton is integrated with the system to allow the patient to call for an ambulance if\nneeded. The system used Hc05 Bluetooth module [7], ESP8266 (ESP-01) Wi-Fi mod-\nule [8] and SIM 908 GSM module [9]. While the sensors used are; Alcohol sensor [10],\nLM35 temperature sensor [11], heart rate sensor [12] and Humidity sensor [13]. Figure 5 shows the hardware implementation of the system. The idea behind using\nmultiple communication technologies, is to test their performance in order to determine\nthe one most suitable to the requirements of the proposed system. Fig. 5. Implementation of the System. 5 Discussion\nTable 1 shows a comparative study between the three technologies. The three tech-\nnologies were compared by the transmission delay, throughput, cost, range, and infra-\nstructure.",
+          "content_hash": "a901f6aad92ab2ec4d238482f78215a7a900dcb4a841d898b81586c2c7fae994",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_7",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_13"
+          ],
+          "bbox": null
+        },
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_14",
+          "page_number": 7,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "GSM can support very large distances (1m – 40km, based on base station\ntype). However, it requires cellular infrastructure and it only offers low data rates (in\nterms of kbps). Moreover, the cost of transmission is high and it has moderate trans-\nmission delay compared to the other technologies. Wi-Fi can support moderate distances (1-40m for indoor networks and up to 90m for\noutdoor networks) with routing and internet infrastructure. High data rates can be\n78 http://www.i-joe.org",
+          "content_hash": "ebd70eb58a14af55d934a741f8889703fdca84f2ca897997c877f85bd3ff5abf",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_7",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_14"
+          ],
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "page_number": 8,
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_7",
+      "content_hash": "fcb67c601f8d847680095b379b3a3abe11e865316ac0f93608fed411dac6c918",
+      "provenance": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_8"
+      ],
+      "ldus": [
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_15",
+          "page_number": 8,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "Paper—Telemedicine: An IoT based Remote Healthcare System\nreached (~54 Mbps) with moderate cost of the router and internet registration fees, but\nit suffers from high transmission delay. Bluetooth can only support limited distance (1-10m). However, it doesn't require any\ninfrastructure. But as a plus, moderate data rates (~24 Mbps) can be achieved with low\ntransmission delay and cost. From this analysis, Bluetooth technology is recommended in the network where all\ncomponents of the system are in the same room and there when there is no need to\naccess the internet. On the other hand, Wi-Fi is suggested in a system that requires\naccess to the internet as it supports high data rates with limited infrastructure and cost. Table 1. A comparative study between the three technologies\nGSM Wi-Fi Bluetooth\nTransmission Delay Moderate High Low\nThroughput Low High Moderate\nCost High Moderate Low\nRange (Distance) Very long Moderate Limited\nInfrastructure Cellular networks is Routing and interned are Not Required\nrequired required\n6 Conclusion\nThis paper proposed a platform that can be adopted in IoMT where patients can get\nin contact with one of the doctors remotely. Additionally, sensors can be attached with\nthe sessions opened to allow the patient's vitals to be uploaded to the system.",
+          "content_hash": "4907a3fc823b1699746e187bc28621991524d634386367ecdaef5f2ee456dc52",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_8",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_15"
+          ],
+          "bbox": null
+        },
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_16",
+          "page_number": 8,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "Doctors\nwill be able to review the measured data online and advise the patient with the appro-\npriate course of treatment remotely. This system was tested using five sensors: heart\nrate, humidity, temperature, blood pressure, and alcohol sensors using 3 ATmega_32\n(Arduino board). Additionally, three communications technologies were used to con-\nnect the sensors with the server which are; Bluetooth, GSM and Wi-Fi. A comparative\nstudy between the three technologies used to connect medical sensors to the servers is\ndiscussed. best suited technology is suggested with regard of the nature of the applica-\ntion itself. Bluetooth and Wi-Fi technologies are recommended for similar networks\nthat may /may not require to access the internet. Similar networks doesn’t have to cover\nlong distances and they can support high data rates for the video streaming. The pro-\nposed network model can be extended by adding a payment mechanism from the pa-\ntients to the doctors within secure framework. Moreover, integrating GPS with such a\nsystem would make it more accurate for the instant emergency case which would be\neasier for EMTs to locate its place in the case of emergency. iJOE ‒ Vol. 16, No. 6, 2020 79",
+          "content_hash": "b1a7564ce81e630d50570a69aa8e6b9098644ad0d52c6b9abe81c1f3155f8322",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_8",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_16"
+          ],
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "page_number": 9,
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_8",
+      "content_hash": "da6aa9777f48c8a0aac0ca7160cb09b2801acbc92caa465383128ee094bdc370",
+      "provenance": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_9"
+      ],
+      "ldus": [
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_17",
+          "page_number": 9,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "Paper—Telemedicine: An IoT based Remote Healthcare System\n7 Acknowledgement\nThe Authors would like to thank the British university in Egypt for the support in\npublishing this paper\n8 References\n[1] Mohd, Adnan, \"Internet of Things (IoT) Healthcare Market by Component Global Oppor-\ntunity Analysis and Industry Forecast, 2014 - 2021\", Allied Market Research, 2016. Retriv-\nied from: https://www.alliedmarketresearch.com/iot-healthcare-market\n[2] Bernard Marr, \"Why The Internet Of Medical Things (IoMT) Will Start To Transform\nHealthcare In 2018\", 2018. Retrived from: https://www.forbes.com/sites/bernard-\nmarr/2018/01/25/why-the-internet-of-medical-things-iomt-will-start-to-transform-\nhealthcare-in- 2018/#771a51374a3c\n[3] Fong, Bernard, Alvis Cheuk Min Fong, and Chi Kwong Li. Telemedicine technologies: In-\nformation technologies in medicine and telehealth. John Wiley & Sons, 2011. https://doi.org/10.1002/9780470972151\n[4] I. Antohe, M. Floria and E. M. Carausu, \"Telemedicine: Good or bad and for whom?\" 2017\nE-Health and Bioengineering Conference (EHB), Sinaia, pp. 49-52, 2017. https://doi.org/10.1109/EHB.2017.7995358\n[5] Maksimovi, Mirjana and Vujovi, Vladimir and Perisi, Branko,\" A Custom internet of things\nhealthcare system,\" in Proc. 10th IEEE Iberian Conference on Information Systems and\nTechnologies (CISTI), pp.1-6, 2015.",
+          "content_hash": "fa6d4e839c41ac7648a157634c4f2afa7e07119892f4e19b737929497bbc9aa5",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_9",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_17"
+          ],
+          "bbox": null
+        },
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_18",
+          "page_number": 9,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "https://doi.org/10.1109/CISTI.2015.7170415\n[6] Vermesan, O and Friess, P,\" IoT--From Research and Innovation to Market Deployment,\"\nRiver Publishers, 2014. [7] HC-05 bluethoth Module. Retrived from: https://www.gme.cz/data/attachments/dsh.772-\n148.1.pdf\n[8] ESP8266 Serial Esp-01 WIFI Wireless. Retrieved from: http://www.microchip.ua/wire-\nless/esp01.pdf\n[9] SIM 908 GSM module. Retrived from: https://simcom.ee/modules/gsm- gprs-gps/sim908/\n[10] Alcohol sensor. Retrieved from: https://store.fut-electronics.com/products/alcohol-sensor-\nmodule-mq3analog-digital\n[11] LM35 temperature sensor, Retrived from: http://www.ti.com/lit/ds/symlink/lm35.pdf\n[12] Heart rate. Retrieved from: https://store.fut-electronics.com/products/heart-rate-pulse-sen-\nsor\n[13] Humidity sensor. Retrieved from: https://store.fut-electronics.com/products/temperature-\namp-humidity-sensor-module\n9 Authors\nWalaa Mohamed is a fresh graduate fro the electrical engineering department at the\nBritish University in Egypt class of 2018. She is currently working as a software testing\nengineer at IBM Cairo, Egypt. Email: Mohammad.abdellatif@bue.edu.eg\nMohammad M. Abdellatif is a full-time Lecturer at the British University in Egypt. Dr. Mohammad holds a BSc '04 in Electronics and Communications Engineering from\nAssiut University, Assiut, Egypt, an MSc '06 in Telecommunication Engineering from\n80 http://www.i-joe.org",
+          "content_hash": "dca8ff6b62ef61cab9ee42baca212e7cf520c00a2caa32651fa9a4b92f032ae0",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_9",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_18"
+          ],
+          "bbox": null
+        }
+      ]
+    },
+    {
+      "page_number": 10,
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_9",
+      "content_hash": "1daa8bad2dda6bf1b305a423b83e8e4ecd13354284cc81f5f3772754b836da4c",
+      "provenance": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_10"
+      ],
+      "ldus": [
+        {
+          "ldu_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_19",
+          "page_number": 10,
+          "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+          "text": "Paper—Telemedicine: An IoT based Remote Healthcare System\nKing Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia, and a PhD\n'15 in Telecommunications engineering from the electrical and computer engineering\ndepartment of the University of Porto, Portugal. His research interests are in the fields\nof IoT, WSN, and wireless communications.\nArticle submitted 2020-02-08. Resubmitted 2020-03-26. Final acceptance 2020-03-28. Final version pub-\nlished as submitted by the authors.\niJOE ‒ Vol. 16, No. 6, 2020 81",
+          "content_hash": "1daa8bad2dda6bf1b305a423b83e8e4ecd13354284cc81f5f3772754b836da4c",
+          "provenance": [
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_page_10",
+            "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_19"
+          ],
+          "bbox": null
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_1",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System Telemedicine: An IoT Based Remote Healthcare System https://doi.org/10.3991/ijoe.v16i06.13651 Mohammad M. Abdellatif (), Walaa Mohamed The British University, Ca",
+      "page_refs": [
+        1,
+        2
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_1",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_2",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_3",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_4",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_5"
+      ],
+      "content_hash": "45640d794ae4e485a21662404779144bbcd262f5cf355ce214b54c9362ed320d",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_2",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System not all around well characterized. Tele-radiology exams are the main Telemedicine ses- sions that consistently get repayment [6]. Another real impediment to Telem",
+      "page_refs": [
+        3
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_6",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_7",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_8"
+      ],
+      "content_hash": "e368b1ecc48f44551f2b201cbdcf0ac75a0594310dc869f8ccdf478d17eb69e4",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_3",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System System Patients Doctors Fig. 1. Network Architecture. Moreover, each row in the system's databases table represents a session between a doctor and patient who wil",
+      "page_refs": [
+        4
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_9",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_10"
+      ],
+      "content_hash": "827ae3d131f61913b611bedd8a23db322d2ba4abd2ddb26cb2f1479b46c80092",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_4",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System Fig. 2. System Homepage Fig. 3. A chat example with a message from both sides. The doctor's portal will take the input from the keyboard, get all the collected da",
+      "page_refs": [
+        5
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_11"
+      ],
+      "content_hash": "15b8fbf8bfa604500af34de4479d3dd0af0dcc097aaf0182bb58629f3198015f",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_5",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System Fig. 4. Flow Chart of the Network Model To have a full overview on the communications channels that can be used in this network, the network model is implemented ",
+      "page_refs": [
+        6
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_12"
+      ],
+      "content_hash": "4dfb24ce54fae50ed24efa63a133274138c8682574216daa112c30fbba366cfa",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_6",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System be measured using heart rate, humidity, temperature, blood pressure, and alcohol sen- sors. Three Arduino ATmega_32 boards are used to test them as each has one R",
+      "page_refs": [
+        7
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_13",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_14"
+      ],
+      "content_hash": "a4b1f57afc5891474480d32861c7371072cd9caf56ef8faf74c22c48599b0f82",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_7",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System reached (~54 Mbps) with moderate cost of the router and internet registration fees, but it suffers from high transmission delay. Bluetooth can only support limite",
+      "page_refs": [
+        8
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_15",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_16"
+      ],
+      "content_hash": "bdbb28dedfa4c0fe480ada6bb943ee940b6c415ade2c4037bf476c6c2ae3ffb8",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_8",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System 7 Acknowledgement The Authors would like to thank the British university in Egypt for the support in publishing this paper 8 References [1] Mohd, Adnan, \"Internet",
+      "page_refs": [
+        9
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_17",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_18"
+      ],
+      "content_hash": "3fde290f077dbc88800a304527b13350287ecabe290c1d7189190960a6b32828",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_9",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia, and a PhD '15 in Telecommunications engineering from the electrical and computer engineerin",
+      "page_refs": [
+        10
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_19"
+      ],
+      "content_hash": "1daa8bad2dda6bf1b305a423b83e8e4ecd13354284cc81f5f3772754b836da4c",
+      "child_nodes": [],
+      "children": []
+    }
+  ],
+  "children": [
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_1",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System Telemedicine: An IoT Based Remote Healthcare System https://doi.org/10.3991/ijoe.v16i06.13651 Mohammad M. Abdellatif (), Walaa Mohamed The British University, Ca",
+      "page_refs": [
+        1,
+        2
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_1",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_2",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_3",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_4",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_5"
+      ],
+      "content_hash": "45640d794ae4e485a21662404779144bbcd262f5cf355ce214b54c9362ed320d",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_2",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System not all around well characterized. Tele-radiology exams are the main Telemedicine ses- sions that consistently get repayment [6]. Another real impediment to Telem",
+      "page_refs": [
+        3
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_6",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_7",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_8"
+      ],
+      "content_hash": "e368b1ecc48f44551f2b201cbdcf0ac75a0594310dc869f8ccdf478d17eb69e4",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_3",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System System Patients Doctors Fig. 1. Network Architecture. Moreover, each row in the system's databases table represents a session between a doctor and patient who wil",
+      "page_refs": [
+        4
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_9",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_10"
+      ],
+      "content_hash": "827ae3d131f61913b611bedd8a23db322d2ba4abd2ddb26cb2f1479b46c80092",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_4",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System Fig. 2. System Homepage Fig. 3. A chat example with a message from both sides. The doctor's portal will take the input from the keyboard, get all the collected da",
+      "page_refs": [
+        5
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_11"
+      ],
+      "content_hash": "15b8fbf8bfa604500af34de4479d3dd0af0dcc097aaf0182bb58629f3198015f",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_5",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System Fig. 4. Flow Chart of the Network Model To have a full overview on the communications channels that can be used in this network, the network model is implemented ",
+      "page_refs": [
+        6
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_12"
+      ],
+      "content_hash": "4dfb24ce54fae50ed24efa63a133274138c8682574216daa112c30fbba366cfa",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_6",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System be measured using heart rate, humidity, temperature, blood pressure, and alcohol sen- sors. Three Arduino ATmega_32 boards are used to test them as each has one R",
+      "page_refs": [
+        7
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_13",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_14"
+      ],
+      "content_hash": "a4b1f57afc5891474480d32861c7371072cd9caf56ef8faf74c22c48599b0f82",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_7",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System reached (~54 Mbps) with moderate cost of the router and internet registration fees, but it suffers from high transmission delay. Bluetooth can only support limite",
+      "page_refs": [
+        8
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_15",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_16"
+      ],
+      "content_hash": "bdbb28dedfa4c0fe480ada6bb943ee940b6c415ade2c4037bf476c6c2ae3ffb8",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_8",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System 7 Acknowledgement The Authors would like to thank the British university in Egypt for the support in publishing this paper 8 References [1] Mohd, Adnan, \"Internet",
+      "page_refs": [
+        9
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_17",
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_18"
+      ],
+      "content_hash": "3fde290f077dbc88800a304527b13350287ecabe290c1d7189190960a6b32828",
+      "child_nodes": [],
+      "children": []
+    },
+    {
+      "section_id": "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_section_9",
+      "title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "section_title": "Paper—Telemedicine: An IoT based Remote Healthcare System",
+      "summary": "Paper—Telemedicine: An IoT based Remote Healthcare System King Fahd University of Petroleum and Minerals, Dhahran, Saudi Arabia, and a PhD '15 in Telecommunications engineering from the electrical and computer engineerin",
+      "page_refs": [
+        10
+      ],
+      "ldu_ids": [
+        "auer,+72_Telemedicine+An+IoT+based+Remote+Healthcare+System_ldu_19"
+      ],
+      "content_hash": "1daa8bad2dda6bf1b305a423b83e8e4ecd13354284cc81f5f3772754b836da4c",
+      "child_nodes": [],
+      "children": []
+    }
+  ]
+}

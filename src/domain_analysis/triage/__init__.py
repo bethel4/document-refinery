@@ -9,11 +9,14 @@ from .document_classifier import (
     LayoutComplexity, 
     ProcessingPriority
 )
+from .domain_classifier import DomainClassifier, KeywordDomainClassifier
 
 __all__ = [
     'TriageClassifier', 
     'DocumentProfile', 
     'OriginType', 
     'LayoutComplexity', 
-    'ProcessingPriority'
+    'ProcessingPriority',
+    'DomainClassifier',
+    'KeywordDomainClassifier',
 ]

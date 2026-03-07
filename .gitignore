@@ -61,11 +61,21 @@ data/processed/*
 .refinery/extractions/*
 .refinery/profiles/*
 .refinery/temp/*
-!refinery/logs/.gitkeep
-!refinery/pages/.gitkeep
-!refinery/ocr/.gitkeep
-!refinery/extractions/.gitkeep
-!refinery/profiles/.gitkeep
+.refinery/uploads/*
+.refinery/vector_store/*
+.refinery/vector_store_test/*
+.refinery/facts/*.db
+.refinery/facts/*.sqlite
+.refinery/facts/*.sqlite3
+!.refinery/logs/.gitkeep
+!.refinery/pages/.gitkeep
+!.refinery/ocr/.gitkeep
+!.refinery/extractions/.gitkeep
+!.refinery/profiles/.gitkeep
+!.refinery/uploads/.gitkeep
+!.refinery/vector_store/.gitkeep
+!.refinery/vector_store_test/.gitkeep
+!.refinery/facts/.gitkeep
 
 # Cache and temporary files
 .cache/
@@ -73,6 +83,8 @@ data/processed/*
 *.temp
 *.log
 *.bak
+*.faiss
+*.npy
 
 # Testing
 .coverage
@@ -92,6 +104,9 @@ docs/_build/
 
 # pyenv
 .python-version
+
+# Local credentials
+carbide-algebra-*.json
 
 # pipenv
 Pipfile.lock

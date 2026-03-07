@@ -49,6 +49,7 @@ class FastTextExtractor(BaseExtractor):
             pages_output = []
             total_confidence = 0
             total_text_length = 0
+            total_tables = 0
             
             with pdfplumber.open(pdf_path) as pdf:
                 for page_num, page in enumerate(pdf.pages, start=1):
@@ -60,7 +61,7 @@ class FastTextExtractor(BaseExtractor):
                     confidence = self._compute_page_confidence(page, page_text)
                     
                     # Extract tables if present
-                    tables = self._extract_tables(page)
+                    tables = self._extract_tables(page, page_num=page_num)
                     
                     page_result = {
                         "page_num": page_num,
@@ -68,7 +69,7 @@ class FastTextExtractor(BaseExtractor):
                         "text_length": page_chars,
                         "tables": tables,
                         "confidence": confidence,
-                        "extraction_method": "pdfplumber_text",
+                        "extraction_method": "fast_text",
                         "page_metadata": {
                             "width": page.width,
                             "height": page.height,
@@ -80,6 +81,7 @@ class FastTextExtractor(BaseExtractor):
                     pages_output.append(page_result)
                     total_confidence += confidence
                     total_text_length += page_chars
+                    total_tables += len(tables)
             
             # Compute overall metrics
             avg_confidence = total_confidence / len(pages_output) if pages_output else 0
@@ -90,6 +92,7 @@ class FastTextExtractor(BaseExtractor):
                 "extraction_metadata": {
                     "total_pages": len(pages_output),
                     "total_text_length": total_text_length,
+                    "total_tables": total_tables,
                     "average_confidence": avg_confidence,
                     "extraction_cost": "low",
                     "processing_time_seconds": 0,  # Will be set by pipeline
@@ -109,8 +112,86 @@ class FastTextExtractor(BaseExtractor):
                 "strategy_used": "fast_text",
                 "error": str(e),
                 "pages": [],
-                "extraction_metadata": {"error": True}
+                "extraction_metadata": {
+                    "total_pages": 0,
+                    "total_text_length": 0,
+                    "total_tables": 0,
+                    "average_confidence": 0.0,
+                    "extraction_cost": "low",
+                    "processing_time_seconds": 0.0,
+                    "pages_processed": 0,
+                    "confidence_threshold": 0.7,
+                    "error": True,
+                },
             }
+
+    def _compute_page_confidence(self, page: Any, text: str) -> float:
+        """Confidence based on text density and image dominance."""
+        char_count = len((text or "").strip())
+
+        # Estimate image coverage (pdfplumber provides image bboxes in page.images).
+        image_ratio = 0.0
+        try:
+            page_area = float(page.width) * float(page.height)
+            if page_area > 0 and getattr(page, "images", None):
+                total_img_area = 0.0
+                for img in page.images:
+                    try:
+                        x0 = float(img.get("x0", 0.0))
+                        x1 = float(img.get("x1", 0.0))
+                        top = float(img.get("top", 0.0))
+                        bottom = float(img.get("bottom", 0.0))
+                        total_img_area += max(0.0, x1 - x0) * max(0.0, bottom - top)
+                    except Exception:
+                        continue
+                image_ratio = min(1.0, total_img_area / page_area)
+        except Exception:
+            image_ratio = 0.0
+
+        text_score = min(1.0, char_count / max(1, int(self.char_threshold) * 2))
+        image_penalty = 0.0
+        if image_ratio > float(self.image_ratio_threshold):
+            image_penalty = min(0.6, (image_ratio - float(self.image_ratio_threshold)) * 1.2)
+
+        conf = 0.2 + 0.85 * text_score - image_penalty
+        if char_count < int(self.char_threshold):
+            conf *= 0.7
+        return float(max(0.0, min(1.0, conf)))
+
+    def _extract_tables(self, page: Any, page_num: int) -> List[Dict[str, Any]]:
+        """Extract tables in a lightweight way using pdfplumber."""
+        tables_out: List[Dict[str, Any]] = []
+        try:
+            raw_tables = page.extract_tables() or []
+        except Exception:
+            return tables_out
+
+        for idx, table in enumerate(raw_tables, start=1):
+            if not table or not isinstance(table, list) or len(table) < 2:
+                continue
+
+            # Normalize rows to strings.
+            rows = [[("" if cell is None else str(cell)).strip() for cell in row] for row in table if isinstance(row, list)]
+            if len(rows) < 2:
+                continue
+            headers = [h for h in rows[0] if h]
+            data_rows = rows[1:]
+            # Drop completely empty rows.
+            data_rows = [r for r in data_rows if any(cell for cell in r)]
+
+            tables_out.append(
+                {
+                    "table_id": f"fast_table_{idx}",
+                    "page_num": int(page_num),
+                    "headers": headers,
+                    "data": data_rows,
+                    "rows": len(data_rows),
+                    "columns": max(0, len(rows[0])),
+                    "confidence": 0.75,
+                }
+            )
+
+        return tables_out
     
     def _mock_extract(self, pdf_path: str, profile: Dict[str, Any]) -> Dict[str, Any]:
         """Mock implementation when pdfplumber is not available."""
@@ -132,14 +213,13 @@ class FastTextExtractor(BaseExtractor):
             mock_tables = []
             if page_num in [2, 4]:
                 mock_tables = [{
-                    "table_id": 1,
+                    "table_id": "mock_table_1",
+                    "page_num": page_num,
                     "rows": random.randint(3, 8),
                     "columns": random.randint(2, 4),
-                    "data": {
-                        "headers": [f"Column {i}" for i in range(random.randint(2, 4))],
-                        "data": [[f"Data {i}-{j}" for j in range(random.randint(2, 4))] 
-                                 for i in range(random.randint(3, 8))]
-                    },
+                    "headers": [f"Column {i}" for i in range(random.randint(2, 4))],
+                    "data": [[f"Data {i}-{j}" for j in range(random.randint(2, 4))]
+                             for i in range(random.randint(3, 8))],
                     "confidence": 0.9
                 }]
             
@@ -149,7 +229,7 @@ class FastTextExtractor(BaseExtractor):
                 "text_length": len(mock_text),
                 "tables": mock_tables,
                 "confidence": random.uniform(0.8, 0.95),
-                "extraction_method": "mock_fast_text",
+                "extraction_method": "mock",
                 "page_metadata": {
                     "width": 612,
                     "height": 792,

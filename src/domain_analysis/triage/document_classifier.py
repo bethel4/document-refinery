@@ -5,17 +5,17 @@ Classifies documents based on calibrated thresholds and lightweight analysis.
 
 import json
 import logging
+import time
 from pathlib import Path
-from typing import Dict, List, Any, Optional, Tuple
-from dataclasses import dataclass
+from typing import Dict, List, Any, Tuple
 from datetime import datetime
 from enum import Enum
 
 import yaml
-from pydantic import BaseModel, Field
 
 # Import from new models
 from src.models.document_profile import DocumentProfile, OriginType, LayoutComplexity, DocumentCategory, ExtractionStrategy
+from src.domain_analysis.triage.domain_classifier import DomainClassifier, KeywordDomainClassifier
 
 class ProcessingPriority(str, Enum):
     LOW = "low"
@@ -26,7 +26,12 @@ class ProcessingPriority(str, Enum):
 class TriageClassifier:
     """Document triage classifier using calibrated thresholds."""
     
-    def __init__(self, rules_file: str, profiles_dir: str):
+    def __init__(
+        self,
+        rules_file: str,
+        profiles_dir: str,
+        domain_classifier: DomainClassifier | None = None,
+    ):
         self.rules_file = Path(rules_file)
         self.profiles_dir = Path(profiles_dir)
         self.rules = self._load_rules()
@@ -47,6 +52,7 @@ class TriageClassifier:
             'government': ['government', 'official', 'permit', 'license', 'regulation'],
             'personal': ['letter', 'personal', 'family', 'individual', 'private']
         }
+        self.domain_classifier = domain_classifier or KeywordDomainClassifier(self.domain_keywords)
     
     def _load_rules(self) -> Dict[str, Any]:
         """Load extraction rules from YAML file."""
@@ -110,6 +116,7 @@ class TriageClassifier:
         
         # Classify origin type
         origin_type = self._classify_origin_type(metrics)
+        metrics["origin_type"] = origin_type
         
         # Classify layout complexity
         layout_complexity = self._classify_layout_complexity(metrics)
@@ -173,139 +180,118 @@ class TriageClassifier:
         """Extract lightweight metrics for triage classification with page-level analysis."""
         try:
             import fitz  # PyMuPDF
-            
-            doc = fitz.open(str(pdf_path))
-            
-            total_pages = len(doc)
-            total_chars = 0
-            total_image_area = 0
-            total_page_area = 0
-            table_count = 0
-            x_positions = []
-            fonts = set()
-            is_searchable = True
-            has_watermarks = False
-            has_signatures = False
-            
-            # Page-level metrics for mixed document detection
-            page_metrics = []
-            
-            for page_num in range(total_pages):
-                page = doc[page_num]
-                
-                # Get text and characters
-                text = page.get_text()
-                page_chars = len(text)
-                total_chars += page_chars
-                
-                # Check if page is searchable
-                if len(text.strip()) == 0:
-                    is_searchable = False
-                
-                # Get page dimensions
-                rect = page.rect
-                page_area = rect.width * rect.height
-                total_page_area += page_area
-                
-                # Analyze images - enhanced detection for scanned documents
-                image_list = page.get_images()
-                page_image_area = 0
-                
-                # Method 1: Try to get image bounding boxes
-                for img_index, img in enumerate(image_list):
+
+            # NOTE: This stage must be lightweight. Avoid expensive operations like
+            # `page.get_text("dict")` / `page.get_drawings()` across all pages.
+            max_pages_analyzed = (
+                int((self.rules.get("triage", {}) or {}).get("max_pages_analyzed", 12))
+                if isinstance(self.rules, dict)
+                else 12
+            )
+            max_pages_analyzed = max(1, max_pages_analyzed)
+
+            started = time.time()
+            with fitz.open(str(pdf_path)) as doc:
+                total_pages = len(doc)
+                sample_page_idxs = self._select_sample_pages(total_pages, max_pages_analyzed)
+
+                total_chars_sample = 0
+                total_image_ratio_sample = 0.0
+                table_hits = 0
+                x_positions: List[float] = []
+                fonts = set()
+                has_watermarks = False
+                has_signatures = False
+
+                page_metrics: List[Dict[str, Any]] = []
+
+                for page_idx in sample_page_idxs:
+                    page = doc[page_idx]
+                    text = page.get_text("text") or ""
+                    page_chars = len(text)
+
+                    # Fast image dominance heuristic: avoid bbox computations (slow).
+                    images = page.get_images(full=True)
+                    image_ratio = 0.0
+                    if page_chars < 50:
+                        image_ratio = 0.8
+                    elif images and page_chars < 200:
+                        image_ratio = 0.6
+                    elif images:
+                        image_ratio = 0.3
+
+                    meaningful_text = len(text.strip()) > 100
+                    page_metrics.append(
+                        {
+                            "page_num": int(page_idx + 1),
+                            "chars": int(page_chars),
+                            "image_area_ratio": float(image_ratio),
+                            "is_searchable": bool(meaningful_text),
+                        }
+                    )
+
+                    total_chars_sample += page_chars
+                    total_image_ratio_sample += image_ratio
+
+                    # Cheap table heuristic: many aligned columns/spaces and digits.
+                    if ("  " in text and sum(ch.isdigit() for ch in text) > 30) or ("\t" in text):
+                        table_hits += 1
+
+                    # Cheap layout heuristic for columns: use block x0 positions (faster than dict/spans).
                     try:
-                        img_rect = page.get_image_bbox(img[0])
-                        if img_rect:
-                            img_area = img_rect.width * img_rect.height
-                            page_image_area += img_area
-                    except:
-                        continue
-                
-                # Method 2: Enhanced detection for scanned documents
-                if len(text.strip()) == 0 and len(image_list) > 0:
-                    # No text but has images → assume entire page is image
-                    page_image_area = page_area
-                elif len(text.strip()) < 100 and len(image_list) > 0:
-                    # Very little text with images → likely scanned with OCR
-                    page_image_area = page_area * 0.7
-                elif len(text.strip()) < 50:
-                    # Almost no text → probably scanned regardless of image_list
-                    page_image_area = page_area * 0.8
-                # Additional check: try alternative image detection
-                elif page_image_area == 0 and len(text.strip()) < 200:
-                    # Try to detect images using page.get_drawings() for vector graphics
-                    drawings = page.get_drawings()
-                    if drawings:
-                        page_image_area = page_area * 0.5
-                    # Also check if page has any embedded content
-                    page_dict = page.get_text("dict")
-                    if page_dict and any(block.get("type") == 0 for block in page_dict.get("blocks", [])):
-                        page_image_area = page_area * 0.6
-                
-                # Store page-level metrics
-                page_image_ratio = page_image_area / page_area if page_area > 0 else 0
-                
-                # Better searchability check: needs meaningful text content
-                meaningful_text = len(text.strip()) > 100  # At least 100 characters
-                page_metrics.append({
-                    'page_num': page_num + 1,
-                    'chars': page_chars,
-                    'image_area_ratio': page_image_ratio,
-                    'is_searchable': meaningful_text
-                })
-                
-                total_image_area += page_image_area
-                
-                # Detect tables and collect fonts
-                text_dict = page.get_text("dict")
-                blocks = text_dict.get("blocks", [])
-                
-                for block in blocks:
-                    if "lines" in block:
-                        lines = block["lines"]
-                        
-                        # Table detection
-                        if len(lines) > 2:
-                            line_x_positions = []
-                            for line in lines:
-                                for span in line.get("spans", []):
-                                    x_positions.append(span["origin"][0])
-                                    line_x_positions.append(span["origin"][0])
-                                    
-                                    # Collect fonts
-                                    if "font" in span:
-                                        fonts.add(span["font"])
-                            
-                            # Simple table detection
-                            if len(set(round(x/20) for x in line_x_positions)) >= 3:
-                                table_count += 1
-                
-                # Check for watermarks and signatures
-                if "watermark" in text.lower() or "confidential" in text.lower():
-                    has_watermarks = True
-                if "signature" in text.lower() or "signed" in text.lower():
-                    has_signatures = True
-            
-            doc.close()
-            
-            # Compute derived metrics
-            avg_chars_per_page = total_chars / total_pages if total_pages > 0 else 0
-            image_area_ratio = total_image_area / total_page_area if total_page_area > 0 else 0
-            column_count = self._estimate_columns(x_positions)
-            
+                        blocks = page.get_text("blocks") or []
+                        for b in blocks:
+                            if isinstance(b, (list, tuple)) and len(b) >= 5:
+                                x_positions.append(float(b[0]))
+                    except Exception:
+                        pass
+
+                    # Font detection (optional): only sample spans when present, but keep bounded.
+                    try:
+                        raw = page.get_text("rawdict") or {}
+                        for block in raw.get("blocks", [])[:50]:
+                            for line in block.get("lines", [])[:50]:
+                                for span in line.get("spans", [])[:50]:
+                                    font = span.get("font")
+                                    if font:
+                                        fonts.add(font)
+                    except Exception:
+                        pass
+
+                    lower = text.lower()
+                    if "watermark" in lower or "confidential" in lower:
+                        has_watermarks = True
+                    if "signature" in lower or "signed" in lower:
+                        has_signatures = True
+
+                sampled_pages = max(1, len(sample_page_idxs))
+                avg_chars_per_page = float(total_chars_sample) / float(sampled_pages)
+                image_area_ratio = float(total_image_ratio_sample) / float(sampled_pages)
+                column_count = self._estimate_columns(x_positions)
+
+            file_size = pdf_path.stat().st_size
+            self.logger.info(
+                "Triage metrics extracted: pages=%s sampled=%s in %.2fs",
+                total_pages,
+                len(sample_page_idxs),
+                time.time() - started,
+            )
+
             return {
-                'total_pages': total_pages,
-                'total_chars': total_chars,
-                'avg_chars_per_page': avg_chars_per_page,
-                'image_area_ratio': image_area_ratio,
-                'table_count': table_count,
-                'column_count': column_count,
-                'fonts': list(fonts),
-                'is_searchable': is_searchable,
-                'has_watermarks': has_watermarks,
-                'has_signatures': has_signatures,
-                'file_size': pdf_path.stat().st_size,
-                'page_metrics': page_metrics  # New: page-level data
+                "total_pages": int(total_pages),
+                # Estimated totals derived from samples (keep triage lightweight).
+                "total_chars": int(avg_chars_per_page * max(1, int(total_pages))),
+                "avg_chars_per_page": float(avg_chars_per_page),
+                "image_area_ratio": float(image_area_ratio),
+                "table_count": int(table_hits),  # sample-based proxy
+                "column_count": int(column_count),
+                "fonts": list(fonts),
+                # Searchable if a majority of sampled pages have meaningful text.
+                "is_searchable": bool(sum(1 for p in page_metrics if p.get("is_searchable")) >= max(1, len(page_metrics) // 2)),
+                "has_watermarks": bool(has_watermarks),
+                "has_signatures": bool(has_signatures),
+                "file_size": int(file_size),
+                "page_metrics": page_metrics,
             }
             
         except ImportError:
@@ -314,6 +300,31 @@ class TriageClassifier:
         except Exception as e:
             self.logger.error(f"Error extracting metrics: {e}")
             return {}
+
+    def _select_sample_pages(self, total_pages: int, max_pages_analyzed: int) -> List[int]:
+        """Pick a small, deterministic set of pages for triage sampling."""
+        if total_pages <= 0:
+            return [0]
+
+        max_pages_analyzed = max(1, int(max_pages_analyzed))
+        if total_pages <= max_pages_analyzed:
+            return list(range(total_pages))
+
+        # Always include first pages + last page, then evenly spaced interior pages.
+        picks = set()
+        for i in range(min(3, total_pages)):
+            picks.add(i)
+        picks.add(total_pages - 1)
+
+        remaining = max_pages_analyzed - len(picks)
+        if remaining > 0:
+            step = max(1, (total_pages - 1) // (remaining + 1))
+            idx = step
+            while len(picks) < max_pages_analyzed and idx < total_pages - 1:
+                picks.add(idx)
+                idx += step
+
+        return sorted(picks)[:max_pages_analyzed]
     
     def _classify_origin_type(self, metrics: Dict[str, Any]) -> str:
         """Classify document origin type with page-level mixed document detection."""
@@ -332,8 +343,10 @@ class TriageClassifier:
         for page in page_metrics:
             chars = page.get('chars', 0)
             is_searchable = page.get('is_searchable', False)
+            image_ratio = float(page.get('image_area_ratio', 0.0))
             
-            if chars < 50 or not is_searchable:
+            # Use character stream + image dominance per page.
+            if chars < 50 or not is_searchable or image_ratio > 0.65:
                 scanned_pages += 1
             else:
                 digital_pages += 1
@@ -355,53 +368,30 @@ class TriageClassifier:
         # Recalculate final ratios
         scanned_ratio = scanned_pages / total_pages
         digital_ratio = digital_pages / total_pages
+        fonts = metrics.get("fonts", [])
+        image_ratio = float(metrics.get("image_area_ratio", 0.0))
+        avg_chars = float(metrics.get("avg_chars_per_page", 0.0))
         
         # Store mixed document ratios for later use
         metrics['scanned_page_ratio'] = scanned_ratio
         metrics['digital_page_ratio'] = digital_ratio
         
-        # Debug: Print page-level analysis with details
-        print(f"\n🔍 Page-Level Analysis for {metrics.get('total_pages', 0)} pages:")
-        print(f"   Scanned pages: {scanned_pages} ({scanned_ratio:.1%})")
-        print(f"   Digital pages: {digital_pages} ({digital_ratio:.1%})")
-        print(f"   Avg chars/page: {metrics.get('avg_chars_per_page', 0):.1f}")
-        
-        # Debug: Show which pages are classified as digital
-        page_metrics = metrics.get('page_metrics', [])
-        digital_pages_list = []
-        scanned_pages_list = []
-        for page in page_metrics:
-            chars = page.get('chars', 0)
-            is_searchable = page.get('is_searchable', False)
-            
-            if chars >= 20 and is_searchable:
-                digital_pages_list.append(f"Page {page.get('page_num')}: {chars} chars (searchable)")
-            else:
-                scanned_pages_list.append(f"Page {page.get('page_num')}: {chars} chars (not searchable)")
-        
-        if digital_pages_list:
-            print(f"   📄 Digital pages found:")
-            for page_info in digital_pages_list[:5]:  # Show first 5
-                print(f"      {page_info}")
-            if len(digital_pages_list) > 5:
-                print(f"      ... and {len(digital_pages_list) - 5} more")
-        
-        if len(scanned_pages_list) <= 5:  # Show scanned pages if few
-            print(f"   🔍 Scanned pages (sample):")
-            for page_info in scanned_pages_list[:3]:
-                print(f"      {page_info}")
-            if len(scanned_pages_list) > 3:
-                print(f"      ... and {len(scanned_pages_list) - 3} more")
-        
         # Determine origin type
-        if scanned_ratio == 0:
+        # Guardrails using document-level image ratio + font metadata + character density.
+        if scanned_ratio == 0 and image_ratio < 0.35 and bool(fonts) and avg_chars > 300:
             result = "native_digital"
-        elif scanned_ratio == 1:
+        elif scanned_ratio == 1 or (image_ratio > 0.7 and avg_chars < 120 and not fonts):
             result = "scanned_image"
         else:
             result = "mixed"
         
-        print(f"   → Classification: {result}")
+        self.logger.info(
+            "Origin classification: %s (scanned_ratio=%.1f%%, avg_chars=%.1f, image_ratio=%.2f)",
+            result,
+            scanned_ratio * 100.0,
+            avg_chars,
+            image_ratio,
+        )
         return result
     
     def _classify_origin_type_document_level(self, metrics: Dict[str, Any]) -> str:
@@ -447,17 +437,19 @@ class TriageClassifier:
         """Assign category using calibrated YAML rules with mixed document handling."""
         categories = self.rules.get('document_categories', {})
         origin_type = metrics.get('origin_type', '')
+        layout_complexity = self._classify_layout_complexity(metrics)
         
-        # HARD GUARD: Mixed documents get special handling
+        # Policy guard: mixed-origin docs should default to layout-aware extraction,
+        # with page-level escalation handled later in the router.
         if origin_type == "mixed":
             scanned_ratio = metrics.get('scanned_page_ratio', 0)
-            
-            # If mostly scanned, treat as high_complexity
-            if scanned_ratio > 0.3:
+            if scanned_ratio >= 0.5:
                 return "high_complexity", scanned_ratio, "hybrid"
-            else:
-                # Mostly digital, use normal classification
-                pass
+            return "moderate_complexity", max(0.7, 1.0 - scanned_ratio), "layout"
+
+        # Policy guard: structurally complex digital docs use layout-aware extraction first.
+        if layout_complexity in {"multi_column", "table_heavy"} and origin_type != "scanned_image":
+            return "moderate_complexity", 0.8, "layout"
         
         # HARD GUARD: Extremely low character count = high_complexity (scanned)
         avg_chars = metrics.get('avg_chars_per_page', 0)
@@ -595,40 +587,25 @@ class TriageClassifier:
     def _classify_domain(self, pdf_path: Path) -> Tuple[str, float]:
         """Classify document domain."""
         try:
-            import fitz
-            
-            doc = fitz.open(str(pdf_path))
-            text = ""
-            
-            # Sample text from first few pages
-            for page_num in range(min(3, len(doc))):
-                page = doc[page_num]
-                page_text = page.get_text()
-                text += page_text + " "
-            
-            doc.close()
-            
-            text_lower = text.lower()
-            domain_scores = {}
-            
-            # Score each domain
-            for domain, keywords in self.domain_keywords.items():
-                matches = sum(1 for keyword in keywords if keyword in text_lower)
-                domain_scores[domain] = matches
-            
-            if domain_scores:
-                best_domain = max(domain_scores, key=domain_scores.get)
-                score = domain_scores[best_domain]
-                confidence = min(score / 3.0, 1.0)  # Normalize to 0-1
-                
-                if confidence > 0.3:
-                    return best_domain, confidence
-            
-            return "general", 0.5
+            text = self._extract_sample_text(pdf_path, sample_pages=3)
+            return self.domain_classifier.classify(text)
             
         except Exception as e:
             self.logger.error(f"Domain classification failed: {e}")
             return "general", 0.5
+
+    def _extract_sample_text(self, pdf_path: Path, sample_pages: int = 3) -> str:
+        """Extract a short text sample for language/domain classification."""
+        import fitz
+
+        doc = fitz.open(str(pdf_path))
+        try:
+            text_parts: List[str] = []
+            for page_num in range(min(sample_pages, len(doc))):
+                text_parts.append(doc[page_num].get_text())
+            return " ".join(text_parts)
+        finally:
+            doc.close()
     
     def _determine_processing_params(self, layout_complexity: LayoutComplexity, 
                                    metrics: Dict[str, Any], 
@@ -726,7 +703,7 @@ class TriageClassifier:
         profile_file = self.profiles_dir / f"{profile.document_id}.json"
         
         with open(profile_file, 'w') as f:
-            json.dump(profile.dict(), f, indent=2, default=str)
+            json.dump(profile.model_dump(mode="json"), f, indent=2, default=str)
         
         self.logger.info(f"Profile saved: {profile_file}")
 

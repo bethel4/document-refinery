@@ -1,0 +1,53 @@
+[
+  {
+    "document_class": "financial_statement",
+    "document_id": "2020_Audited_Financial_Statement_Report",
+    "document_title": "2020_Audited_Financial_Statement_Report.pdf",
+    "question": "What does 2020_Audited_Financial_Statement_Report.pdf say in the section 'Document Root'?",
+    "answer": "J wo 30 June 2020 Notes Birr’o0o.",
+    "provenance_chain": [
+      {
+        "document_id": "2020_Audited_Financial_Statement_Report",
+        "page_number": 1,
+        "section_title": "Document Root",
+        "ldu_id": "2020_Audited_Financial_Statement_Report_ldu_1",
+        "ldu_text": "J\n\nwo\n\n30 June 2020\n\nNotes Birr’o0o.\n\nRevenue from contracts with customers. 5 47,628,412\nDirect costs 6(a) (4.492.493)\nOperating expenses 6() (5,271,623)\nNet irment losses on financial and contract assets 14, 16,17, (89,465)\nOther income (expense) 8 848,660.\nEarnings before interest, taxes, depreciation and amortization (EBITDA) 28,623,551\nDepreciation of property, plant and equipment u (6,712,906)\nDepreciation charge of right of use asset 2 (168,879)\nAmortization intangible assets 13 (600,617)\n482,402)\nOperating profit 22,141,149\nFinance income 9 337,799\nFinance costs 9 (7,960,608)\nFinance costs - net 7,622,809)\nProfit / (loss) before income tax 14,518,340\nIncome tax (expense) / eredit 10(@2)__(,065.268)\nProfit / (loss) after tax ——— 2.453.072,",
+        "content_hash": "77b5f3c7e6395a022c2c3942991d18437468be8671deee38db95cbf3ab0134d7"
+      }
+    ]
+  },
+  {
+    "document_class": "financial_statement",
+    "document_id": "2021_Audited_Financial_Statement_Report",
+    "document_title": "2021_Audited_Financial_Statement_Report.pdf",
+    "question": "What does 2021_Audited_Financial_Statement_Report.pdf say in the section '30 June 2021'?",
+    "answer": "30 June 2021 Notes i000 Asses Non curent ses Property, plant and equipment a 33,286,458 35,705,951 Rightof we assets, 2 985.374 749.256 Intangible assets 3 154309 1958127 Otheraseets ae) 6846 25.298 Other financial asset at amortised cost 14) 7127588 7205,098 Notes rcevableat amorised cost, 1668) ‘973183 638.743 Deferred tax Assets 10) 1.990.657 1085423 8 73962.",
+    "provenance_chain": [
+      {
+        "document_id": "2021_Audited_Financial_Statement_Report",
+        "page_number": 2,
+        "section_title": "30 June 2021",
+        "ldu_id": "2021_Audited_Financial_Statement_Report_ldu_7",
+        "ldu_text": "30 June 2021\nNotes i000\nAsses\nNon curent\nses\nProperty, plant and equipment a 33,286,458 35,705,951\nRightof we assets, 2 985.374 749.256\nIntangible assets 3 154309 1958127\nOtheraseets ae) 6846 25.298\nOther financial asset at amortised cost 14) 7127588 7205,098\nNotes rcevableat amorised cost, 1668) ‘973183 638.743\nDeferred tax Assets 10) 1.990.657 1085423\n8 73962.\nCurent assets\nTaventores 15 5.930.403 3,062,569\nOther assets (6) 2254973 1932546\n‘Trade receivables 40) 8,095,586 8,701,049\nOther financial assets a amortised cost 140) 92.887 109.371\nNotes receivable at amortised cost, 1663) 2465 3455\nInvestment securities at emortsed cost 160) 29886 25534018\nsh and cash equivalents ” 5.194080 sa7aoHt\n1.9698 1.5\n‘Total assets 77218285 78.878.805,\nEQUITY AND\nABILITIES\nABILITIES\nNon-cucren liabilities\n8 22,898,052 24.359619\n206) 47858 od\n2 631685 82,865\n23 363, 610\nDeferred tax ibis 2)\nDefined bene abilities 9 52\nBae7si0 75447289\nCurrent abilities\nBorowings . 8 1876488 Bu19.350\nContract ates 2060) 7726 7238;510\n“rade and other payables 200) 25,082,308 1.60184\n200) 399 17879\nLease liblties 2 195703 176875\nGrants 23 18 6\nDefined bene bites % 58.090 52.428\nDividend payable 2500) 504,066\nCurrent income tax 2 65947 3970\n3165.6 1.903,706,\nTotal iabtities zegaa.705 75.0\nEquity +\nattributable to\nCapital 2 409.79 sz49209\nRetained earnings 250) 79098) 15920,026\nLegal reserve 2 349.948 949,994\n‘ther eserves 4 2s) _____ tong)\n‘otal equity 884.560 14527708\nTotal equity and",
+        "content_hash": "74a1be80436d45281d3d605884c63a9570759bb5a01e33801f2ded5bb4ced00b"
+      }
+    ]
+  },
+  {
+    "document_class": "financial_statement",
+    "document_id": "2022_Audited_Financial_Statement_Report",
+    "document_title": "2022_Audited_Financial_Statement_Report.pdf",
+    "question": "What does 2022_Audited_Financial_Statement_Report.pdf say in the section 'Notes Birr'000 Birr'000,'?",
+    "answer": ": = = Ethio Telecom Statement of financial position For the year ended 30 June 2022 30 June 2021 30 June 2022 As Restated Notes Birr'ooo Birr’ooo ASSETS Non current assets Property, plant and equipment a 38,857,822 33,286,458 Right of use assets 12 961,266 985.374 Intangible assets 3 1,608,350 1,354,309 Other assets 14(@) 7 6,846 Other financial assets at amortised cost 1400) 701,635, 727,568 Notes receivable at amortised cost 16(a) I 497.183, Deferred tax Assets 10(4) 1,220 1,990, 2,460, 2 Current assets, Inventories 5 6,308,228, 5,930,403 Other assets ag(a) 2,366,469 2,254,973 Trade receivables 14(b) 6,530,101 7,267,769 Other financial assets at amortised cost 14(0) 92,510,752 95,343,168 Notes receivable at amortised cost 16(@) 650,540 3465 Investment securities at amortised cost 16) = 398,456 Cash and cash equivalents ” 28,191,157, 15,194,080.",
+    "provenance_chain": [
+      {
+        "document_id": "2022_Audited_Financial_Statement_Report",
+        "page_number": 2,
+        "section_title": "Notes Birr'000 Birr'000,",
+        "ldu_id": "2022_Audited_Financial_Statement_Report_ldu_4",
+        "ldu_text": ": =\n\n=\n\nEthio Telecom\nStatement of financial position\nFor the year ended 30 June 2022\n\n30 June 2021\n30 June 2022 As Restated\nNotes Birr'ooo Birr’ooo\nASSETS\nNon current assets\nProperty, plant and equipment a 38,857,822 33,286,458\nRight of use assets 12 961,266 985.374\nIntangible assets 3 1,608,350 1,354,309\nOther assets 14(@) 7 6,846\nOther financial assets at amortised cost 1400) 701,635, 727,568\nNotes receivable at amortised cost 16(a) I 497.183,\nDeferred tax Assets 10(4) 1,220 1,990,\n2,460, 2\nCurrent assets,\nInventories 5 6,308,228, 5,930,403\nOther assets ag(a) 2,366,469 2,254,973\nTrade receivables 14(b) 6,530,101 7,267,769\nOther financial assets at amortised cost 14(0) 92,510,752 95,343,168\nNotes receivable at amortised cost 16(@) 650,540 3465\nInvestment securities at amortised cost 16) = 398,456\nCash and cash equivalents ” 28,191,157, 15,194,080.\n136,557.247 126,302,513\nTotal assets 189,017,711, 371.640.749.\nEQUITY AND LIABILITIES\nLIABILITIES\nNon-current liabilities\nBorrowings 18 20,576,144 22,898,052\nProvisions 20(0) 84,296 47858\nLease liabilities 12 519,662 631,685\nGrants 23 518 363,\nDefined benefit liabi 19 640.151, 618,66\n721,820,771 24,196,825\nCurrent liabilities\nBorrowings 8 6,702,921, 7.676.488\nContract liabilities 20(a) 6,968,799 7.311,726\n‘Trade and other payables 20(b) 38,824,823 25,082,328\nProvisions 200) 13,772 3199\nLease liabilities 12 312,233 195,703\nGrants 23 43 45\nDefined benefit liabilities 19 69,206 58,090\nDividend payable 2500) 4,804,066 5,304,066\nCurrent income tax 10) 946,12: 6,\n5,641,990 52,166,416\nTotal liabilities 8 7.462.761 76,363,240\nEquity attributable to owners\nCapital 100,000,000 100,000,000\nRetained earnings 115,086 (5,648,273)\nLegal reserve 1.399.923, 949.944\nOther reserves\nTotal equity",
+        "content_hash": "e9c0d2f42eae6cafe9926d6cadf188e2fb08c04a9c66a742a3a4b2b83fea902a"
+      }
+    ]
+  }
+]
