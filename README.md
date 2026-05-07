@@ -10,8 +10,6 @@ A multi-stage document intelligence system:
 
 ## Architecture
 
-# Architecture
-
 ```mermaid
 flowchart TB
 
@@ -43,15 +41,15 @@ flowchart TB
 
         A["Strategy A<br/>FastTextExtractor<br/>(pdfplumber)"]
 
-        ACONF{"Confidence ≥ 0.80?"}
+        ACONF{"Confidence >= 0.80"}
 
         B["Strategy B<br/>LayoutExtractor<br/>(MinerU / Docling)"]
 
-        BCONF{"Confidence ≥ 0.70?"}
+        BCONF{"Confidence >= 0.70"}
 
         C["Strategy C<br/>VisionExtractor<br/>(VLM via OpenRouter)"]
 
-        CCONF{"Confidence ≥ 0.60?"}
+        CCONF{"Confidence >= 0.60"}
 
         MR["Manual Review Queue"]
 
@@ -75,6 +73,7 @@ flowchart TB
 
         CCONF -- Yes --> DONE
         CCONF -- No --> MR
+
     end
 
     %% =========================
@@ -84,30 +83,38 @@ flowchart TB
 
         LDU["LDU Generator"]
 
-        RULES["Chunking Rules:
-        • Tables never split from headers
-        • Figure captions preserved
-        • Lists remain atomic
-        • Content hashes for provenance"]
+        RULES["Semantic Chunking Rules"]
+
+        R1A["Tables stay attached to headers"]
+        R1B["Figure captions preserved"]
+        R1C["Lists remain atomic"]
+        R1D["Content hashes for provenance"]
 
         LDU --> RULES
+
+        RULES --> R1A
+        RULES --> R1B
+        RULES --> R1C
+        RULES --> R1D
+
     end
 
     %% =========================
     %% Stage 4
     %% =========================
-    subgraph S4["Stage 4 · Retrieval & Indexing"]
+    subgraph S4["Stage 4 · Retrieval and Indexing"]
 
         P1["Hierarchical PageIndex"]
-        P2["Section Summaries"]
+        P2["LLM Section Summaries"]
         P3["Scoped Vector Retrieval"]
 
         P1 --> P2
         P2 --> P3
+
     end
 
     %% =========================
-    %% Metadata Layer
+    %% Metadata
     %% =========================
     subgraph META["Cross-Cutting Provenance"]
 
@@ -116,10 +123,14 @@ flowchart TB
         M3["Confidence Score"]
         M4["Escalation History"]
         M5["Content Hash"]
+
     end
 
     DONE --> LDU
+
     RULES --> P1
+```
+
 
 
 ## Domain Analysis Subsystems
