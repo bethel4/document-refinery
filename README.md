@@ -10,7 +10,117 @@ A multi-stage document intelligence system:
 
 ## Architecture
 
-PDF → Triage → Extraction (A/B/C) → Chunking → PageIndex → Query Agent
+# Architecture
+
+```mermaid
+flowchart TB
+
+    %% =========================
+    %% Stage 0
+    %% =========================
+    subgraph S0["Stage 0 · Corpus Calibration"]
+        C1["Corpus Sampling"]
+        C2["Metric Distribution Analysis"]
+        C3["Threshold Definition"]
+    end
+
+    %% =========================
+    %% Stage 1
+    %% =========================
+    subgraph S1["Stage 1 · Triage Engine"]
+        T1["Text Layer Detection"]
+        T2["Image Ratio Computation"]
+        T3["Layout Entropy Score"]
+        T4["Document Profile"]
+    end
+
+    %% =========================
+    %% Stage 2
+    %% =========================
+    subgraph S2["Stage 2 · Strategy Routing"]
+
+        R1{"Initial Strategy Selection"}
+
+        A["Strategy A<br/>FastTextExtractor<br/>(pdfplumber)"]
+
+        ACONF{"Confidence ≥ 0.80?"}
+
+        B["Strategy B<br/>LayoutExtractor<br/>(MinerU / Docling)"]
+
+        BCONF{"Confidence ≥ 0.70?"}
+
+        C["Strategy C<br/>VisionExtractor<br/>(VLM via OpenRouter)"]
+
+        CCONF{"Confidence ≥ 0.60?"}
+
+        MR["Manual Review Queue"]
+
+        DONE["Extraction Complete"]
+
+        R1 --> A
+        R1 --> B
+        R1 --> C
+
+        A --> ACONF
+
+        ACONF -- Yes --> DONE
+        ACONF -- No --> B
+
+        B --> BCONF
+
+        BCONF -- Yes --> DONE
+        BCONF -- No --> C
+
+        C --> CCONF
+
+        CCONF -- Yes --> DONE
+        CCONF -- No --> MR
+    end
+
+    %% =========================
+    %% Stage 3
+    %% =========================
+    subgraph S3["Stage 3 · Semantic Chunker"]
+
+        LDU["LDU Generator"]
+
+        RULES["Chunking Rules:
+        • Tables never split from headers
+        • Figure captions preserved
+        • Lists remain atomic
+        • Content hashes for provenance"]
+
+        LDU --> RULES
+    end
+
+    %% =========================
+    %% Stage 4
+    %% =========================
+    subgraph S4["Stage 4 · Retrieval & Indexing"]
+
+        P1["Hierarchical PageIndex"]
+        P2["Section Summaries"]
+        P3["Scoped Vector Retrieval"]
+
+        P1 --> P2
+        P2 --> P3
+    end
+
+    %% =========================
+    %% Metadata Layer
+    %% =========================
+    subgraph META["Cross-Cutting Provenance"]
+
+        M1["Page Number"]
+        M2["Strategy Used"]
+        M3["Confidence Score"]
+        M4["Escalation History"]
+        M5["Content Hash"]
+    end
+
+    DONE --> LDU
+    RULES --> P1
+
 
 ## Domain Analysis Subsystems
 
